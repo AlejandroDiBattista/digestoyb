@@ -1,0 +1,322 @@
+﻿[
+    {
+        "indice": "01",
+        "descripcion": "Personal"
+    },
+    {
+        "indice": "01.01",
+        "descripcion": "Reglamentos y Legislacion en General"
+    },
+    {
+        "indice": "01.02",
+        "descripcion": "Cargos y Estructuras"
+    },
+    {
+        "indice": "01.03",
+        "descripcion": "Remuneraciones"
+    },
+    {
+        "indice": "01.04",
+        "descripcion": "Licencias"
+    },
+    {
+        "indice": "01.05",
+        "descripcion": "Asignaciones Familiares"
+    },
+    {
+        "indice": "01.06",
+        "descripcion": "Bonificaciones"
+    },
+    {
+        "indice": "02",
+        "descripcion": "Faltas"
+    },
+    {
+        "indice": "02.01",
+        "descripcion": "Tribunal de faltas"
+    },
+    {
+        "indice": "02.02",
+        "descripcion": "Codigo de faltas"
+    },
+    {
+        "indice": "03",
+        "descripcion": "Cultura y Educacion"
+    },
+    {
+        "indice": "03.01",
+        "descripcion": "Cultura"
+    },
+    {
+        "indice": "03.02",
+        "descripcion": "Educacion"
+    },
+    {
+        "indice": "03.03",
+        "descripcion": "Homenajes y Monumentos"
+    },
+    {
+        "indice": "03.04",
+        "descripcion": "Interes Municipal"
+    },
+    {
+        "indice": "04",
+        "descripcion": "Obras Publicas"
+    },
+    {
+        "indice": "04.01",
+        "descripcion": "Calles"
+    },
+    {
+        "indice": "04.01.01",
+        "descripcion": "Nombres"
+    },
+    {
+        "indice": "04.02",
+        "descripcion": "Veredas"
+    },
+    {
+        "indice": "04.03",
+        "descripcion": "Plazas"
+    },
+    {
+        "indice": "04.03.01",
+        "descripcion": "Nombres"
+    },
+    {
+        "indice": "04.04",
+        "descripcion": "Catastro y Edificacion Privada"
+    },
+    {
+        "indice": "04.05",
+        "descripcion": "Barrios"
+    },
+    {
+        "indice": "04.06",
+        "descripcion": "Via de excepcion"
+    },
+    {
+        "indice": "05",
+        "descripcion": "Compras, Ventas, Alquileres y Prestamos de inmuebles"
+    },
+    {
+        "indice": "05.01",
+        "descripcion": "Reglamentacion"
+    },
+    {
+        "indice": "05.02",
+        "descripcion": "Patrimonial"
+    },
+    {
+        "indice": "05.02.01",
+        "descripcion": "Licitacion"
+    },
+    {
+        "indice": "05.02.02",
+        "descripcion": "Compra directa"
+    },
+    {
+        "indice": "05.02.03 ",
+        "descripcion": "Expropiacion"
+    },
+    {
+        "indice": "06",
+        "descripcion": "Servicios Publicos"
+    },
+    {
+        "indice": "06.01",
+        "descripcion": "Reglamentacion"
+    },
+    {
+        "indice": "06.02",
+        "descripcion": "Alumbrado Publico"
+    },
+    {
+        "indice": "06.03",
+        "descripcion": "Seguridad"
+    },
+    {
+        "indice": "06.04",
+        "descripcion": "Recoleccion de Residuos"
+    },
+    {
+        "indice": "06.05",
+        "descripcion": "Agua y Cloacas"
+    },
+    {
+        "indice": "06.06",
+        "descripcion": "Gas"
+    },
+    {
+        "indice": "07",
+        "descripcion": "Transito"
+    },
+    {
+        "indice": "07.01",
+        "descripcion": "Reglamentacion"
+    },
+    {
+        "indice": "07.02",
+        "descripcion": "Servicio de Transporte"
+    },
+    {
+        "indice": "07.02.01",
+        "descripcion": "Taxi / Remis"
+    },
+    {
+        "indice": "07.02.02",
+        "descripcion": "Impropio"
+    },
+    {
+        "indice": "07.02.03",
+        "descripcion": "Pasajeros"
+    },
+    {
+        "indice": "8",
+        "descripcion": "Adhesiones"
+    },
+    {
+        "indice": "08.01",
+        "descripcion": "Leyes"
+    },
+    {
+        "indice": "08.02",
+        "descripcion": "Decretos"
+    },
+    {
+        "indice": "9",
+        "descripcion": "Convenios"
+    },
+    {
+        "indice": "10",
+        "descripcion": "Cementerio"
+    },
+    {
+        "indice": "10.01",
+        "descripcion": "Municipal"
+    },
+    {
+        "indice": "10.02",
+        "descripcion": "San Agustin"
+    },
+    {
+        "indice": "11",
+        "descripcion": "Salud"
+    },
+    {
+        "indice": "11.01",
+        "descripcion": "Politica Sanitaria"
+    },
+    {
+        "indice": "11.02",
+        "descripcion": "Deporte"
+    },
+    {
+        "indice": "11.03",
+        "descripcion": "Turismo"
+    },
+    {
+        "indice": "11.04",
+        "descripcion": "Discapacidad"
+    },
+    {
+        "indice": "12",
+        "descripcion": "Medio Ambiente"
+    },
+    {
+        "indice": "12.01",
+        "descripcion": "Ruidos Molestos"
+    },
+    {
+        "indice": "12.02",
+        "descripcion": "Forestacion"
+    },
+    {
+        "indice": "13",
+        "descripcion": "Hacienda"
+    },
+    {
+        "indice": "13.01",
+        "descripcion": "Prestamos"
+    },
+    {
+        "indice": "13.02",
+        "descripcion": "Presupuesto"
+    },
+    {
+        "indice": "14",
+        "descripcion": "Actividades Comerciales"
+    },
+    {
+        "indice": "14.01",
+        "descripcion": "Habilitacion"
+    },
+    {
+        "indice": "15",
+        "descripcion": "Fiscal"
+    },
+    {
+        "indice": "15.01",
+        "descripcion": "OFA"
+    },
+    {
+        "indice": "15.02",
+        "descripcion": "Exenciones / Bonificaciones"
+    },
+    {
+        "indice": "15.03",
+        "descripcion": "Moratorias"
+    },
+    {
+        "indice": "15.04",
+        "descripcion": "Tributarias"
+    },
+    {
+        "indice": "15.05",
+        "descripcion": "Cobro de Tributos"
+    },
+    {
+        "indice": "16",
+        "descripcion": "Politicas Sociales"
+    },
+    {
+        "indice": "16.01",
+        "descripcion": "Bolsa de trabajo"
+    },
+    {
+        "indice": "17",
+        "descripcion": "Donaciones"
+    },
+    {
+        "indice": "17.01",
+        "descripcion": "Muebles"
+    },
+    {
+        "indice": "17.02",
+        "descripcion": "Inmuebles"
+    },
+    {
+        "indice": "17.02.01",
+        "descripcion": "Calles"
+    },
+    {
+        "indice": "18",
+        "descripcion": "Comisiones"
+    },
+    {
+        "indice": "19",
+        "descripcion": "Planeamiento Urbano"
+    },
+    {
+        "indice": "20",
+        "descripcion": "Legislacion"
+    },
+    {
+        "indice": "98",
+        "descripcion": "Veto Parcial"
+    },
+    {
+        "indice": "99",
+        "descripcion": "Veto Total"
+    }
+]
