@@ -6,18 +6,18 @@ const componentes = await Astro.glob('../datos/*.json');
 const clasificacion = componentes[0]['default'];
 const ordenanzas = componentes[1]['default'];
 const textos = componentes[2]['default'];
+const vigentes = ordenanzas.filter((o)=> o.estado=="Vigente" && o.alcance=="General");
+
 ---
 
 <Layout title='Welcome to Astro.'>
 	<main>
-		<h1>
-			Bienvenidos al <span class='text-gradient'>Digesto Yerba Buena</span>
-		</h1>
+		<h1>Bienvenidos al <span class='text-gradient'>Digesto Yerba Buena</span></h1>
+		<h3>Hay {vigentes.length} ordenanzas vigentes</h3>
 		<div>
 			<ul>
-			
 				{
-					ordenanzas.map((o) => (
+					vigentes.map((o) => (
 						<Ordenanza
 							ordenanza={o.ordenanza}
 							asunto={o.asunto}
