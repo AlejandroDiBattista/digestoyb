@@ -1,10 +1,43 @@
-body {
-    background-color: aqua;
+:root {
+    --accent: 124, 58, 237;
+    --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
 }
+
+html {
+    font-family: system-ui,sans-serif;
+    background-color: #f6f6f6;
+}
+
+body {
+    display: block;
+    margin: 8px;
+}
+
 button {
     padding: 12px 24px;
     border-radius: 25px;
     font-size: 20px;
+}
+
+.busqueda {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #eaeaea;
+}
+
+.campo-busqueda {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.icono {
+  margin-right: 5px;
 }
 
 .tarjeta {
@@ -23,7 +56,6 @@ button {
 .tarjeta a {
     width: 100%;
     text-decoration: none;
-    line-height: 1.4;
     padding: 8px 8px;
     border-radius: 8px;
     color: #111;
@@ -33,11 +65,12 @@ button {
 
 .tarjeta:is(:hover, :focus-within) {
     background-position: 0;
-    background-image: red;
+    background-image: --accent-gradient;
+
 }
 
 .tarjeta:is(:hover, :focus-within) h2 {
-    color: red;
+    color: var(--accent);
 }
 
 .linea {
@@ -45,14 +78,13 @@ button {
     justify-content: space-between;
 }
 
-.linea .destacar {
-    margin: 4px 0;
-    font-size: 20px;
-    color: red;
+.linea.destacar {
+    margin: 12px 0;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .campo {
-    padding: 0px 4px;
     flex: 1;
 }
 
