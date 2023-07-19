@@ -1,6 +1,7 @@
 :root {
     --accent: 124, 58, 237;
     --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+    --etiqueta: green;
 }
 
 html {
@@ -13,33 +14,33 @@ body {
     margin: 8px;
 }
 
-button {
-    padding: 12px 24px;
-    border-radius: 25px;
-    font-size: 20px;
-}
-
+/* Busqueda */
 .busqueda {
   display: flex;
   align-items: center;
-  border-radius: 10px;
-  padding: 5px;
-  background-color: #eaeaea;
+  border-radius: 20px;
+  padding: 1px;
+  border-color: black; 
+  border-width: 1px;
+  border-style: solid;
 }
 
 .campo-busqueda {
   flex: 1;
   border: none;
   outline: none;
-  padding: 5px;
-  border-radius: 10px;
+  padding: 4px;
+  padding-left: 12px;
+  border-radius: 20px;
   font-size: 14px;
+  background-color: transparent;
 }
 
 .icono {
   margin-right: 5px;
 }
 
+/* Ordenanza */
 .tarjeta {
     display: flex;
     padding: 0.25rem;
@@ -81,7 +82,7 @@ button {
 .linea.destacar {
     margin: 12px 0;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .campo {
@@ -91,13 +92,17 @@ button {
 .campo label {
     display: block;
     font-size: 12px;
-    color: green;
+    color: var(--etiqueta);
 }
 
 .campo span {
-    font-size: 16px;
+    font-size: 14px;
 }
 
-a {
-    text-decoration: none;
+/* info */
+#medir {
+    height: 20px;
+    padding: 8px 0;
+    font-weight: lighter;
+    color: var(--etiqueta);
 }

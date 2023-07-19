@@ -8,7 +8,6 @@ function sinAcento(cadena) {
 }
 
 function simplificar(texto) {
-    // return texto.toLowerCase();
     return sinAcento(texto.toLowerCase());
 }
 
@@ -25,25 +24,20 @@ function contiene(palabra, o) {
     var enAsunto = palabra.startsWith(":");
     if (enAsunto) palabra = palabra.substring(1);
 
-    palabra += comienzaConMayuscula(palabra) ? ` ` : ``;
+    palabra += comienzaConMayuscula(palabra) ? ' ' : '';
     const palabras = enAsunto ? ` ${simplificar(o.asunto)} ` : o.palabras;
 
     return palabras.includes(` ${simplificar(palabra)}`);
 }
 
 function filtrarCondicion(ordenanzas, condicion) {
-    let palabras = sinAcento(condicion).toLowerCase().split(" ");
-    console.log(`Filtrando [${palabras}]`);
-
+    let palabras = simplificar(condicion).split(" ");
     let salida = ordenanzas.filter(o => palabras.every(palabra => contiene(palabra, o)));
-
-    console.log(`Hay ${salida.length} (en ${ordenanzas.length}) para [${condicion}]`);
-
     return salida;
 }
 
 function palabrasUnicas(cadena) {
-    const palabras = cadena.toLowerCase().split(' ');
+    const palabras = simplificar(cadena).split(' ');
     const palabrasUnicas = [...new Set(palabras)];
     return palabrasUnicas.join(' ');
 }
@@ -57,12 +51,6 @@ async function medir(operacion, titulo = "Ejecutando") {
     console.log(`La operación tardó ${tiempoTranscurrido} milisegundos.`);
 }
 
-var intervalo;
-function ejecutar(accion) {
-    clearInterval(intervalo); // Si hay un intervalo en curso lo detenemos y
-    intervalo = setInterval(accion, 100);
-}
-
 var ordenanzas = [];
 var clasificacion = [];
 
@@ -71,46 +59,10 @@ async function bajarJson(origen) {
     return await response.json();
 }
 
-async function cargar() {
-    await medir(async () => {
-        const inicio = new Date();
-
-        ordenanzas = await bajarJson('ordenanzas');
-        ordenanzas = filtrarVigentes(ordenanzas);
-
-        const textos = await bajarJson('textos');
-        const palabras = {}
-        textos.forEach(t => palabras[t.ordenanza] = t.palabras);
-
-        ordenanzas.forEach(o => o.palabras = palabrasUnicas(` ${palabras[o.ordenanza]} ${o.asunto} ${o.ordenanza} ${o.estado} ${o.alcance} ${o.clasificacion}`));
-
-        clasificacion = await bajarJson('clasificacion');
-
-        console.log(`Hay ${ordenanzas.length} ordenanzas`);
-        console.log(ordenanzas[0]);
-
-        generarOrdenanzas(ordenanzas);
-
-        const final = new Date();
-        console.log(`Lista generada  ${final - inicio} ms`);
-        instalar();
-    });
-}
-
-function instalar() {
-    const campoBusqueda = document.getElementById('campoBusqueda');
-
-    campoBusqueda.addEventListener('input', function () {
-        const condicion = campoBusqueda.value;
-        generarOrdenanzas(filtrarCondicion(ordenanzas, condicion));
-    });
-}
-
 function generarOdenanza(o) {
     return `
         <div class="tarjeta">
             <a href="pdf/${o.ordenanza}.pdf">
-
                 <div class="linea">
                     <div class="campo">
                         <label>Ordenanza</label>
@@ -142,23 +94,67 @@ function generarOdenanza(o) {
         </div>
     `;
 }
-function generarOrdenanzas(ordenanzas) {
+
+function generarOrdenanzas(ordenanzas, maximo=100) {
     const inicio = new Date();
-    const lista = document.getElementById('lista');
 
     var html = "";
-    var i = 0;
-    ordenanzas.forEach(o => {
-        html += generarOdenanza(o);
-        if (i++ == 10) {
-            lista.innerHTML = html;
-        }
-    });
-    const resultado = `Para ${ordenanzas.length} ordenanzas se generó ${Math.trunc(html.length / 100000) / 10} mb en ${(new Date()) - inicio}ms`;
+    ordenanzas.slice(1, maximo).forEach(o => html += generarOdenanza(o));
+    document.getElementById('lista').innerHTML = html;
+
+    const resultado = ordenanzas.length == 0 ? 'No hay ordenanzas que cumpla los criterio de busqueda' : `Hay ${ordenanzas.length} ordenanzas (${(new Date()) - inicio} ms)`;
     document.getElementById("medir").innerHTML = resultado;
     console.log(resultado);
-    lista.innerHTML = html;
 }
 
+var demorar;
+function buscar(condicion) {
+    clearTimeout(demorar);
+    const listado = filtrarCondicion(ordenanzas, condicion);
+    generarOdenanza(listado, 10);
+    demorar = setTimeout(() => generarOrdenanzas(listado, 50));
+}
 
+function extrar() {
+    const parametros = new URLSearchParams(window.location.search);
+    return parametros.get('buscar');
+}
 
+async function cargar() {
+    await medir(async () => {
+        const inicio = new Date();
+
+        ordenanzas = await bajarJson('ordenanzas');
+        ordenanzas = filtrarVigentes(ordenanzas);
+
+        const textos = await bajarJson('textos');
+        const palabras = {}
+        textos.forEach(t => palabras[t.ordenanza] = t.palabras);
+
+        ordenanzas.forEach(o => o.palabras = palabrasUnicas(` ${palabras[o.ordenanza]} ${o.asunto} ${o.ordenanza} ${o.estado} ${o.alcance} ${o.clasificacion}`));
+
+        clasificacion = await bajarJson('clasificacion');
+
+        console.log(`Hay ${ordenanzas.length} ordenanzas`);
+        console.log(ordenanzas[0]);
+
+        generarOrdenanzas(ordenanzas);
+
+        const final = new Date();
+        console.log(`Lista generada  ${final - inicio} ms`);
+
+        instalar();
+
+        const parametros = new URLSearchParams(window.location.search);
+        console.log(parametros.getAll()); // Obtener un objeto con todos los parámetros y sus valores
+    });
+}
+
+function instalar() {
+    const campoBusqueda = document.getElementById('campoBusqueda');
+
+    campoBusqueda.addEventListener('input', function () {
+        const condicion = campoBusqueda.value;
+        buscar(condicion);
+    });
+}
