@@ -1,3 +1,4 @@
+const version = "v0.10";
 function sinAcento(texto) {
     const mapaAcentos = {
         'á': 'a','é': 'e','í': 'i','ó': 'o','ú': 'u',
@@ -121,8 +122,8 @@ function generarOrdenanzas(ordenanzas, maximo=100) {
     ordenanzas.slice(0, maximo).forEach(o => html += generarOdenanza(o));
     document.getElementById('lista').innerHTML = html;
 
-    const resultado = ordenanzas.length == 0 ? 'No hay ordenanzas que cumpla los criterio de busqueda' : `Hay ${ordenanzas.length} ordenanzas (${(new Date()) - inicio} ms)`;
-    document.getElementById("medir").innerHTML = resultado;
+    const resultado = ordenanzas.length == 0 ? 'No hay ordenanzas que cumpla los criterio de busqueda' : `Hay ${ordenanzas.length} ordenanzas - ${(new Date()) - inicio} ms - ${version}`;
+    document.getElementById("info").innerHTML = resultado;
     console.log(resultado);
 }
 

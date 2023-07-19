@@ -6,81 +6,86 @@
 
 html {
     font-family: system-ui,sans-serif;
-    background-color: #f6f6f6;
+    background-color: #e9fcf4;
 }
 
 body {
-    display: block;
-    margin: 8px;
-    display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 #head {
+    width: 100%;
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #f2f2f2; /* Puedes ajustar el color de fondo según tus preferencias */
-    padding: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Añade una sombra suave si lo deseas */
-    z-index: 1000; /* Asegúrate de que el z-index sea mayor que otros elementos para que esté en la parte superior */
-    /* background-color: var(--accent-gradient); */
+    background-color: green;
+    color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+
+.titulo {
+    max-width: 600px;
+    margin: 0 auto;
     display: flex;
-    
-    justify-content:space-between;
+    justify-content: space-between;
+}
+
+h1 {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 10px 20px;
+}
+
+.busqueda {
+    flex: 1;
+    display: flex;
     align-items: center;
 
+    border: 1px solid black;
+    border-radius: 10px;
+
+    margin-right: 4px;
+    margin-top: 16px;
+
+    max-width: 200px;
+    max-height: 20px;
 }
 
-#head h1 {
-    margin: 0px 12px 8px 4px;
-    text-align: center;
+.entrada {
+    width: 100%;
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 4px;
+    padding-left: 12px;
+    border-radius: 20px;
+    font-size: 14px;
 }
 
-#head h1 mark {  
-    font-size: 12px;
+#info {
+    max-width: 600px;
+    width: 100%;
+    text-align: right;
+    padding-bottom: 4px;
+    padding-right: 8px;
     font-weight: lighter;
-    color: var(--accent);
+    font-size: 12px;
 }
 
 
 .centrar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
 #lista {
-    margin-top: 80px;
+    margin: 90px 8px;
     max-width: 600px;
-}
-
-/* Busqueda */
-#busqueda {
-    display: flex;
-    align-items: center;
-    border-radius: 20px;
-    padding: 1px;
-    border-color: black; 
-    border-width: 1px;
-    border-style: solid;
-    margin: 0 24px 0 4px;
-max-width: 400px;
-}
-
-.campo-busqueda {
-  flex: 1;
-  border: none;
-  outline: none;
-  padding: 4px;
-  padding-left: 12px;
-  border-radius: 20px;
-  font-size: 14px;
-}
-
-.icono {
-  margin-right: 5px;
 }
 
 /* Ordenanza */
@@ -93,7 +98,7 @@ max-width: 400px;
     border-radius: 4px;
     background-position: 100%;
     transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
     margin-bottom: 8px;
 }
 
@@ -148,9 +153,9 @@ max-width: 400px;
 
 /* info */
 #medir {
-    margin-left: 8px;
+/*     margin-left: 8px;
     height: 12px;
     padding: 8px 0;
-    font-weight: lighter;
+ */    font-weight: lighter;
     color: var(--etiqueta);
 }
