@@ -27,6 +27,14 @@ body {
 
 #head h1 {
     margin: 0px 12px 8px 4px;
+    text-align: center;
+}
+
+#head h1 mark {
+
+    font-size: 12px;
+    font-weight: lighter;
+    color: var(--accent);
 }
 
 #lista {
