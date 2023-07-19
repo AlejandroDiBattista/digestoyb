@@ -1,10 +1,34 @@
-function sinAcento(cadena) {
+function sinAcento(texto) {
     const mapaAcentos = {
         'á': 'a','é': 'e','í': 'i','ó': 'o','ú': 'u',
         'Á': 'A','É': 'E','Í': 'I','Ó': 'O','Ú': 'U'
     };
 
-    return cadena.replace(/[áéíóúÁÉÍÓÚ]/g, (caracter) => mapaAcentos[caracter]);
+    return texto.replace(/[áéíóúÁÉÍÓÚ]/g, (caracter) => mapaAcentos[caracter]);
+}
+
+function esClasificacion(palabra) {
+    const formatoValido = /^\d+(\.\d+)*$/;
+    return formatoValido.test(palabra);
+}
+
+function comienzaConMayuscula(cadena) {
+    const patron = /^[A-Z]/;
+    return patron.test(cadena);
+}
+
+function normalizarClasificacion(palabra) {
+    if(esClasificacion(palabra)) return palabra;
+    
+    const digitos = palabra.split('.');
+    const resultado = digitos.map(digito => digito.padStart(2, '0')).join('.');
+    return resultado;
+  }
+  
+function normalizarPalabra(palabra) {
+    if(palabra.startsWith(":")) palabra = palabra.substring(1);
+    if(comienzaConMayuscula(palabra)) palabra += ' ';
+    return ` ${simplificar(palabra)}`;
 }
 
 function simplificar(texto) {
@@ -15,19 +39,16 @@ function filtrarVigentes(ordenanzas) {
     return ordenanzas.filter(o => o.estado == "Vigente" && o.alcance == "General")
 }
 
-function comienzaConMayuscula(cadena) {
-    const patron = /^[A-Z]/;
-    return patron.test(cadena);
-}
-
 function contiene(palabra, o) {
-    var enAsunto = palabra.startsWith(":");
-    if (enAsunto) palabra = palabra.substring(1);
-
-    palabra += comienzaConMayuscula(palabra) ? ' ' : '';
-    const palabras = enAsunto ? ` ${simplificar(o.asunto)} ` : o.palabras;
-
-    return palabras.includes(` ${simplificar(palabra)}`);
+    if(o.clasificacion.startsWith(normalizarClasificacion(palabra))) {
+        return true;
+    }
+    
+    if(palabra.startsWith(":")){
+        return simplificar(` ${o.asunto} `).includes(normalizarPalabra(palabra));
+    }
+        
+    return o.palabras.includes(normalizarPalabra(palabra));
 }
 
 function filtrarCondicion(ordenanzas, condicion) {
@@ -99,7 +120,7 @@ function generarOrdenanzas(ordenanzas, maximo=100) {
     const inicio = new Date();
 
     var html = "";
-    ordenanzas.slice(1, maximo).forEach(o => html += generarOdenanza(o));
+    ordenanzas.slice(0, maximo).forEach(o => html += generarOdenanza(o));
     document.getElementById('lista').innerHTML = html;
 
     const resultado = ordenanzas.length == 0 ? 'No hay ordenanzas que cumpla los criterio de busqueda' : `Hay ${ordenanzas.length} ordenanzas (${(new Date()) - inicio} ms)`;
@@ -111,13 +132,21 @@ var demorar;
 function buscar(condicion) {
     clearTimeout(demorar);
     const listado = filtrarCondicion(ordenanzas, condicion);
+
     generarOdenanza(listado, 10);
-    demorar = setTimeout(() => generarOrdenanzas(listado, 50));
+    demorar = setTimeout(() => generarOrdenanzas(listado, 1000), 100);
+    escribirParametro(condicion);
 }
 
-function extrar() {
-    const parametros = new URLSearchParams(window.location.search);
+function leerParametro(historia=false) {
+    const origen = historia ? document.referrer : window.location.search;
+    const parametros = new URLSearchParams(origen);
     return parametros.get('buscar');
+}
+
+function escribirParametro(valor){
+    const nuevaUrl = `${window.location.pathname}?buscar=${valor}`;
+    window.history.replaceState({}, '', nuevaUrl);
 }
 
 async function cargar() {
@@ -144,17 +173,24 @@ async function cargar() {
         console.log(`Lista generada  ${final - inicio} ms`);
 
         instalar();
-
-        const parametros = new URLSearchParams(window.location.search);
-        console.log(parametros.getAll()); // Obtener un objeto con todos los parámetros y sus valores
     });
 }
 
 function instalar() {
     const campoBusqueda = document.getElementById('campoBusqueda');
-
+    campoBusqueda.value = leerParametro(true);
+    buscar(campoBusqueda.value);
+    
     campoBusqueda.addEventListener('input', function () {
         const condicion = campoBusqueda.value;
         buscar(condicion);
     });
+
+    console.log(`>> Estoy instalando. Vengo de [${document.referrer}]`);
+    window.addEventListener('popstate', function(event) {
+        const condicion = campoBusqueda.value;
+        console.log("Estoy regresando de la pagina siguiente");
+        buscar(condicion);
+    });
+      
 }
