@@ -64,11 +64,11 @@ function generarOdenanza(o) {
         <div class="tarjeta">
             <a href="pdf/${o.ordenanza}.pdf">
                 <div class="linea">
-                    <div class="campo">
+                    <div class="campo destacar">
                         <label>Ordenanza</label>
                         <span>${o.ordenanza}</span>
                     </div>
-                    <div class="campo">
+                    <div class="campo destacar">
                         <label>Sanción</label>
                         <span>${o.sancion}</span>
                     </div>
