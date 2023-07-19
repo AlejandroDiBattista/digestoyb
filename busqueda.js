@@ -64,19 +64,17 @@ function palabrasUnicas(cadena) {
 }
 
 async function medir(operacion, titulo = "Ejecutando") {
-    console.log(titulo);
+    console.log(`> ${titulo}`);
     const inicio = new Date();
     await operacion();
-    const fin = new Date();
-    const tiempoTranscurrido = fin - inicio;
-    console.log(`La operación tardó ${tiempoTranscurrido} milisegundos.`);
+    console.log(`| ${new Date() - inicio}ms`);
 }
 
 var ordenanzas = [];
 var clasificacion = [];
 
 async function bajarJson(origen) {
-    const response = await fetch(`/datos/${origen}.json`);
+    const response = await fetch(`./datos/${origen}.json`);
     return await response.json();
 }
 
@@ -159,24 +157,22 @@ async function cargar() {
         const textos = await bajarJson('textos');
         const palabras = {}
         textos.forEach(t => palabras[t.ordenanza] = t.palabras);
-
         ordenanzas.forEach(o => o.palabras = palabrasUnicas(` ${palabras[o.ordenanza]} ${o.asunto} ${o.ordenanza} ${o.estado} ${o.alcance} ${o.clasificacion}`));
 
         clasificacion = await bajarJson('clasificacion');
 
-        console.log(`Hay ${ordenanzas.length} ordenanzas`);
-        console.log(ordenanzas[0]);
-
         generarOrdenanzas(ordenanzas);
-
+        
         const final = new Date();
-        console.log(`Lista generada  ${final - inicio} ms`);
+        console.log(`>> Hay ${ordenanzas.length} ordenanzas en ${final - inicio}ms`);
 
         instalar();
     });
 }
 
 function instalar() {
+    console.log(`>> Estoy instalando. \n - Vengo de [${document.referrer}]\n - Estoy en [${window.location.search}]`);
+ 
     const campoBusqueda = document.getElementById('campoBusqueda');
     campoBusqueda.value = leerParametro(true);
     buscar(campoBusqueda.value);
@@ -186,8 +182,8 @@ function instalar() {
         buscar(condicion);
     });
 
-    console.log(`>> Estoy instalando. Vengo de [${document.referrer}]`);
-    window.addEventListener('popstate', function(event) {
+ 
+    window.addEventListener('popstate', function (event) {
         const condicion = campoBusqueda.value;
         console.log("Estoy regresando de la pagina siguiente");
         buscar(condicion);

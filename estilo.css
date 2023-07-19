@@ -14,8 +14,27 @@ body {
     margin: 8px;
 }
 
+#head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f2f2f2; /* Puedes ajustar el color de fondo según tus preferencias */
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Añade una sombra suave si lo deseas */
+    z-index: 1000; /* Asegúrate de que el z-index sea mayor que otros elementos para que esté en la parte superior */
+}
+
+#head h1 {
+    margin: 0px 12px 8px 4px;
+}
+
+#lista {
+    margin-top: 128px;
+}
+
 /* Busqueda */
-.busqueda {
+#busqueda {
   display: flex;
   align-items: center;
   border-radius: 20px;
@@ -23,6 +42,7 @@ body {
   border-color: black; 
   border-width: 1px;
   border-style: solid;
+  margin: 0 24px 0 4px;
 }
 
 .campo-busqueda {
@@ -105,7 +125,8 @@ body {
 
 /* info */
 #medir {
-    height: 20px;
+    margin-left: 8px;
+    height: 12px;
     padding: 8px 0;
     font-weight: lighter;
     color: var(--etiqueta);
