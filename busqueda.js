@@ -168,6 +168,7 @@ async function cargar() {
         console.log(`>> Hay ${ordenanzas.length} ordenanzas en ${final - inicio}ms`);
 
         instalar();
+        buscar("");
     });
 }
 
