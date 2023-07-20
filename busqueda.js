@@ -1,4 +1,4 @@
-const version = "v0.10";
+const version = "v0.11";
 function sinAcento(texto) {
     const mapaAcentos = {
         'á': 'a','é': 'e','í': 'i','ó': 'o','ú': 'u',
@@ -41,15 +41,19 @@ function filtrarVigentes(ordenanzas) {
 }
 
 function contiene(palabra, o) {
-    if(o.clasificacion.startsWith(normalizarClasificacion(palabra))) {
+    if (palabra.startsWith("#") && (o.ordenanza == palabra.substring(1).padStart(4,"0"))) { // #xxx > Ordenanza
         return true;
     }
     
-    if(palabra.startsWith(":")){
-        return simplificar(` ${o.asunto} `).includes(normalizarPalabra(palabra));
+    if(o.clasificacion.startsWith(normalizarClasificacion(palabra))) {       // NN.NN => Clasificacion
+        return true;
+    }
+    
+    if(palabra.startsWith(":")){                                            // :xxx > Asunto
+        return o.palabrasAsunto.includes(normalizarPalabra(palabra));
     }
         
-    return o.palabras.includes(normalizarPalabra(palabra));
+    return o.palabrasTexto.includes(normalizarPalabra(palabra));
 }
 
 function filtrarCondicion(ordenanzas, condicion) {
@@ -158,7 +162,10 @@ async function cargar() {
         const textos = await bajarJson('textos');
         const palabras = {}
         textos.forEach(t => palabras[t.ordenanza] = t.palabras);
-        ordenanzas.forEach(o => o.palabras = palabrasUnicas(` ${palabras[o.ordenanza]} ${o.asunto} ${o.ordenanza} ${o.estado} ${o.alcance} ${o.clasificacion}`));
+        ordenanzas.forEach(o => {
+            o.palabrasAsunto = ` ${palabrasUnicas(o.asunto)} `;
+            o.palabrasTexto = palabrasUnicas(` ${palabras[o.ordenanza]} ${o.asunto} ${o.ordenanza} ${o.estado} ${o.alcance} ${o.clasificacion}`);
+        });
 
         clasificacion = await bajarJson('clasificacion');
 

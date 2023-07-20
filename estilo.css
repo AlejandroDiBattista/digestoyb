@@ -86,6 +86,7 @@ h1 {
 #lista {
     margin: 90px 8px;
     max-width: 600px;
+    min-width: 400px;
 }
 
 /* Ordenanza */
