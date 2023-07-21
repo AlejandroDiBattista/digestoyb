@@ -1,4 +1,5 @@
-const version = "v0.11";
+const version = 'v0.12';
+
 function sinAcento(texto) {
     const mapaAcentos = {
         'á': 'a','é': 'e','í': 'i','ó': 'o','ú': 'u',
@@ -24,11 +25,17 @@ function normalizarClasificacion(palabra) {
     const digitos = palabra.split('.');
     const resultado = digitos.map(digito => digito.padStart(2, '0')).join('.');
     return resultado;
-  }
-  
+}
+
+function normalizarOrdenanza(palabra) {
+    return palabra.replace("#","").padStart(4,"0")
+}
+
 function normalizarPalabra(palabra) {
     if(palabra.startsWith(":")) palabra = palabra.substring(1);
+
     if(comienzaConMayuscula(palabra)) palabra += ' ';
+
     return ` ${simplificar(palabra)}`;
 }
 
@@ -41,15 +48,15 @@ function filtrarVigentes(ordenanzas) {
 }
 
 function contiene(palabra, o) {
-    if (palabra.startsWith("#") && (o.ordenanza == palabra.substring(1).padStart(4,"0"))) { // #xxx > Ordenanza
+    if (palabra.startsWith("#") && (o.ordenanza == normalizarOrdenanza(palabra))) { // #xxx > Ordenanza
         return true;
     }
     
-    if(o.clasificacion.startsWith(normalizarClasificacion(palabra))) {       // NN.NN => Clasificacion
+    if(o.clasificacion.startsWith(normalizarClasificacion(palabra))) {              // NN.NN => Clasificacion
         return true;
     }
     
-    if(palabra.startsWith(":")){                                            // :xxx > Asunto
+    if(palabra.startsWith(":")){                                                    // :xxx > Asunto
         return o.palabrasAsunto.includes(normalizarPalabra(palabra));
     }
         
@@ -59,12 +66,14 @@ function contiene(palabra, o) {
 function filtrarCondicion(ordenanzas, condicion) {
     let palabras = simplificar(condicion).split(" ");
     let salida = ordenanzas.filter(o => palabras.every(palabra => contiene(palabra, o)));
+
     return salida;
 }
 
 function palabrasUnicas(cadena) {
     const palabras = simplificar(cadena).split(' ');
     const palabrasUnicas = [...new Set(palabras)];
+
     return palabrasUnicas.join(' ');
 }
 
@@ -196,6 +205,5 @@ function instalar() {
         const condicion = campoBusqueda.value;
         console.log("Estoy regresando de la pagina siguiente");
         buscar(condicion);
-    });
-      
+    });     
 }
