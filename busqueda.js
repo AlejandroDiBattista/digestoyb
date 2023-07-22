@@ -20,7 +20,7 @@ function comienzaConMayuscula(cadena) {
 }
 
 function normalizarClasificacion(palabra) {
-    if(esClasificacion(palabra)) return palabra;
+    if(!esClasificacion(palabra)) return palabra;
     
     const digitos = palabra.split('.');
     const resultado = digitos.map(digito => digito.padStart(2, '0')).join('.');

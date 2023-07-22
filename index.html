@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
+    
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Digesto Digital</title>
         <link
         rel="stylesheet" href="estilo.css"/>
-        <!--         <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css"> -->
         <script src="busqueda.js"></script>
     </head>
+
     <body>
         <div id="head">
-            <div class="titulo">
-                <h1>Digesto YB</h1>
-                <div class="busqueda">
-                    <input type="text" id="campoBusqueda" class="entrada" placeholder="Buscar...">
+            <div class="centrar-titulo">
+                <div class="fila">
+                    <div class="titulo">Digesto YB</div>
+                    <input class="entrada" type="text" id="campoBusqueda" placeholder="Buscar...">
                 </div>
             </div>
-            <div class="titulo">
+            <div class="centrar-titulo">
                 <div id="info">Esto es para medir</div>
             </div>
         </div>
+
         <div class="centrar">
             <div id="lista">
         </div>
+
         <script>cargar();</script>
     </body>
+
 </html>

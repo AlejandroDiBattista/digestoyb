@@ -1,7 +1,5 @@
 :root {
-    --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-    --etiqueta: green;
+    --color-base: green;
 }
 
 html {
@@ -15,96 +13,72 @@ body {
 }
 
 #head {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    background-color: green;
+    background-color: var(--color-base);
     color: white;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
-    z-index: 1000;
-}
-
-.titulo {
-    display: flex;
-    justify-content: space-between;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-h1 {
-    flex: 1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin: 10px 20px;
-}
-
-.busqueda {
-    flex: 1;
-    display: flex;
-    align-items: center;
-
-    border: 1px solid black;
-    border-radius: 20px;
-
-    margin-right: 4px;
-    margin-top: 16px;
-
-    max-width: 250px;
-    max-height: 20px;
-}
-
-.entrada {
-    font-size: 14px;
     
-    border: none;
-    outline: none;
-    border-radius: 20px;
-    height: 20px;
-    padding: 4px;
-    padding-left: 12px;
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    
+    z-index: 1000;
+    text-align: center;
+}
 
-    flex: 1;
+#head .aux {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.centrar-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.fila {
+    display: flex;
+    justify-content: space-between; 
+    max-width: 600px;
     width: 100%;
 }
 
-/* @media (max-width: 500px) {
-    .titulo {
-      flex-direction: column;
-      align-items: center;
-      background-color: red;
-    }
-    
-    .busqueda {
-        max-width: 100%;
-        margin-bottom: 10px;
-    }
-    
-    .entrada {
-        max-width: 100%;
-        background-color: blue;
-    }
+.fila .titulo {
+    font-size: 28px;
+    font-weight: lighter;
+    margin: 8px;
+}
 
-    h1 {
-        width: 100%;
-        padding-left: 100px;
-    }
-    /* h1,
-    .entrada {
-      flex: 1;
-      width: 100%;
-      margin: 0 8px;
-    } */
-} */
+input::placeholder {
+    color: #a0a0a0;
+    font-size: 14px;
+}
+
+.fila .entrada {
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 12px;
+
+    font-size: 18px;
+    
+    height: 20px;
+    padding: 4px;
+    width: 220px;
+    padding-left: 12px;
+    color: var(--color-base);
+}
 
 #info {
     max-width: 600px;
     width: 100%;
-    text-align: right;
-    padding-bottom: 4px;
-    padding-right: 8px;
+    padding: 2px 0;
+    font-size: 16px;
     font-weight: lighter;
-    font-size: 12px;
+    text-align: right;
+    margin-right: 30px;
 }
 
 .centrar {
@@ -125,9 +99,8 @@ h1 {
     display: flex;
     padding: 4px;
     background-color: white;
-    background-image: none;
     background-size: 400%;
-    border-radius: 4px;
+    border-radius: 8px;
     background-position: 100%;
     transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
@@ -137,20 +110,10 @@ h1 {
 .tarjeta a {
     width: 100%;
     text-decoration: none;
-    padding: 8px 8px;
+    padding: 8px;
     border-radius: 4px;
-    color: #222;
     background-color: white;
-    opacity: 0.8;
-}
-
-.tarjeta:is(:hover, :focus-within) {
-    background-position: 0;
-    background-image: --accent-gradient;
-}
-
-.tarjeta:is(:hover, :focus-within) h2 {
-    color: var(--accent);
+    color: #201010;
 }
 
 .linea {
@@ -173,21 +136,13 @@ h1 {
 .campo.destacar span {
     font-weight: normal;
 }
+
 .campo label {
     display: block;
     font-size: 12px;
-    color: var(--etiqueta);
+    color: var(--color-base);
 }
 
 .campo span {
     font-size: 14px;
-}
-
-/* info */
-#medir {
-/*     margin-left: 8px;
-    height: 12px;
-    padding: 8px 0;
- */    font-weight: lighter;
-    color: var(--etiqueta);
 }
