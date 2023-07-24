@@ -10,7 +10,7 @@ function sinAcento(texto) {
 }
 
 function esClasificacion(palabra) {
-    const formatoValido = /^\d+(\.\d+)*$/;
+    const formatoValido = /^\d+(\.\d*)*$/;
     return formatoValido.test(palabra);
 }
 
@@ -22,7 +22,7 @@ function comienzaConMayuscula(cadena) {
 function normalizarClasificacion(palabra) {
     if(!esClasificacion(palabra)) return palabra;
     
-    const digitos = palabra.split('.');
+    const digitos = palabra.split('.').filter(x => x.length > 0);
     const resultado = digitos.map(digito => digito.padStart(2, '0')).join('.');
     return resultado;
 }
@@ -85,7 +85,7 @@ async function medir(operacion, titulo = "Ejecutando") {
 }
 
 var ordenanzas = [];
-var clasificacion = [];
+var clasificaciones = [];
 
 async function bajarJson(origen) {
     const response = await fetch(`./datos/${origen}.json`);
@@ -93,9 +93,11 @@ async function bajarJson(origen) {
 }
 
 function generarOdenanza(o) {
+    const tipo = 'html';
+    // const tipo = 'pdf';
     return `
         <div class="tarjeta">
-            <a href="pdf/${o.ordenanza}.pdf">
+            <a href="${tipo}/${o.ordenanza}.${tipo}">
                 <div class="linea">
                     <div class="campo destacar">
                         <label>Ordenanza</label>
@@ -128,25 +130,51 @@ function generarOdenanza(o) {
     `;
 }
 
-function generarOrdenanzas(ordenanzas, maximo=100) {
-    const inicio = new Date();
+function mostrarEstado(ordenanzas) {
+    const resultado = modoClasificacion ?
+        "Elegir clasificación" :
+            ordenanzas.length == 0 ?
+                `No hay ordenanzas - ${version}` :
+            `Hay ${ordenanzas.length} ${ordenanzas.length == 1 ? 'ordenanza' : 'ordenanzas'}`;
+    
+    document.getElementById("info").innerHTML = resultado;    
+}
 
+function generarOrdenanzas(ordenanzas, maximo=100) {
     var html = "";
     ordenanzas.slice(0, maximo).forEach(o => html += generarOdenanza(o));
-    document.getElementById('lista').innerHTML = html;
+    document.getElementById('cuerpo').innerHTML = `<div id="lista">${html}</div>`;
+}
 
-    const resultado = ordenanzas.length == 0 ? 'No hay ordenanzas que cumpla los criterio de busqueda' : `Hay ${ordenanzas.length} ordenanzas - ${(new Date()) - inicio} ms - ${version}`;
-    document.getElementById("info").innerHTML = resultado;
-    console.log(resultado);
+function generarClasificacion(clasificacion) {
+    var { indice, descripcion, cantidad } = clasificacion;
+    let nivel = indice.split(".").length;
+    let subIndice = indice.split(".")[nivel - 1];
+    return `
+        <div class="nivel_${nivel}">
+            <button onclick="buscar('${indice}.')"><b>${subIndice}</b> ${descripcion} <i>${cantidad||""}</i></button>
+        </div>
+    `;
+}
+
+function generarClasificaciones() {
+    var html = "";
+    clasificaciones.forEach(c => html += generarClasificacion(c));
+    document.getElementById('cuerpo').innerHTML = `<div id="clasificacion">${html}</div>`;
 }
 
 var demorar;
+
 function buscar(condicion) {
     clearTimeout(demorar);
+    modoClasificacion = false;
+    mostrarClasificacion();
+    
     const listado = filtrarCondicion(ordenanzas, condicion);
-
+    mostrarEstado(listado);
+    
     generarOdenanza(listado, 10);
-    demorar = setTimeout(() => generarOrdenanzas(listado, 1000), 100);
+    demorar = setTimeout(() => generarOrdenanzas(listado, 1000), 200);
     escribirParametro(condicion);
 }
 
@@ -161,6 +189,17 @@ function escribirParametro(valor){
     window.history.replaceState({}, '', nuevaUrl);
 }
 
+function contarClasificaciones() {
+    let total = {};
+    ordenanzas.forEach(o => {
+        const entradas = o.clasificacion.split("|").map( c => c.split("=>")[0].trim());
+        entradas.forEach(indice => total[indice] = (total[indice] || 0) + 1)
+    });
+    clasificaciones.forEach(clasificacion => {
+        clasificacion.cantidad = total[clasificacion.indice];
+    });
+    console.log(clasificaciones);
+}
 async function cargar() {
     await medir(async () => {
         const inicio = new Date();
@@ -176,15 +215,15 @@ async function cargar() {
             o.palabrasTexto = palabrasUnicas(` ${palabras[o.ordenanza]} ${o.asunto} ${o.ordenanza} ${o.estado} ${o.alcance} ${o.clasificacion}`);
         });
 
-        clasificacion = await bajarJson('clasificacion');
+        clasificaciones = await bajarJson('clasificacion');
+        contarClasificaciones();
 
-        generarOrdenanzas(ordenanzas);
-        
         const final = new Date();
         console.log(`>> Hay ${ordenanzas.length} ordenanzas en ${final - inicio}ms`);
 
         instalar();
         buscar("");
+        generarClasificaciones(clasificaciones);
     });
 }
 
@@ -199,11 +238,21 @@ function instalar() {
         const condicion = campoBusqueda.value;
         buscar(condicion);
     });
-
- 
-    window.addEventListener('popstate', function (event) {
-        const condicion = campoBusqueda.value;
-        console.log("Estoy regresando de la pagina siguiente");
-        buscar(condicion);
-    });     
 }
+
+var modoClasificacion = false;
+
+function mostrarClasificacion() {
+    document.querySelector("button.clasificacion").innerHTML = modoClasificacion ? "Ocultar Clasificación" : "Mostrar Clasificación";
+}
+
+function alterarClasificacion() {
+    modoClasificacion = !modoClasificacion;
+    mostrarClasificacion();
+    if (modoClasificacion) {
+        generarClasificaciones(clasificaciones);
+    } else {
+        buscar("");
+    }
+}
+

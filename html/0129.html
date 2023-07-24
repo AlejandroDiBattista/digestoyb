@@ -1,0 +1,623 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Book Antiqua";
+	panose-1:2 4 6 2 5 3 5 3 3 4;}
+@font-face
+	{font-family:"Segoe UI Emoji";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+h2
+	{mso-style-link:"Título 2 Car";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Book Antiqua",serif;
+	font-variant:small-caps;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:9.0pt;
+	margin-left:18.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:9.0pt;
+	margin-left:18.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+p.DGFecha, li.DGFecha, div.DGFecha
+	{mso-style-name:"DG Fecha";
+	mso-style-link:"DG Fecha Char";
+	margin:0cm;
+	text-align:right;
+	border:none;
+	padding:0cm;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+span.DGFechaChar
+	{mso-style-name:"DG Fecha Char";
+	mso-style-link:"DG Fecha";
+	font-family:"Book Antiqua",serif;}
+p.DGOrdenanza, li.DGOrdenanza, div.DGOrdenanza
+	{mso-style-name:"DG Ordenanza";
+	mso-style-link:"DG Ordenanza Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;
+	text-transform:uppercase;
+	font-weight:bold;}
+span.DGOrdenanzaChar
+	{mso-style-name:"DG Ordenanza Char";
+	mso-style-link:"DG Ordenanza";
+	font-family:"Book Antiqua",serif;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.DGSeccion, li.DGSeccion, div.DGSeccion
+	{mso-style-name:"DG Seccion";
+	mso-style-link:"DG Seccion Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;
+	color:#0D0000;
+	text-transform:uppercase;
+	font-weight:bold;}
+span.DGSeccionChar
+	{mso-style-name:"DG Seccion Char";
+	mso-style-link:"DG Seccion";
+	font-family:"Book Antiqua",serif;
+	color:#0D0000;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.DGCuerpoSeccion, li.DGCuerpoSeccion, div.DGCuerpoSeccion
+	{mso-style-name:"DG CuerpoSeccion";
+	mso-style-link:"DG CuerpoSeccion Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+span.DGCuerpoSeccionChar
+	{mso-style-name:"DG CuerpoSeccion Char";
+	mso-style-link:"DG CuerpoSeccion";
+	font-family:"Book Antiqua",serif;}
+p.DGSanciona, li.DGSanciona, div.DGSanciona
+	{mso-style-name:"DG Sanciona";
+	mso-style-link:"DG Sanciona Char";
+	margin-top:16.0pt;
+	margin-right:92.15pt;
+	margin-bottom:16.0pt;
+	margin-left:92.15pt;
+	text-align:center;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;
+	color:#0D0000;
+	text-transform:uppercase;
+	font-weight:bold;}
+span.DGSancionaChar
+	{mso-style-name:"DG Sanciona Char";
+	mso-style-link:"DG Sanciona";
+	font-family:"Book Antiqua",serif;
+	color:#0D0000;
+	text-transform:uppercase;
+	font-weight:bold;}
+span.DGArticulo
+	{mso-style-name:"DG Articulo";
+	font-family:"Book Antiqua",serif;
+	font-variant:normal !important;
+	color:windowtext;
+	text-transform:none;
+	text-shadow:none;
+	font-weight:normal;
+	font-style:normal;
+	text-decoration:underline none underline;
+	vertical-align:baseline;}
+span.Ttulo2Car
+	{mso-style-name:"Título 2 Car";
+	mso-style-link:"Título 2";
+	font-family:"Book Antiqua",serif;
+	font-variant:small-caps;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:2.0cm 42.5pt 42.5pt 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=ES-AR style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<div style='border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+
+<p class=DGFecha><a name=Fecha>Yerba Buena, 26 de febrero de 1985</a></p>
+
+</div>
+
+<p class=DGOrdenanza><a name=Ordenanza>ORDENANZA Nº 129</a></p>
+
+<p class=DGSeccion><a name=Visto>VISTO:</a></p>
+
+<p class=DGCuerpoSeccion>Que nuestro Municipio no se encuentra reglamentado
+para realizar obras de servicios públicos con colaboración vecinal y la
+participación directa de los Centros Vecinales, consorcios o grupos de vecinos
+ejerciendo el contralor de las obras; y</p>
+
+<p class=DGSeccion><a name=Considerando>CONSIDERANDO:</a></p>
+
+<p class=DGCuerpoSeccion>Que el Financiero-Económico de nuestro Municipio, para
+encarar las obras necesarias pretendidas por nuestra comunidad, consideramos
+que el único medio idóneo, es encarar los trabajos por colaboración vecinal; de
+esta forma lograremos mejorar y obtener mas Servicios Públicos y brindarle las
+comodidades y seguridad de un hábitat mas o menos adecuado a sus
+características, porque una Ciudad como Yerba Buena, que tiene un crecimiento
+habitacional muy importante, no cuenta todavía con un servicio de gas natural, de
+colectores cloacales, de alumbrado eficiente, de vías de circulación adecuadas ni
+de transportes de pasajeros con un buen servicio. Es decir estamos creciendo en
+forma desorganizada, donde cada vecino busca dar soluciones a su zona o barrio
+sin que muchas veces se encuentre la manera de encarar la realización de obras
+necesarias y elementales para una convivencia normal; por lo tanto se produce
+el consabido descontento que da como resultado no abonar las contribuciones por
+servicios que no existen o que son deficientes, y la Municipalidad no puede
+encarar obras porque no cuenta con un ingreso adecuado por parte de los
+contribuyentes.</p>
+
+<p class=DGCuerpoSeccion>Además la poca participación que se obtiene del
+Gobierno Provincial en el Área Obras Públicas, no permite planificar o intentar
+realizar las obras necesarias.</p>
+
+<p class=DGCuerpoSeccion>Por lo tanto debemos convocar a todos los vecinos de
+los distintos sectores a trabajar en forma directa y participativa con el D.E.M.</p>
+
+<p class=DGSanciona><a name=Sanciona>EL CONCEJO DELIBERANTE SANCIONA CON FUERZA
+DE ORDENANZA</a></p>
+
+<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;PRIMERO</span><span
+class=DGArticulo><span style='text-decoration:none'>: </span></span>Facultase
+al D.E.M. a través de la Secretaría de Obras y Servicios Públicos, a promover
+obras públicas, cuya ejecución estará a cargo de dicha Secretaría o empresas
+contratistas y será costeado por los vecinos frentistas o beneficiarios
+directos, en un todo de acuerdo a lo preceptuado por esta Ordenanza.</p>
+
+<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SEGUNDO</span><span
+class=DGArticulo><span style='text-decoration:none'>: </span></span>Las obras a
+las que se refiere la presente podrán ser de cualquier tipo, tales como
+pavimento, ya sea de hormigón o asfáltico, cordón cuneta, abovedado, enripiado
+y apertura de calles, cañerías de conducción de aguas servidas, gas, alumbrado,
+señalización de calles, etc. siendo la enunciación precedente indicativa y no
+excluyente de otras obras.</p>
+
+<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;TERCERO</span><span
+class=DGArticulo><span style='text-decoration:none'>: </span></span>El aporte
+vecinal no será nunca superior al 80% del costo de las obras quedando a cargo
+de las partes la determinación del porcentaje definitivo que le corresponderá a
+cada uno.</p>
+
+<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;CUARTO</span><span
+class=DGArticulo><span style='text-decoration:none'>: </span></span>Estará, en
+todos los casos, a cargo exclusivamente del Municipio, lo siguiente: a) Asistencia
+Técnica: que comprende la ejecución total o parcial del proyecto, dirección o
+contralor técnico de los trabajos y su liquidación y la permanente inspección
+durante el período de la construcción; b) Eximición de cualquier tasa que pudiera
+gravar la construcción de la obra; c) Asistir, coordinar y gestionar ante otras
+reparticiones, ya sean Nacionales, Provinciales o Municipales, o prestatarias
+de Servicios Públicos, todo lo atinente a las obras con colaboración vecinal.</p>
+
+<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;QUINTO</span><span
+class=DGArticulo><span style='text-decoration:none'>: </span></span>Cuando un
+grupo de vecinos, propietarios o poseedores de inmuebles agrupados en un barrio
+o calle, desea realizar alguna obra de conformidad a lo establecido en la
+presente Ordenanza, deberá ajustarse a las siguientes normas.</p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:21.3pt;page-break-after:auto'>a)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>El número
+de propietario a presentarse y que manifiesten voluntad expresa, no podrá ser
+inferior al 80% del total de beneficiarios que deben aportar, contando los que
+deben otorgar la conformidad tácita. Se considera conformidad tácita y
+obligatoria, la de los propietarios de inmuebles baldíos, siempre que la cuadra
+o circuito, considerando estos, no supere en un cincuenta por ciento (50%) de
+la suma de los frentes.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:21.3pt;page-break-after:auto'>b)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Cuando exista
+interés vecinal en la realización de la obra y no sea posible llenar los
+requisitos del apartado anterior, y mediaren razones de fuerza mayor, de
+seguridad colectiva o de evidente interés público, el Dpto. Ejecutivo queda
+facultado para la realización de obras dentro del sistema de colaboración
+vecinal contemplado en esta Ordenanza.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:21.3pt;page-break-after:auto'>c)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Acta de
+Asamblea vecinal en la que se resolvió solicitar la realización de los trabajos
+y nombramiento de uno o más representantes del Centro Vecinal que se encargará
+de gestionar y coordinar conjuntamente con la Secretaría de Obras Públicas, el
+accionar ante el Dpto. Ejecutivo.</p>
+
+<p class=MsoListParagraphCxSpLast style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:21.3pt;page-break-after:auto'>d)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>En base a estos
+antecedentes, la Municipalidad efectuará el estudio de factibilidad. En caso de
+ser posible, los vecinos, a través de la Comisión, completarán todos los datos
+catastrales de los inmuebles, y los que hagan a la titularidad del dominio, así
+como toda la documentación que sea menester para la realización.</p>
+
+<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SEXTO</span><span
+class=DGArticulo><span style='text-decoration:none'>: </span></span>En aquellas
+obras en que el Municipio tenga capacidad de ejecución y que los Centros
+Vecinales así lo soliciten, se podrá realizar los trabajos por administración, en
+cuyo caso el procedimiento será el siguiente:</p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:21.3pt;page-break-after:auto'>a)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>La
+Municipalidad por intermedio de la Secretaría de Obras Públicas calculará el
+presupuesto de la mano de obra correspondiente, el que será integrado por los
+jornales a emplear incluyendo los beneficios sociales.</p>
+
+<p class=MsoListParagraphCxSpLast style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:21.3pt;page-break-after:auto'>b)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Los materiales
+necesarios serán adquiridos en forma especial para la obra, y su costo será a
+cargo de los vecinos en la parte que les corresponde; estos deberán entregar el
+dinero en efectivo o materiales, hasta el 30% del total a utilizar con
+antelación a la iniciación de la obra y documentará el saldo restante del costo
+presunto, quedando sujeto el ajuste final al costo real de la obra.</p>
+
+<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SÉPTIMO</span><span
+class=DGArticulo><span style='text-decoration:none'>: </span></span>Del
+presupuesto final una concluida la obra se procederá a prorratear el porcentaje
+que corresponda a los vecinos, siendo el porcentaje restante a cargo de la
+Municipalidad.</p>
+
+<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;OCTAVO</span><span
+class=DGArticulo><span style='text-decoration:none'>: </span></span>En caso que
+el estudio de factibilidad aconseje la realización de la obra, y esta no pueda
+ser ejecutada por administración, se procederá a la formación de la “Carpeta
+Técnica” y “El pliego general de base y condiciones y especificaciones
+particulares o de cotejo”, de conformidad a las normas usuales en la
+Municipalidad para ello.</p>
+
+<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;NOVENO</span><span
+class=DGArticulo><span style='text-decoration:none'>: </span></span>Previo a la
+Licitación, o cotejo o adjudicación de la obra, se hará conocer a los vecinos
+el presupuesto estimativo de la misma, las condiciones de financiación, el
+plazo de ejecución y de más detalles referidos a la misma, debiendo los vecinos
+asumir el compromiso de pago mediante la firma del contrato respectivo. De no
+mediar objeción por parte de la mayoría, en las proporciones exigidas en el
+artículo 4 Inc. A) dentro de los cinco (5) días de puesta la carpeta técnica a
+conocimiento de los interesados, la Municipalidad procederá a continuar el
+trámite.</p>
+
+<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO</span><span
+class=DGArticulo><span style='text-decoration:none'>: </span></span>En todos
+los casos estará a cargo de la Municipalidad establecer el costo final de los
+gastos ocasionados por la obra y en base a ello las cuotas que correspondan a
+los vecinos, tanto a los adherentes de la obra, como a los remisos y propietarios
+de baldíos.</p>
+
+<h2 style='margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+0cm;page-break-after:auto'><span style='font-size:12.0pt'>Formas De
+Financiación</span></h2>
+
+<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;PRIMERO</span><span
+class=DGArticulo><span style='text-decoration:none'>: </span></span>La
+financiación se podrá realizar a través de las siguientes alternativas:</p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:21.3pt;page-break-after:auto'>a)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Entre la
+Municipalidad y los vecinos; en este caso serán de aplicación las disposiciones
+del artículo 6 Inc. b)</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:21.3pt;page-break-after:auto'>b)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Entre la entidad
+financiera y los vecinos, en cuyo caso la Municipalidad gestionará el
+otorgamiento de los créditos respectivos, acompañando toda la documentación
+necesaria y la estimación del costo global de la obra y el costo por frentista.
+Los fondos acordados serán acreditados en una cuenta especial, abierta a tal
+efecto, la que será administrada por la Municipalidad y controlada por los
+vecinos (es decir, por los representantes de los representantes de los vecinos)</p>
+
+<p class=MsoListParagraphCxSpLast style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:21.3pt;page-break-after:auto'>c)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Entre una
+entidad financiera y la Municipalidad; en este caso el crédito se otorgará a la
+Municipalidad la que realizará la obra y cobrará los importes resultantes a los
+vecinos, en los términos de esta Ordenanza.</p>
+
+<h2 style='margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+0cm;page-break-after:auto'><span style='font-size:12.0pt'>Forma De
+Efectivización De Los Aportes</span></h2>
+
+<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;SEGUNDO</span><span
+class=DGArticulo><span style='text-decoration:none'>: </span></span>Cuando las
+obras se realizan de acuerdo a lo estipulado en el artículo 11 Inc. a) será de
+aplicación lo establecido en el artículo 6, y el saldo será documentado en un
+plazo no mayor de 10 meses.</p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:21.3pt;page-break-after:auto'>a)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Cuando la
+obra se financia mediante el uso de crédito bancario por parte de los vecinos, será
+de aplicación lo establecido en el artículo 11 Inc. b) quedando la forma de
+pago a criterio del interesado.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:21.3pt;page-break-after:auto'>b)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Cuando la
+financiación la realiza la Municipalidad, mediante el uso del crédito bancario,
+la financiación a los vecinos se efectuará en las mismas condiciones y plazos
+otorgados a la Municipalidad.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:21.3pt;page-break-after:auto'>c)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Cuando la
+financiación la efectúe la Municipalidad con fondos propios, se seguirá el
+siguiente procedimiento:</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:42.55pt;page-break-after:auto'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Los
+vecinos podrán hacer efectiva su participación en un plazo no mayor de 10 meses,
+con el correspondiente interés al tipo bancario.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:42.55pt;page-break-after:auto'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>La
+Municipalidad podrá realizar la percepción, sujeta a las variaciones finales
+del costo, en base al presupuesto de realización de la obra, aprobado en la
+Carpeta Técnica. Tal percepción, en todos los casos se hará por Rentas
+Municipales, y podrá comenzar dentro de los 30 días de iniciadas las obras.</p>
+
+<p class=MsoListParagraphCxSpLast style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:42.55pt;page-break-after:auto'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Una vez concluida
+la misma y habilitadas al uso público se confeccionará el reajuste definitivo
+del presupuesto insumido por la realización haciéndose las correcciones en las
+cuotas consecutivas dará derecho a la Municipalidad a reclamar por vía de
+apremio la totalidad del monto de contribución que corresponda al vecino remiso,
+sin perjuicio del reajuste a que alude el apartado anterior. Para ello será
+título suficiente la boleta de deuda emitida por la Dirección de Rentas
+Municipal y firmada por el Intendente Municipal.</p>
+
+<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;TERCERO</span><span
+class=DGArticulo><span style='text-decoration:none'>: </span></span>Las
+liquidaciones del aporte vecinal se efectuarán con arreglo a las siguientes normas:</p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:21.3pt;page-break-after:auto'>a)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Para
+cañerías y conducciones, instalaciones de alumbrado y conducción eléctrica, el
+costo final y total de la obra y será prorrateado por la suma de los frentes
+corregido. El producto de este resultado por el frente corregido de cada
+propietario, dará el importe a pagar por cada vecino.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:21.3pt;page-break-after:auto'>b)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Para los
+desagües pluviales y drenajes se considerará como zona beneficiaria toda
+aquella que de manera directa o indirecta concurren a volcar sus aguas en un
+sistema independiente. En caso de construirse en forma separada el colector
+principal de la red secundaria se liquidará en forma separada ambas etapas, pero
+siempre entre la zona beneficiaria. En caso de construirse separadamente la red
+secundaria, la liquidación de esta etapa se hará únicamente entre las subzonas
+construidas. La base de liquidación será la indicada anteriormente y la
+mecánica para establecer el frente corregido será igual.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:21.3pt;page-break-after:auto'>c)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>En la
+liquidación de obras de pavimento se procederá de la siguiente manera:</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:42.55pt;page-break-after:auto'>1)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Corresponde
+a cada cuadra el importe de multiplicar la superficie pavimentada más la mitad
+o una cuarta parte de las bocas calles correspondientes, por el precio unitario
+del pavimento que resulta en general para barrios o cuadras que se considere.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:42.55pt;page-break-after:auto'>2)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>El precio
+correspondiente a cada cuadra será dividido por la suma de fuentes corregidas
+de la misma. Este resultado se multiplicará por el frente corregido que
+corresponde a cada vecino y el resultado será la parte proporcional que le
+corresponda pagar a cada uno.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:42.55pt;page-break-after:auto'>3)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Las bocas
+calles están definidas por el área comprendida por las perpendiculares a los
+ejes de las calles, trazadas de los vértices de las ochavas reglamentarias y
+sus respectivos cordones.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:42.55pt;page-break-after:auto'>4)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>La superficie
+de boca calle que corresponda, será prorrateada entre los inmuebles situados
+hasta la mitad de la cuadra que concurra a ella.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:42.55pt;page-break-after:auto'>5)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>En caso de
+avenidas cuando el ancho de la calzada pavimentada exceda los 9,00mts. los
+vecinos asumirán el pago de 50% de la superficie excedente, correspondiendo al
+Municipio el otro 50%.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:42.55pt;page-break-after:auto'>6)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>En los
+predios ubicados en las esquinas, la parte correspondiente estará dada por la
+longitud del frente real, meta libre de ochava, de ambos frentes, con las
+variaciones que le correspondan como frente corregido.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:21.3pt;page-break-after:auto'>d)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Cordón Cuneta: corresponderá
+pagar a cada vecino el resultado de aplicar el costo unitario (lineal) por su
+frente corregido, más la parte correspondiente a la ochava con el mismo
+concepto que con el pavimento.</p>
+
+<p class=MsoListParagraphCxSpLast style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:21.3pt;page-break-after:auto'>e)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Veredas: Corresponderá
+pagar a cada vecino la superficie por el costo unitario de la misma. En este
+caso se tomará a superficie real de cada una.</p>
+
+<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;CUARTO</span><span
+class=DGArticulo><span style='text-decoration:none'>: </span></span>Se define
+como frente corregido, al que resulta de agregar al frente real los siguientes
+incrementos:</p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:36.0pt;page-break-after:auto'>a)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Los
+predios que tengan una superficie mayor de 450,00mts. cuadrados, sufrirán
+recargo de 0,20% por cada metro cuadrado de superficie que pase de la mínima
+mencionada.</p>
+
+<p class=MsoListParagraphCxSpLast style='margin-top:0cm;margin-right:0cm;
+margin-bottom:6.0pt;margin-left:36.0pt;page-break-after:auto'>b)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Cuando la
+superficie cubierta de una unidad de vivienda sea mayor de 250,00mts<sup>2</sup>
+de superficie el frente real se incrementará en un 0,20% por cada metro
+cuadrado de superficie cubierta que exceda la medida indicada.</p>
+
+<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;QUINTO</span><span
+class=DGArticulo><span style='text-decoration:none'>: </span></span>En caso de
+vecinos no adherentes y de terrenos baldíos, a las liquidaciones que
+correspondan se les incrementará un 15%, que se percibirá como valor estimativo
+de los gastos indirectos y generales. El cobro se efectuará por boleta separada,
+pero en conjunto con la liquidación que por prorrateo corresponda.</p>
+
+<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;SEXTO</span><span
+class=DGArticulo><span style='text-decoration:none'>: </span></span>Los predios
+oficiales sean de carácter nacional, provincial o municipal, de uso público o
+privado, los que la Iglesia y sin excepciones los de cualquier institución de
+bien público, están obligados a construir a la realización de las obras, estando
+a cargo de la Municipalidad la gestión de reintegro del importe que les
+corresponda conforme a las liquidaciones que se efectúen. En caso de que por
+convenio, legislación o cualquier disposición especial se encuentren exentos de
+contribuir, el Municipio responderá por el monto que corresponda a los mismos.</p>
+
+<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;SÉPTIMO</span><span
+class=DGArticulo><span style='text-decoration:none'>: </span></span>La Dirección
+de Rentas Municipales, tendrá a su cargo la responsabilidad del cobro de las
+participaciones que correspondan a cada vecino. A tal fin llevará detallada
+cuenta del registro de vecinos contribuyentes, sus datos y el estado de sus
+cuentas, procurando mantener la información al día. En cada caso, estudiará y
+planificará los plazos de financiación, los intereses a aplicar, el importe
+mínimo de cuotas, las garantías a exigir a los propietarios y la fecha en que
+efectuará el cobro; otorgamiento de libre deuda a los que hubieren concluido el
+pago de sus participaciones y efectuará cargos a los morosos.</p>
+
+<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;OCTAVO</span><span
+class=DGArticulo><span style='text-decoration:none'>: </span></span>Derogase
+toda Ordenanza que se oponga a la presente.</p>
+
+<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;NOVENO</span><span
+class=DGArticulo><span style='text-decoration:none'>: </span></span>La consulta
+previa a los Centros Vecinales asociaciones, consorcios o grupos de vecinos, será
+obligatoria antes del emprendimiento de cualquier obra pública. El plazo para
+expedirse de los grupos o entidades enunciados será de 15 días a partir de su
+conocimiento del proyecto, plazo que podrá ampliarse cuando así lo requiere la
+naturaleza y complejidad del proyecto. Se excluye de esta disposición las obras
+que por razones de seguridad no admiten demora en su ejecución.</p>
+
+<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;VIGÉSIMO</span><span
+class=DGArticulo><span style='text-decoration:none'>: </span></span>El D.E.M. deberá
+girar a la Comisión de Obras y Servicios Públicos del H.C.D. a los fines de
+tomar conocimiento y dar las pautas para la realización de las obras que sean
+solicitadas por los vecinos, conforme a las necesidades de sus sectores.</p>
+
+<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;VIGÉSIMO&nbsp;PRIMERO</span><span
+class=DGArticulo><span style='text-decoration:none'>: </span></span>COMUNIQUESE,
+COPIESE Y ARCHIVESE.</p>
+
+</div>
+
+</body>
+
+</html>
