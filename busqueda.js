@@ -50,6 +50,10 @@ function normalizarOrdenanza(palabra) {
     return palabra.replace("#","").padStart(4,"0")
 }
 
+function completarAño(texto) {
+    return texto.replace(/([89]\d)$/g, "19$1").replace(/([012]\d)$/g, "20$1");
+}
+
 function normalizarPalabra(palabra) {
     if(palabra.startsWith(":")) palabra = palabra.substring(1);
 
@@ -242,6 +246,7 @@ async function cargar() {
         const palabras = {}
         textos.forEach(t => palabras[t.ordenanza] = t.palabras);
         ordenanzas.forEach(o => {
+            o.sancion = completarAño(o.sancion);
             o.palabrasAsunto = ` ${palabrasUnicas(o.asunto)} `;
             o.palabrasTexto = palabrasUnicas(` ${palabras[o.ordenanza]} ${o.asunto} ${o.ordenanza} ${o.estado} ${o.alcance} ${o.clasificacion}`);
         });
