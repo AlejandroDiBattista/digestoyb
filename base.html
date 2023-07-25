@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Digesto Digital</title>
+
+        <!-- <link href="estilo.css" rel="stylesheet"/> -->
+        <link href="word.css" rel="stylesheet"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"/>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+        <script id="plantilla-ordenanza" type="text/template">
+            <div id="lista" class="m2">
+                {{#each ordenanza}}
+                    <div class="card text-center mb-2">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col text-start">
+                                    <label class="form-label small text-body-primary mb-0">Ordenanza</label>
+                                    <div class="mt-0 text-primary">{{ordenanza}}</div>
+                                </div>
+                                <div class="col text-start">
+                                    <label class="form-label small text-body-primary mb-0">Sanción</label>
+                                    <div class="mt-0 text-primary">{{sancion}}</div>
+                                </div>
+                                <div class="col text-start">
+                                    <label class="form-label small text-body-primary mb-0">Estado</label>
+                                    <div class="mt-0 text-primary">{{estado}}</div>
+                                </div>
+                                <div class="col text-start">
+                                    <label class="form-label small text-body-primary mb-0">Alcance</label>
+                                    <div class="mt-0 text-primary">{{alcance}}</div>
+                                </div>
+                            </div>
+                            <div class="my-2 text-start fw-semibold">{{asunto}}</div>
+                            <div class="row">
+                                <div class="col text-start">
+                                    <label class="form-label small text-body-primary mb-0">Clasificación</label>
+                                    <div class="text-start">
+                                        {{#each clasificacion}}
+                                        <div class="text-primary"><strong class="ml-2">{{indice}}</strong> {{descripcion}}</div></div>
+                                        {{/each}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </script>
+        <script src="base.js"></script>
+    </head>
+
+    <body>
+<div class="sticky-top">
+    
+    <nav class="navbar bg-body-tertiary">
+        
+        <div class="container-fluid">
+            <a class="navbar-brand">Digesto YB</a>
+            <form class="d-flex" role="search">
+                <input
+                id="campoBusqueda" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"><!-- <button class="btn btn-outline-success" type="submit">Buscar</button> -->
+                </form>
+                <div class="fila">
+                    <button type="button" class="btn btn-outline-primary btn-sm clasificacion" onclick="alterarClasificacion()">Mostrar Clasificación</button>
+                    <div id="info"></div>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+        <div id="head" class="m-2">
+            <div class="centrar-titulo">
+                <div class="centrar-titulo"></div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <hr>
+        
+        <div id="cuerpo">
+            <div id="lista">
+            </div>
+        </div>
+        <script>cargar();</script>
+    </body>
+</html>
