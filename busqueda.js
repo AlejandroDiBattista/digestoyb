@@ -1,4 +1,4 @@
-const version = 'v0.20';
+const version = 'v0.22';
 let modoClasificacion = false;
 let demorar = null;
 let criterio = "";
