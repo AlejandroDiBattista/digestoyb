@@ -1,0 +1,180 @@
+
+:root {
+  --fuente-principal: "Book Antiqua", serif;
+}
+
+/* Font Definitions */
+ /* @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Book Antiqua";
+	panose-1:2 4 6 2 5 3 5 3 3 4;} */
+ /* Style Definitions */
+
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:var(--fuente-principal);
+}
+
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph {
+    margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:36.0pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:var(--fuente-principal);
+}
+
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst {
+    margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:var(--fuente-principal);
+}
+
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle	{
+    margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:var(--fuente-principal);
+}
+
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast {
+    margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:36.0pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:var(--fuente-principal);
+}
+
+p.DGFecha, li.DGFecha, div.DGFecha	{
+	margin:0cm;
+	text-align:right;
+	border:none;
+	padding:0cm;
+	font-size:12.0pt;
+	font-family:var(--fuente-principal);
+}
+
+span.DGFechaChar {
+    font-family:var(--fuente-principal);
+}
+
+p.DGOrdenanza, li.DGOrdenanza, div.DGOrdenanza	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:var(--fuente-principal);
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+span.DGOrdenanzaChar{
+	font-family:var(--fuente-principal);
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+p.DGSeccion, li.DGSeccion, div.DGSeccion	{
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:var(--fuente-principal);
+	color:#0D0000;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+span.DGSeccionChar	{
+	font-family:var(--fuente-principal);
+	color:#0D0000;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+p.DGCuerpoSeccion, li.DGCuerpoSeccion, div.DGCuerpoSeccion	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:var(--fuente-principal);
+}
+
+span.DGCuerpoSeccionChar{
+	font-family:var(--fuente-principal);
+}
+
+p.DGSanciona, li.DGSanciona, div.DGSanciona	{
+	margin-top:16.0pt;
+	margin-right:92.15pt;
+	margin-bottom:16.0pt;
+	margin-left:92.15pt;
+	text-align:center;
+	font-size:12.0pt;
+	font-family:var(--fuente-principal);
+	color:#0D0000;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+span.DGSancionaChar	{
+	font-family:var(--fuente-principal);
+	color:#0D0000;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+span.DGArticulo	{
+	font-family:var(--fuente-principal);
+	font-variant:normal !important;
+	text-transform:none;
+	text-shadow:none;
+	font-weight:normal;
+	font-style:normal;
+	text-decoration:underline none underline;
+	vertical-align:baseline;
+}
+
+.MsoChpDefault {
+    font-size:12.0pt;
+}
+
+.MsoPapDefault {
+    text-align:justify;
+	line-height:150%;
+}
+ol {
+    margin-bottom:0cm;
+}
+
+ul {
+    margin-bottom:0cm;
+}

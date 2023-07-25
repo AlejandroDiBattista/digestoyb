@@ -1,4 +1,10 @@
-const version = 'v0.12';
+const version = 'v0.20';
+let modoClasificacion = false;
+let demorar = null;
+let criterio = "";
+let ordenanzas = [];
+let clasificaciones = [];
+
 
 function sinAcento(texto) {
     const mapaAcentos = {
@@ -9,9 +15,8 @@ function sinAcento(texto) {
     return texto.replace(/[áéíóúÁÉÍÓÚ]/g, (caracter) => mapaAcentos[caracter]);
 }
 
-function esClasificacion(palabra) {
-    const formatoValido = /^\d+(\.\d*)*$/;
-    return formatoValido.test(palabra);
+function allTrim(texto) {
+    return texto.replace(/\s+/g," ").trim()
 }
 
 function comienzaConMayuscula(cadena) {
@@ -19,12 +24,26 @@ function comienzaConMayuscula(cadena) {
     return patron.test(cadena);
 }
 
+function esClasificacion(palabra) {
+    palabra = allTrim(palabra);
+    palabra = palabra.replace(/>(?=\d)/g, '.').replace(/[^0-9.>]/g, ""); 
+    
+    const valido = /^\d+(\.\d*)*$/;
+    const comienza = /(^>\d|\d>$)/;
+
+    return valido.test(palabra) || comienza.test(palabra);
+}
+
 function normalizarClasificacion(palabra) {
     if(!esClasificacion(palabra)) return palabra;
     
-    const digitos = palabra.split('.').filter(x => x.length > 0);
+    palabra = allTrim(palabra);
+    palabra = palabra.replace(/>(?=\d)/g, '.').replace(/[^0-9.]/g, "");
+
+    const digitos   = palabra.split('.').filter(x => x.length > 0);
     const resultado = digitos.map(digito => digito.padStart(2, '0')).join('.');
-    return resultado;
+    
+    return resultado.trim();
 }
 
 function normalizarOrdenanza(palabra) {
@@ -52,7 +71,7 @@ function contiene(palabra, o) {
         return true;
     }
     
-    if(o.clasificacion.startsWith(normalizarClasificacion(palabra))) {              // NN.NN => Clasificacion
+    if( esClasificacion(palabra) && extraerIndices(o.clasificacion).includes(normalizarClasificacion(palabra))) {              // NN.NN => Clasificacion
         return true;
     }
     
@@ -70,11 +89,13 @@ function filtrarCondicion(ordenanzas, condicion) {
     return salida;
 }
 
+function sinRepeatir(lista) {
+    return [...new Set(lista)];
+}
+
 function palabrasUnicas(cadena) {
     const palabras = simplificar(cadena).split(' ');
-    const palabrasUnicas = [...new Set(palabras)];
-
-    return palabrasUnicas.join(' ');
+    return sinRepeatir(palabras).join(' ');
 }
 
 async function medir(operacion, titulo = "Ejecutando") {
@@ -83,9 +104,6 @@ async function medir(operacion, titulo = "Ejecutando") {
     await operacion();
     console.log(`| ${new Date() - inicio}ms`);
 }
-
-var ordenanzas = [];
-var clasificaciones = [];
 
 async function bajarJson(origen) {
     const response = await fetch(`./datos/${origen}.json`);
@@ -97,7 +115,7 @@ function generarOdenanza(o) {
     // const tipo = 'pdf';
     return `
         <div class="tarjeta">
-            <a href="${tipo}/${o.ordenanza}.${tipo}">
+            <button onclick="cargarPagina('${o.ordenanza}')">
                 <div class="linea">
                     <div class="campo destacar">
                         <label>Ordenanza</label>
@@ -125,7 +143,7 @@ function generarOdenanza(o) {
                         <span>${o.clasificacion}</span>
                     </div>
                 </div>
-            </a>
+            </button>
         </div>
     `;
 }
@@ -135,35 +153,33 @@ function mostrarEstado(ordenanzas) {
         "Elegir clasificación" :
             ordenanzas.length == 0 ?
                 `No hay ordenanzas - ${version}` :
-            `Hay ${ordenanzas.length} ${ordenanzas.length == 1 ? 'ordenanza' : 'ordenanzas'}`;
+                `Hay ${ordenanzas.length} ${ordenanzas.length == 1 ? 'ordenanza' : 'ordenanzas'}`;
     
     document.getElementById("info").innerHTML = resultado;    
 }
 
 function generarOrdenanzas(ordenanzas, maximo=100) {
-    var html = "";
+    let html = "";
     ordenanzas.slice(0, maximo).forEach(o => html += generarOdenanza(o));
     document.getElementById('cuerpo').innerHTML = `<div id="lista">${html}</div>`;
 }
 
 function generarClasificacion(clasificacion) {
-    var { indice, descripcion, cantidad } = clasificacion;
+    let { indice, descripcion, cantidad } = clasificacion;
     let nivel = indice.split(".").length;
     let subIndice = indice.split(".")[nivel - 1];
     return `
-        <div class="nivel_${nivel}">
-            <button onclick="buscar('${indice}.')"><b>${subIndice}</b> ${descripcion} <i>${cantidad||""}</i></button>
-        </div>
+        <button class="nivel_${nivel}" onclick="buscar('${indice}>')">
+            <span><b>${indice}</b> ${descripcion}</span> <i>${cantidad || ""}</i>
+        </button>
     `;
 }
 
 function generarClasificaciones() {
-    var html = "";
+    let html = "";
     clasificaciones.forEach(c => html += generarClasificacion(c));
     document.getElementById('cuerpo').innerHTML = `<div id="clasificacion">${html}</div>`;
 }
-
-var demorar;
 
 function buscar(condicion) {
     clearTimeout(demorar);
@@ -189,17 +205,32 @@ function escribirParametro(valor){
     window.history.replaceState({}, '', nuevaUrl);
 }
 
+function extraerIndices(texto) { 
+    const indices = texto.split("|").map(c => normalizarClasificacion(c.split("=>")[0]));
+    let salida = [];
+    indices.forEach(indice => {
+        let actual = '';
+
+        indice.split('.').forEach(i => {
+            actual += i;
+            salida.push(actual);
+            actual += '.';
+        });
+    })
+    return sinRepeatir(salida);
+}
+
 function contarClasificaciones() {
     let total = {};
     ordenanzas.forEach(o => {
-        const entradas = o.clasificacion.split("|").map( c => c.split("=>")[0].trim());
-        entradas.forEach(indice => total[indice] = (total[indice] || 0) + 1)
+        extraerIndices(o.clasificacion).forEach(indice => total[indice] = (total[indice] || 0) + 1)
     });
+
     clasificaciones.forEach(clasificacion => {
-        clasificacion.cantidad = total[clasificacion.indice];
+        clasificacion.cantidad = total[clasificacion.indice] || 0;
     });
-    console.log(clasificaciones);
 }
+
 async function cargar() {
     await medir(async () => {
         const inicio = new Date();
@@ -223,8 +254,17 @@ async function cargar() {
 
         instalar();
         buscar("");
-        generarClasificaciones(clasificaciones);
     });
+}
+
+async function cargarPagina(numero) {
+    console.log(`>> Cargando Pagina ${numero}`);
+
+    const origen = "./html/" + numero.padStart(4, "0") + ".html";
+    const parser = new DOMParser();
+    const response = await fetch(origen);
+    const htmlDoc = parser.parseFromString((await response.text()), 'text/html');
+    document.getElementById("cuerpo").innerHTML = `<div id="marco"><button class="clasificacion volver" onclick="volver()"> ◀ Volver </button>${htmlDoc.body.innerHTML}</div>`;
 }
 
 function instalar() {
@@ -240,8 +280,6 @@ function instalar() {
     });
 }
 
-var modoClasificacion = false;
-
 function mostrarClasificacion() {
     document.querySelector("button.clasificacion").innerHTML = modoClasificacion ? "Ocultar Clasificación" : "Mostrar Clasificación";
 }
@@ -250,9 +288,12 @@ function alterarClasificacion() {
     modoClasificacion = !modoClasificacion;
     mostrarClasificacion();
     if (modoClasificacion) {
-        generarClasificaciones(clasificaciones);
+        generarClasificaciones();
     } else {
         buscar("");
     }
 }
 
+function volver() {
+    buscar("");
+}

@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
-    
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Digesto Digital</title>
-        <link
-        rel="stylesheet" href="estilo.css"/>
+        <link rel="stylesheet" href="estilo.css"/>
+        <link rel="stylesheet" href="word.css"/>
         <script src="busqueda.js"></script>
     </head>
-
     <body>
         <div id="head">
-            
             <div class="centrar-titulo">
                 <div class="fila">
                     <div class="titulo">Digesto YB</div>
                     <input class="entrada" type="text" id="campoBusqueda" placeholder="Buscar...">
                 </div>
             </div>
-
             <div class="centrar-titulo">
-                <button class="clasificacion" onclick="alterarClasificacion()">Clasificación</button>
-
-                <div id="info">Esto es para medir</div>
+                <div class="fila">
+                    <button class="clasificacion" onclick="alterarClasificacion()">Mostrar Clasificación</button>
+                    <div id="info"></div>
+                </div>
             </div>
-
         </div>
+            <!-- <a href="https://api.whatsapp.com/send/?text=http://digestoyb.netlify.app/pdf/0005.pdf&type=custom_url&app_absent=0">Enviar WApp</a> -->
 
-        <div id="cuerpo">
-        </div>
+        <div id="cuerpo"></div>
 
-        <script>cargar();</script>
+        <script>
+            cargar();
+            cargarPagina("5");
+        </script>
     </body>
-
 </html>

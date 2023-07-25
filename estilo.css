@@ -81,14 +81,14 @@ input::placeholder {
     margin-right: 30px;
 }
 
-#cuerpo {
+#cuerpo, #pagina {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
 }
 
-#lista, #clasificacion {
+#lista, #clasificacion, #marco{
     margin: 110px 8px 0 8px;
     max-width: 600px;
     min-width: 400px;
@@ -107,13 +107,14 @@ input::placeholder {
     margin-bottom: 8px;
 }
 
-.tarjeta a {
+.tarjeta button {
     width: 100%;
     text-decoration: none;
     padding: 8px;
     border-radius: 4px;
     background-color: white;
     color: #201010;
+    border: none;
 }
 
 .linea {
@@ -152,32 +153,40 @@ div.nivel_1,div.nivel_2, div.nivel_3{
     display: flex;
 }
 
-.nivel_1 a,.nivel_2 a, .nivel_3 a{
+.nivel_1 a,.nivel_2 a, .nivel_3 a {
     width: 100%;
     text-decoration: none;
     color: #201010;
     padding: 8px;
 }
 
-.nivel_1 a:hover,.nivel_2 a:hover, .nivel_3 a:hover{
-    width: 100%;
-    background-color: rgba(8, 165, 74, 0.473);
-    border-radius: 4px;
+#clasificacion button {
+    padding: 4px 16px;
+    padding-left: 10px !important; 
+    padding-right: 10px !important; 
 }
 
-.nivel_1 {
-    padding-left: 8px;
+#clasificacion button.nivel_1 {
+    margin-left: 10px;
     font-size: 20px;
 }
 
-.nivel_2 {
-    padding-left: 28px;
-    font-size: 18px;
+#clasificacion button.nivel_2 {
+    margin-left: 20px;
+    font-size: 16px;
 }
 
-.nivel_3 {
-    padding-left: 48px;
+#clasificacion button.nivel_3 {
+    margin-left: 30px;
     font-size: 16px;
+}
+
+
+#clasificacion {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
 }
 
 button.clasificacion {
@@ -188,24 +197,49 @@ button.clasificacion {
     font-size: 12px;
     padding: 8px;
     background-color: transparent;
-    color: white;
+    color: black;
 }
 
-#clasificacion {
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    flex-direction: column;
-}
-
-#clasificacion button {
+#clasificacion button{
     border: none;
+    max-width: 600px;
+    min-width: 400px;
     width: 100%;
-    align-self: flex-start;
+
     padding: 8px 0;
+    padding-right: 20px;
     background-color: transparent;
+    cursor : pointer;
+    color: var(--color-base);
+    display: flex;
+    align-self: flex-start;
+    justify-content: space-between;
+    text-align : left;
+}
+
+.tarjeta button {
+    text-align: left;
+}
+
+#clasificacion button b {
+    color: black;
+}
+
+#clasificacion button i {
+    color: black;
+    font-size: 16px;   
 }
 
 #clasificacion button:hover {
-    background-color: red;
+    color: black;
+    background-color: rgba(8, 165, 74, 0.3);
+    border-radius: 12px;
 } 
+
+button {
+    cursor: pointer;
+}
+
+button.volver {
+    width: 100px;
+}
