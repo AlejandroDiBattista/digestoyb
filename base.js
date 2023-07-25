@@ -15,6 +15,18 @@ function sinAcento(texto) {
     return texto.replace(/[áéíóúÁÉÍÓÚ]/g, (caracter) => mapaAcentos[caracter]);
 }
 
+function traducirMeses(cadena) {
+    const mesesEnIngles = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const mesesEnEspañol = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
+
+    for (let i = 0; i < mesesEnIngles.length; i++) {
+        const expresionRegular = new RegExp(mesesEnIngles[i], 'gi');
+        cadena = cadena.replace(expresionRegular, mesesEnEspañol[i]);
+    }
+
+    return cadena;
+}
+
 function allTrim(texto) {
     return texto.replace(/\s+/g," ").trim()
 }
@@ -227,7 +239,8 @@ async function cargar() {
         const palabras = {}
         textos.forEach(t => palabras[t.ordenanza] = t.palabras);
         ordenanzas.forEach(o => {
-            o.sancion = completarAño(o.sancion);
+            // o.sancion = completarAño(o.sancion);
+            o.sancion = traducirMeses(o.sancion);
             o.palabrasAsunto = ` ${palabrasUnicas(o.asunto)} `;
             o.palabrasTexto = palabrasUnicas(` ${palabras[o.ordenanza]} ${o.asunto} ${o.ordenanza} ${o.estado} ${o.alcance} `);
             o.clasificacion = extraerClasificacion(o.clasificacion || "");
