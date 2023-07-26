@@ -8,6 +8,7 @@ let clasificaciones = [];
 
 let plantillaOrdenanza = null;
 let plantillaClasificacion = null;
+let plantillaPagina = null;
 
 function sinAcento(texto) {
     const mapaAcentos = {
@@ -20,13 +21,14 @@ function sinAcento(texto) {
 
 function traducirMeses(cadena) {
     const mesesEnIngles = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    const mesesEnEspañol = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
+    const mesesEnEspañol = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
 
     for (let i = 0; i < mesesEnIngles.length; i++) {
         const expresionRegular = new RegExp(mesesEnIngles[i], 'gi');
         cadena = cadena.replace(expresionRegular, mesesEnEspañol[i]);
     }
 
+    cadena = cadena.replace(/-/g, "/");
     return cadena;
 }
 
@@ -62,7 +64,7 @@ function normalizarClasificacion(palabra) {
 }
 
 function normalizarOrdenanza(palabra) {
-    return palabra.replace("#","").padStart(4,"0")
+    return `${palabra}`.replace("#","").padStart(4,"0")
 }
 
 function completarAño(texto) {
@@ -85,12 +87,17 @@ function filtrarVigentes(ordenanzas) {
     return ordenanzas.filter(o => o.estado == "Vigente" && o.alcance == "General")
 }
 
+function contieneIndice(o, indice) {
+    indice = normalizarClasificacion(indice);
+    return o.clasificacion.map(c => c.indice).some(i => i.startsWith(indice));
+}
+
 function contienePalabra(palabra, o) {
     if (palabra.startsWith("#") && (o.ordenanza == normalizarOrdenanza(palabra))) { // #xxx > Ordenanza
         return true;
     }
     
-    if( esClasificacion(palabra) && expandirIndices(o.clasificacion.map(c => c.indice)).includes(normalizarClasificacion(palabra))) {              // NN.NN => Clasificacion
+    if (esClasificacion(palabra) && contieneIndice(o, palabra)) {              // NN.NN => Clasificacion
         return true;
     }
     
@@ -124,22 +131,30 @@ async function medir(operacion, titulo = "Ejecutando") {
     console.log(`| ${new Date() - inicio}ms`);
 }
 
-async function bajarJson(origen) {
-    const response = await fetch(`./datos/${origen}.json`);
-    return await response.json();
-}
+const plantillas = {};
 
 function cargarPlantilla(idPlantilla) {
-    return Handlebars.compile(document.getElementById(idPlantilla).innerHTML);
+    plantillas[idPlantilla] ||= Handlebars.compile(document.getElementById(idPlantilla).innerHTML); 
+    return plantillas[idPlantilla];
+}
+
+function generar(idPlatilla, datos) {
+    const plantilla = cargarPlantilla(idPlatilla);
+    document.getElementById('cuerpo').innerHTML = plantilla(datos);
 }
 
 function generarOrdenanzas(ordenanzas, maximo = 100) {
     ordenanzas = ordenanzas.slice(0, maximo);
-    document.getElementById('cuerpo').innerHTML = plantillaOrdenanza({ "ordenanza": ordenanzas });
+    generar('plantilla-ordenanza', { "ordenanza": ordenanzas });
 }
 
-function generarClasificaciones() {
-    document.getElementById('cuerpo').innerHTML = plantillaClasificacion({ "clasificacion": clasificaciones });
+function generarClasificaciones(clasificaciones) {
+    generar("plantilla-clasificacion", { "clasificacion": clasificaciones });
+}
+
+async function generarPagina(ordenanza) {
+    const pagina = await bajarOrdenanza(ordenanza);
+    generar("plantilla-pagina", { "ordenanza": ordenanza, "cuerpo": pagina });    
 }
 
 function mostrarEstado(ordenanzas) {
@@ -175,52 +190,9 @@ function escribirParametro(valor){
     const nuevaUrl = `${window.location.pathname}?buscar=${valor}`;
     window.history.replaceState({}, '', nuevaUrl);
 }
-
-function expandirIndices(indices) {     
-    let salida = [];
-    
-    indices.forEach(indice => {
-        let actual = '';
-        indice.split('.').forEach(i => {
-            actual += i;
-            salida.push(actual);
-            actual += '.';
-        })
-    });
-
-    return sinRepetir(salida);
-}
-
-function expandirClasificacion(texto) {
-    const indices = texto.split("|").map(c => c.split("=>"));
-    return indices.map(indice => ({ "indice": normalizarClasificacion(indice[0]), "descripcion": allTrim(indice[1]) }));
-}
-
-function completarOrdenanzas(textos) {
-    const palabras = {}
-    textos.forEach(t => palabras[t.ordenanza] = t.palabras);
-
-    ordenanzas.forEach(o => {
-        o.sancion = traducirMeses(o.sancion);
-        o.palabrasAsunto = ` ${palabrasUnicas(o.asunto)} `;
-        o.palabrasTexto  = palabrasUnicas(` ${palabras[o.ordenanza]} ${o.asunto} ${o.ordenanza} ${o.estado} ${o.alcance} `);
-        o.clasificacion  = expandirClasificacion(o.clasificacion || "");
-    });
-
-    console.log(ordenanzas[0]);
-}
-
-function completarClasificaciones() {
-    let total = {};
-    ordenanzas.forEach(o => {
-        let indices = o.clasificacion.map(c => c.indice);
-        expandirIndices(indices).forEach(indice => total[indice] = (total[indice] || 0) + 1);
-    });
-    
-    clasificaciones.forEach(clasificacion => {
-        clasificacion.cantidad = total[clasificacion.indice] || 0;
-        clasificacion.nivel = clasificacion.indice.split(".").length;
-    });
+async function bajarJson(origen) {
+    const response = await fetch(`./datos/${origen}.json`);
+    return await response.json();
 }
 
 async function cargar() {
@@ -228,14 +200,7 @@ async function cargar() {
         ordenanzas = await bajarJson('ordenanzas');
         ordenanzas = filtrarVigentes(ordenanzas);
 
-        const textos = await bajarJson('textos');
-        completarOrdenanzas(textos);
-
-        clasificaciones = await bajarJson('clasificacion');
-        completarClasificaciones();
-
-        plantillaOrdenanza = cargarPlantilla("plantilla-ordenanza");
-        plantillaClasificacion = cargarPlantilla("plantilla-clasificacion");
+        clasificaciones = await bajarJson('clasificaciones');
 
         instalar();
         buscar('');
@@ -248,6 +213,16 @@ async function cargarPagina(numero) {
     const response = await fetch(origen);
     const htmlDoc = parser.parseFromString((await response.text()), 'text/html');
     document.getElementById("cuerpo").innerHTML = `<div id="marco"><button class="clasificacion volver" onclick="volver()"> ◀ Volver </button>${htmlDoc.body.innerHTML}</div>`;
+}
+
+
+async function bajarOrdenanza(ordenanza) {
+    const origen = generarURL(ordenanza, 'html', true);
+    console.log(`Bajar Ordenanza > ${origen}`);
+    const parser = new DOMParser();
+    const response = await fetch(origen);
+    const htmlDoc = parser.parseFromString((await response.text()), 'text/html');
+    return htmlDoc.body.innerHTML;
 }
 
 function instalar() {
@@ -271,7 +246,7 @@ function alterarClasificacion() {
     modoClasificacion = !modoClasificacion;
     mostrarClasificacion();
     if (modoClasificacion) {
-        generarClasificaciones();
+        generarClasificaciones(clasificaciones);
     } else {
         buscar("");
     }
@@ -280,3 +255,57 @@ function alterarClasificacion() {
 function volver() {
     buscar("");
 }
+
+function generarURL(ordenanza, tipo, local = false) {
+    const base = local ? "." : 'https://digestoyb.netlify.app';
+
+    ordenanza = normalizarOrdenanza(ordenanza);
+    tipo = tipo.toLowerCase();
+
+    return `${base}/${tipo}/${ordenanza}.${tipo}`;
+}
+
+function enviarWhatsapp(ordenanza) {
+    let texto = `
+    *Digesto digital Yerba Buena*
+
+    Bajar la ordenanza ${ordenanza} de ${generarURL(ordenanza,'pdf')}`;
+    texto = allTrim(texto).replace(/ +/g, '%20');
+
+    return `https://api.whatsapp.com/send/?text=${texto}&type=custom_url&app_absent=0`;
+}
+
+function descargarJSONEnMemoria(jsonData, nombreArchivo) {
+    // Crear el contenido JSON como texto
+    const contenidoJSON = JSON.stringify(jsonData);
+
+    // Crear un Blob con el contenido del JSON
+    const blob = new Blob([contenidoJSON], { type: 'application/json' });
+
+    // Crear un enlace para el archivo Blob
+    const url = URL.createObjectURL(blob);
+    const enlace = document.createElement('a');
+    enlace.href = url;
+    enlace.download = nombreArchivo;
+
+    // Simular un clic en el enlace para descargar el archivo
+    document.body.appendChild(enlace);
+    enlace.click();
+
+    // Limpiar el objeto URL y remover el enlace
+    URL.revokeObjectURL(url);
+    document.body.removeChild(enlace);
+}
+
+function descargarPDF(ordenanza) {
+    const url = generarURL(ordenanza, 'pdf');
+    // Crear un enlace simulado para el PDF
+    const enlacePDF = document.createElement('a');
+    enlacePDF.href = url;
+    enlacePDF.target = '_blank'; // Para que se abra en una nueva pestaña (opcional)
+    enlacePDF.download = `${normalizarOrdenanza(ordenanza)}.pdf`; // Nombre del archivo al descargar (puedes cambiarlo)
+
+    // Simular un clic en el enlace para iniciar la descarga del PDF
+    enlacePDF.click();
+}
+

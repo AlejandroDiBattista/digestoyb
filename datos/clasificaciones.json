@@ -1,0 +1,482 @@
+[
+    {
+        "indice": "01",
+        "descripcion": "Personal",
+        "cantidad": 58,
+        "nivel": 1
+    },
+    {
+        "indice": "01.01",
+        "descripcion": "Reglamentos y Legislacion en General",
+        "cantidad": 12,
+        "nivel": 2
+    },
+    {
+        "indice": "01.02",
+        "descripcion": "Cargos y Estructuras",
+        "cantidad": 26,
+        "nivel": 2
+    },
+    {
+        "indice": "01.03",
+        "descripcion": "Remuneraciones",
+        "cantidad": 10,
+        "nivel": 2
+    },
+    {
+        "indice": "01.04",
+        "descripcion": "Licencias",
+        "cantidad": 2,
+        "nivel": 2
+    },
+    {
+        "indice": "01.05",
+        "descripcion": "Asignaciones Familiares",
+        "cantidad": 0,
+        "nivel": 2
+    },
+    {
+        "indice": "01.06",
+        "descripcion": "Bonificaciones",
+        "cantidad": 4,
+        "nivel": 2
+    },
+    {
+        "indice": "02",
+        "descripcion": "Faltas",
+        "cantidad": 20,
+        "nivel": 1
+    },
+    {
+        "indice": "02.01",
+        "descripcion": "Tribunal de faltas",
+        "cantidad": 4,
+        "nivel": 2
+    },
+    {
+        "indice": "02.02",
+        "descripcion": "Codigo de faltas",
+        "cantidad": 9,
+        "nivel": 2
+    },
+    {
+        "indice": "03",
+        "descripcion": "Cultura y Educacion",
+        "cantidad": 67,
+        "nivel": 1
+    },
+    {
+        "indice": "03.01",
+        "descripcion": "Cultura",
+        "cantidad": 23,
+        "nivel": 2
+    },
+    {
+        "indice": "03.02",
+        "descripcion": "Educacion",
+        "cantidad": 20,
+        "nivel": 2
+    },
+    {
+        "indice": "03.03",
+        "descripcion": "Homenajes y Monumentos",
+        "cantidad": 18,
+        "nivel": 2
+    },
+    {
+        "indice": "03.04",
+        "descripcion": "Interes Municipal",
+        "cantidad": 7,
+        "nivel": 2
+    },
+    {
+        "indice": "04",
+        "descripcion": "Obras Publicas",
+        "cantidad": 126,
+        "nivel": 1
+    },
+    {
+        "indice": "04.01",
+        "descripcion": "Calles",
+        "cantidad": 38,
+        "nivel": 2
+    },
+    {
+        "indice": "04.01.01",
+        "descripcion": "Nombres",
+        "cantidad": 27,
+        "nivel": 3
+    },
+    {
+        "indice": "04.02",
+        "descripcion": "Veredas",
+        "cantidad": 4,
+        "nivel": 2
+    },
+    {
+        "indice": "04.03",
+        "descripcion": "Plazas",
+        "cantidad": 13,
+        "nivel": 2
+    },
+    {
+        "indice": "04.03.01",
+        "descripcion": "Nombres",
+        "cantidad": 8,
+        "nivel": 3
+    },
+    {
+        "indice": "04.04",
+        "descripcion": "Catastro y Edificacion Privada",
+        "cantidad": 53,
+        "nivel": 2
+    },
+    {
+        "indice": "04.05",
+        "descripcion": "Barrios",
+        "cantidad": 1,
+        "nivel": 2
+    },
+    {
+        "indice": "04.06",
+        "descripcion": "Via de excepcion",
+        "cantidad": 10,
+        "nivel": 2
+    },
+    {
+        "indice": "05",
+        "descripcion": "Compras, Ventas, Alquileres y Prestamos de inmuebles",
+        "cantidad": 38,
+        "nivel": 1
+    },
+    {
+        "indice": "05.01",
+        "descripcion": "Reglamentacion",
+        "cantidad": 2,
+        "nivel": 2
+    },
+    {
+        "indice": "05.02",
+        "descripcion": "Patrimonial",
+        "cantidad": 24,
+        "nivel": 2
+    },
+    {
+        "indice": "05.02.01",
+        "descripcion": "Licitacion",
+        "cantidad": 3,
+        "nivel": 3
+    },
+    {
+        "indice": "05.02.02",
+        "descripcion": "Compra directa",
+        "cantidad": 12,
+        "nivel": 3
+    },
+    {
+        "indice": "05.02.03 ",
+        "descripcion": "Expropiacion",
+        "cantidad": 0,
+        "nivel": 3
+    },
+    {
+        "indice": "06",
+        "descripcion": "Servicios Publicos",
+        "cantidad": 51,
+        "nivel": 1
+    },
+    {
+        "indice": "06.01",
+        "descripcion": "Reglamentacion",
+        "cantidad": 7,
+        "nivel": 2
+    },
+    {
+        "indice": "06.02",
+        "descripcion": "Alumbrado Publico",
+        "cantidad": 5,
+        "nivel": 2
+    },
+    {
+        "indice": "06.03",
+        "descripcion": "Seguridad",
+        "cantidad": 12,
+        "nivel": 2
+    },
+    {
+        "indice": "06.04",
+        "descripcion": "Recoleccion de Residuos",
+        "cantidad": 11,
+        "nivel": 2
+    },
+    {
+        "indice": "06.05",
+        "descripcion": "Agua y Cloacas",
+        "cantidad": 10,
+        "nivel": 2
+    },
+    {
+        "indice": "06.06",
+        "descripcion": "Gas",
+        "cantidad": 5,
+        "nivel": 2
+    },
+    {
+        "indice": "07",
+        "descripcion": "Transito",
+        "cantidad": 79,
+        "nivel": 1
+    },
+    {
+        "indice": "07.01",
+        "descripcion": "Reglamentacion",
+        "cantidad": 26,
+        "nivel": 2
+    },
+    {
+        "indice": "07.02",
+        "descripcion": "Servicio de Transporte",
+        "cantidad": 49,
+        "nivel": 2
+    },
+    {
+        "indice": "07.02.01",
+        "descripcion": "Taxi / Remis",
+        "cantidad": 15,
+        "nivel": 3
+    },
+    {
+        "indice": "07.02.02",
+        "descripcion": "Impropio",
+        "cantidad": 5,
+        "nivel": 3
+    },
+    {
+        "indice": "07.02.03",
+        "descripcion": "Pasajeros",
+        "cantidad": 22,
+        "nivel": 3
+    },
+    {
+        "indice": "08",
+        "descripcion": "Adhesiones",
+        "cantidad": 88,
+        "nivel": 1
+    },
+    {
+        "indice": "08.01",
+        "descripcion": "Leyes",
+        "cantidad": 58,
+        "nivel": 2
+    },
+    {
+        "indice": "08.02",
+        "descripcion": "Decretos",
+        "cantidad": 27,
+        "nivel": 2
+    },
+    {
+        "indice": "09",
+        "descripcion": "Convenios",
+        "cantidad": 81,
+        "nivel": 1
+    },
+    {
+        "indice": "10",
+        "descripcion": "Cementerio",
+        "cantidad": 16,
+        "nivel": 1
+    },
+    {
+        "indice": "10.01",
+        "descripcion": "Municipal",
+        "cantidad": 4,
+        "nivel": 2
+    },
+    {
+        "indice": "10.02",
+        "descripcion": "San Agustin",
+        "cantidad": 8,
+        "nivel": 2
+    },
+    {
+        "indice": "11",
+        "descripcion": "Salud",
+        "cantidad": 48,
+        "nivel": 1
+    },
+    {
+        "indice": "11.01",
+        "descripcion": "Politica Sanitaria",
+        "cantidad": 27,
+        "nivel": 2
+    },
+    {
+        "indice": "11.02",
+        "descripcion": "Deporte",
+        "cantidad": 10,
+        "nivel": 2
+    },
+    {
+        "indice": "11.03",
+        "descripcion": "Turismo",
+        "cantidad": 1,
+        "nivel": 2
+    },
+    {
+        "indice": "11.04",
+        "descripcion": "Discapacidad",
+        "cantidad": 7,
+        "nivel": 2
+    },
+    {
+        "indice": "12",
+        "descripcion": "Medio Ambiente",
+        "cantidad": 19,
+        "nivel": 1
+    },
+    {
+        "indice": "12.01",
+        "descripcion": "Ruidos Molestos",
+        "cantidad": 1,
+        "nivel": 2
+    },
+    {
+        "indice": "12.02",
+        "descripcion": "Forestacion",
+        "cantidad": 7,
+        "nivel": 2
+    },
+    {
+        "indice": "13",
+        "descripcion": "Hacienda",
+        "cantidad": 44,
+        "nivel": 1
+    },
+    {
+        "indice": "13.01",
+        "descripcion": "Prestamos",
+        "cantidad": 34,
+        "nivel": 2
+    },
+    {
+        "indice": "13.02",
+        "descripcion": "Presupuesto",
+        "cantidad": 6,
+        "nivel": 2
+    },
+    {
+        "indice": "14",
+        "descripcion": "Actividades Comerciales",
+        "cantidad": 30,
+        "nivel": 1
+    },
+    {
+        "indice": "14.01",
+        "descripcion": "Habilitacion",
+        "cantidad": 7,
+        "nivel": 2
+    },
+    {
+        "indice": "15",
+        "descripcion": "Fiscal",
+        "cantidad": 33,
+        "nivel": 1
+    },
+    {
+        "indice": "15.01",
+        "descripcion": "OFA",
+        "cantidad": 1,
+        "nivel": 2
+    },
+    {
+        "indice": "15.02",
+        "descripcion": "Exenciones / Bonificaciones",
+        "cantidad": 9,
+        "nivel": 2
+    },
+    {
+        "indice": "15.03",
+        "descripcion": "Moratorias",
+        "cantidad": 0,
+        "nivel": 2
+    },
+    {
+        "indice": "15.04",
+        "descripcion": "Tributarias",
+        "cantidad": 21,
+        "nivel": 2
+    },
+    {
+        "indice": "15.05",
+        "descripcion": "Cobro de Tributos",
+        "cantidad": 1,
+        "nivel": 2
+    },
+    {
+        "indice": "16",
+        "descripcion": "Politicas Sociales",
+        "cantidad": 15,
+        "nivel": 1
+    },
+    {
+        "indice": "16.01",
+        "descripcion": "Bolsa de trabajo",
+        "cantidad": 3,
+        "nivel": 2
+    },
+    {
+        "indice": "17",
+        "descripcion": "Donaciones",
+        "cantidad": 105,
+        "nivel": 1
+    },
+    {
+        "indice": "17.01",
+        "descripcion": "Muebles",
+        "cantidad": 16,
+        "nivel": 2
+    },
+    {
+        "indice": "17.02",
+        "descripcion": "Inmuebles",
+        "cantidad": 85,
+        "nivel": 2
+    },
+    {
+        "indice": "17.02.01",
+        "descripcion": "Calles",
+        "cantidad": 41,
+        "nivel": 3
+    },
+    {
+        "indice": "18",
+        "descripcion": "Comisiones",
+        "cantidad": 8,
+        "nivel": 1
+    },
+    {
+        "indice": "19",
+        "descripcion": "Planeamiento Urbano",
+        "cantidad": 18,
+        "nivel": 1
+    },
+    {
+        "indice": "20",
+        "descripcion": "Legislacion",
+        "cantidad": 27,
+        "nivel": 1
+    },
+    {
+        "indice": "98",
+        "descripcion": "Veto Parcial",
+        "cantidad": 5,
+        "nivel": 1
+    },
+    {
+        "indice": "99",
+        "descripcion": "Veto Total",
+        "cantidad": 0,
+        "nivel": 1
+    }
+]
