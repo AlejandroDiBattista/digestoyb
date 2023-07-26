@@ -2,9 +2,12 @@ const version = 'v0.22';
 let modoClasificacion = false;
 let demorar = null;
 let criterio = "";
+
 let ordenanzas = [];
 let clasificaciones = [];
-let plantillaOrdenanza = "";
+
+let plantillaOrdenanza = null;
+let plantillaClasificacion = null;
 
 function sinAcento(texto) {
     const mapaAcentos = {
@@ -82,12 +85,12 @@ function filtrarVigentes(ordenanzas) {
     return ordenanzas.filter(o => o.estado == "Vigente" && o.alcance == "General")
 }
 
-function contiene(palabra, o) {
+function contienePalabra(palabra, o) {
     if (palabra.startsWith("#") && (o.ordenanza == normalizarOrdenanza(palabra))) { // #xxx > Ordenanza
         return true;
     }
     
-    if( esClasificacion(palabra) && extraerIndices(o.clasificacion).includes(normalizarClasificacion(palabra))) {              // NN.NN => Clasificacion
+    if( esClasificacion(palabra) && expandirIndices(o.clasificacion.map(c => c.indice)).includes(normalizarClasificacion(palabra))) {              // NN.NN => Clasificacion
         return true;
     }
     
@@ -100,18 +103,18 @@ function contiene(palabra, o) {
 
 function filtrarCondicion(ordenanzas, condicion) {
     let palabras = simplificar(condicion).split(" ");
-    let salida = ordenanzas.filter(o => palabras.every(palabra => contiene(palabra, o)));
+    let salida = ordenanzas.filter(o => palabras.every(palabra => contienePalabra(palabra, o)));
 
     return salida;
 }
 
-function sinRepeatir(lista) {
+function sinRepetir(lista) {
     return [...new Set(lista)];
 }
 
 function palabrasUnicas(cadena) {
     const palabras = simplificar(cadena).split(' ');
-    return sinRepeatir(palabras).join(' ');
+    return sinRepetir(palabras).join(' ');
 }
 
 async function medir(operacion, titulo = "Ejecutando") {
@@ -130,15 +133,13 @@ function cargarPlantilla(idPlantilla) {
     return Handlebars.compile(document.getElementById(idPlantilla).innerHTML);
 }
 
-function rellenarPlantilla(plantilla, dato) {
-    for (let campo in dato) {
-        plantilla = plantilla.replace(`{{${campo}}}`, dato[campo]);
-    }
-    return plantilla;
+function generarOrdenanzas(ordenanzas, maximo = 100) {
+    ordenanzas = ordenanzas.slice(0, maximo);
+    document.getElementById('cuerpo').innerHTML = plantillaOrdenanza({ "ordenanza": ordenanzas });
 }
 
-function generarOdenanza(o) {
-    return plantillaOrdenanza(o);
+function generarClasificaciones() {
+    document.getElementById('cuerpo').innerHTML = plantillaClasificacion({ "clasificacion": clasificaciones });
 }
 
 function mostrarEstado(ordenanzas) {
@@ -151,28 +152,6 @@ function mostrarEstado(ordenanzas) {
     document.getElementById("info").innerHTML = resultado;    
 }
 
-function generarOrdenanzas(ordenanzas, maximo = 100) {
-    ordenanzas = ordenanzas.slice(0, maximo);
-    document.getElementById('cuerpo').innerHTML = plantillaOrdenanza({"ordenanza": ordenanzas});
-}
-
-function generarClasificacion(clasificacion) {
-    let { indice, descripcion, cantidad } = clasificacion;
-    let nivel = indice.split(".").length;
-    let subIndice = indice.split(".")[nivel - 1];
-    return `
-        <button class="nivel_${nivel}" onclick="buscar('${indice}>')">
-            <span><b>${indice}</b> ${descripcion}</span> <i>${cantidad || ""}</i>
-        </button>
-    `;
-}
-
-function generarClasificaciones() {
-    let html = "";
-    clasificaciones.forEach(c => html += generarClasificacion(c));
-    document.getElementById('cuerpo').innerHTML = `<div id="clasificacion">${html}</div>`;
-}
-
 function buscar(condicion) {
     clearTimeout(demorar);
     modoClasificacion = false;
@@ -181,7 +160,7 @@ function buscar(condicion) {
     const listado = filtrarCondicion(ordenanzas, condicion);
     mostrarEstado(listado);
     
-    generarOdenanza(listado, 10);
+    generarOrdenanzas(listado, 10);
     demorar = setTimeout(() => generarOrdenanzas(listado, 1000), 200);
     escribirParametro(condicion);
 }
@@ -197,71 +176,73 @@ function escribirParametro(valor){
     window.history.replaceState({}, '', nuevaUrl);
 }
 
-function extraerIndices(indices) {     
+function expandirIndices(indices) {     
     let salida = [];
-    indices.forEach(entrada => {
-        let { indice, descripcion } = entrada;
+    
+    indices.forEach(indice => {
         let actual = '';
-
         indice.split('.').forEach(i => {
             actual += i;
             salida.push(actual);
             actual += '.';
-        });
-    })
-    return sinRepeatir(salida);
+        })
+    });
+
+    return sinRepetir(salida);
 }
 
-function contarClasificaciones() {
+function expandirClasificacion(texto) {
+    const indices = texto.split("|").map(c => c.split("=>"));
+    return indices.map(indice => ({ "indice": normalizarClasificacion(indice[0]), "descripcion": allTrim(indice[1]) }));
+}
+
+function completarOrdenanzas(textos) {
+    const palabras = {}
+    textos.forEach(t => palabras[t.ordenanza] = t.palabras);
+
+    ordenanzas.forEach(o => {
+        o.sancion = traducirMeses(o.sancion);
+        o.palabrasAsunto = ` ${palabrasUnicas(o.asunto)} `;
+        o.palabrasTexto  = palabrasUnicas(` ${palabras[o.ordenanza]} ${o.asunto} ${o.ordenanza} ${o.estado} ${o.alcance} `);
+        o.clasificacion  = expandirClasificacion(o.clasificacion || "");
+    });
+
+    console.log(ordenanzas[0]);
+}
+
+function completarClasificaciones() {
     let total = {};
     ordenanzas.forEach(o => {
-        extraerIndices(o.clasificacion).forEach(indice => total[indice] = (total[indice] || 0) + 1)
+        let indices = o.clasificacion.map(c => c.indice);
+        expandirIndices(indices).forEach(indice => total[indice] = (total[indice] || 0) + 1);
     });
-
+    
     clasificaciones.forEach(clasificacion => {
         clasificacion.cantidad = total[clasificacion.indice] || 0;
+        clasificacion.nivel = clasificacion.indice.split(".").length;
     });
-}
-
-function extraerClasificacion(texto) {
-    const indices = texto.split("|").map(c => c.split("=>"));
-    return indices.map(x => ({ "indice": normalizarClasificacion(x[0]), "descripcion": allTrim(x[1]) }));
 }
 
 async function cargar() {
     await medir(async () => {
-        const inicio = new Date();
-
         ordenanzas = await bajarJson('ordenanzas');
         ordenanzas = filtrarVigentes(ordenanzas);
 
         const textos = await bajarJson('textos');
-        const palabras = {}
-        textos.forEach(t => palabras[t.ordenanza] = t.palabras);
-        ordenanzas.forEach(o => {
-            // o.sancion = completarAño(o.sancion);
-            o.sancion = traducirMeses(o.sancion);
-            o.palabrasAsunto = ` ${palabrasUnicas(o.asunto)} `;
-            o.palabrasTexto = palabrasUnicas(` ${palabras[o.ordenanza]} ${o.asunto} ${o.ordenanza} ${o.estado} ${o.alcance} `);
-            o.clasificacion = extraerClasificacion(o.clasificacion || "");
-        });
+        completarOrdenanzas(textos);
 
         clasificaciones = await bajarJson('clasificacion');
-        contarClasificaciones();
-
-        const final = new Date();
-        console.log(`>> Hay ${ordenanzas.length} ordenanzas en ${final - inicio}ms`);
+        completarClasificaciones();
 
         plantillaOrdenanza = cargarPlantilla("plantilla-ordenanza");
-        console.log(plantillaOrdenanza);
+        plantillaClasificacion = cargarPlantilla("plantilla-clasificacion");
+
         instalar();
-        buscar("");
+        buscar('');
     });
 }
 
 async function cargarPagina(numero) {
-    console.log(`>> Cargando Pagina ${numero}`);
-
     const origen = "./html/" + numero.padStart(4, "0") + ".html";
     const parser = new DOMParser();
     const response = await fetch(origen);

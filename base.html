@@ -52,6 +52,21 @@
                 {{/each}}
             </div>
         </script>
+        <script id="plantilla-clasificacion" type="text/template">
+            <div id="clasificacion" class="m2 container">
+                <ul>
+                    {{#each clasificacion}}    
+                    <li>
+                        <button class="nivel_{{nivel}}" onclick="buscar('{{indice}}>')">
+                            <div class="row">
+                                <b class="col-2">{{indice}}</b><span class="col-9">{{descripcion}}</span><i class="col-1">{{cantidad}}</i>
+                            </div>
+                        </button>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </script>
         <script src="base.js"></script>
     </head>
 
