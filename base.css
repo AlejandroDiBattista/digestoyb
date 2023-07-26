@@ -33,12 +33,14 @@ button:hover{
     max-width: 800px;
 }
 
-.navbar{
-    background-color: rebeccapurple;
+.navbar {
+    background: hsla(218, 100%, 55%, 1);
+    background: linear-gradient(135deg, hsla(218, 100%, 55%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -moz-linear-gradient(135deg, hsla(218, 100%, 55%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(218, 100%, 55%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#1A6EFF", endColorstr="#60EFFF", GradientType=1);
 }
 
 #campoBusqueda {
     border-radius: 30px !important;
-    /* background-color: red; */
 }
-
