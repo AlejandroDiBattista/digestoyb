@@ -13,33 +13,36 @@
         <script id="plantilla-ordenanza" type="text/template">
             <div id="lista" class="m2">
                 {{#each ordenanza}}
-                    <div class="card text-center mb-2">
+                    <div class="card text-center m-2">
                         <div class="card-body">
-                            <div class="my-2 text-start fw-semibold">{{asunto}}</div>
                             <div class="row">
                                 <div class="col text-start">
-                                    <label class="form-label small text-body-primary mb-0">Ordenanza</label>
-                                    <div class="mt-0 text-primary">{{ordenanza}}</div>
+                                    <label class="form-label small text-body-secondary mb-0">Ordenanza</label>
+                                    <div class="mt-0 text-primary fw-bold">{{ordenanza}}</div>
                                 </div>
                                 <div class="col text-start">
-                                    <label class="form-label small text-body-primary mb-0">Sanción</label>
-                                    <div class="mt-0 text-primary">{{sancion}}</div>
+                                    <label class="form-label small text-body-secondary mb-0">Sanción</label>
+                                    <div class="mt-0 text-primary small">{{sancion}}</div>
                                 </div>
                                 <div class="col text-start">
-                                    <label class="form-label small text-body-primary mb-0">Estado</label>
+                                    <label class="form-label small text-body-secondary mb-0">Estado</label>
                                     <div class="mt-0 text-primary">{{estado}}</div>
                                 </div>
                                 <div class="col text-start">
-                                    <label class="form-label small text-body-primary mb-0">Alcance</label>
+                                    <label class="form-label small text-body-secondary mb-0">Alcance</label>
                                     <div class="mt-0 text-primary">{{alcance}}</div>
                                 </div>
                             </div>
+                            <div class="my-2 text-start fw-semibold">{{asunto}}</div>
                             <div class="row">
                                 <div class="col text-start">
-                                    <label class="form-label small text-body-primary mb-0">Clasificación</label>
+                                    <label class="form-label small text-body-secondary mb-0">Clasificación</label>
                                     <div class="text-start">
                                         {{#each clasificacion}}
-                                        <div class="text-primary"><strong class="ml-2">{{indice}}</strong> {{descripcion}}</div></div>
+                                            <div class="text-truncate">
+                                                <strong class="small text-primary">{{indice}}</strong>
+                                                <span class="text-secondary">{{descripcion}}</span>
+                                            </div>
                                         {{/each}}
                                     </div>
                                 </div>
@@ -53,37 +56,33 @@
     </head>
 
     <body>
-<div class="sticky-top">
-    
-    <nav class="navbar bg-body-tertiary">
-        
-        <div class="container-fluid">
-            <a class="navbar-brand">Digesto YB</a>
-            <form class="d-flex" role="search">
-                <input
-                id="campoBusqueda" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"><!-- <button class="btn btn-outline-success" type="submit">Buscar</button> -->
-                </form>
-                <div class="fila">
-                    <button type="button" class="btn btn-outline-primary btn-sm clasificacion" onclick="alterarClasificacion()">Mostrar Clasificación</button>
-                    <div id="info"></div>
+        <div class="sticky-top">
+            <nav class="navbar bg-info-subtle  shadow-sm">
+                <div class="container-fluid">
+                    <a class="navbar-brand">Digesto YB</a>
+                    <form class="d-flex" role="search">
+                        <div class="input-group mb-3">
+                            <input id="campoBusqueda"  class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+                            <span class="input-group-text" id="basic-addon2">
+                                <svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20">
+                                    <path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </form>
+                    <div class="fila">
+                        <button type="button" class="btn btn-outline-primary btn-sm clasificacion" onclick="alterarClasificacion()">Mostrar Clasificación</button>
+                        <div id="info"></div>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
 
-    </div>
-        <div id="head" class="m-2">
-            <div class="centrar-titulo">
-                <div class="centrar-titulo"></div>
+        <div class="container">
+            <div id="cuerpo" class="col-md-8">
+                <div id="lista"></div>
             </div>
-        </div>
-        <br>
-        <br>
-        <hr>
-        
-        <div id="cuerpo">
-            <div id="lista">
-            </div>
-        </div>
+        </div>        
         <script>cargar();</script>
     </body>
 </html>
