@@ -1,4 +1,4 @@
-li button {
+#lista button {
     border: none;
     width: 100%;
     text-align: left;
@@ -23,16 +23,22 @@ button.nivel_3 {
     margin-left: 30px;
     font-size: 16px;
 }
+
 button:hover{
     color:blue;
-    font-weight: bold;
 }
-/* 
-body {
-    background-image: linear-gradient(180deg, rgba(255,255,255, 0.01), 
-    rgba(255,255,255, 1) 85%), radial-gradient(ellipse at top left, 
-    rgba(13,110,253, 0.5), transparent 50%), radial-gradient(ellipse at top right, 
-    rgba(255,228,132, 0.5), transparent 50%), radial-gradient(ellipse at center right,
-    rgba(112,44,249, 0.5), transparent 50%), radial-gradient(ellipse at center left,
-    rgba(214,51,132, 0.5), transparent 50%);
-} */
+
+#cuerpo {
+    min-width: 350px;
+    max-width: 800px;
+}
+
+.navbar{
+    background-color: rebeccapurple;
+}
+
+#campoBusqueda {
+    border-radius: 30px !important;
+    /* background-color: red; */
+}
+

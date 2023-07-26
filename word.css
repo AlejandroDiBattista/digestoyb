@@ -70,6 +70,7 @@ p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxS
 
 p.DGFecha, li.DGFecha, div.DGFecha	{
 	margin:0cm;
+	margin-bottom: 1cm;
 	text-align:right;
 	border:none;
 	padding:0cm;

@@ -140,7 +140,13 @@ function cargarPlantilla(idPlantilla) {
 
 function generar(idPlatilla, datos) {
     const plantilla = cargarPlantilla(idPlatilla);
-    document.getElementById('cuerpo').innerHTML = plantilla(datos);
+    const html = plantilla(datos);
+    if (!document.startViewTransition) {
+        document.getElementById('cuerpo').innerHTML = html;
+    } else {
+        document.startViewTransition(() => document.getElementById('cuerpo').innerHTML = html);
+    }
+    scrollInicio();
 }
 
 function generarOrdenanzas(ordenanzas, maximo = 100) {
@@ -225,26 +231,30 @@ async function bajarOrdenanza(ordenanza) {
     return htmlDoc.body.innerHTML;
 }
 
+function ocultarTeclado() {
+    const campo = document.getElementById('campoBusqueda');
+    campo.blur();
+}
+
 function instalar() {
     console.log(`>> Estoy instalando. \n - Vengo de [${document.referrer}]\n - Estoy en [${window.location.search}]`);
  
-    const campoBusqueda = document.getElementById('campoBusqueda');
-    campoBusqueda.value = leerParametro(true);
-    buscar(campoBusqueda.value);
+    // busqueda.value = leerParametro(true);
+    // buscar(busqueda.value);
     
-    campoBusqueda.addEventListener('input', function () {
-        const condicion = campoBusqueda.value;
-        buscar(condicion);
-    });
+    buscar('');
+    const busqueda = document.getElementById('campoBusqueda');
+    busqueda.addEventListener('input', () =>  buscar(busqueda.value));
+    window.addEventListener('scroll', ocultarTeclado);
 }
 
 function mostrarClasificacion() {
-    document.querySelector("button.clasificacion").innerHTML = modoClasificacion ? "Ocultar Clasificación" : "Mostrar Clasificación";
+    // document.querySelector("button.clasificacion").innerHTML = modoClasificacion ? "Ocultar Clasificación" : "Mostrar Clasificación";
 }
 
 function alterarClasificacion() {
     modoClasificacion = !modoClasificacion;
-    mostrarClasificacion();
+    // mostrarClasificacion();
     if (modoClasificacion) {
         generarClasificaciones(clasificaciones);
     } else {
@@ -265,47 +275,48 @@ function generarURL(ordenanza, tipo, local = false) {
     return `${base}/${tipo}/${ordenanza}.${tipo}`;
 }
 
-function enviarWhatsapp(ordenanza) {
-    let texto = `
-    *Digesto digital Yerba Buena*
-
-    Bajar la ordenanza ${ordenanza} de ${generarURL(ordenanza,'pdf')}`;
-    texto = allTrim(texto).replace(/ +/g, '%20');
-
-    return `https://api.whatsapp.com/send/?text=${texto}&type=custom_url&app_absent=0`;
-}
-
-function descargarJSONEnMemoria(jsonData, nombreArchivo) {
-    // Crear el contenido JSON como texto
-    const contenidoJSON = JSON.stringify(jsonData);
-
-    // Crear un Blob con el contenido del JSON
-    const blob = new Blob([contenidoJSON], { type: 'application/json' });
-
-    // Crear un enlace para el archivo Blob
-    const url = URL.createObjectURL(blob);
+function invocarURL(url, destino=null, abrir=false) {
     const enlace = document.createElement('a');
+    
     enlace.href = url;
-    enlace.download = nombreArchivo;
+    if (destino) {
+        enlace.download = destino;
+    }
+    if (abrir) {
+        enlace.target = "_blank"
+    }
 
-    // Simular un clic en el enlace para descargar el archivo
     document.body.appendChild(enlace);
     enlace.click();
+    document.body.removeChild(enlace);    
+}
 
-    // Limpiar el objeto URL y remover el enlace
+function descargarJSON(json, destino) {
+    const contenidoJSON = JSON.stringify(json);
+
+    const blob = new Blob([contenidoJSON], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+
+    invocarURL(url, destino, false);
+
     URL.revokeObjectURL(url);
-    document.body.removeChild(enlace);
 }
 
 function descargarPDF(ordenanza) {
     const url = generarURL(ordenanza, 'pdf');
-    // Crear un enlace simulado para el PDF
-    const enlacePDF = document.createElement('a');
-    enlacePDF.href = url;
-    enlacePDF.target = '_blank'; // Para que se abra en una nueva pestaña (opcional)
-    enlacePDF.download = `${normalizarOrdenanza(ordenanza)}.pdf`; // Nombre del archivo al descargar (puedes cambiarlo)
-
-    // Simular un clic en el enlace para iniciar la descarga del PDF
-    enlacePDF.click();
+    invocarURL(url, `${normalizarOrdenanza(ordenanza)}.pdf`, true);
 }
 
+function enviarWhatsapp(ordenanza) {
+    let texto = `*Digesto digital Yerba Buena*
+    
+    Bajar la ordenanza ${ordenanza} de ${generarURL(ordenanza, 'pdf')}`;
+    texto = encodeURIComponent(texto);
+
+    url = `https://api.whatsapp.com/send/?text=${texto}&type=custom_url&app_absent=0`;
+    invocarURL(url,'',true);
+}
+
+function scrollInicio() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
