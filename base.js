@@ -156,6 +156,7 @@ function generarOrdenanzas(ordenanzas, maximo = 100) {
 
 function generarClasificaciones(clasificaciones) {
     generar("plantilla-clasificacion", { "clasificacion": clasificaciones });
+    mostrarEstado();
 }
 
 async function generarPagina(ordenanza) {
@@ -165,7 +166,7 @@ async function generarPagina(ordenanza) {
 
 function mostrarEstado(ordenanzas) {
     const resultado = modoClasificacion ?
-        "Elegir clasificación" :
+        "" :
             ordenanzas.length == 0 ?
                 `No hay ordenanzas - ${version}` :
                 `Hay ${ordenanzas.length} ${ordenanzas.length == 1 ? 'ordenanza' : 'ordenanzas'}`;

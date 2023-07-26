@@ -10,18 +10,18 @@ li {
 }
 
 button.nivel_1 {
-    margin-left: 10px;
-    font-size: 20px;
+    margin-left: 0px;
+    font-size: 16px;
 }
 
 button.nivel_2 {
-    margin-left: 20px;
-    font-size: 16px;
+    margin-left: 10px;
+    font-size: 14px;
 }
 
 button.nivel_3 {
-    margin-left: 30px;
-    font-size: 16px;
+    margin-left: 20px;
+    font-size: 12px;
 }
 
 button:hover{
@@ -35,12 +35,26 @@ button:hover{
 
 .navbar {
     background: hsla(218, 100%, 55%, 1);
-    background: linear-gradient(135deg, hsla(218, 100%, 55%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
-    background: -moz-linear-gradient(135deg, hsla(218, 100%, 55%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
-    background: -webkit-linear-gradient(135deg, hsla(218, 100%, 55%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: linear-gradient(135deg, hsla(186, 100%, 69%, 1) 100%, hsla(218, 100%, 55%, 1) 0%);
+    background: -moz-linear-gradient(135deg, hsla(186, 100%, 69%, 1) 100%, hsla(218, 100%, 55%, 1) 0%);
+    background: -webkit-linear-gradient(135deg, hsla(186, 100%, 69%, 1) 100%, hsla(218, 100%, 55%, 1) 0%);
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#1A6EFF", endColorstr="#60EFFF", GradientType=1);
 }
 
+.navbar img {
+    max-width: 50px;
+}
 #campoBusqueda {
     border-radius: 30px !important;
+}
+
+#campoBusqueda {
+    max-width: none;
+}
+
+@media(max-width: 390px) {
+    #campoBusqueda {
+        max-width: 170px;
+        /* background-color: red; */
+    }
 }

@@ -67,10 +67,10 @@
         <script id="plantilla-clasificacion" type="text/template">
             <div id="lista">
                 {{#each clasificacion}}    
-                    <button class="nivel_{{nivel}}" onclick="buscar('{{indice}}>')">
-                        <div class="row my-1">
-                            <b class="col-2">{{indice}}</b><span class="col-9">{{descripcion}}</span><i class="col-1">{{cantidad}}</i>
-                        </div>
+                    <button class="nivel_{{nivel}} row my-1" onclick="buscar('{{indice}}>')">
+                        <!-- <div class="row my-1"> -->
+                            <b class="col-2" >{{indice}}</b><span class="col-8 text-truncate m-0">{{descripcion}}</span><i class="col-1">{{cantidad}}</i>
+                        <!-- </div> -->
                     </button>
                 {{/each}}
             </div>
@@ -83,7 +83,6 @@
                         <i class="bi bi-chevron-left"></i> Volver
                     </button>
                     <div>
-
                         <button type="button" class="btn btn-outline-primary  btn-sm"  onclick="descargarPDF('{{ordenanza}}')">
                             <i class="bi bi-download"></i> Descargar
                         </button>
@@ -107,6 +106,7 @@
         <div class="sticky-top">
             <nav class="navbar shadow-sm">
                 <div class="container-fluid">
+                    <!-- <img src="logo.png" /> -->
                     <a class="navbar-brand">Digesto YB</a>
                     <!-- <form class="d-flex" role="search">
                         <div class="input-group mb-3">
@@ -116,9 +116,9 @@
 
                     </form> -->
                     <form class="d-flex" role="search"> 
-                        <input id="campoBusqueda" class="form-control me-1" type="search" placeholder="Buscar">
+                        <input id="campoBusqueda" class="form-control" type="search" placeholder="Buscar">
                         <!-- <button class="btn btn-primary me-1" type="submit"><i class="bi bi-search"></i> </button> -->
-                        <button type="button" class="btn btn-primary clasificacion" onclick="alterarClasificacion()"><i class="bi bi-filter-square"></i></button>
+                        <button type="button" class="btn btn-outline-primary clasificacion ms-2" onclick="alterarClasificacion()"><i class="bi bi-filter-square"></i></button>
                     </form>
                 </div>
             </nav>
