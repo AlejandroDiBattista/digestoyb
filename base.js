@@ -1,14 +1,18 @@
-const version = 'v0.22';
+const version = 'v0.3';
 let modoClasificacion = false;
+
+let busqueda = null;
 let demorar = null;
 let criterio = "";
+const plantillas = {};
 
 let ordenanzas = [];
 let clasificaciones = [];
 
-let plantillaOrdenanza = null;
-let plantillaClasificacion = null;
-let plantillaPagina = null;
+let mediciones = [];
+
+let actual = "";
+let anterior = "";
 
 function sinAcento(texto) {
     const mapaAcentos = {
@@ -41,9 +45,22 @@ function comienzaConMayuscula(cadena) {
     return patron.test(cadena);
 }
 
+function esNumero(cadena) {
+    const patron = /^[0-9]$/;
+    return patron.test(cadena);
+}
+
+function esOrdenanza(palabra) {
+    palabra = allTrim(palabra);
+
+    const valido = /^#\d+$/;
+
+    return valido.test(palabra);
+}
+
 function esClasificacion(palabra) {
     palabra = allTrim(palabra);
-    palabra = palabra.replace(/>(?=\d)/g, '.').replace(/[^0-9.>]/g, ""); 
+    palabra = palabra.replace(/(?=\d)>/g, '.').replace(/[^0-9.>]/g, ""); 
     
     const valido = /^\d+(\.\d*)*$/;
     const comienza = /(^>\d|\d>$)/;
@@ -51,11 +68,23 @@ function esClasificacion(palabra) {
     return valido.test(palabra) || comienza.test(palabra);
 }
 
+function esSoloOrdenanzaValida(texto) {
+    if (!esOrdenanza(texto)) return false;
+
+    const ordenanza = normalizarOrdenanza(texto);
+
+    return ordenanzas.some(o => o.ordenanza == ordenanza);
+}
+
+function esSoloClasificacion(texto) {
+    return /^\s*[>.]+\s*$/.test(texto);
+}
+
 function normalizarClasificacion(palabra) {
     if(!esClasificacion(palabra)) return palabra;
     
     palabra = allTrim(palabra);
-    palabra = palabra.replace(/>(?=\d)/g, '.').replace(/[^0-9.]/g, "");
+    palabra = palabra.replace(/>/g, '.').replace(/[^0-9.]/g, "");
 
     const digitos   = palabra.split('.').filter(x => x.length > 0);
     const resultado = digitos.map(digito => digito.padStart(2, '0')).join('.');
@@ -74,7 +103,7 @@ function completarAño(texto) {
 function normalizarPalabra(palabra) {
     if(palabra.startsWith(":")) palabra = palabra.substring(1);
 
-    if(comienzaConMayuscula(palabra)) palabra += ' ';
+    if(comienzaConMayuscula(palabra) || esNumero(palabra)) palabra += ' ';
 
     return ` ${simplificar(palabra)}`;
 }
@@ -93,18 +122,18 @@ function contieneIndice(o, indice) {
 }
 
 function contienePalabra(palabra, o) {
-    if (palabra.startsWith("#") && (o.ordenanza == normalizarOrdenanza(palabra))) { // #xxx > Ordenanza
+    if (esOrdenanza(palabra) && (o.ordenanza == normalizarOrdenanza(palabra))) {    // #xxx > Ordenanza
         return true;
     }
     
-    if (esClasificacion(palabra) && contieneIndice(o, palabra)) {              // NN.NN => Clasificacion
+    if (esClasificacion(palabra) && contieneIndice(o, palabra)) {                   // NN.NN => Clasificacion
         return true;
     }
     
     if(palabra.startsWith(":")){                                                    // :xxx > Asunto
         return o.palabrasAsunto.includes(normalizarPalabra(palabra));
     }
-        
+
     return o.palabrasTexto.includes(normalizarPalabra(palabra));
 }
 
@@ -124,14 +153,21 @@ function palabrasUnicas(cadena) {
     return sinRepetir(palabras).join(' ');
 }
 
-async function medir(operacion, titulo = "Ejecutando") {
-    console.log(`> ${titulo}`);
-    const inicio = new Date();
-    await operacion();
-    console.log(`| ${new Date() - inicio}ms`);
+
+function medir(titulo = "Ejecutando") {
+    mostrar(`> ${titulo}`);
+    mediciones.push(new Date());
 }
 
-const plantillas = {};
+function mostrar(...parametros) {
+    const nivel = '   '.repeat(mediciones.length);
+    console.log(nivel, ...parametros);
+}
+
+function fin() {
+    const inicio = mediciones.pop();
+    mostrar(`| ${new Date() - inicio}ms`);
+}
 
 function cargarPlantilla(idPlantilla) {
     plantillas[idPlantilla] ||= Handlebars.compile(document.getElementById(idPlantilla).innerHTML); 
@@ -150,13 +186,15 @@ function generar(idPlatilla, datos) {
 }
 
 function generarOrdenanzas(ordenanzas, maximo = 100) {
+    medir(`Generar ordenanzas x ${maximo}`);
     ordenanzas = ordenanzas.slice(0, maximo);
     generar('plantilla-ordenanza', { "ordenanza": ordenanzas });
+    fin();
 }
 
 function generarClasificaciones(clasificaciones) {
     generar("plantilla-clasificacion", { "clasificacion": clasificaciones });
-    mostrarEstado();
+    mostrarEstado([]);
 }
 
 async function generarPagina(ordenanza) {
@@ -174,98 +212,35 @@ function mostrarEstado(ordenanzas) {
     document.getElementById("info").innerHTML = resultado;    
 }
 
-function buscar(condicion) {
-    clearTimeout(demorar);
-    modoClasificacion = false;
-    mostrarClasificacion();
-    
-    const listado = filtrarCondicion(ordenanzas, condicion);
-    mostrarEstado(listado);
-    
-    generarOrdenanzas(listado, 10);
-    demorar = setTimeout(() => generarOrdenanzas(listado, 1000), 200);
-    escribirParametro(condicion);
-}
-
-function leerParametro(historia=false) {
-    const origen = historia ? document.referrer : window.location.search;
-    const parametros = new URLSearchParams(origen);
-    return parametros.get('buscar');
-}
-
-function escribirParametro(valor){
-    const nuevaUrl = `${window.location.pathname}?buscar=${valor}`;
-    window.history.replaceState({}, '', nuevaUrl);
-}
 async function bajarJson(origen) {
     const response = await fetch(`./datos/${origen}.json`);
     return await response.json();
 }
 
-async function cargar() {
-    await medir(async () => {
-        ordenanzas = await bajarJson('ordenanzas');
-        ordenanzas = filtrarVigentes(ordenanzas);
-
-        clasificaciones = await bajarJson('clasificaciones');
-
-        instalar();
-        buscar('');
-    });
-}
-
-async function cargarPagina(numero) {
-    const origen = "./html/" + numero.padStart(4, "0") + ".html";
-    const parser = new DOMParser();
-    const response = await fetch(origen);
-    const htmlDoc = parser.parseFromString((await response.text()), 'text/html');
-    document.getElementById("cuerpo").innerHTML = `<div id="marco"><button class="clasificacion volver" onclick="volver()"> ◀ Volver </button>${htmlDoc.body.innerHTML}</div>`;
-}
-
-
 async function bajarOrdenanza(ordenanza) {
     const origen = generarURL(ordenanza, 'html', true);
-    console.log(`Bajar Ordenanza > ${origen}`);
+    medir(`Bajar Ordenanza > ${origen}`);
     const parser = new DOMParser();
     const response = await fetch(origen);
-    const htmlDoc = parser.parseFromString((await response.text()), 'text/html');
-    return htmlDoc.body.innerHTML;
+    const html = parser.parseFromString((await response.text()), 'text/html');
+    fin();
+    return html.body.innerHTML;
 }
 
-function ocultarTeclado() {
-    const campo = document.getElementById('campoBusqueda');
-    campo.blur();
-}
+async function cargar() {
+    medir("Cargando datos");
 
-function instalar() {
-    console.log(`>> Estoy instalando. \n - Vengo de [${document.referrer}]\n - Estoy en [${window.location.search}]`);
- 
-    // busqueda.value = leerParametro(true);
-    // buscar(busqueda.value);
+    ordenanzas = await bajarJson('ordenanzas');
+    ordenanzas = filtrarVigentes(ordenanzas);
+
+    clasificaciones = await bajarJson('clasificaciones');
+    clasificaciones = clasificaciones.filter(c => c.cantidad > 0);
+
+    fin();
     
-    buscar('');
-    const busqueda = document.getElementById('campoBusqueda');
-    busqueda.addEventListener('input', () =>  buscar(busqueda.value));
-    window.addEventListener('scroll', ocultarTeclado);
+    instalar();
 }
 
-function mostrarClasificacion() {
-    // document.querySelector("button.clasificacion").innerHTML = modoClasificacion ? "Ocultar Clasificación" : "Mostrar Clasificación";
-}
-
-function alterarClasificacion() {
-    modoClasificacion = !modoClasificacion;
-    // mostrarClasificacion();
-    if (modoClasificacion) {
-        generarClasificaciones(clasificaciones);
-    } else {
-        buscar("");
-    }
-}
-
-function volver() {
-    buscar("");
-}
 
 function generarURL(ordenanza, tipo, local = false) {
     const base = local ? "." : 'https://digestoyb.netlify.app';
@@ -320,4 +295,77 @@ function enviarWhatsapp(ordenanza) {
 
 function scrollInicio() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function instalar() {
+    busqueda = document.getElementById('campoBusqueda');
+
+    busqueda.addEventListener('input', () => buscar(busqueda.value));
+    busqueda.addEventListener('focus', () => busqueda.select());
+
+    window.addEventListener('scroll', () => busqueda.blur());
+   
+    buscar(leerParametro());
+}
+
+function generarInteligente(condicion, ordenanzas) {
+    if (esSoloClasificacion(condicion)) { 
+        generarClasificaciones(clasificaciones);
+    } else if (esSoloOrdenanzaValida(condicion)) {
+        generarPagina(normalizarOrdenanza(condicion));
+    } else {
+        generarOrdenanzas(ordenanzas, 1000);
+    }
+}
+
+function buscar(condicion) {
+    actual = condicion;
+    busqueda.value = condicion;
+    clearTimeout(demorar);
+
+    modoClasificacion = false;
+
+    const listado = filtrarCondicion(ordenanzas, condicion);
+    mostrar(`EsOrdenanza: ${esSoloOrdenanzaValida(condicion) ? "SI" : "NO"} clasificacion: ${esSoloClasificacion(condicion) ? "SI" : "NO"}`  )
+
+    mostrarEstado(listado);
+
+    demorar = setTimeout(() => generarInteligente(condicion, listado), 50);
+    escribirParametro(condicion);
+}
+
+function leerParametro(historia = false) {
+    const origen = historia ? document.referrer : window.location.search;
+    const parametros = new URLSearchParams(origen);
+    return parametros.get('buscar') || "";
+}
+
+function escribirParametro(valor) {
+    const url = `${window.location.pathname}?buscar=${encodeURIComponent(valor)}`;
+ 
+    window.history.replaceState({}, '', url);
+}
+
+function alterarClasificacion() {
+    if (esSoloClasificacion(actual)) {
+        volver();
+    } else {
+        irClasificacion();
+    }
+}
+
+function irOrdenanza(ordenanza) {
+    anterior = busqueda.value;
+    buscar("#" + normalizarOrdenanza(ordenanza));
+}
+
+function irClasificacion() {
+    anterior = busqueda.value;
+    buscar(".");
+}
+
+function volver() {
+    buscar(anterior);
+    anterior = "";
+    busqueda.focus();
 }
