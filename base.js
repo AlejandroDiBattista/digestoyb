@@ -186,6 +186,8 @@ function generar(idPlatilla, datos) {
 function generarOrdenanzas(ordenanzas) {
     generar('plantilla-ordenanza', { "ordenanza": ordenanzas });
     mostrarEstado(ordenanzas);
+    setTimeout( ()=> resaltarPalabras("#lista", actual), 100);
+    
 }
 
 function generarClasificaciones(clasificaciones) {
@@ -196,6 +198,7 @@ function generarClasificaciones(clasificaciones) {
 async function generarPagina(ordenanza) {
     const pagina = await bajarOrdenanza(ordenanza);
     generar("plantilla-pagina", { "ordenanza": ordenanza, "cuerpo": pagina });    
+    setTimeout( ()=> resaltarPalabras("#pagina", anterior), 100);
 }
 
 function mostrarEstado(ordenanzas) {
@@ -217,8 +220,9 @@ async function bajarOrdenanza(ordenanza) {
     const parser = new DOMParser();
     const response = await fetch(origen);
     const html = parser.parseFromString((await response.text()), 'text/html');
+    let texto = html.body.innerHTML;
     fin();
-    return html.body.innerHTML;
+    return texto;
 }
 
 async function cargar() {
@@ -358,4 +362,42 @@ function volver() {
     buscar(anterior);
     anterior = "";
     busqueda.focus();
+}
+
+function resaltarPalabrasEnFuente(html, palabras, tag='mark') {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+
+    const elementos = doc.querySelectorAll('*');
+    elementos.forEach(elemento => {
+        palabras.forEach(palabra => {
+            elemento.innerHTML = elemento.innerHTML.replace(new RegExp(`\\b${palabra}\\b`, 'gi'), `<${tag}>${palabra}</${tag}>`);
+        });
+    });
+
+    return doc.documentElement.outerHTML;
+}
+
+function resaltarPalabras(selector, palabras, tag = 'mark') {
+    palabras = allTrim(palabras).split(" ")
+    if (palabras.length == 0 || palabras[0].length <= 2) return;
+
+    medir(`Resaltar palabras > ${palabras.map(p=>generalizarVocales(p))}`)
+    const elementos = document.querySelectorAll(`${selector} *`);
+    elementos.forEach(elemento => {
+        palabras.forEach(palabra => {
+            const buscar = generalizarVocales(palabra);
+            elemento.innerHTML = elemento.innerHTML.replace(new RegExp(`\\b${buscar}\\b`, 'gi'), `<${tag}>${palabra}</${tag}>`);
+        });
+    });
+    fin();
+}
+
+function generalizarVocales(texto) {
+    return texto
+        .replaceAll(/[aá]/gi, "[aá]")
+        .replaceAll(/[eé]/gi, "[eé]")
+        .replaceAll(/[ií]/gi, "[ií]")
+        .replaceAll(/[oó]/gi, "[oó]")
+        .replaceAll(/[uú]/gi, "[uú]")
 }
