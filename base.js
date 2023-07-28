@@ -1,4 +1,6 @@
-const version = 'v0.4';
+// import { medir, mostrar, fin } from './medir.js';
+
+const version = 'v0.5';
 
 let busqueda = null;
 let demorar = null;
@@ -7,19 +9,34 @@ const plantillas = {};
 let ordenanzas = [];
 let clasificaciones = [];
 
-let mediciones = [];
-
 let actual = "";
 let anterior = "";
 
-function sinAcento(texto) {
+function generalizarVocales(texto) {
+    return texto
+        .replaceAll(/[aá]/gi, "[aá]")
+        .replaceAll(/[eé]/gi, "[eé]")
+        .replaceAll(/[ií]/gi, "[ií]")
+        .replaceAll(/[oó]/gi, "[oó]")
+        .replaceAll(/[uú]/gi, "[uú]")
+}
+
+String.prototype.sinAcento = function sinAcento() {
     const mapaAcentos = {
         'á': 'a','é': 'e','í': 'i','ó': 'o','ú': 'u',
         'Á': 'A','É': 'E','Í': 'I','Ó': 'O','Ú': 'U'
     };
 
-    return texto.replace(/[áéíóúÁÉÍÓÚ]/g, (caracter) => mapaAcentos[caracter]);
+    return this.replace(/[áéíóúÁÉÍÓÚ]/g, (caracter) => mapaAcentos[caracter]);
 }
+
+String.prototype.simplificar = function () {
+    return this.toLowerCase().sinAcento();
+}
+
+String.prototype.allTrim = function () {
+    return this.replace(/\s+/g, " ").trim();
+};
 
 function traducirMeses(cadena) {
     const mesesEnIngles = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -34,30 +51,29 @@ function traducirMeses(cadena) {
     return cadena;
 }
 
-function allTrim(texto) {
-    return texto.replace(/\s+/g," ").trim()
+function completarAño(texto) {
+    return texto.replace(/([89]\d)$/g, "19$1").replace(/([012]\d)$/g, "20$1");
 }
 
-function comienzaConMayuscula(cadena) {
+
+function comienzaConMayuscula(palabra) {
     const patron = /^[A-Z]/;
-    return patron.test(cadena);
+    return patron.test(palabra);
 }
 
-function esNumero(cadena) {
+function esNumero(palabra) {
     const patron = /^[0-9]$/;
-    return patron.test(cadena);
+    return patron.test(palabra);
 }
 
 function esOrdenanza(palabra) {
-    palabra = allTrim(palabra);
-
+    palabra = palabra.allTrim();
     const valido = /^#\d+$/;
-
     return valido.test(palabra);
 }
 
 function esClasificacion(palabra) {
-    palabra = allTrim(palabra);
+    palabra = palabra.allTrim();
     palabra = palabra.replace(/(?=\d)>/g, '.').replace(/[^0-9.>]/g, ""); 
     
     const valido = /^\d+(\.\d*)*$/;
@@ -81,7 +97,7 @@ function esSoloClasificacion(texto) {
 function normalizarClasificacion(palabra) {
     if(!esClasificacion(palabra)) return palabra;
     
-    palabra = allTrim(palabra);
+    palabra = palabra.allTrim();
     palabra = palabra.replace(/>/g, '.').replace(/[^0-9.]/g, "");
 
     const digitos   = palabra.split('.').filter(x => x.length > 0);
@@ -94,20 +110,12 @@ function normalizarOrdenanza(palabra) {
     return `${palabra}`.replace("#","").padStart(4,"0")
 }
 
-function completarAño(texto) {
-    return texto.replace(/([89]\d)$/g, "19$1").replace(/([012]\d)$/g, "20$1");
-}
-
 function normalizarPalabra(palabra) {
     if(palabra.startsWith(":")) palabra = palabra.substring(1);
 
     if(comienzaConMayuscula(palabra) || esNumero(palabra)) palabra += ' ';
 
-    return ` ${simplificar(palabra)}`;
-}
-
-function simplificar(texto) {
-    return sinAcento(texto.toLowerCase());
+    return ` ${palabra.simplificar()}`;
 }
 
 function filtrarVigentes(ordenanzas) {
@@ -119,7 +127,7 @@ function contieneIndice(o, indice) {
     return o.clasificacion.map(c => c.indice).some(i => i.startsWith(indice));
 }
 
-function contienePalabra(palabra, o) {
+function contienePalabra(o, palabra) {
     if (esOrdenanza(palabra) && (o.ordenanza == normalizarOrdenanza(palabra))) {    // #xxx > Ordenanza
         return true;
     }
@@ -136,8 +144,8 @@ function contienePalabra(palabra, o) {
 }
 
 function filtrarCondicion(ordenanzas, condicion) {
-    let palabras = simplificar(condicion).split(" ");
-    let salida = ordenanzas.filter(o => palabras.every(palabra => contienePalabra(palabra, o)));
+    let palabras = condicion.simplificar().split(" ");
+    let salida = ordenanzas.filter(o => palabras.every(palabra => contienePalabra(o, palabra)));
 
     return salida;
 }
@@ -147,24 +155,8 @@ function sinRepetir(lista) {
 }
 
 function palabrasUnicas(cadena) {
-    const palabras = simplificar(cadena).split(' ');
+    const palabras = cadena.simplificar().split(' ');
     return sinRepetir(palabras).join(' ');
-}
-
-
-function medir(titulo = "Ejecutando") {
-    mostrar(`> ${titulo}`);
-    mediciones.push(new Date());
-}
-
-function mostrar(...parametros) {
-    const nivel = '   '.repeat(mediciones.length);
-    console.log(nivel, ...parametros);
-}
-
-function fin() {
-    const inicio = mediciones.pop();
-    mostrar(`| ${new Date() - inicio}ms`);
 }
 
 function cargarPlantilla(idPlantilla) {
@@ -186,8 +178,7 @@ function generar(idPlatilla, datos) {
 function generarOrdenanzas(ordenanzas) {
     generar('plantilla-ordenanza', { "ordenanza": ordenanzas });
     mostrarEstado(ordenanzas);
-    setTimeout( ()=> resaltarPalabras("#lista", actual), 100);
-    
+    setTimeout( ()=> resaltarPalabras("#lista", actual), 200);
 }
 
 function generarClasificaciones(clasificaciones) {
@@ -198,7 +189,7 @@ function generarClasificaciones(clasificaciones) {
 async function generarPagina(ordenanza) {
     const pagina = await bajarOrdenanza(ordenanza);
     generar("plantilla-pagina", { "ordenanza": ordenanza, "cuerpo": pagina });    
-    setTimeout( ()=> resaltarPalabras("#pagina", anterior), 100);
+    setTimeout( ()=> resaltarPalabras("#pagina", anterior), 200);
 }
 
 function mostrarEstado(ordenanzas) {
@@ -207,22 +198,6 @@ function mostrarEstado(ordenanzas) {
         `Hay ${ordenanzas.length} ${ordenanzas.length == 1 ? 'ordenanza' : 'ordenanzas'}`;
     
     document.getElementById("info").innerHTML = resultado;    
-}
-
-async function bajarJson(origen) {
-    const response = await fetch(`./datos/${origen}.json`);
-    return await response.json();
-}
-
-async function bajarOrdenanza(ordenanza) {
-    const origen = generarURL(ordenanza, 'html', true);
-    medir(`Bajar Ordenanza > ${origen}`);
-    const parser = new DOMParser();
-    const response = await fetch(origen);
-    const html = parser.parseFromString((await response.text()), 'text/html');
-    let texto = html.body.innerHTML;
-    fin();
-    return texto;
 }
 
 async function cargar() {
@@ -262,32 +237,6 @@ function invocarURL(url, destino=null, abrir=false) {
     document.body.appendChild(enlace);
     enlace.click();
     document.body.removeChild(enlace);    
-}
-
-function descargarJSON(json, destino) {
-    const contenidoJSON = JSON.stringify(json);
-
-    const blob = new Blob([contenidoJSON], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-
-    invocarURL(url, destino, false);
-
-    URL.revokeObjectURL(url);
-}
-
-function descargarPDF(ordenanza) {
-    const url = generarURL(ordenanza, 'pdf');
-    invocarURL(url, `${normalizarOrdenanza(ordenanza)}.pdf`, true);
-}
-
-function enviarWhatsapp(ordenanza) {
-    let texto = `*Digesto digital Yerba Buena*
-    
-    Bajar la ordenanza ${ordenanza} de ${generarURL(ordenanza, 'pdf')}`;
-    texto = encodeURIComponent(texto);
-
-    url = `https://api.whatsapp.com/send/?text=${texto}&type=custom_url&app_absent=0`;
-    invocarURL(url,'',true);
 }
 
 function scrollInicio() {
@@ -364,22 +313,9 @@ function volver() {
     busqueda.focus();
 }
 
-function resaltarPalabrasEnFuente(html, palabras, tag='mark') {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-
-    const elementos = doc.querySelectorAll('*');
-    elementos.forEach(elemento => {
-        palabras.forEach(palabra => {
-            elemento.innerHTML = elemento.innerHTML.replace(new RegExp(`\\b${palabra}\\b`, 'gi'), `<${tag}>${palabra}</${tag}>`);
-        });
-    });
-
-    return doc.documentElement.outerHTML;
-}
-
 function resaltarPalabras(selector, palabras, tag = 'mark') {
-    palabras = allTrim(palabras).split(" ")
+    palabras = palabras.allTrim().split(" ");
+
     if (palabras.length == 0 || palabras[0].length <= 2) return;
 
     medir(`Resaltar palabras > ${palabras.map(p=>generalizarVocales(p))}`)
@@ -391,13 +327,4 @@ function resaltarPalabras(selector, palabras, tag = 'mark') {
         });
     });
     fin();
-}
-
-function generalizarVocales(texto) {
-    return texto
-        .replaceAll(/[aá]/gi, "[aá]")
-        .replaceAll(/[eé]/gi, "[eé]")
-        .replaceAll(/[ií]/gi, "[ií]")
-        .replaceAll(/[oó]/gi, "[oó]")
-        .replaceAll(/[uú]/gi, "[uú]")
 }
