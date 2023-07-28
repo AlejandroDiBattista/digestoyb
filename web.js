@@ -15,9 +15,12 @@ function descargarPDF(ordenanza) {
 }
 
 function enviarWhatsapp(ordenanza) {
-    let texto = `*Digesto digital Yerba Buena*
+    let texto = `
+*Digesto Digital Yerba Buena*
     
-    Bajar la ordenanza ${ordenanza} de ${generarURL(ordenanza, 'pdf')}`;
+Bajar la ordenanza ${ordenanza} de 
+${generarURL(ordenanza, 'pdf')}`;
+    
     texto = encodeURIComponent(texto);
 
     url = `https://api.whatsapp.com/send/?text=${texto}&type=custom_url&app_absent=0`;
