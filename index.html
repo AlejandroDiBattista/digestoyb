@@ -45,7 +45,7 @@
         </script>
 
         <script id="plantilla-clasificacion" type="text/template">
-            <div id="lista">
+            <div id="lista" class="clasificacion">
                 <h2>Clasificación</h2>
                 {{#each clasificacion}}    
                     <button class="nivel_{{nivel}} row my-1" onclick="buscar('{{indice}}.')">
@@ -83,7 +83,7 @@
 
     <body>
         <div class="sticky-top">
-            <nav class="navbar shadow-sm">
+            <nav class="navbar shadow-sm bg-success-subtle ">
                 <div class="container-fluid">
                     <a class="navbar-brand">Digesto YB</a>
                     <form class="d-flex" role="search"> 
@@ -95,8 +95,228 @@
         </div>
         
         <div class="container">
-            <div id="info" class="text-end me-2"></div>
-            <div id="cuerpo" class="m-1"></div>
+            <div id="info" class="text-end me-2">
+                <!-- Esto es para que al comienzo muestre algo -->
+                Hay 851 ordenanzas
+            </div>
+
+            <div id="cuerpo" class="m-1">
+                <!-- Esto es para que al comienzo muestre algo -->
+                <div id="lista">
+                    <button onclick="irOrdenanza('0005')">
+                        <div class="card text-center mb-1">
+                            <div class="card-body">
+                                <div class="row justify-content-between">
+                                    <div class="col-3 text-start">
+                                        <div class="mt-0 text-primary fw-bold">0005</div>
+                                    </div>
+                                    <div class="col-3 text-end">
+                                        <div class="mt-0 text-primary small">19/01/84</div>
+                                    </div>
+                                </div>
+                                <div class="my-2 text-start fw-bold">Prohíbe la exhibición de todo tipo de publicación calificada prohibida para menores</div>
+                                <div class="row">
+                                    <div class="col text-start">
+                                        <div class="text-truncate ">
+                                            <span class="text-primary1 col-2 text-center">03.01</span>
+                                            <span class="text-secondary col-10">Cultura y Educación ‣ Cultura</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                        <button onclick="irOrdenanza('0021')">
+                        <div class="card text-center mb-1">
+                            <div class="card-body">
+                                <div class="row justify-content-between">
+                                    <div class="col-3 text-start">
+                                        <div class="mt-0 text-primary fw-bold">0021</div>
+                                    </div>
+                                    <div class="col-3 text-end">
+                                        <div class="mt-0 text-primary small">6/02/84</div>
+                                    </div>
+                                </div>
+                                <div class="my-2 text-start fw-bold">Crea la biblioteca municipal en los predios del HCD</div>
+                                <div class="row">
+                                    <div class="col text-start">
+                                            <div class="text-truncate ">
+                                                <span class="text-primary1 col-2 text-center">03.01</span>
+                                                <span class="text-secondary col-10">Cultura y Educación ‣ Cultura</span>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                        <button onclick="irOrdenanza('0022')">
+                        <div class="card text-center mb-1">
+                            <div class="card-body">
+                                <div class="row justify-content-between">
+                                    <div class="col-3 text-start">
+                                        <div class="mt-0 text-primary fw-bold">0022</div>
+                                    </div>
+                                    <div class="col-3 text-end">
+                                        <div class="mt-0 text-primary small">21/02/84</div>
+                                    </div>
+                                </div>
+                                <div class="my-2 text-start fw-bold">Faculta al DEM a proveer de indumentaria al personal del cementerio y a construir 2 baños y un botiquín de primeros auxilios</div>
+                                <div class="row">
+                                    <div class="col text-start">
+                                            <div class="text-truncate ">
+                                                <span class="text-primary1 col-2 text-center">10.01</span>
+                                                <span class="text-secondary col-10">Cementerio ‣ Municipal</span>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                        <button onclick="irOrdenanza('0023')">
+                        <div class="card text-center mb-1">
+                            <div class="card-body">
+                                <div class="row justify-content-between">
+                                    <div class="col-3 text-start">
+                                        <div class="mt-0 text-primary fw-bold">0023</div>
+                                    </div>
+                                    <div class="col-3 text-end">
+                                        <div class="mt-0 text-primary small">21/02/84</div>
+                                    </div>
+                                </div>
+                                <div class="my-2 text-start fw-bold">Crea el Club de Lectura dependiente de la biblioteca Municipal</div>
+                                <div class="row">
+                                    <div class="col text-start">
+                                            <div class="text-truncate ">
+                                                <span class="text-primary1 col-2 text-center">03.01</span>
+                                                <span class="text-secondary col-10">Cultura y Educación ‣ Cultura</span>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                        <button onclick="irOrdenanza('0024')">
+                        <div class="card text-center mb-1">
+                            <div class="card-body">
+                                <div class="row justify-content-between">
+                                    <div class="col-3 text-start">
+                                        <div class="mt-0 text-primary fw-bold">0024</div>
+                                    </div>
+                                    <div class="col-3 text-end">
+                                        <div class="mt-0 text-primary small">22/02/84</div>
+                                    </div>
+                                </div>
+                                <div class="my-2 text-start fw-bold">Faculta al DEM a gestionar ante Gas del Estado la realización del estudio para la red de distribución de gas natural</div>
+                                <div class="row">
+                                    <div class="col text-start">
+                                            <div class="text-truncate ">
+                                                <span class="text-primary1 col-2 text-center">06.06</span>
+                                                <span class="text-secondary col-10">Servicios Públicos ‣ Gas</span>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                        <button onclick="irOrdenanza('0025')">
+                        <div class="card text-center mb-1">
+                            <div class="card-body">
+                                <div class="row justify-content-between">
+                                    <div class="col-3 text-start">
+                                        <div class="mt-0 text-primary fw-bold">0025</div>
+                                    </div>
+                                    <div class="col-3 text-end">
+                                        <div class="mt-0 text-primary small">28/02/84</div>
+                                    </div>
+                                </div>
+                                <div class="my-2 text-start fw-bold">Crea el mercado dominical de Yerba Buena</div>
+                                <div class="row">
+                                    <div class="col text-start">
+                                            <div class="text-truncate ">
+                                                <span class="text-primary1 col-2 text-center">14</span>
+                                                <span class="text-secondary col-10">Actividades Comerciales</span>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                        <button onclick="irOrdenanza('0026')">
+                        <div class="card text-center mb-1">
+                            <div class="card-body">
+                                <div class="row justify-content-between">
+                                    <div class="col-3 text-start">
+                                        <div class="mt-0 text-primary fw-bold">0026</div>
+                                    </div>
+                                    <div class="col-3 text-end">
+                                        <div class="mt-0 text-primary small">28/02/84</div>
+                                    </div>
+                                </div>
+                                <div class="my-2 text-start fw-bold">Autoriza al DEM a afectar al servicio de CONET los inmuebles fiscales ubicados en calle Paraguay y Salta</div>
+                                <div class="row">
+                                    <div class="col text-start">
+                                            <div class="text-truncate ">
+                                                <span class="text-primary1 col-2 text-center">03.01</span>
+                                                <span class="text-secondary col-10">Cultura y Educación ‣ Cultura</span>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                        <button onclick="irOrdenanza('0028')">
+                        <div class="card text-center mb-1">
+                            <div class="card-body">
+                                <div class="row justify-content-between">
+                                    <div class="col-3 text-start">
+                                        <div class="mt-0 text-primary fw-bold">0028</div>
+                                    </div>
+                                    <div class="col-3 text-end">
+                                        <div class="mt-0 text-primary small">6/03/84</div>
+                                    </div>
+                                </div>
+                                <div class="my-2 text-start fw-bold">Faculta al DEM a implementar la recolección de residuos de 18:00 a 24:00hs</div>
+                                <div class="row">
+                                    <div class="col text-start">
+                                            <div class="text-truncate ">
+                                                <span class="text-primary1 col-2 text-center">06.04</span>
+                                                <span class="text-secondary col-10">Servicios Públicos ‣ Recolección de Residuos</span>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                        <button onclick="irOrdenanza('0033')">
+                        <div class="card text-center mb-1">
+                            <div class="card-body">
+                                <div class="row justify-content-between">
+                                    <div class="col-3 text-start">
+                                        <div class="mt-0 text-primary fw-bold">0033</div>
+                                    </div>
+                                    <div class="col-3 text-end">
+                                        <div class="mt-0 text-primary small">28/03/84</div>
+                                    </div>
+                                </div>
+                                <div class="my-2 text-start fw-bold">Exprópiense los inmuebles comprendidos en padrón 384.390 desde calle Cariola hacia el Oeste hasta la Vía Vieja del Ex F.C.G.B.</div>
+                                <div class="row">
+                                    <div class="col text-start">
+                                            <div class="text-truncate ">
+                                                <span class="text-primary1 col-2 text-center">04.04</span>
+                                                <span class="text-secondary col-10">Obras Públicas ‣ Catastro y Edificacion Privada</span>
+                                            </div>
+                                            <div class="text-truncate ">
+                                                <span class="text-primary1 col-2 text-center">05.02.03</span>
+                                                <span class="text-secondary col-10">Compras ‣ Patrimonial ‣ Expropiación</span>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <!-- Fin del cache -->
         </div>        
 
         <script>cargar();</script>

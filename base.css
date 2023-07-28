@@ -5,23 +5,29 @@
     background-color: transparent;
 }
 
-button:hover{
-    color:blue;
+.clasificacion button:hover{
+    background-color: rgb(13, 110, 253) !important;
+    color:#fff!important ;
 }
 
+button.nivel_1, button.nivel_2, button.nivel_3 {
+    padding: 4px 0;
+
+}
 button.nivel_1 {
     margin-left: 0px;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 button.nivel_2 {
     margin-left: 10px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 button.nivel_3 {
     margin-left: 20px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 #cuerpo {
@@ -43,3 +49,16 @@ button.nivel_3 {
 body {
   margin-right: calc(100vw - 100%);
 }
+
+.navbar {
+    background: hsla(225, 78%, 59%, 1);
+    background: linear-gradient(90deg, hsla(225, 78%, 59%, 1) 0%, hsla(197, 85%, 51%, 1) 100%);
+}
+
+.navbar-brand {
+    color: white !important;
+    font-weight: 200;
+    font-size: 28px !important;
+    padding-left: 10px;
+}
+

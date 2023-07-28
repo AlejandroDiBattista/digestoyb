@@ -1,9 +1,7 @@
-const version = 'v0.3';
-let modoClasificacion = false;
+const version = 'v0.4';
 
 let busqueda = null;
 let demorar = null;
-let criterio = "";
 const plantillas = {};
 
 let ordenanzas = [];
@@ -185,11 +183,9 @@ function generar(idPlatilla, datos) {
     scrollInicio();
 }
 
-function generarOrdenanzas(ordenanzas, maximo = 100) {
-    medir(`Generar ordenanzas x ${maximo}`);
-    ordenanzas = ordenanzas.slice(0, maximo);
+function generarOrdenanzas(ordenanzas) {
     generar('plantilla-ordenanza', { "ordenanza": ordenanzas });
-    fin();
+    mostrarEstado(ordenanzas);
 }
 
 function generarClasificaciones(clasificaciones) {
@@ -203,11 +199,9 @@ async function generarPagina(ordenanza) {
 }
 
 function mostrarEstado(ordenanzas) {
-    const resultado = modoClasificacion ?
-        "" :
-            ordenanzas.length == 0 ?
-                `No hay ordenanzas - ${version}` :
-                `Hay ${ordenanzas.length} ${ordenanzas.length == 1 ? 'ordenanza' : 'ordenanzas'}`;
+    const resultado = ordenanzas.length == 0 ?
+        `No hay ordenanzas - ${version}` :
+        `Hay ${ordenanzas.length} ${ordenanzas.length == 1 ? 'ordenanza' : 'ordenanzas'}`;
     
     document.getElementById("info").innerHTML = resultado;    
 }
@@ -240,7 +234,6 @@ async function cargar() {
     
     instalar();
 }
-
 
 function generarURL(ordenanza, tipo, local = false) {
     const base = local ? "." : 'https://digestoyb.netlify.app';
@@ -314,24 +307,21 @@ function generarInteligente(condicion, ordenanzas) {
     } else if (esSoloOrdenanzaValida(condicion)) {
         generarPagina(normalizarOrdenanza(condicion));
     } else {
-        generarOrdenanzas(ordenanzas, 1000);
+        generarOrdenanzas(ordenanzas);
     }
 }
 
 function buscar(condicion) {
     actual = condicion;
     busqueda.value = condicion;
-    clearTimeout(demorar);
-
-    modoClasificacion = false;
-
+    escribirParametro(condicion);
+    
     const listado = filtrarCondicion(ordenanzas, condicion);
     mostrar(`EsOrdenanza: ${esSoloOrdenanzaValida(condicion) ? "SI" : "NO"} clasificacion: ${esSoloClasificacion(condicion) ? "SI" : "NO"}`  )
-
-    mostrarEstado(listado);
-
+    
+    clearTimeout(demorar);
     demorar = setTimeout(() => generarInteligente(condicion, listado), 50);
-    escribirParametro(condicion);
+    
 }
 
 function leerParametro(historia = false) {
