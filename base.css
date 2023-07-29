@@ -1,3 +1,21 @@
+.navbar {
+    background: hsla(225, 78%, 59%, 1);
+    background: linear-gradient(90deg, hsla(225, 78%, 59%, 1) 0%, hsla(197, 85%, 51%, 1) 100%);
+}
+
+.navbar-brand {
+    color: white !important;
+    font-weight: 200;
+    font-size: 28px !important;
+    padding-left: 10px;
+}
+
+#cuerpo,
+#info {
+    min-width: 350px;
+    max-width: 800px;
+}
+
 #lista button {
     border: none;
     width: 100%;
@@ -14,6 +32,7 @@ button.nivel_1, button.nivel_2, button.nivel_3 {
     padding: 4px 0;
 
 }
+
 button.nivel_1 {
     margin-left: 0px;
     font-size: 18px;
@@ -30,11 +49,6 @@ button.nivel_3 {
     font-size: 14px;
 }
 
-#cuerpo {
-    min-width: 350px;
-    max-width: 800px;
-}
-
 #campoBusqueda {
     border-radius: 30px !important;
     max-width: none;
@@ -46,19 +60,6 @@ button.nivel_3 {
     }
 }
 
-body {
-  margin-right: calc(100vw - 100%);
+mark {
+    color: red;
 }
-
-.navbar {
-    background: hsla(225, 78%, 59%, 1);
-    background: linear-gradient(90deg, hsla(225, 78%, 59%, 1) 0%, hsla(197, 85%, 51%, 1) 100%);
-}
-
-.navbar-brand {
-    color: white !important;
-    font-weight: 200;
-    font-size: 28px !important;
-    padding-left: 10px;
-}
-
