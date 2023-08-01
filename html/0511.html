@@ -1,287 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html>
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Book Antiqua";
-	panose-1:2 4 6 2 5 3 5 3 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.DGFecha, li.DGFecha, div.DGFecha
-	{mso-style-name:"DG Fecha";
-	mso-style-link:"DG Fecha Char";
-	margin:0cm;
-	text-align:right;
-	border:none;
-	padding:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGFechaChar
-	{mso-style-name:"DG Fecha Char";
-	mso-style-link:"DG Fecha";
-	font-family:"Book Antiqua",serif;}
-p.DGOrdenanza, li.DGOrdenanza, div.DGOrdenanza
-	{mso-style-name:"DG Ordenanza";
-	mso-style-link:"DG Ordenanza Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:12.0pt;
-	margin-left:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGOrdenanzaChar
-	{mso-style-name:"DG Ordenanza Char";
-	mso-style-link:"DG Ordenanza";
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGSeccion, li.DGSeccion, div.DGSeccion
-	{mso-style-name:"DG Seccion";
-	mso-style-link:"DG Seccion Char";
-	margin-top:12.0pt;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSeccionChar
-	{mso-style-name:"DG Seccion Char";
-	mso-style-link:"DG Seccion";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGCuerpoSeccion, li.DGCuerpoSeccion, div.DGCuerpoSeccion
-	{mso-style-name:"DG CuerpoSeccion";
-	mso-style-link:"DG CuerpoSeccion Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGCuerpoSeccionChar
-	{mso-style-name:"DG CuerpoSeccion Char";
-	mso-style-link:"DG CuerpoSeccion";
-	font-family:"Book Antiqua",serif;}
-p.DGSanciona, li.DGSanciona, div.DGSanciona
-	{mso-style-name:"DG Sanciona";
-	mso-style-link:"DG Sanciona Char";
-	margin-top:16.0pt;
-	margin-right:92.15pt;
-	margin-bottom:16.0pt;
-	margin-left:92.15pt;
-	text-align:center;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSancionaChar
-	{mso-style-name:"DG Sanciona Char";
-	mso-style-link:"DG Sanciona";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGArticulo
-	{mso-style-name:"DG Articulo";
-	font-family:"Book Antiqua",serif;
-	font-variant:normal !important;
-	color:windowtext;
-	text-transform:none;
-	text-shadow:none;
-	font-weight:normal;
-	font-style:normal;
-	text-decoration:underline none underline;
-	vertical-align:baseline;}
-.MsoChpDefault
-	{font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:10.0pt;
-	line-height:115%;}
- /* Page Definitions */
- @page WordSection1
-	{size:595.3pt 841.9pt;
-	margin:2.0cm 42.5pt 42.5pt 70.85pt;}
-div.WordSection1
-	{page:WordSection1;}
- /* List Definitions */
- ol
-	{margin-bottom:0cm;}
-ul
-	{margin-bottom:0cm;}
--->
-</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Generator" content="Microsoft Word 15 (filtered)">
+
 
 </head>
 
-<body lang=ES-AR style='word-wrap:break-word'>
+<body lang="ES-AR" style="word-wrap:break-word">
 
-<div class=WordSection1>
+<div class="WordSection1">
 
-<div style='border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<div style="border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm">
 
-<p class=DGFecha><a name=Fecha>Yerba Buena, 25 de noviembre de 1992</a></p>
+<p class="DGFecha"><a name="Fecha">Yerba Buena, 25 de noviembre de 1992</a></p>
 
 </div>
 
-<p class=DGOrdenanza><a name=Ordenanza>ORDENANZA Nº 511</a></p>
+<p class="DGOrdenanza"><a name="Ordenanza">ORDENANZA Nº 511</a></p>
 
-<p class=DGSeccion><a name=Visto>VISTO:</a></p>
+<p class="DGSeccion"><a name="Visto">VISTO:</a></p>
 
-<p class=DGCuerpoSeccion>Que en Yerba Buena, al día de la fecha no existe
+<p class="DGCuerpoSeccion">Que en Yerba Buena, al día de la fecha no existe
 legislación que contemple el reconocimiento a vecinos por sus cualidades o
 actuaciones destacadas durante el año calendario; y</p>
 
-<p class=DGSeccion><a name=Considerando>CONSIDERANDO:</a></p>
+<p class="DGSeccion"><a name="Considerando">CONSIDERANDO:</a></p>
 
-<p class=DGCuerpoSeccion>Que en nuestro Municipio uno de los mas trascendentes
+<p class="DGCuerpoSeccion">Que en nuestro Municipio uno de los mas trascendentes
 del País y que es en nuestro Municipio donde se albergan hombres de las artes, la
 cultura, el deporte, la ciencia, personalidades de todo tipo;</p>
 
-<p class=DGCuerpoSeccion>Que es necesario para una sociedad en desarrollo, propender
+<p class="DGCuerpoSeccion">Que es necesario para una sociedad en desarrollo, propender
 a los objetivos que conllevan la motivación o incentivación para que todas las
 personas o Instituciones se sientan tenidas en cuenta por sus gobernantes;</p>
 
-<p class=DGCuerpoSeccion>Que la participación deja de ser un enunciado teórico
+<p class="DGCuerpoSeccion">Que la participación deja de ser un enunciado teórico
 o retórico para convertirse en un hecho tangible y real;</p>
 
-<p class=DGCuerpoSeccion>Que un año calendario, no puede ni debe pasar
+<p class="DGCuerpoSeccion">Que un año calendario, no puede ni debe pasar
 inadvertido como si el tiempo transcurriese sin protagonista;</p>
 
-<p class=DGCuerpoSeccion>Que estando en los umbrales de una nueva centuria y
+<p class="DGCuerpoSeccion">Que estando en los umbrales de una nueva centuria y
 que la sociedad en el tercer milenio va a ser una sociedad mucho mas compleja;</p>
 
-<p class=DGCuerpoSeccion>Que los nuevos temas de la vida en sociedad, la
+<p class="DGCuerpoSeccion">Que los nuevos temas de la vida en sociedad, la
 ecología y la tecnología nos llevan a un mundo donde las individualidades
 pueden dejar de ser tales para convertirse en grupos de protagonismo;</p>
 
-<p class=DGSanciona><a name=Sanciona>EL CONCEJO DELIBERANTE SANCIONA CON FUERZA
+<p class="DGSanciona"><a name="Sanciona">EL CONCEJO DELIBERANTE SANCIONA CON FUERZA
 DE ORDENANZA</a></p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;PRIMERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>El D.E.M. celebrará
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO PRIMERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>El D.E.M. celebrará
 anualmente una reunión de calificados vecinos y/o Instituciones que por sus
 méritos o logros, hayan tenido una destacada actuación en nuestro medio durante
 el año calendario, a partir del año 1992, y que hayan sido seleccionados
 previamente por el Comité mencionado en el artículo 3 de la presente Ordenanza.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SEGUNDO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>En esa
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO SEGUNDO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>En esa
 reunión será el Señor Intendente Municipal, quien exprese el reconocimiento y
 exalte las virtudes o los motivos por los cuales se hicieron acreedores los
 nominados.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;TERCERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>CREASE el
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO TERCERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>CREASE el
 Comité de Selección de candidatos.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;CUARTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>El Comité
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO CUARTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>El Comité
 de selección estará integrado por:</p>
 
-<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>3 (tres) representantes del Ejecutivo Municipal.</p>
 
-<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpLast" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>3 (tres) representantes del H.C.D.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;QUINTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Se habrá de
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO QUINTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Se habrá de
 seleccionar una persona o institución por rama o disciplina que se quiera
 premiar o reconocer. Quedan excluidas las personas que desarrollen actividad
 política y/o que estén ejerciendo funciones públicas, sea en esfera Municipal, Provincial
 o Nacional, y/o las personas que desempeñen cargos en los Partidos Políticos.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SEXTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Los
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO SEXTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Los
 seleccionados surgirán de una nómina de tres propuestos por el Comité de
 Selección.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SÉPTIMO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>De entre
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO SÉPTIMO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>De entre
 todos los seleccionados de todas las ramas, se elegirá la persona o Institución
 que mas méritos acumule para ser acreedor a la primera mención o premio.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;OCTAVO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>La
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO OCTAVO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>La
 complejidad que significa la selección en las Artes y Ciencias, y por tener
 éstas el carácter de excelencias, se incorporará al Comité-Jurado, un
 calificado número de vecinos (3) seleccionados con la mención a otorgarse.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;NOVENO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>El primer
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO NOVENO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>El primer
 premio consistirá en una medalla o plaquita dorada. Los restantes seleccionados
 recibirán Medallas Plateadas o Plaquetas Plateadas.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Los Premios
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO DÉCIMO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Los Premios
 llevarán inscriptos las Leyendas alusivas a Yerba Buena.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;PRIMERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>COMUNIQUESE,
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO DÉCIMO PRIMERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>COMUNIQUESE,
 COPIESE Y ARCHIVESE.</p>
 
 </div>

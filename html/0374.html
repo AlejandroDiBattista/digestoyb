@@ -1,406 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html>
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Book Antiqua";
-	panose-1:2 4 6 2 5 3 5 3 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.DGFecha, li.DGFecha, div.DGFecha
-	{mso-style-name:"DG Fecha";
-	mso-style-link:"DG Fecha Char";
-	margin:0cm;
-	text-align:right;
-	border:none;
-	padding:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGFechaChar
-	{mso-style-name:"DG Fecha Char";
-	mso-style-link:"DG Fecha";
-	font-family:"Book Antiqua",serif;}
-p.DGOrdenanza, li.DGOrdenanza, div.DGOrdenanza
-	{mso-style-name:"DG Ordenanza";
-	mso-style-link:"DG Ordenanza Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:12.0pt;
-	margin-left:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGOrdenanzaChar
-	{mso-style-name:"DG Ordenanza Char";
-	mso-style-link:"DG Ordenanza";
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGSeccion, li.DGSeccion, div.DGSeccion
-	{mso-style-name:"DG Seccion";
-	mso-style-link:"DG Seccion Char";
-	margin-top:12.0pt;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSeccionChar
-	{mso-style-name:"DG Seccion Char";
-	mso-style-link:"DG Seccion";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGCuerpoSeccion, li.DGCuerpoSeccion, div.DGCuerpoSeccion
-	{mso-style-name:"DG CuerpoSeccion";
-	mso-style-link:"DG CuerpoSeccion Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGCuerpoSeccionChar
-	{mso-style-name:"DG CuerpoSeccion Char";
-	mso-style-link:"DG CuerpoSeccion";
-	font-family:"Book Antiqua",serif;}
-p.DGSanciona, li.DGSanciona, div.DGSanciona
-	{mso-style-name:"DG Sanciona";
-	mso-style-link:"DG Sanciona Char";
-	margin-top:16.0pt;
-	margin-right:92.15pt;
-	margin-bottom:16.0pt;
-	margin-left:92.15pt;
-	text-align:center;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSancionaChar
-	{mso-style-name:"DG Sanciona Char";
-	mso-style-link:"DG Sanciona";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGArticulo
-	{mso-style-name:"DG Articulo";
-	font-family:"Book Antiqua",serif;
-	font-variant:normal !important;
-	color:windowtext;
-	text-transform:none;
-	text-shadow:none;
-	font-weight:normal;
-	font-style:normal;
-	text-decoration:underline none underline;
-	vertical-align:baseline;}
-.MsoChpDefault
-	{font-size:10.0pt;
-	font-family:"Calibri",sans-serif;}
- /* Page Definitions */
- @page WordSection1
-	{size:595.3pt 841.9pt;
-	margin:2.0cm 42.5pt 42.5pt 70.85pt;}
-div.WordSection1
-	{page:WordSection1;}
- /* List Definitions */
- ol
-	{margin-bottom:0cm;}
-ul
-	{margin-bottom:0cm;}
--->
-</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Generator" content="Microsoft Word 15 (filtered)">
+
 
 </head>
 
-<body lang=ES-AR style='word-wrap:break-word'>
+<body lang="ES-AR" style="word-wrap:break-word">
 
-<div class=WordSection1>
+<div class="WordSection1">
 
-<div style='border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<div style="border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm">
 
-<p class=DGFecha><a name=Fecha>Yerba Buena, 03 de julio de 1990</a></p>
+<p class="DGFecha"><a name="Fecha">Yerba Buena, 03 de julio de 1990</a></p>
 
 </div>
 
-<p class=DGOrdenanza><a name=Ordenanza>ORDENANZA Nº 374</a></p>
+<p class="DGOrdenanza"><a name="Ordenanza">ORDENANZA Nº 374</a></p>
 
-<p class=DGSeccion><a name=Visto>VISTO:</a></p>
+<p class="DGSeccion"><a name="Visto">VISTO:</a></p>
 
-<p class=DGCuerpoSeccion>La necesidad de actualizar las Reglamentaciones
+<p class="DGCuerpoSeccion">La necesidad de actualizar las Reglamentaciones
 vigentes en referencia a la tenencia de animales y detectándose en la
 circunscripción de Yerba Buena, diversos inconvenientes que atentan contra la salud
 pública y la higiene ambiental; y</p>
 
-<p class=DGSeccion><a name=Considerando>CONSIDERANDO:</a></p>
+<p class="DGSeccion"><a name="Considerando">CONSIDERANDO:</a></p>
 
-<p class=DGCuerpoSeccion>Que es imperiosa la necesidad de unificar la Ordenanza
+<p class="DGCuerpoSeccion">Que es imperiosa la necesidad de unificar la Ordenanza
 que rige para la tenencia de animales, a los fines de lograr una mayor
 practicidad en su aplicación, como también garantizar la mejor convivencia entre
 los vecinos y salvaguardar la población en general de cualquier foco infeccioso
 o molestia alguna que le pudiera afectar;</p>
 
-<p class=DGSanciona><a name=Sanciona>EL CONCEJO DELIBERANTE SANCIONA CON FUERZA
+<p class="DGSanciona"><a name="Sanciona">EL CONCEJO DELIBERANTE SANCIONA CON FUERZA
 DE ORDENANZA</a></p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;PRIMERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Déjase sin
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO PRIMERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Déjase sin
 efecto la Ordenanza N° 26/80 del 30/11/1980; la Ordenanza N° 54/81 del 14/01/1981;
 y la Ordenanza N° 61 del 03/06/1984</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SEGUNDO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Autorizase
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO SEGUNDO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Autorizase
 la crianza y/o tenencia de hasta 30 aves de corral por propiedad, cuando las
 mismas sean para consumo familiar y guarden las siguientes normas para su tenencia:</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Gallinero
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>Gallinero
 cercado techado, cuya ubicación dentro de la propiedad no causare molestias a
 los vecinos.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Limpieza
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>Limpieza
 permanente del gallinero, con retiro de deyecciones y cambio de cama en forma
 periódica, evitando malos olores y proliferación de enfermedades.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>c)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Control
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">c)<span style='font:7.0pt "Times New Roman"'>     </span>Control
 periódico de la sanidad de las aves para evitar propagación de enfermedades.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;TERCERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Explotación
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO TERCERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Explotación
 Comercial de Aves de Corral</p>
 
-<p class=MsoNormal>Se considerará como tal, cuando la cantidad de aves supere
+<p class="MsoNormal">Se considerará como tal, cuando la cantidad de aves supere
 la cifra establecida en el artículo segundo, y para este fin se delimitan zonas
 aptas y que están comprendidas en los siguientes sectores, que no deberán estar
 ubicados cerca del núcleo urbano, lecho de rio, arroyo o extensión de agua
 aprovechable para el consumo de la población en un radio de 200,00mts.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Sector
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>Sector
 Oeste: La franja ubicada al Oeste del Camino a Horco Molle, siguiendo este
 hasta el límite del Municipio. La franja ubicada al Oeste de calle Juan XXIII
 hasta el límite del Municipio, por ésta hasta calle San Javier, por ésta hasta ex
 vía y por ésta hasta el límite del Municipio.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Sector Norte: La
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>Sector Norte: La
 franja ubicada al Norte de futura Av. Belgrano por ésta hasta la intersección
 con calle Bartolomé Hernández por ésta al Norte hasta el límite del Municipio. Luego
 por futura Av. Belgrano hasta calle Uruguay, por ésta hasta canal revestido, por
 éste siguiendo una línea imaginaria hasta el límite del Municipio.</p>
 
-<p class=MsoNormal>Los predios destinados a esta actividad tendrán una
+<p class="MsoNormal">Los predios destinados a esta actividad tendrán una
 superficie mínima de 1.500,00mts<sup>2</sup>, y su frente mínimo será de 25,00mts.
 La superficie cubierta destinada a la actividad concreta (gallineros) (Depósitos)
 etc. no podrá superar el 60% de la superficie del predio. Estos
 establecimientos podrán instalarse sobre Av. Aconquija y futura Av. Belgrano.</p>
 
-<p class=MsoNormal>Todo establecimiento para la explotación comercial de aves
+<p class="MsoNormal">Todo establecimiento para la explotación comercial de aves
 de corral deberá guardar las siguientes normas:</p>
 
-<p class=MsoNormal>AVES PRODUCTORAS DE CARNE</p>
+<p class="MsoNormal">AVES PRODUCTORAS DE CARNE</p>
 
-<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'>1.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Galpón
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-18.0pt">1.<span style='font:7.0pt "Times New Roman"'>     </span>Galpón
 techado y cercado de concreto y/o alambre.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>2.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>División
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">2.<span style='font:7.0pt "Times New Roman"'>     </span>División
 de corrales con alambre y con capacidad para 25 o 30 aves de corral.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>3.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Distribución
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">3.<span style='font:7.0pt "Times New Roman"'>     </span>Distribución
 de bebederos a los efectos de evitar la formación de sectores húmedos.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>4.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Preparación
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">4.<span style='font:7.0pt "Times New Roman"'>     </span>Preparación
 y desinfección de pisos, preparación de camas de virutas, cascara de arroz, o
 cualquier otro elemento acorde.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>5.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Control
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">5.<span style='font:7.0pt "Times New Roman"'>     </span>Control
 Sanitario permanente, limpieza periódica de corrales, retiro de deyecciones, cambios
 de cama.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>6.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Desinfección
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">6.<span style='font:7.0pt "Times New Roman"'>     </span>Desinfección
 completa y cambio total de camas en cada renovación de lotes de aves.</p>
 
-<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt'>7.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Sector
+<p class="MsoListParagraphCxSpLast" style="text-indent:-18.0pt">7.<span style='font:7.0pt "Times New Roman"'>     </span>Sector
 determinado para sepultar y/o incinerar aves muertas.</p>
 
-<p class=MsoNormal>AVES PRODUCTORAS DE HUEVOS</p>
+<p class="MsoNormal">AVES PRODUCTORAS DE HUEVOS</p>
 
-<p class=MsoNormal>Por ser este rubro de características especiales, ya que los
+<p class="MsoNormal">Por ser este rubro de características especiales, ya que los
 planteles tiene mayor tiempo de estadía en galpones, se debe guardar un mayor
 control de sanidad que en otro tipo de explotación comercial de aves de corral,
 y las normas exigidas son las mismas que las enunciadas anteriormente en los
 incisos 1-2-3-4-5-6 y 7, con los siguientes agregados:</p>
 
-<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Nidales
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>Nidales
 colectivos o individuales con camas secas.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Corral destinado
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>Corral destinado
 a enfermería, para tratamiento de las aves.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>c)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Lugar para
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">c)<span style='font:7.0pt "Times New Roman"'>     </span>Lugar para
 depósito de alimentos, etc.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>d)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Vacunación
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">d)<span style='font:7.0pt "Times New Roman"'>    </span>Vacunación
 preventiva de enfermedades propias de la zona, y de acuerdo a reglamentación
 vigente.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>e)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Obligatoriedad
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">e)<span style='font:7.0pt "Times New Roman"'>     </span>Obligatoriedad
 del propietario o responsable del criadero, a informar de inmediato ante la
 presencia de síntomas de enfermedades, a la Dirección de Saneamiento Ambiental
 de la Municipalidad de Yerba Buena, y dar comienzo de inmediato el tratamiento
 adecuado a los efectos de evitar la propagación de las mismas.</p>
 
-<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt'>f)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Toda
+<p class="MsoListParagraphCxSpLast" style="text-indent:-18.0pt">f)<span style='font:7.0pt "Times New Roman"'>      </span>Toda
 explotación avícola, deberá realizarse diferenciando las especies de aves y en
 galpones separados, evitando así contagios y propagación de enfermedades entre
 las mismas.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;CUARTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>En caso de
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO CUARTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>En caso de
 no cumplir con lo requerido en el artículo Tercero de la presente Ordenanza, el
 propietario se hará posible al pago de una multa y a la clausura del
 establecimiento hasta tanto cumplimente con los requisitos exigidos.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;QUINTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Queda
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO QUINTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Queda
 prohibido la crianza y/o tenencia de animales de las siguientes especies: Equino,
 Caprino, Bovino, Ovino y Porcino en todo el ámbito de la Ciudad de Yerba Buena
 y según los siguientes límites:</p>
 
-<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Al Norte: Desde Camino del Perú y por futura Av. Belgrano hasta
 calle Uruguay, por ésta hasta Canal revestido, por éste siguiendo una línea
 imaginaria al Oeste hasta el límite del Municipio.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Al Sur: Desde Av. Alfredo Guzmán y siguiendo una línea imaginaria
 al Sur hasta calle Las Lanzas, por ésta hasta el límite del Municipio.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Al Este: Desde intersección línea imaginaria de calle Las Lanzas
 con Alfredo Guzmán, por ésta hasta Av. Aconquija: desde Av. Aconquija por
 Camino del Perú hasta futura Av. Belgrano; desde intersección de futura Av. Belgrano
 con calle Bartolomé Hernández, por ésta al Norte hasta el límite del Municipio.</p>
 
-<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpLast" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Al Oeste: el Río Muerto y el límite del Municipio.</p>
 
-<p class=MsoNormal>Fuera de estos límites todo predio destinado a la crianza
+<p class="MsoNormal">Fuera de estos límites todo predio destinado a la crianza
 y/o tenencia de las especies descriptas, deberá tener una superficie mínima de
 1.500,00mts<sup>2</sup> y un frente mínimo de 25,00mts. No podrán estar
 ubicados cuando hubiere núcleo urbano, cauce de río, arroyo, o extensión de
 agua aprovechable para consumo de la población en un radio de 300,00mts.</p>
 
-<p class=MsoNormal>Toda otra especie no contemplada específicamente en la
+<p class="MsoNormal">Toda otra especie no contemplada específicamente en la
 presente Ordenanza, deberá ajustarse a lo reglamentado en este artículo.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SEXTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>se prohíbe
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO SEXTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>se prohíbe
 el tránsito de Vehículos de tracción a sangre y de jinetes, en toda arteria pavimentada
 de la circunscripción de Yerba Buena. En tales casos se hará pasible al pago de
 una multa, al propietario e inmediato secuestro del animal pudiendo ser
 rescatado por su dueño, previo pago de la multa correspondiente en la
 Municipalidad de Yerba Buena, dentro de los (tres) días de su secuestro.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SÉPTIMO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>La
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO SÉPTIMO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>La
 presencia de cualquier animal en la vía pública, facultará a la Municipalidad
 de Yerba Buena al secuestro de los mismos, pudiendo ser rescatados por su dueño
 una vez acreditada su propiedad y después de pagar la multa correspondiente y
 dentro de los 3 (tres) días de su secuestro.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;OCTAVO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Se prohíbe
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO OCTAVO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Se prohíbe
 la tenencia de animales alimentados con desperdicios, o cualquier desecho
 molesto o perjudicial para la salud del vecindario.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;NOVENO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Prohíbese
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO NOVENO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Prohíbese
 la tenencia y/o destrucción de nidos, huevos, crias y ejemplares de la fauna
 silvestre, que no estuviere autorizado por la Dirección de Recursos Naturales
 dependiente de la Secretaría de Agricultura y Ganadería de la Provincia.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Prohíbese
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO DÉCIMO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Prohíbese
 la tenencia de animales de la especie canina cuando por su número o condición
 particular pueda constituir una molestia o peligro para la salud del vecindario.
 En tal caso, será verificado por el Servicio Veterinario de la Municipalidad de
@@ -409,8 +212,7 @@ caso se le exigiere. Caso contrario se hará pasible de una multa al propietario
 y posterior retiro de los animales, por parte de la Municipalidad de Yerba
 Buena.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;PRIMERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Se prohíbe
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO DÉCIMO PRIMERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Se prohíbe
 la tenencia y/o crianza de animales de las especies determinadas en el Artículo
 Quinto, cuando los terrenos de su/s propietario/s a pesar de cumplimentar con
 lo dispuesto en el mismo artículo, no hayan cercado con pared o alambre o
@@ -418,16 +220,14 @@ cualquier otro material que a criterio de la Autoridad Competente considere
 adecuado para preservar la seguridad de la comunidad, se incluye también la
 especie de conejos y se amplía el radio total a 300,00mts.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;SEGUNDO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Los canes
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO DÉCIMO SEGUNDO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Los canes
 secuestrados por la Municipalidad de Yerba Buena, podrán ser rescatados por su
 propietario en el plazo y condición requerida por el art. Séptimo de la
 presente Ordenanza. En caso de no poseer certificado de vacunación antirrábica
 se realizará la vacunación de los mismos antes de su salida definitiva del
 lugar de secuestro, y en tales casos se pagará el costo de la vacunación.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;TERCERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Transcurridos
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO DÉCIMO TERCERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Transcurridos
 los plazos que se establecen en los art. Sexto y Séptimo de la presente
 Ordenanza, sin que sean rescatados por sus dueños, los animales podrán ser
 sacrificados o vendidos en subastas públicas, o ser donados a entidades de bien
@@ -437,14 +237,12 @@ montos adeudados por multas establecidas antes de la subasta y la mantención
 del animal durante los días que estuvo retenido el animal en la Municipalidad
 hasta el día de la subasta.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;CUARTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Cuando por primera
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO DÉCIMO CUARTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Cuando por primera
 vez se reitera la infracción cometida en anterior oportunidad, el monto de la/s
 multa/s será/n el doble de la primera y cuando se reiterará por segunda vez, el
 monto de la multa será el doble de la anterior oportunidad y así sucesivamente.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;QUINTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>A los fines
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO DÉCIMO QUINTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>A los fines
 de que las multas por infracción de la presente Ordenanza tengan plena vigencia,
 se procederá a actualizar trimestralmente sus valores, según la variación el
 nivel general del Índice de Precios al Consumidor de Bienes y Servicios en San
@@ -452,12 +250,10 @@ Miguel de Tucumán, emitidos por la Dirección de Censo y Estadísticas de la
 Provincia. Tomando como base Enero de 1.989 hasta la fecha de promulgación de
 la presente ordenanza.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;SEXTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Publíquese
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO DÉCIMO SEXTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Publíquese
 en el Boletín Oficial.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;SÉPTIMO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>COMUNÍQUESE,
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO DÉCIMO SÉPTIMO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>COMUNÍQUESE,
 CÓPIESE y ARCHÍVESE.</p>
 
 </div>

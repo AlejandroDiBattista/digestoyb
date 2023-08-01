@@ -395,11 +395,13 @@ function resaltarPalabras(selector, palabras, tag = 'mark') {
 
 function resaltarPalabrasEnTexto(texto, palabras, tag = 'mark') {
     palabras = palabras.allTrim().split(" ");
-    if (palabras.length == 0 || palabras.every(p => p.length <= 2)) return null;
+    palabrasLargas = palabras.filter(palabra => palabra.length > 2);
+
+    if (palabrasLargas.length == 0) return null;
 
     palabras = palabras.map(x => `\\b${generalizarVocales(x)}\\b`);
     const buscarOrdenando   = new RegExp(`(${palabras.join("\\s+")})`, 'gi');
-    const buscarDesordenado = new RegExp(`(${palabras.join("|")})`, 'gi');
+    const buscarDesordenado = new RegExp(`(${palabrasLargas.join("|")})`, 'gi');
 
     if (buscarOrdenando.test(texto)) {
         return texto.replace(buscarOrdenando, x => `<${tag}>${x}</${tag}>`);
@@ -407,4 +409,12 @@ function resaltarPalabrasEnTexto(texto, palabras, tag = 'mark') {
         return texto.replace(buscarDesordenado, x => `<${tag}>${x}</${tag}>`);
     }
     return null;
+}
+
+function esSingular(palabra) {
+
+}
+
+function plural(palabra) {
+
 }

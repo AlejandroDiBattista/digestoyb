@@ -1,288 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html>
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Book Antiqua";
-	panose-1:2 4 6 2 5 3 5 3 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.DGFecha, li.DGFecha, div.DGFecha
-	{mso-style-name:"DG Fecha";
-	mso-style-link:"DG Fecha Char";
-	margin:0cm;
-	text-align:right;
-	border:none;
-	padding:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGFechaChar
-	{mso-style-name:"DG Fecha Char";
-	mso-style-link:"DG Fecha";
-	font-family:"Book Antiqua",serif;}
-p.DGOrdenanza, li.DGOrdenanza, div.DGOrdenanza
-	{mso-style-name:"DG Ordenanza";
-	mso-style-link:"DG Ordenanza Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:12.0pt;
-	margin-left:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGOrdenanzaChar
-	{mso-style-name:"DG Ordenanza Char";
-	mso-style-link:"DG Ordenanza";
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGSeccion, li.DGSeccion, div.DGSeccion
-	{mso-style-name:"DG Seccion";
-	mso-style-link:"DG Seccion Char";
-	margin-top:12.0pt;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSeccionChar
-	{mso-style-name:"DG Seccion Char";
-	mso-style-link:"DG Seccion";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGCuerpoSeccion, li.DGCuerpoSeccion, div.DGCuerpoSeccion
-	{mso-style-name:"DG CuerpoSeccion";
-	mso-style-link:"DG CuerpoSeccion Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGCuerpoSeccionChar
-	{mso-style-name:"DG CuerpoSeccion Char";
-	mso-style-link:"DG CuerpoSeccion";
-	font-family:"Book Antiqua",serif;}
-p.DGSanciona, li.DGSanciona, div.DGSanciona
-	{mso-style-name:"DG Sanciona";
-	mso-style-link:"DG Sanciona Char";
-	margin-top:16.0pt;
-	margin-right:92.15pt;
-	margin-bottom:16.0pt;
-	margin-left:92.15pt;
-	text-align:center;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSancionaChar
-	{mso-style-name:"DG Sanciona Char";
-	mso-style-link:"DG Sanciona";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGArticulo
-	{mso-style-name:"DG Articulo";
-	font-family:"Book Antiqua",serif;
-	font-variant:normal !important;
-	color:windowtext;
-	text-transform:none;
-	text-shadow:none;
-	font-weight:normal;
-	font-style:normal;
-	text-decoration:underline none underline;
-	vertical-align:baseline;}
-.MsoChpDefault
-	{font-size:12.0pt;}
-.MsoPapDefault
-	{text-align:justify;
-	line-height:150%;}
- /* Page Definitions */
- @page WordSection1
-	{size:595.3pt 841.9pt;
-	margin:2.0cm 42.5pt 42.5pt 70.85pt;}
-div.WordSection1
-	{page:WordSection1;}
- /* List Definitions */
- ol
-	{margin-bottom:0cm;}
-ul
-	{margin-bottom:0cm;}
--->
-</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Generator" content="Microsoft Word 15 (filtered)">
+
 
 </head>
 
-<body lang=ES-AR style='word-wrap:break-word'>
+<body lang="ES-AR" style="word-wrap:break-word">
 
-<div class=WordSection1>
+<div class="WordSection1">
 
-<div style='border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<div style="border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm">
 
-<p class=DGFecha><a name=Fecha>Yerba Buena, 21 de junio de 2019</a></p>
+<p class="DGFecha"><a name="Fecha">Yerba Buena, 21 de junio de 2019</a></p>
 
 </div>
 
-<p class=DGOrdenanza><a name=Ordenanza>ORDENANZA Nº 2200</a></p>
+<p class="DGOrdenanza"><a name="Ordenanza">ORDENANZA Nº 2200</a></p>
 
-<p class=DGSeccion><a name=Visto>VISTO:</a></p>
+<p class="DGSeccion"><a name="Visto">VISTO:</a></p>
 
-<p class=DGCuerpoSeccion>Que la Ordenanza N° 2144 define nuevos ejes
+<p class="DGCuerpoSeccion">Que la Ordenanza N° 2144 define nuevos ejes
 comerciales, a fin de promocionar su desarrollo urbanístico a través de la
 mejora del coeficiente FOT; y</p>
 
-<p class=DGSeccion><a name=Considerando>CONSIDERANDO:</a></p>
+<p class="DGSeccion"><a name="Considerando">CONSIDERANDO:</a></p>
 
-<p class=DGCuerpoSeccion>Que la calle Lamadrid, entre Av. Solano Vera y calle
+<p class="DGCuerpoSeccion">Que la calle Lamadrid, entre Av. Solano Vera y calle
 Martín Fierro, fue definida como nuevo eje comercial, siendo conveniente
 prolongar dicha condición hasta la Av. Alfredo Guzmán;</p>
 
-<p class=DGCuerpoSeccion>Que, por su parte, la nueva pavimentación de la Av.
+<p class="DGCuerpoSeccion">Que, por su parte, la nueva pavimentación de la Av.
 Solano Vera permitirá una circulación vehicular ordenada, que la caracterizará
 como una arteria de flujo rápido y de circulación constante;</p>
 
-<p class=DGCuerpoSeccion>Que la Av. Solano Vera, delimitada entre la Av.
+<p class="DGCuerpoSeccion">Que la Av. Solano Vera, delimitada entre la Av.
 Aconquija y la calle San Luis, presenta en la actualidad un alto desarrollo
 comercial signado por una amplia oferta de rubros, con la conjunción de
 emprendimientos recientes y construcciones antiguas y deterioradas;</p>
 
-<p class=DGCuerpoSeccion>Que, por lo expuesto, resulta necesario incorporar los
+<p class="DGCuerpoSeccion">Que, por lo expuesto, resulta necesario incorporar los
 referidos tramos en el listado contenido en el Artículo Primero de la Ordenanza
 N° 2144, el que, además, debe consignarse en forma numerada a efectos de una
 adecuada técnica legislativa;</p>
 
-<p class=DGSanciona><a name=Sanciona>EL CONCEJO DELIBERANTE SANCIONA CON FUERZA
+<p class="DGSanciona"><a name="Sanciona">EL CONCEJO DELIBERANTE SANCIONA CON FUERZA
 DE ORDENANZA</a></p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;PRIMERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>MODIFÍCASE el
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO PRIMERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>MODIFÍCASE el
 Artículo Primero de la Ordenanza N° 2144, el que queda redactado de la
 siguiente forma:</p>
 
-<p class=MsoNormal style='margin-top:0cm;margin-right:14.15pt;margin-bottom:
-6.0pt;margin-left:14.15pt'><i>“DEFÍNANSE como nuevos EJES COMERCIALES a los
+<p class="MsoNormal" style="margin-top:0cm;margin-right:14.15pt;margin-bottom:
+6.0pt;margin-left:14.15pt"><i>“DEFÍNANSE como nuevos EJES COMERCIALES a los
 fines de promocionar su desarrollo urbanístico (indicados en el plano del Anexo
 Único que forma parte integrante de la presente Ordenanza):</i></p>
 
-<p class=MsoListParagraphCxSpFirst style='margin-top:0cm;margin-right:14.15pt;
-margin-bottom:6.0pt;margin-left:50.15pt;text-indent:-18.0pt'><i>1.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></i><i>Av.
+<p class="MsoListParagraphCxSpFirst" style="margin-top:0cm;margin-right:14.15pt;
+margin-bottom:6.0pt;margin-left:50.15pt;text-indent:-18.0pt"><i>1.<span style='font:7.0pt "Times New Roman"'>     </span></i><i>Av.
 Presidente Perón, tramo 1: desde su inicio en Camino del Perú hasta Av.
 Fanzolato, tramo 2: desde Av. Fanzolato hasta calle Las Rosas (sólo en acera
 Norte), tramo 3: desde calle Las Rosas hasta calle Berutti. (UA1-6-7).</i></p>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:14.15pt;
-margin-bottom:6.0pt;margin-left:50.15pt;text-indent:-18.0pt'><i>2.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></i><i>Av.
+<p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:14.15pt;
+margin-bottom:6.0pt;margin-left:50.15pt;text-indent:-18.0pt"><i>2.<span style='font:7.0pt "Times New Roman"'>     </span></i><i>Av.
 Fanzolato, desde su inicio en Av. Perón hasta calle Frías Silva. (UA7).</i></p>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:14.15pt;
-margin-bottom:6.0pt;margin-left:50.15pt;text-indent:-18.0pt'><i>3.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></i><i>Calle
+<p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:14.15pt;
+margin-bottom:6.0pt;margin-left:50.15pt;text-indent:-18.0pt"><i>3.<span style='font:7.0pt "Times New Roman"'>     </span></i><i>Calle
 Frías Silva, desde su inicio en Camino del Perú hasta Av. Fanzolato (UA7).</i></p>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:14.15pt;
-margin-bottom:6.0pt;margin-left:50.15pt;text-indent:-18.0pt'><i>4.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></i><i>Calle
+<p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:14.15pt;
+margin-bottom:6.0pt;margin-left:50.15pt;text-indent:-18.0pt"><i>4.<span style='font:7.0pt "Times New Roman"'>     </span></i><i>Calle
 Lobo de la Vega, tramo 1: desde su inicio en Av. Aconquija hasta calle Salas y
 Valdez, y tramo 2: desde calle Higueritas hasta Av. Perón (UA1).</i></p>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:14.15pt;
-margin-bottom:6.0pt;margin-left:50.15pt;text-indent:-18.0pt'><i>5.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></i><i>Calle
+<p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:14.15pt;
+margin-bottom:6.0pt;margin-left:50.15pt;text-indent:-18.0pt"><i>5.<span style='font:7.0pt "Times New Roman"'>     </span></i><i>Calle
 Moreno, tramo 1: desde su inicio en Av. Aconquija hasta calle Salas y Valdez, y
 tramo 2: desde calle Higueritas hasta Av. Perón. (UA1)</i></p>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:14.15pt;
-margin-bottom:6.0pt;margin-left:50.15pt;text-indent:-18.0pt'><i>6.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></i><i>Boulevard
+<p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:14.15pt;
+margin-bottom:6.0pt;margin-left:50.15pt;text-indent:-18.0pt"><i>6.<span style='font:7.0pt "Times New Roman"'>     </span></i><i>Boulevard
 9 de Julio, desde su inicio en Av. Alfredo Guzmán hasta Av. Solano Vera. (UA2)</i></p>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:14.15pt;
-margin-bottom:6.0pt;margin-left:50.15pt;text-indent:-18.0pt'><i>7.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></i><i>Calle
+<p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:14.15pt;
+margin-bottom:6.0pt;margin-left:50.15pt;text-indent:-18.0pt"><i>7.<span style='font:7.0pt "Times New Roman"'>     </span></i><i>Calle
 Lamadrid, desde Av. Alfredo Guzmán hasta Av. Solano Vera. (UA2)</i></p>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:14.15pt;
-margin-bottom:6.0pt;margin-left:50.15pt;text-indent:-18.0pt'><i>8.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></i><i>Calle
+<p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:14.15pt;
+margin-bottom:6.0pt;margin-left:50.15pt;text-indent:-18.0pt"><i>8.<span style='font:7.0pt "Times New Roman"'>     </span></i><i>Calle
 San Martín, tramo 1: desde Boulevard 9 de Julio hasta Catamarca, y tramo 2: desde
 calle San Luis hasta su llegada al Camino de Sirga. (UA2)</i></p>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:14.15pt;
-margin-bottom:6.0pt;margin-left:50.15pt;text-indent:-18.0pt'><i>9.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></i><i>Calle
+<p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:14.15pt;
+margin-bottom:6.0pt;margin-left:50.15pt;text-indent:-18.0pt"><i>9.<span style='font:7.0pt "Times New Roman"'>     </span></i><i>Calle
 San Luis, desde Calle San Martín hasta Av. Solano Vera. (UA2)</i></p>
 
-<p class=MsoListParagraphCxSpLast style='margin-top:0cm;margin-right:14.15pt;
-margin-bottom:6.0pt;margin-left:50.15pt;text-indent:-18.0pt'><i>10.<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span></i><i>Av. Solano Vera,
+<p class="MsoListParagraphCxSpLast" style="margin-top:0cm;margin-right:14.15pt;
+margin-bottom:6.0pt;margin-left:50.15pt;text-indent:-18.0pt"><i>10.<span style='font:7.0pt "Times New Roman"'>  </span></i><i>Av. Solano Vera,
 desde Av. Aconquija hasta calle San Luis”.</i></p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SEGUNDO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>COMUNIQUESE,
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO SEGUNDO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>COMUNIQUESE,
 REGISTRESE Y ARCHIVESE.</p>
 
 </div>

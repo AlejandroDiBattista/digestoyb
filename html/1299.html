@@ -1,522 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html>
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Book Antiqua";
-	panose-1:2 4 6 2 5 3 5 3 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-h1
-	{mso-style-link:"Título 1 Car";
-	margin-top:6.0pt;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	page-break-after:avoid;
-	font-size:16.0pt;
-	font-family:"Book Antiqua",serif;
-	font-variant:small-caps;}
-h2
-	{mso-style-link:"Título 2 Car";
-	margin-top:12.0pt;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	page-break-after:avoid;
-	font-size:14.0pt;
-	font-family:"Book Antiqua",serif;
-	font-variant:small-caps;}
-h3
-	{mso-style-link:"Título 3 Car";
-	margin-top:2.0pt;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:0cm;
-	text-align:justify;
-	page-break-after:avoid;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#243F60;
-	font-weight:normal;}
-h4
-	{mso-style-link:"Título 4 Car";
-	margin-top:2.0pt;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:0cm;
-	text-align:justify;
-	page-break-after:avoid;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#365F91;
-	font-weight:normal;
-	font-style:italic;}
-h5
-	{mso-style-link:"Título 5 Car";
-	margin-top:2.0pt;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:0cm;
-	text-align:justify;
-	page-break-after:avoid;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#365F91;
-	font-weight:normal;}
-h6
-	{mso-style-link:"Título 6 Car";
-	margin-top:2.0pt;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:0cm;
-	text-align:justify;
-	page-break-after:avoid;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#243F60;
-	font-weight:normal;}
-p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
-	{mso-style-link:"Título 7 Car";
-	margin-top:2.0pt;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:0cm;
-	text-align:justify;
-	page-break-after:avoid;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#243F60;
-	font-style:italic;}
-p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
-	{mso-style-link:"Título 8 Car";
-	margin-top:2.0pt;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:0cm;
-	text-align:justify;
-	page-break-after:avoid;
-	font-size:10.5pt;
-	font-family:"Book Antiqua",serif;
-	color:#272727;}
-p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
-	{mso-style-link:"Título 9 Car";
-	margin-top:2.0pt;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:0cm;
-	text-align:justify;
-	page-break-after:avoid;
-	font-size:10.5pt;
-	font-family:"Book Antiqua",serif;
-	color:#272727;
-	font-style:italic;}
-p.MsoHeader, li.MsoHeader, div.MsoHeader
-	{mso-style-link:"Encabezado Car";
-	margin:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoFooter, li.MsoFooter, div.MsoFooter
-	{mso-style-link:"Pie de página Car";
-	margin:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoTitle, li.MsoTitle, div.MsoTitle
-	{mso-style-link:"Título Car";
-	margin:0cm;
-	text-align:justify;
-	font-size:28.0pt;
-	font-family:"Book Antiqua",serif;
-	letter-spacing:-.5pt;}
-p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
-	{mso-style-link:"Título Car";
-	margin:0cm;
-	text-align:justify;
-	font-size:28.0pt;
-	font-family:"Book Antiqua",serif;
-	letter-spacing:-.5pt;}
-p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
-	{mso-style-link:"Título Car";
-	margin:0cm;
-	text-align:justify;
-	font-size:28.0pt;
-	font-family:"Book Antiqua",serif;
-	letter-spacing:-.5pt;}
-p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
-	{mso-style-link:"Título Car";
-	margin:0cm;
-	text-align:justify;
-	font-size:28.0pt;
-	font-family:"Book Antiqua",serif;
-	letter-spacing:-.5pt;}
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.Listavistosa-nfasis11, li.Listavistosa-nfasis11, div.Listavistosa-nfasis11
-	{mso-style-name:"Lista vistosa - Énfasis 11";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.Listavistosa-nfasis11CxSpFirst, li.Listavistosa-nfasis11CxSpFirst, div.Listavistosa-nfasis11CxSpFirst
-	{mso-style-name:"Lista vistosa - Énfasis 11CxSpFirst";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.Listavistosa-nfasis11CxSpMiddle, li.Listavistosa-nfasis11CxSpMiddle, div.Listavistosa-nfasis11CxSpMiddle
-	{mso-style-name:"Lista vistosa - Énfasis 11CxSpMiddle";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.Listavistosa-nfasis11CxSpLast, li.Listavistosa-nfasis11CxSpLast, div.Listavistosa-nfasis11CxSpLast
-	{mso-style-name:"Lista vistosa - Énfasis 11CxSpLast";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.EncabezadoCar
-	{mso-style-name:"Encabezado Car";
-	mso-style-link:Encabezado;}
-span.PiedepginaCar
-	{mso-style-name:"Pie de página Car";
-	mso-style-link:"Pie de página";}
-p.DGFecha, li.DGFecha, div.DGFecha
-	{mso-style-name:"DG Fecha";
-	mso-style-link:"DG Fecha Char";
-	margin:0cm;
-	text-align:right;
-	border:none;
-	padding:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGFechaChar
-	{mso-style-name:"DG Fecha Char";
-	mso-style-link:"DG Fecha";
-	font-family:"Book Antiqua",serif;}
-p.DGOrdenanza, li.DGOrdenanza, div.DGOrdenanza
-	{mso-style-name:"DG Ordenanza";
-	mso-style-link:"DG Ordenanza Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:12.0pt;
-	margin-left:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGOrdenanzaChar
-	{mso-style-name:"DG Ordenanza Char";
-	mso-style-link:"DG Ordenanza";
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGSeccion, li.DGSeccion, div.DGSeccion
-	{mso-style-name:"DG Seccion";
-	mso-style-link:"DG Seccion Char";
-	margin-top:12.0pt;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSeccionChar
-	{mso-style-name:"DG Seccion Char";
-	mso-style-link:"DG Seccion";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGCuerpoSeccion, li.DGCuerpoSeccion, div.DGCuerpoSeccion
-	{mso-style-name:"DG CuerpoSeccion";
-	mso-style-link:"DG CuerpoSeccion Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGCuerpoSeccionChar
-	{mso-style-name:"DG CuerpoSeccion Char";
-	mso-style-link:"DG CuerpoSeccion";
-	font-family:"Book Antiqua",serif;}
-p.DGSanciona, li.DGSanciona, div.DGSanciona
-	{mso-style-name:"DG Sanciona";
-	mso-style-link:"DG Sanciona Char";
-	margin-top:16.0pt;
-	margin-right:92.15pt;
-	margin-bottom:16.0pt;
-	margin-left:92.15pt;
-	text-align:center;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSancionaChar
-	{mso-style-name:"DG Sanciona Char";
-	mso-style-link:"DG Sanciona";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGArticulos, li.DGArticulos, div.DGArticulos
-	{mso-style-name:"DG Articulos";
-	mso-style-link:"DG Articulos Char";
-	margin-top:6.0pt;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGArticulosChar
-	{mso-style-name:"DG Articulos Char";
-	mso-style-link:"DG Articulos";
-	font-family:"Book Antiqua",serif;}
-span.DGArticulo
-	{mso-style-name:"DG Articulo";
-	font-family:"Book Antiqua",serif;
-	font-variant:normal !important;
-	color:windowtext;
-	text-transform:none;
-	text-shadow:none;
-	font-weight:normal;
-	font-style:normal;
-	text-decoration:underline none underline;
-	vertical-align:baseline;}
-span.Ttulo1Car
-	{mso-style-name:"Título 1 Car";
-	mso-style-link:"Título 1";
-	font-family:"Book Antiqua",serif;
-	font-variant:small-caps;
-	font-weight:bold;}
-span.Ttulo2Car
-	{mso-style-name:"Título 2 Car";
-	mso-style-link:"Título 2";
-	font-family:"Book Antiqua",serif;
-	font-variant:small-caps;
-	font-weight:bold;}
-span.Ttulo3Car
-	{mso-style-name:"Título 3 Car";
-	mso-style-link:"Título 3";
-	font-family:"Book Antiqua",serif;
-	color:#243F60;}
-span.TtuloCar
-	{mso-style-name:"Título Car";
-	mso-style-link:Título;
-	font-family:"Book Antiqua",serif;
-	letter-spacing:-.5pt;}
-span.Ttulo4Car
-	{mso-style-name:"Título 4 Car";
-	mso-style-link:"Título 4";
-	font-family:"Book Antiqua",serif;
-	color:#365F91;
-	font-style:italic;}
-span.Ttulo5Car
-	{mso-style-name:"Título 5 Car";
-	mso-style-link:"Título 5";
-	font-family:"Book Antiqua",serif;
-	color:#365F91;}
-span.Ttulo6Car
-	{mso-style-name:"Título 6 Car";
-	mso-style-link:"Título 6";
-	font-family:"Book Antiqua",serif;
-	color:#243F60;}
-span.Ttulo7Car
-	{mso-style-name:"Título 7 Car";
-	mso-style-link:"Título 7";
-	font-family:"Book Antiqua",serif;
-	color:#243F60;
-	font-style:italic;}
-span.Ttulo8Car
-	{mso-style-name:"Título 8 Car";
-	mso-style-link:"Título 8";
-	font-family:"Book Antiqua",serif;
-	color:#272727;}
-span.Ttulo9Car
-	{mso-style-name:"Título 9 Car";
-	mso-style-link:"Título 9";
-	font-family:"Book Antiqua",serif;
-	color:#272727;
-	font-style:italic;}
-.MsoChpDefault
-	{font-size:10.0pt;
-	font-family:"Calibri",sans-serif;}
- /* Page Definitions */
- @page WordSection1
-	{size:595.3pt 841.9pt;
-	margin:2.0cm 42.5pt 42.5pt 70.85pt;}
-div.WordSection1
-	{page:WordSection1;}
- /* List Definitions */
- ol
-	{margin-bottom:0cm;}
-ul
-	{margin-bottom:0cm;}
--->
-</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Generator" content="Microsoft Word 15 (filtered)">
+
 
 </head>
 
-<body lang=ES-AR style='word-wrap:break-word'>
+<body lang="ES-AR" style="word-wrap:break-word">
 
-<div class=WordSection1>
+<div class="WordSection1">
 
-<div style='border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<div style="border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm">
 
-<p class=DGFecha><a name=Fecha>Yerba Buena, 28 de julio de 2003</a></p>
+<p class="DGFecha"><a name="Fecha">Yerba Buena, 28 de julio de 2003</a></p>
 
 </div>
 
-<p class=DGOrdenanza><a name=Ordenanza>ORDENANZA Nº 1299</a></p>
+<p class="DGOrdenanza"><a name="Ordenanza">ORDENANZA Nº 1299</a></p>
 
-<p class=DGSeccion><a name=Visto>VISTO:</a></p>
+<p class="DGSeccion"><a name="Visto">VISTO:</a></p>
 
-<p class=DGCuerpoSeccion>La Ordenanza N° 59 del 13/02/1981 y sus modificatorias
+<p class="DGCuerpoSeccion">La Ordenanza N° 59 del 13/02/1981 y sus modificatorias
 mediante las cuales se establece el régimen de Contrataciones para la
 Municipalidad de Yerba Buena, y</p>
 
-<p class=DGSeccion><a name=Considerando>CONSIDERANDO:</a></p>
+<p class="DGSeccion"><a name="Considerando">CONSIDERANDO:</a></p>
 
-<p class=DGCuerpoSeccion>Que para el dictado de la misma se tuvo en cuenta las
+<p class="DGCuerpoSeccion">Que para el dictado de la misma se tuvo en cuenta las
 disposiciones establecidas por el Decreto 3041/3, texto Ordenado de la Ley
 Provincial Nº 56 /17 de Contabilidad y Tribunal de Cuentas de la Provincia;</p>
 
-<p class=DGCuerpoSeccion>Que mediante Ley Provincial Nº 6970 y sus
+<p class="DGCuerpoSeccion">Que mediante Ley Provincial Nº 6970 y sus
 modificatorias, se establece y se regula la administración financiera y los
 sistemas de control del sector público provincial y su artículo 195 deroga el
 Decreto Ley Provincial Nº 56 /17;</p>
 
-<p class=DGCuerpoSeccion>Que la Municipalidad de Yerba Buena, mediante Ordenanza
+<p class="DGCuerpoSeccion">Que la Municipalidad de Yerba Buena, mediante Ordenanza
 N° 1076 se adhirió a las disposiciones de la Ley Provincial Nº 6970 y de su
 modificatoria Ley Provincial Nº 6981, debiendo adoptar sus disposiciones en
 todos los sistemas financieros que integran su administración, siendo el
 régimen de contrataciones una parte del sistema presupuestario;</p>
 
-<p class=DGCuerpoSeccion>Que se debe contar con el Régimen de Contrataciones, conforme
+<p class="DGCuerpoSeccion">Que se debe contar con el Régimen de Contrataciones, conforme
 lo dispuesto en la Ley Provincial Nº 5529, artículo 24, Inc. 11)</p>
 
-<p class=DGCuerpoSeccion>Por ello y en uso de las facultades que le confiere el
+<p class="DGCuerpoSeccion">Por ello y en uso de las facultades que le confiere el
 Decreto Nº 863/14 (MGyJ) de fecha 06 de Mayo de 2003, emitida por el Poder
 Ejecutivo Provincial;</p>
 
-<p class=DGSanciona><a name=Sanciona>EL INTERVENTOR MUNICIPAL SANCIONA CON
+<p class="DGSanciona"><a name="Sanciona">EL INTERVENTOR MUNICIPAL SANCIONA CON
 FUERZA DE ORDENANZA</a></p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;1</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Establecese
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 1</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Establecese
 el Régimen de Contrataciones, cuya normativa será de aplicación obligatoria
 para la Municipalidad de Yerba Buena, conforme a lo establecido en la Ley
 Provincial Nº 5529, artículo 24, Inc. 11)</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;2</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Toda compra,
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 2</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Toda compra,
 así como las contrataciones sobre trabajos o suministros de especies, locación,
 arrendamiento y servicios que se realicen por cuenta de la Municipalidad de
 Yerba Buena, se ajustará en lo sucesivo a la presente reglamentación:</p>
 
-<h1 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Título
+<h1 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Título
 I: Competencia</span></h1>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;3</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Las compras,
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 3</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Las compras,
 contrataciones sobre trabajos o suministros de especies, locación, arrendamiento
 y servicios que excedan los $20.001 (pesos veinte mil uno) se efectuarán
 mediante Licitación Pública, cuyos llamados previos y aprobación, serán
 autorizados por el Señor Intendente Municipal, mediante la emisión del Decreto
 correspondiente.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;4</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Podrá
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 4</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Podrá
 contratarse además por:</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>LICITACION
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>LICITACION
 PRIVADA: Cuando el monto de la contratación sea de $10.001 (pesos diez mil uno)
 hasta $20.000 (pesos veinte mil) autorizada por el Secretario de Hacienda y
 aprobada por el D.E.M. mediante Decreto.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>CONCURSOS DE
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>CONCURSOS DE
 PRECIOS: Cuando el monto estimado de la contratación sea de $2.001 (pesos dos
 mil uno) hasta $10.000 (pesos diez mil) autorizada por el Contador General y
 aprobada por el Secretario de Hacienda mediante Resolución del D.E.M.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;5</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Podrá
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 5</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Podrá
 contratarse en forma directa cuando el monto de la operación no exceda los $2.000
 (pesos dos mil) siendo necesaria, la autorización de la Contaduría General y
 del Secretario del área que correspondiera.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;6</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Los montos
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 6</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Los montos
 consignados en los Artículos Tercero, Cuarta y Quinto se actualizarán
 periódicamente y cuando las circunstancias lo aconsejen en función de la
 incrementación del Nivel General del índice de precios al consumidor de bienes
@@ -524,107 +99,90 @@ y servicios de Tucumán, experimentados en el trimestre anterior y suministrados
 por la Dirección Provincial de Estadísticas de la provincia de Tucumán, mediante
 Decreto del D.E.M.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;7</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>No obstante
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 7</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>No obstante
 lo dispuesto por el Artículo Quinto podrá también contratarse en forma directa:</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>1.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Por
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">1.<span style='font:7.0pt "Times New Roman"'>     </span>Por
 razones de urgencia o emergencia imprevisible y únicamente por el mínimo indispensable
 hasta tanto se proceda al llamado licitatorio. Todo esto siempre que se
 acredite fehacientemente el estado de urgencia y necesidad invocada.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>2.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Cuando
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">2.<span style='font:7.0pt "Times New Roman"'>     </span>Cuando
 realizada una licitación, no hubiera propuestas o las habidas no fueran
 convenientes. La contratación demostrará exhaustivamente la conveniencia de la
 adjudicación propiciada.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>3.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>La
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">3.<span style='font:7.0pt "Times New Roman"'>     </span>La
 adquisición o locación de bienes y servicios cuya producción o prestación sea
 exclusiva de quienes tengan privilegios para ello o que sólo posean una persona
 o entidad y no hubiera sustituto conveniente.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>4.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>La
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">4.<span style='font:7.0pt "Times New Roman"'>     </span>La
 contratación de artistas, técnicos o científicos o sus obras.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>5.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Cuando las
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">5.<span style='font:7.0pt "Times New Roman"'>     </span>Cuando las
 circunstancias exijan que las operaciones del gobierno se mantengan secretas.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>6.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Cuando
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">6.<span style='font:7.0pt "Times New Roman"'>     </span>Cuando
 existiera escasez notoria en el mercado y siempre que se acredite debidamente
 tal situación. Todas estas adquisiciones se harán por el mínimo indispensable.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>7.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Entre
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">7.<span style='font:7.0pt "Times New Roman"'>     </span>Entre
 reparticiones oficiales o mixtas, nacionales, provinciales o municipales.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>8.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>La
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">8.<span style='font:7.0pt "Times New Roman"'>     </span>La
 publicidad oficial.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>9.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>La compra
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">9.<span style='font:7.0pt "Times New Roman"'>     </span>La compra
 de semovientes por selección o remate público.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>10.<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span>Las compras o locaciones que
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">10.<span style='font:7.0pt "Times New Roman"'>  </span>Las compras o locaciones que
 deban realizarse en países extranjeros siempre que no resulte posible o
 conveniente realizar en ellos licitación.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>11.<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span>Las compras en remate
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">11.<span style='font:7.0pt "Times New Roman"'>  </span>Las compras en remate
 público, previa fijación del precio máximo a abonarse en la operación.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>12.<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span>Para la adquisición de
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">12.<span style='font:7.0pt "Times New Roman"'>  </span>Para la adquisición de
 inmuebles se requerirá la tasación de ellos, por la Comisión de Tasaciones de
 la Provincia. Este justiprecio determinará el valor máximo a ofrecer en el
 remate o a pagar en la compra. Dicho valor máximo solo podrá ser superado por
 razones de conveniencia del servicio, circunstancia ésta que deberá ser
 justificada con amplitud por la autoridad competente.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>13.<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span>La reparación de vehículos y
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">13.<span style='font:7.0pt "Times New Roman"'>  </span>La reparación de vehículos y
 motores. Esta excepción solo procederá cuando resulte indispensable el desarme
 total o parcial de vehículos o motores para determinar las reparaciones
 necesarias a efectuarse.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>14.<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span>La compra de combustible, lubricantes
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">14.<span style='font:7.0pt "Times New Roman"'>  </span>La compra de combustible, lubricantes
 y derivados del petróleo en las condiciones de venta más ventajosa a los
 intereses municipales.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>15.<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span>En los demás casos que, a
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">15.<span style='font:7.0pt "Times New Roman"'>  </span>En los demás casos que, a
 criterio del H.C.D., expresado mediante Ordenanzas especiales, ello sea
 conveniente y/o necesario por razones de bien público, de conformidad con la
 letra y espíritu de la Constitución Provincial y la Ley Provincial Nº 5529 y
 sus modificatorias.</p>
 
-<p class=MsoNormal>Las causales de excepción serán debidamente fundadas y en
+<p class="MsoNormal">Las causales de excepción serán debidamente fundadas y en
 cada caso el funcionario que la invoque será responsable de su existencia u
 procedencia.</p>
 
-<p class=MsoNormal>Las adquisiciones efectuadas conforme las excepciones
+<p class="MsoNormal">Las adquisiciones efectuadas conforme las excepciones
 previstas en los incisos 1, 2, 12 y 13 del presente Artículo, se harán previo
 Cotejo de Precios.</p>
 
-<p class=MsoNormal>Las contrataciones que se realicen al amparo de este
+<p class="MsoNormal">Las contrataciones que se realicen al amparo de este
 artículo, excepción hecha del 14, serán autorizadas y aprobadas por el Señor
 Intendente Municipal y por el Señor Secretario de Hacienda mediante Decreto.</p>
 
-<h1 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Título
+<h1 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Título
 II: Licitación Pública</span></h1>
 
-<h2 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Publicidad</span></h2>
+<h2 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Publicidad</span></h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;8</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>El llamado
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 8</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>El llamado
 a Licitación Pública deberá anunciarse en el Boletín Oficial y en un diario, por
 lo menos, de los de mayor circulación en el Municipio y en la Provincia, pudiendo
 además disponerse publicaciones en periódicos de otras jurisdicciones cuando la
@@ -635,32 +193,26 @@ de 2 (dos) días hábiles. Los anuncios se regularán prudentemente de modo que 
 costo no desnaturalice el efecto perseguido en la puja pública de precios, debiéndose
 cumplir siempre con las limitaciones mínimas.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;9</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Las
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 9</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Las
 publicaciones deberán contener por lo menos los siguientes requisitos:</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Nombre del
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>Nombre del
 Municipio, repartición interviniente, numero de licitación y del expediente del
 caso.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Objeto de la
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>Objeto de la
 Licitación, con indicación del monto estimado.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>c)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Lugar, fecha
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">c)<span style='font:7.0pt "Times New Roman"'>     </span>Lugar, fecha
 y hora de apertura de las propuestas.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>d)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Oficina y hora
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">d)<span style='font:7.0pt "Times New Roman"'>    </span>Oficina y hora
 para que los interesados retiren pliegos de condiciones y valor de éste.</p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Normas
+<h2 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Normas
 Referentes a las Contrataciones</span></h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;10</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Las compras,
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 10</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Las compras,
 contrataciones sobre trabajos, suministros de especies, locación, arrendamiento
 y servicios se regirán por las cláusulas generales de los pliegos de Bases y
 Condiciones aprobadas por el D.E.M. de la Municipalidad. Las cláusulas
@@ -669,67 +221,55 @@ objeto o motivo de la compra, contratación, suministro, locación, arrendamient
 y servicio, serán establecidas por la oficina o dependencia interviniente y se
 indicarán en el respectivo Decreto autorizatorio.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;11</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>En las
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 11</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>En las
 cláusulas particulares, que serán parte integrante de los Pliegos de Bases y
 Condiciones deberán indicarse los requisitos esenciales de la compra, contratación,
 suministro, locación y servicios y en especial:</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Lugar, día
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>Lugar, día
 y hora en que se presentarán y abrirán las ofertas.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Plazo de
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>Plazo de
 mantenimiento de la oferta.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>c)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Lugar y
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">c)<span style='font:7.0pt "Times New Roman"'>     </span>Lugar y
 forma de entrega y recepción de lo adjudicado.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>d)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Plazo de entrega
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">d)<span style='font:7.0pt "Times New Roman"'>    </span>Plazo de entrega
 máximo, en cuanto a su fijación fuese indispensable según las necesidades del
 servicio y no implicare una restricción artificial de las ofertas.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>e)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Si será
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">e)<span style='font:7.0pt "Times New Roman"'>     </span>Si será
 requerida la conformidad de la Municipalidad antes de la entrega.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>f)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Lapsos
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">f)<span style='font:7.0pt "Times New Roman"'>      </span>Lapsos
 en los que podrá recabarse entregas parciales y cantidades que se han de
 suministrar en cada una de ellas, cuando se requieran entregas sujetas ha
 pedido de la Municipalidad.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>g)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Plazo máximo en
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">g)<span style='font:7.0pt "Times New Roman"'>    </span>Plazo máximo en
 que la Municipalidad efectuará la apertura del respectivo crédito documentario,
 si se reviene esa forma de pago para la compra, contratación, suministro, arrendamiento
 y servicios de los elementos a importar.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>h)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Las
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">h)<span style='font:7.0pt "Times New Roman"'>    </span>Las
 características y calidad mínima esenciales de la prestación cualquiera fuese
 su naturaleza, estableciendo, respecto del objeto motivo de la contratación o
 compra, si los elementos deben ser nuevos, usados o reacondicionados, cantidad,
 especies y calidad, de conformidad con la terminología, calificativa usual en
 el comercio.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>i)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Las
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">i)<span style='font:7.0pt "Times New Roman"'>      </span>Las
 tolerancias que se aceptarán, dentro de márgenes fijos o aproximados, según el
 caso, teniendo en cuenta las necesidades del servicio, salvo cuando mediaren
 razones científicas o técnicas que lo impidieran en cuyo supuesto, se harán
 constar en las actuaciones correspondientes.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>j)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>No
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">j)<span style='font:7.0pt "Times New Roman"'>      </span>No
 se podrán incluir requisitos que modifiquen o establezcan condiciones
 diferentes a las determinadas en las cláusulas generales.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;12</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Sin
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 12</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Sin
 perjuicio de que en todos los casos se dé cumplimiento a lo establecido en el
 artículo anterior, cuando resulte dificultosa la especificación de ciertas
 características del elemento referido, estas podrán remitirse a las de una
@@ -742,8 +282,7 @@ los fines establecidos anteriormente. No obstante la falta de presentación de
 muestras no será causal de rechazo de la oferta, cuando ésta se ajuste a las
 condiciones exigidas en el artículo anterior.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;13</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Salvo casos
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 13</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Salvo casos
 indispensables, originados en razones científicas o técnicas, debidamente
 fundadas, no deberá solicitarse marca determinada, quedando entendido que si
 menciona marca o tipo es al solo efecto de señalar las características
@@ -752,8 +291,7 @@ ofrecer artículos similares de otra marca o tipos. Para la reparación de
 aparatos, máquinas o motores, podrá solicitarse repuestos denominados
 “Legítimos”.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;14</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Las
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 14</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Las
 cláusulas particulares establecerán preferentemente que la entrega se efectuara
 en el lugar de destino, corriendo el flete, acarreo, descarga y estiba en
 depósito, por cuenta del destinatario. En aquellos casos en que las
@@ -761,11 +299,10 @@ circunstancias lo hagan necesario o convenientes, podrán preverse en las
 cláusulas particulares la aceptación de ofertas sobre vagón y otros medios de
 transporte, con flete por cuenta de la Municipalidad.</p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Forma
+<h2 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Forma
 de Presentación de las Propuestas</span></h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;15</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Las
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 15</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Las
 propuestas se presentarán en sobre cubierto, cerrado y lacrado y se admitirán
 hasta la hora fijada para la apertura. Deberán entregarse personalmente, bajo
 recibo o remitirse por pieza certificada con anticipación indispensable, consignándose
@@ -775,55 +312,45 @@ sobres no deberán tener ninguna inscripción más que las consignadas en este
 artículo y la Oficina de Compras no recibirá los sobres que no reúnan tales
 condiciones. Los sobres cubiertos contendrán lo siguiente:</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>El sobre
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>El sobre
 cerrado con la propuesta, que se presentará por duplicado y en lo posible
 escrito a máquina para una mayor claridad y legibilidad, sin raspaduras, interlíneas,
 testaciones ni enmiendas, las que de existir deberán ser debidamente salvadas
 al pie. Los proponentes rubricarán cada una de las hojas que las compongan, con
 su sellado correspondiente.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>El documento de
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>El documento de
 garantía respectivo.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>c)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>El sellado
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">c)<span style='font:7.0pt "Times New Roman"'>     </span>El sellado
 correspondiente.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>d)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>El recibo de la
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">d)<span style='font:7.0pt "Times New Roman"'>    </span>El recibo de la
 muestra, cuando la presentación de la misma hubiera sido exigida.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>e)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Recibo de
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">e)<span style='font:7.0pt "Times New Roman"'>     </span>Recibo de
 compra del Pliego de bases y condiciones.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>f)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Certificado
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">f)<span style='font:7.0pt "Times New Roman"'>      </span>Certificado
 de Libre deuda de Impuestos provinciales expedidos por la Dirección General de
 Rentas de la Provincia de Tucumán.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>g)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Certificado de
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">g)<span style='font:7.0pt "Times New Roman"'>    </span>Certificado de
 Libre deuda de Contribuciones Municipales, expedido por Rentas Municipales de
 la Municipalidad de Yerba Buena.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>h)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Constancia o
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">h)<span style='font:7.0pt "Times New Roman"'>    </span>Constancia o
 Declaración Jurada firmada por el proponente o autorizada, del cumplimiento de
 Leyes Laborales y Previsionales, como así también de Impuestos Nacionales, y cualquier
 otra documentación que se le exigiere en el Pliego de Bases y Condiciones.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>i)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Toda
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">i)<span style='font:7.0pt "Times New Roman"'>      </span>Toda
 documentación presentada llevará el sellado correspondiente.</p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Efectos
+<h2 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Efectos
 de la Presentación de las Ofertas</span></h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;16</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>La
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 16</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>La
 presentación de ofertas sin observaciones respecto de este reglamento y de las
 cláusulas particulares de la contratación o la emisión de requisitos o
 características exigidas en la misma, significará la aceptación lisa y llana de
@@ -831,37 +358,31 @@ todas las estipulaciones que rigen la contratación, aún cuando las clausulas
 particulares no se acompañen con la oferta o no estén firmadas por el
 proponente.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;17</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>El
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 17</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>El
 proponente puede formular ofertas por todo o parte de losolicitado y aún por
 parte del renglón. Como alternativa, después de haber cotizado por renglón, puede
 ofrecer por el total de las ofertas sobre la base de su adjudicación íntegra
 siempre que ello no se hubiere prohibido en las cláusulas particulares.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;18</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>El precio
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 18</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>El precio
 de los efectos será cotizado y puestos los mismos en el lugar establecido por las
 cláusulas particulares indicándose:</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>El valor
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>El valor
 unitario y total en números de cada renglón, en letras y en números el total
 general de la propuesta.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Si se trata de
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>Si se trata de
 productos de industria nacional o extranjera, el origen del producto cotizado, si
 no se lo indicare, se entenderá que es de industria argentina.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>c)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>La
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">c)<span style='font:7.0pt "Times New Roman"'>     </span>La
 cotización por cantidades netas y libres de envases y gastos de embalajes, salvo
 que las cláusulas particulares previeran lo contrario. Si el producto tuviere
 envase especial y el mismo debiere devolverse, el flete y acarreo respectivo
 correrá por cuenta del adjudicatario.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>d)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Serán remitidas
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">d)<span style='font:7.0pt "Times New Roman"'>    </span>Serán remitidas
 las ofertas por productos a importar pero solo serán consideradas las
 cotizaciones en moneda extranjeras cuando así se hubieran previsto en las
 cláusulas particulares. En este caso se tomará el valor de las propuestas al
@@ -869,25 +390,21 @@ cambio oficial vigente para el día de la apertura, reponiéndose la diferencia
 de sellado de las mismas, si se hubieres efectuada en base a una cotización
 anterior y menor.</p>
 
-<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>e)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>En caso de
+<p class="MsoNormal" style="margin-left:18.0pt;text-indent:-18.0pt">e)<span style='font:7.0pt "Times New Roman"'>     </span>En caso de
 que el total de cada renglón cotizado no corresponda al precio unitario del
 mismo, se tomará como base el importe menor para determinar el total de la
 propuesta.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;19</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>No se podrá
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 19</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>No se podrá
 estipular el pago en oro o valor oro. Las cotizaciones en moneda nacional no
 podrán referirse, en ningún caso a la eventual fluctuación de su valor.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;20</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>A todos los
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 20</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>A todos los
 efectos legales, los proponentes deberán constituir domicilio legal en el
 territorio de la Provincia de Tucumán, en oportunidad de formular sus
 propuestas.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;21</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Los
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 21</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Los
 proponentes se obligan a mantener el precio de sus ofertas por el término que
 en cada caso establezca el Pliego de Bases y Condiciones y/o cláusulas
 particulares, cualquiera fueren los errores u omisiones en que hubiera
@@ -897,25 +414,22 @@ disposiciones legales especiales. En defecto de la determinación del plazo de
 mantenimiento de la oferta en los pliegos, se entenderá que los mismos no serán
 inferiores a 30 días a contar de la fecha de apertura de las propuestas.</p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Presentacion,
+<h2 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Presentacion,
 Entrega y Retiro de Muestras</span></h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;22</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>La
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 22</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>La
 Municipalidad podrá exigir la presentación de muestras de los artículos
 licitados, con prescindencia de las especificaciones y descripciones que se agregarán
 a las respectivas ofertas.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;23</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Las
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 23</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Las
 muestras serán presentadas juntamente con la oferta o hasta el momento del acto
 de apertura. En caso que las muestras no sean presentadas integrando la propuesta,
 deberán ser envueltas indicando en la parte visible del bulto la contratación a
 que corresponde y el día y la hora establecida para la apertura de las
 propuestas. De las muestras entregadas en esas condiciones se entregará recibo.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;24</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Las muestras
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 24</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Las muestras
 correspondientes a los artículos adjudicados, serán devueltas a petición de la
 parte interesada, una vez recibida en su totalidad y de conformidad los
 artículos contratados. Los interesados tendrán treinta días de plazo para
@@ -923,78 +437,67 @@ proceder a su retiro, a contar de la fecha en que se confeccione el contrato de
 previsión. En caso de no ser retiradas, ingresarán al patrimonio de la
 Municipalidad.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;25</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Las
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 25</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Las
 muestras serán devueltas a los interesados no adjudicatarios inmediatamente
 después de ser aprobadas las licitaciones por la autoridad competente, a cuyo
 efecto deberá solicitarla hasta un plazo de 30 días a partir de la fecha
 mencionada. En caso contrario, ingresarán al patrimonio Municipal.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;26</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Los
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 26</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Los
 propietarios de las muestras no tendrán derecho a reclamo alguno por deterioros
 sufridos en las mismas por análisis, evaporación, pro mero transcurso del
 tiempo o por los que no se reintegraran en razón de haber sido destruidas o
 inutilizadas, total o parcialmente, si ello hubiera sido necesario para la
 mejor clasificación del artículo licitado.</p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Garantias</span></h2>
+<h2 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Garantias</span></h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;27</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Para
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 27</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Para
 afianzar el cumplimiento de todas sus obligaciones, los proponentes y
 adjudicatarios deberán rendir las siguientes garantías:</p>
 
-<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Garantía
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>Garantía
 de la oferta: el 4% del valor total del Presupuesto Oficial, en los casos de
 suministros de bienes y/o servicios.</p>
 
-<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Garantía de la
+<p class="MsoNormal" style="margin-left:36.0pt;text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>Garantía de la
 adjudicación: el 10% del valor total de la adjudicación.</p>
 
-<p class=MsoNormal>La garantía señalada en el apartado a) deberá acompañarse a
+<p class="MsoNormal">La garantía señalada en el apartado a) deberá acompañarse a
 la propuesta.</p>
 
-<p class=MsoNormal>La garantía del apartado b) será entregada o depositada por
+<p class="MsoNormal">La garantía del apartado b) será entregada o depositada por
 el adjudicatario a la orden de la Municipalidad de Yerba Buena dentro de los 5 (cinco)
 días siguientes a la notificación de la adjudicación. Cuando el término de
 entrega de los elementos sea por un plazo inferior al anteriormente indicado, la
 garantía se constituirá con 2 (dos) días de anticipación a la fecha señalada
 para la entrega.</p>
 
-<p class=MsoNormal>Debe entenderse que el 10% es garantía total, integrándose
+<p class="MsoNormal">Debe entenderse que el 10% es garantía total, integrándose
 con el 4% señalado en el apartado a)</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;28</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Cuando la
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 28</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Cuando la
 cotización se haga en moneda extranjera, el importe de las garantías se
 calculará al tipo de cambio vendedor vigente al cierre del día anterior al de
 la constitución de la garantía.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;29</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Las
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 29</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Las
 garantías a que se refiere el artículo 27 deberán constituirse en alguna de
 estas formas:</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Mediante
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>Mediante
 depósito en el Banco del Tucumán, a la orden de la Tesorería Municipal, haciéndose
 referencia a la Licitación Pública que se garantiza, lo que se acreditará con
 la presentación de la boleta respectiva.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>En títulos de la
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>En títulos de la
 deuda pública provincial, nacional y/o cualquier otro valor similar de la
 Provincia o Nación.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>c)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Con aval
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">c)<span style='font:7.0pt "Times New Roman"'>     </span>Con aval
 bancario y otra forma de satisfacción de esta Municipalidad o seguro de caución.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>d)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Con pagaré
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">d)<span style='font:7.0pt "Times New Roman"'>    </span>Con pagaré
 suscripto por quienes tengan el uso de la razón social o actúen con poderes
 suficientes del oferente o adjudicatario. Cuando la licitación que se abra o
 adjudique exceda de los $30.000 (Pesos Treinta Mil) solo podrá aceptarse el
@@ -1008,49 +511,44 @@ bancaria, seguro de caución o aval emitido por institución comercial o
 industrial de reconocida solvencia, apreciándose esta última condición por los
 índices señalados anteriormente.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;30</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Las
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 30</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Las
 garantías a que se refiere el artículo 27 se constituirán independientemente
 para cada contratación.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;31</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>El
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 31</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>El
 municipio no abonará intereses por los depósitos de garantía ni responderá por
 diferencias originadas en devaluaciones monetarias, pero los que devenguen los
 títulos o valores depositados en tales conceptos pertenecerán a sus
 propietarios.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;32</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>En los
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 32</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>En los
 casos de ejecución de garantías constituidas en Títulos, la Municipalidad
 tomará para sí únicamente el importe de la garantía más los gastos que se
 ocasionaren por el procedimiento. Resultando sobrante, el mismo se restituirá
 al titular de la garantía.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;33</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>En la
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 33</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>En la
 presentación de las garantías, cuando el monto de la licitación supere los $30.000
 podrá el adjudicatario suscribir pagaré en garantía hasta dicho importe, y el
 excedente de la misma constituirlo en cualquiera de las formas previstas en los
 apartados a) b) y c) del artículo 29 de la presente Ordenanza.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;34</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Serán
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 34</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Serán
 devueltos de oficios:</p>
 
-<p class=MsoListParagraph style='text-indent:-18.0pt'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" style="text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>    
 </span>Las garantías de ofertas, a los proponentes que no resulten
 adjudicatarios, una vez decidida la contratación.</p>
 
-<p class=MsoListParagraph style='text-indent:-18.0pt'>b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" style="text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>   
 </span>Las garantías de adjudicación una vez cumplido el contrato respectivo.</p>
 
-<p class=MsoListParagraph style='text-indent:-18.0pt'>c)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" style="text-indent:-18.0pt">c)<span style='font:7.0pt "Times New Roman"'>    
 </span>A solicitud de los interesados y salvo el caso de los pagarés sin
 afianzar, podrá procederse a la devolución parcial de las garantías de
 adjudicación en proporción en lo ya comunicado.</p>
 
-<p class=MsoListParagraph style='margin-left:0cm'>En el caso de que, luego de
+<p class="MsoListParagraph" style="margin-left:0cm">En el caso de que, luego de
 notificado en el domicilio constituido, los oferentes o adjudicatarios no
 retirasen las garantías, podrán reclamar su devolución dentro del plazo de 6 (seis)
 meses a contar de la fecha de notificación. La falta de presentación dentro del
@@ -1059,8 +557,7 @@ garantía y será aceptada por la autoridad competente ordenando al ingreso
 patrimonial de la misma. Cuando la garantía hubiera sido constituida por pagaré,
 este se destruirá dejándose constancia de ello.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;35</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Adjudicada
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 35</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Adjudicada
 una propuesta, el adjudicatario debe integrar en término el 10% de la garantía
 establecida, caso contrario quedará sin efecto la adjudicación con las
 penalidades establecidas en el Titulo respectivo y pudiendo en tal caso, la
@@ -1069,44 +566,40 @@ le siguiera en precio y condiciones, siempre que estuviera la propuesta
 confirmada por telegrama colacionado o presentación por escrito a requerimiento
 oficial.</p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Apertura
+<h2 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Apertura
 de la Licitación</span></h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;36</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>En el local,
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 36</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>En el local,
 día y hora fijados para la realización del acto o primer día hábil subsiguiente,
 en caso de feriados o no laborales, se procederá a la apertura de las
 propuestas en presencia de las siguientes personas:</p>
 
-<p class=MsoListParagraph style='text-indent:-18.0pt'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" style="text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>    
 </span>El Jefe de la Oficina de Compras.</p>
 
-<p class=MsoListParagraph style='text-indent:-18.0pt'>b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" style="text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>   
 </span>El Contador General de la Municipalidad.</p>
 
-<p class=MsoListParagraph style='text-indent:-18.0pt'>c)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" style="text-indent:-18.0pt">c)<span style='font:7.0pt "Times New Roman"'>    
 </span>El Secretario del área que corresponda.</p>
 
-<p class=MsoListParagraph style='text-indent:-18.0pt'>d)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" style="text-indent:-18.0pt">d)<span style='font:7.0pt "Times New Roman"'>   
 </span>Los proponentes que desearan presenciarlo.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;37</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Con
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 37</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Con
 antelación a la apertura del acto, los proponentes, podrán solicitar todo
 antecedente que considere necesario y hacer las aclaraciones, reclamaciones u
 observaciones que juzguen pertinentes. Abierta la primera oferta, no se
 admitirán pedidos de explicaciones o aclaraciones que interrumpan el acto.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;38</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Antes de la
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 38</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Antes de la
 apertura, los sobres deberán estar a la vista de todos los funcionarios y
 personas presentes en el acto, debiéndose hacer un previo recuento de los
 mismos. Los sobres serán abiertos por el Contador General de la Municipalidad. Una
 vez abierto el primer sobre no se admitirá, bajo ningún concepto, nuevas
 propuestas, ni aclaración u observación que altere la esencia de la original.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;39</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Abiertas
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 39</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Abiertas
 que sean las propuestas, se procederá a efectuar una revisión general de las
 mismas, a los efectos de certificar el cumplimiento de las obligaciones
 fiscales, por parte de los proponentes, lo que estará a cargo del Contador
@@ -1115,99 +608,87 @@ cumplimiento por parte de los oferentes, de las distintas disposiciones
 contenidas en el pliego de Bases y Condiciones, en cuanto a las formalidades de
 las propuestas, se refiere.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;40</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Las
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 40</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Las
 propuestas serán rubricadas por el funcionario superior que preside el acto y
 por el Contador General.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;41</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Del acto
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 41</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Del acto
 realizado se procederá a labrar el acta correspondiente, la cual deberá ser
 absolutamente objetiva y contendrá:</p>
 
-<p class=MsoListParagraph style='text-indent:-18.0pt'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" style="text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>    
 </span>Lugar, fecha, hora de apertura, autorización y número de Licitación.</p>
 
-<p class=MsoListParagraph style='text-indent:-18.0pt'>b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" style="text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>   
 </span>Nombre de los funcionarios presentes.</p>
 
-<p class=MsoListParagraph style='text-indent:-18.0pt'>c)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" style="text-indent:-18.0pt">c)<span style='font:7.0pt "Times New Roman"'>    
 </span>Detalle de las propuestas conteniendo: Nombre del proponente, mayor
 importe de la oferta o expresión “Precios Unitarios”, si la misma no estuviese
 totalizada, y monto y naturaleza de las garantías cuando correspondiere la
 misma.</p>
 
-<p class=MsoListParagraph style='text-indent:-18.0pt'>d)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" style="text-indent:-18.0pt">d)<span style='font:7.0pt "Times New Roman"'>   
 </span>Las observaciones formuladas en el acto por parte de los funcionarios
 presentes o proponentes, o representantes con poder debidamente acreditado.</p>
 
-<p class=MsoListParagraph style='margin-left:35.7pt;text-indent:-17.85pt'>e)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Las
+<p class="MsoListParagraph" style="margin-left:35.7pt;text-indent:-17.85pt">e)<span style='font:7.0pt "Times New Roman"'>     </span>Las
 propuestas rechazadas y sus causas.</p>
 
-<p class=MsoListParagraph style='margin-left:0cm'>El acta será firmada
+<p class="MsoListParagraph" style="margin-left:0cm">El acta será firmada
 únicamente por los funcionarios presentes y que hayan intervenido en el acto de
 apertura. También podrán hacerlo los proponentes o representantes que así lo
 deseen. Siendo obligatoria la firma de los que hicieron alguna observación y
 objeción, siempre que éstas figuren en el acta.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;42</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Los
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 42</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Los
 documentos de garantía o constancia que lo sustituyan, se desglosarán
 entregándose en custodia a la Tesorería Municipal.</p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Causas
+<h2 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Causas
 de Rechazo</span></h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;43</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Serán
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 43</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Serán
 caudas de rechazo de las propuestas, las siguientes:</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>El no
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>El no
 cumplimiento de los requisitos establecidos en el inciso a) del artículo 15</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Falta total de
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>Falta total de
 la garantía. Si por el contrario, la garantía ha sido cubierta por lo menos en
 el 80% de su monto, el oferente deberá completarla dentro del término de 48
 horas posteriores a la apertura del acto licitatorio.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>c)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Cuando
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">c)<span style='font:7.0pt "Times New Roman"'>     </span>Cuando
 existieran enmiendas, interlineas, testaciones y/o raspaduras que no hayan sido
 debidamente salvadas en las propuestas, sobre cuestiones de fondo y no de forma,
 quedando esta interpretación a cargo exclusivo de la Municipalidad.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>d)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>La falta del 30%
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">d)<span style='font:7.0pt "Times New Roman"'>    </span>La falta del 30%
 del sellado y/o estampillado fiscal, en la oferta y en la garantía respectiva.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>e)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>La omisión
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">e)<span style='font:7.0pt "Times New Roman"'>     </span>La omisión
 de cualquier otro requisito necesario para la presentación de propuestas será
 observada en el acto de apertura. Tal omisión deberá ser salvada en un plazo
 máximo de 48 horas, encargándose la comisión de preadjudicación de su
 cumplimiento.</p>
 
-<p class=MsoListParagraph style='margin-left:17.85pt;text-indent:-17.85pt'>f)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Cuando
+<p class="MsoListParagraph" style="margin-left:17.85pt;text-indent:-17.85pt">f)<span style='font:7.0pt "Times New Roman"'>      </span>Cuando
 se incluyesen condiciones inconvenientes o que se aparten de los Pliegos, Bases
 de licitación y especificaciones particulares, salvo que contengan defectos de
 forma y no constituyan impedimento para la aceptación de la propuesta, tales
 como errores evidentes en los cálculos, falta de totalización en la propuesta y
 otros efectos puramente formales.</p>
 
-<p class=MsoListParagraph style='margin-left:0cm'>Cualquiera de las causas de
+<p class="MsoListParagraph" style="margin-left:0cm">Cualquiera de las causas de
 rechazo establecidas precedentemente, que pasara inadvertida en el acto de
 apertura de los sobres, podrá surtir efecto posteriormente, durante el estudio
 definitivo de las ofertas.</p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Estudio
+<h2 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Estudio
 de las Ofertas Preadjudicación</span></h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;44</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>La
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 44</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>La
 Municipalidad designará anualmente una comisión de preadjudicación que estará
 integrada por tres miembros como mínimo, cuya composición será determinada por
 el D.E.M., debiendo integrar obligatoriamente la misma el Contador General. Cuando
@@ -1219,28 +700,24 @@ competentes, todos los informes que estimare necesarios. La integración de la
 Comisión en estos casos, deberá efectuarse con antelación a la apertura de las
 ofertas.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;45</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Para el
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 45</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Para el
 examen de las propuestas presentadas se confeccionará un cuadro comparativo de
 precios y condiciones en el que deberán figurar todas aquellas propuestas que
 no se hayan apartado de los requisitos fundamentales de los Pliegos de Bases y
 Condiciones.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;46</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Para la
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 46</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Para la
 comparación de las ofertas por mercaderías o materiales a importar, cuya
 cotización se hubiera efectuado en moneda extranjera, los precios ofrecidos se
 reducirán, en el cuadro comparativo, a pesos cotizados al tipo de cambio
 vendedor vigente al cierre del día anterior al de apertura de ofertas.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;47</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Con el fin
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 47</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Con el fin
 de colocarlas en un mismo plano y al solo efecto comparativo se adicionarán, a
 los precios cotizados, fletes, seguros y otros gastos hasta el lugar de
 recepción, cuando tales gastos corrieran por cuenta de la Municipalidad.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;48</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Cuando de acuerdo
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 48</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Cuando de acuerdo
 a las cláusulas particulares se hubiera cotizado FOB o CIF u otras modalidades
 habituales, a la cantidad obtenida se acondicionarán, en la medida que
 corresponda, el importe de los fletes, seguros, impuestos, derechos aduaneros y
@@ -1249,26 +726,24 @@ lugar de recepción. Igual procedimiento se seguirá en los casos que de acuerdo
 con el artículo 14 segunda parte, se formula ofertas con fletes, acarreos, descargas
 y estiba en depósito por cuenta de la Municipalidad.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;49</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>La
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 49</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>La
 preadjudicación se hará parcial y total, según conveniencia o necesidad de la
 Municipalidad, como consecuencia de la comparación de las ofertas presentadas y
 ella puede tener lugar aún cuando se hubiera presentado una sola oferta, siempre
 que la misma sea válida, es decir que se ajuste a las bases de la Licitación, pliego
 de Condiciones y cláusulas especiales.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;50</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>La
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 50</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>La
 preadjudicación recaerá siempre en la propuesta más conveniente, entendiéndose
 por ello aquellas cuyos renglones cotizados sean los de más bajo precio, en
 igualdad de condiciones y calidad. Para el caso regirán las siguientes normas
 generales:</p>
 
-<p class=MsoListParagraph style='text-indent:-18.0pt'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" style="text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>    
 </span>Igualdad de precios, aquellas que previo dictamen fundado en la Comisión
 de Preadjudicación, acusen una mejor calidad.</p>
 
-<p class=MsoListParagraph style='text-indent:-18.0pt'>b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" style="text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>   
 </span>En casos de precios distintos, podrá preadjudicarse a la oferta de
 precio más elevado por vía de excepción por razones de calidad, previo dictamen
 fundado de la Comisión de Preadjudicación, que por unanimidad y en forma
@@ -1276,35 +751,29 @@ descriptiva y comparada con las ofertas de menor precio, justifique en detalle
 la mejor calidad del material, funcionamiento u otras características que
 demuestren las ventajas de la adjudicación aún a precio superior.</p>
 
-<p class=MsoListParagraph style='text-indent:-18.0pt'>c)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" style="text-indent:-18.0pt">c)<span style='font:7.0pt "Times New Roman"'>    
 </span>A igualdad de precios y calidad, deberán tenerse en cuenta para la
 preadjudicación las demás condiciones, como ser:</p>
 
-<p class=MsoListParagraph style='margin-left:54.0pt;text-indent:-18.0pt'>1)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Las
+<p class="MsoListParagraph" style="margin-left:54.0pt;text-indent:-18.0pt">1)<span style='font:7.0pt "Times New Roman"'>     </span>Las
 ofertas que fijaren menor plazo de entrega, siempre que así se haya estipulado
 en las especificaciones particulares.</p>
 
-<p class=MsoListParagraph style='margin-left:54.0pt;text-indent:-18.0pt'>2)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Las
+<p class="MsoListParagraph" style="margin-left:54.0pt;text-indent:-18.0pt">2)<span style='font:7.0pt "Times New Roman"'>     </span>Las
 ofertas que ofrezcan mayor plazo para el pago.</p>
 
-<p class=MsoListParagraph style='margin-left:54.0pt;text-indent:-18.0pt'>3)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Las
+<p class="MsoListParagraph" style="margin-left:54.0pt;text-indent:-18.0pt">3)<span style='font:7.0pt "Times New Roman"'>     </span>Las
 ofertas pertenecientes a firmas locales, si hubieran intervenido también
 oferentes de otras jurisdicciones.</p>
 
-<p class=MsoListParagraph style='margin-left:54.0pt;text-indent:-18.0pt'>4)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Las
+<p class="MsoListParagraph" style="margin-left:54.0pt;text-indent:-18.0pt">4)<span style='font:7.0pt "Times New Roman"'>     </span>Las
 ofertas pertenecientes a firmas nacionales, si hubieran intervenido también
 firmas establecidas en el extranjero.</p>
 
-<p class=MsoListParagraph style='margin-left:35.7pt;text-indent:-17.85pt'>d)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Podrá
+<p class="MsoListParagraph" style="margin-left:35.7pt;text-indent:-17.85pt">d)<span style='font:7.0pt "Times New Roman"'>    </span>Podrá
 adjudicarse parcialmente dentro del mismo renglón.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;51</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>En caso de
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 51</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>En caso de
 que exista igualdad de precios y condiciones y calidad, se solicitará a los
 respectivos proponentes que por escrito, en sobre cerrado y dentro del término
 de tres días formulen una mejora de precios. Las propuestas que en su
@@ -1315,8 +784,7 @@ nueva igualdad, se procederá de inmediato a la preadjudicación por sorteo en
 presencia de los interesados que concurrieran y autoridades respectivas, labrándose
 el acta pertinente.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;52</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Los
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 52</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Los
 descuentos o bonificaciones que se ofrezcan por pago dentro de un plazo
 determinado, no serán considerados a los efectos de la comparación de ofertas, debiendo
 no obstante ser tenidos en cuenta, por el pago si la cancelación de las
@@ -1324,22 +792,19 @@ facturas se efectúa dentro del término fijado. En estos casos, el instrumento
 que determina la adjudicación, dispondrá lo pertinente para el cumplimiento de
 la previsión de este artículo.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;53</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>En
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 53</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>En
 cualquier estado del trámite previo a la adjudicación, se podrá dejar sin
 efecto la licitación, rechazar todas o partes de las propuestas, así como
 preadjudicar todos o algunos de los renglones licitados, o por una menor cantidad,
 sin que el adjudicatario tenga derecho a exigir indemnización.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;54</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Las
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 54</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Las
 preadjudicaciones deberán ser enunciadas durante dos días como mínimo, en uno o
 más lugares visibles del local de la Municipalidad al cual tenga acceso el
 público. En las cláusulas particulares deberá indicarse el lugar en que serán
 exhibidos tales anuncios.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;55</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Los
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 55</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Los
 oferentes podrán formular impugnación fundada a la preadjudicación dentro del
 plazo máximo de 24 horas a contar desde el vencimiento del término fijado para
 los anuncios. Las impugnaciones serán resueltas por la autoridad competente
@@ -1348,41 +813,36 @@ adjudicación. La Municipalidad podrá sancionar a los responsables de las
 impugnaciones totalmente infundadas, hasta con la pérdida del depósito de
 garantía.</p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Fracaso
+<h2 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Fracaso
 de la Licitación Segundo Llamado</span></h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;56</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Fracasada
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 56</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Fracasada
 una licitación por la falta de presentación de proponentes o rechazo de las
 ofertas presentadas, y siempre que subsistan las causales y/o necesidades que
 motivaran su llamado, en el acto que resuelve declararla desierta, se podrá
 autorizar un segundo llamado.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;57</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Para el
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 57</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Para el
 segundo llamado regirán las mismas disposiciones que para el primero, con la
 salvedad de que en los avisos se consignará la circunstancia de tratarse de un
 segundo llamado.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;59</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>En el
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 59</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>En el
 segundo llamado podrán presentarse los proponentes que hubieran merecido el
 rechazo de sus propuestas en el primer llamado, siempre que no pesaran sanciones
 sobre los mismos.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;60</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>En caso de
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 60</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>En caso de
 fracasar el segundo llamado licitatorio, se procederá en forma similar a la
 estipulada en este Título, pero podrá disponerse mediante decreto del D.E.M., debidamente
 fundado, la autorización para efectuar en forma directa la contratación previo
 cotejo de precios, para el que regirán las disposiciones aplicables a los
 Concursos de Precios.</p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Adjudicación
+<h2 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Adjudicación
 contrato</span></h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;61</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>La
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 61</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>La
 presentación por el proponente de la oferta sin reservas a este reglamento, el
 Pliego de Condiciones y especificaciones particulares, implica la aceptación y
 sometimiento a las cláusulas de esa documentación base, constituyendo todo ello
@@ -1391,8 +851,7 @@ competente dentro del plazo de mantenimiento de la propuesta, según lo
 dispuesto por el artículo 21 correspondiendo formalizarla por escritura pública
 cuando así lo requieran las disposiciones que sean de aplicación.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;62</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Las
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 62</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Las
 adjudicaciones serán comunicadas dentro de los cinco días de acordadas a los
 interesados, mediante la emisión de Orden de Compra o provisión y
 excepcionalmente en cualquier otra forma documentada, constituyendo esa
@@ -1402,8 +861,7 @@ podrá requerirla por cualquier medio fehaciente. Si dentro de los 3 (tres) día
 siguientes la Municipalidad no remitiera la comunicación al recurrente, la
 oferta caducará automáticamente.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;63</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>La Orden de
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 63</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>La Orden de
 Compra o provisión deberá ser confeccionada en tres o más ejemplares y deberá
 contener las estipulaciones básicas de la contratación. En caso de discordancia
 con las previsiones contractuales, prevalecerán éstas y se interpretará que se
@@ -1411,33 +869,26 @@ trata de errores u omisiones deslizadas en la Orden, sin perjuicio de ello, los
 errores se salvarán en el momento que se los advierta. La Orden de Compra
 deberá ser firmada por el Jefe de Compras y el Contador General.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;64</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Forman
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 64</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Forman
 parte integrante del contrato;</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Las
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>Las
 disposiciones de esta reglamentación y las cláusulas particulares de la
 contratación.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>La oferta
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>La oferta
 adjudicada.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>c)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Las
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">c)<span style='font:7.0pt "Times New Roman"'>     </span>Las
 muestras correspondientes.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>d)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>El acta que
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">d)<span style='font:7.0pt "Times New Roman"'>    </span>El acta que
 resuelva la adjudicación.</p>
 
-<p class=MsoListParagraph style='margin-left:17.85pt;text-indent:-17.85pt'>e)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>La Orden
+<p class="MsoListParagraph" style="margin-left:17.85pt;text-indent:-17.85pt">e)<span style='font:7.0pt "Times New Roman"'>     </span>La Orden
 de Compra o Provisión.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;65</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Todas las
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 65</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Todas las
 cuestiones que se suscitaran con motivo de la ejecución o interpretación del
 contrato, serán resueltas conforme con las disposiciones de este reglamento, con
 las previsiones del Pliego de Bases y Condiciones, de las clausulas
@@ -1446,44 +897,37 @@ cláusulas particulares no podrán estipularse el juicio de árbitros o amigable
 componedores para dirimir las divergencias que se produjeran sobre la
 interpretación o ejecución del contrato.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;66</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>El contrato
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 66</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>El contrato
 no podrá ser transferido ni cedido por el adjudicatario sin previa autorización
 del D.E.M.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;67</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Podrán
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 67</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Podrán
 rescindirse los contratos, sin derecho a recurso alguno por parte del
 adjudicatario, en los siguientes casos:</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Por falta
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>Por falta
 de cumplimiento de las cláusulas contractuales o de las Ordenes de provisión o
 de Compra, por parte del adjudicatario.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Por
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>Por
 transferencia del contrato sin previa autorización, sin perjuicio de las
 penalidades correspondientes.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>c)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Por
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">c)<span style='font:7.0pt "Times New Roman"'>     </span>Por
 comprobarse que la adjudicación ha sido resultado de maniobras o actos
 incorrectos o dolosos.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;68</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Cuando la
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 68</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Cuando la
 Municipalidad rescinda un contrato por una causa no prevista en este reglamento,
 el adjudicatario tendrá derecho a que se le reconozca los gastos directos o
 improductivos en que probara haber incurrido con posterioridad a la
 adjudicación y con motivo del contrato, pero no se hará reclamación alguna por
 lucro cesante o por intereses de capitales requeridos para financiaciones.</p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Entrega
+<h2 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Entrega
 y Recepción</span></h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;69</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Los
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 69</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Los
 adjudicatarios cumplirán la prestación a que se hubieran obligado, ajustándose
 a las formas, plazos, lugar y demás especificaciones establecidas en el
 Contrato. Los plazos para dichas prestaciones se computarán a partir de la
@@ -1491,8 +935,7 @@ fecha de recepción de la comunicación a que se refiere el artículo 62 o en su
 defecto desde la fecha de apertura del respectivo crédito documentario cuando
 se hubiera convencido esa forma de pago.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;70</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>La
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 70</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>La
 recepción de las mercaderías en los depósitos tendrá el carácter de provisional
 y los recibos a remitirse que se firme quedarán sujetos a los requisitos
 establecidos en este reglamento para la recepción definitiva. Cuando la
@@ -1500,8 +943,7 @@ adjudicación no se haya efectuado con la base de muestras o no se haya
 establecido calidad de los artículos, queda entendido que éstos deben ser los
 calificados en el comercio como nuevos y de primera calidad.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;71</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>El
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 71</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>El
 adjudicatario podrá solicitar la prórroga del término contractual antes de
 vencimiento del mismo. La Municipalidad deberá resolver el pedido dentro de los
 10 (diez) días de presentado y en su silencio se tendrá por concedida. De este
@@ -1509,8 +951,7 @@ derecho solo se podrá hacer uso por el adjudicatario en dos oportunidades como
 máximo y el total de prórroga no podrá exceder en ningún caso, de un término
 fijado primitivamente para el cumplimiento del contrato.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;72</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Se
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 72</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Se
 entenderá por entrega “inmediata” la orden a cumplirse por los adjudicatarios
 dentro de los 7 (siete) días de la comunicación, a que se refiere el artículo
 62 salvo que en las cláusulas particulares se estableciera un término menor. Cuando
@@ -1518,14 +959,12 @@ se trate de artículos a manufacturar, los proponentes especificarán en su
 oferta, la fecha en que se comprometen a entregarlo, a contar desde la fecha en
 que reciban la Orden de Provisión o de Compra.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;73</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>En los
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 73</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>En los
 casos en que la Municipalidad deba practicar análisis, ensayos, pericias u
 otras pruebas para verificar si los respectivos elementos, trabajos o servicios
 se ajustan a lo requerido, se procederá conforme a las siguientes normas:</p>
 
-<p class=MsoListParagraph style='margin-left:17.85pt;text-indent:-17.85pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Análisis
+<p class="MsoListParagraph" style="margin-left:17.85pt;text-indent:-17.85pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>Análisis
 de productos perecederos: se efectuarán con las muestras necesarias que se
 extraerán en el momento de la entrega en presencia del adjudicatario, de su
 representante o del encargado de la entrega. En el mismo acto se comunicará la
@@ -1533,16 +972,14 @@ hora en que efectuará el análisis a fin de que pueda concurrir el adjudicatari
 o quien lo represente y si no concurriere no será obstáculo para la realización
 del análisis, cuyo resultado se tendrá por firme y definitivo.</p>
 
-<p class=MsoListParagraph style='margin-left:17.85pt;text-indent:-17.85pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Análisis de
+<p class="MsoListParagraph" style="margin-left:17.85pt;text-indent:-17.85pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>Análisis de
 productos no perecederos: se extraerán las muestras que la Municipalidad estime
 necesarias y el resultado del análisis se comunicará al adjudicatario por carta
 certificada con el aviso de retorno. En caso de no estar conforme el
 adjudicatario, con el resultado del análisis deberá manifestarlo por escrito en
 forma fundada dentro de los 3 (tres) días de la comunicación.</p>
 
-<p class=MsoListParagraph style='margin-left:17.85pt;text-indent:-17.85pt'>c)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>En el
+<p class="MsoListParagraph" style="margin-left:17.85pt;text-indent:-17.85pt">c)<span style='font:7.0pt "Times New Roman"'>     </span>En el
 plazo que fije la Municipalidad, que será el más breve posible, se procederá a
 la extracción de otras muestras y a la realización de un nuevo análisis en
 presencia del adjudicatario o de un representante del mismo debidamente
@@ -1550,43 +987,37 @@ autorizado. La incomparencia del adjudicatario o de su representante no será
 obstáculo para la realización de un nuevo análisis, cuyos resultados se tendrá
 por firme y definitivo.</p>
 
-<p class=MsoListParagraph style='margin-left:17.85pt;text-indent:-17.85pt'>d)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Pericias, ensayos
+<p class="MsoListParagraph" style="margin-left:17.85pt;text-indent:-17.85pt">d)<span style='font:7.0pt "Times New Roman"'>    </span>Pericias, ensayos
 u otras pruebas: se adoptarán en cada caso según las circunstancias
 particulares del mismo, las medidas adecuadas para que la diligencia pueda
 realizarse en forma tal que garantice el control de sus resultados por parte
 del interesado.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;74</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>En aquellos
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 74</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>En aquellos
 casos que fuera necesario recurrir a la prueba pericial o a informes de
 carácter técnico, se dará intervención en lo posible a reparticiones u oficinas
 provinciales y nacionales, si la Municipalidad no contare con el personal o los
 elementos necesarios.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;75</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Si los
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 75</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Si los
 elementos sometidos al análisis, pericia, ensayos, etc. Fueran de recibo, el
 costo de la diligencia correrá por cuenta del interesado con excepción de los
 gastos motivados por la intervención de un perito o representante del
 interesado, que serán siempre a costa de ésta.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;76</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>A los
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 76</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>A los
 efectos de la conformidad definitiva deberá procederse previamente a la
 confrontación de la prestación, con las cláusulas particulares, con las
 muestras patrón o por las presentadas por el adjudicatario y en su caso, con
 los resultados de las pruebas que fuera necesario realizar.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;77</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Cuando por
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 77</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Cuando por
 la naturaleza de la prestación exista imposibilidad de fraccionar las unidades
 para entregar la cantidad exacta contratada, las entregas podrán ser aceptadas,
 en más o menos según lo permita el mínimo fraccionable. La aprobación será
 acordada por la autoridad competente de acuerdo con el monto de esa diferencia.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;78</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>En aquellos
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 78</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>En aquellos
 casos en que la presentación a cargo del adjudicatario no pudiera cumplirse
 sino después de satisfecho determinados requisitos por el organismo licitante (entrega
 de ciertos elementos, devolución de pruebas conformadas, realización de
@@ -1598,36 +1029,33 @@ la Municipalidad dé cumplimiento a los citados requisitos. Si la Municipalidad
 no cumpliese en término los requisitos a su cargo, el adjudicatario podrá optar
 entre:</p>
 
-<p class=MsoListParagraph style='text-indent:-18.0pt'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" style="text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>    
 </span>Reclamar el mayor costo de la mano de obra exclusivamente derivado de la
 demora imputable a la Municipalidad, extremos ambos que deberá probar
 fehacientemente en su oportunidad.</p>
 
-<p class=MsoListParagraph style='text-indent:-18.0pt'>b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraph" style="text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>   
 </span>Tener rescindible el contrato en los términos, y con las ofertas
 determinadas en el artículo 69 dicha opción deberá ser efectuada por escrito, dentro
 del tercer día del vencimiento del plazo establecido. La falta de opción
 significará que el adjudicatario acepta ejecutar sus obligaciones de acuerdo
 con las estipulaciones del contrato, sin derecho a reclamación alguna.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;79</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>La
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 79</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>La
 certificación de la recepción definitiva de mercaderías o la prestación de
 servicios, será efectuada por el Jefe de Patrimonio y/o Jefe de Compras. En
 caso de requerirse conocimientos técnicos para la recepción de determinados
 elementos, el funcionario podrá solicitar asesoramiento al respecto.</p>
 
-<p class=MsoNormal>Los funcionarios responsables de la recepción remitirán a la
+<p class="MsoNormal">Los funcionarios responsables de la recepción remitirán a la
 oficina ante la cual se tramitan los pagos, el informe de recepción correspondiente.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;80</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>El hecho de
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 80</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>El hecho de
 que haya sido inspeccionada la mercadería a proveer no libera al adjudicatario
 de responsabilidad por las deficiencias que se adviertan en el momento de la
 recepción definitiva.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;81</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Los
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 81</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Los
 funcionarios que tuvieran a su cargo la recepción definitiva podrán requerir
 directamente a las firmas proveedoras, la entrega de las cantidades en menos
 que hubieren remitido cuya recepción quedará sujeta a las exigencias
@@ -1637,35 +1065,31 @@ asesores técnicos, quienes deberán formular por escrito, las observaciones que
 estimen oportunas a la Oficina de Compras, quedando a cargo de ésta la decisión
 del asunto.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;82</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>La
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 82</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>La
 conformidad definitiva se acordará dentro de los 5 (cinco) días de la entrega
 de los elementos o de prestación de los servicios o dentro de los plazos que se
 fijen en las cláusulas particulares, cuando los análisis o pruebas especiales
 que correspondan efectuar han de sobrepasar aquel término.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;83</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Los plazos previstos
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 83</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Los plazos previstos
 en el artículo anterior serán interrumpidos cuando faltare cumplir, por parte
 del proveedor, algún recaudo legal o administrativo.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;84</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>La
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 84</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>La
 conformidad definitiva de los elementos previstos en los servicios prestados
 deberá ser expresa.</p>
 
-<p class=MsoNormal>En caso de silencio de la Municipalidad, una vez vencido los
+<p class="MsoNormal">En caso de silencio de la Municipalidad, una vez vencido los
 plazos a que se refiere el artículo 82 el adjudicatario podrá intimar el
 pronunciamiento correspondiente sobre el rechazo o la conformidad definitiva, la
 cual se tendrá por acordada si dicho organismo no se manifestara en el término
 de dos días de recibida esa intimación.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;85</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>En caso de
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 85</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>En caso de
 rechazo de la provisión, los días que hubiera demandado el trámite no serán
 computados dentro del término convenido para el cumplimiento de la contratación.</p>
 
-<p class=MsoNormal>El trámite de actuaciones que se originan en prestaciones de
+<p class="MsoNormal">El trámite de actuaciones que se originan en prestaciones de
 los adjudicatarios, con motivo del contrato, no suspenderá el cómputo del plazo
 estableció para su cumplimiento, sino cuando la Municipalidad, a su exclusivo
 juicio, las considere justificadas, o cuando no se resuelvan por las mismas
@@ -1673,8 +1097,7 @@ dentro de los 10 (diez) días de presentadas. En este último caso, tendrá efec
 suspensivo por los días en que el trámite excediera el término fijado en el
 párrafo anterior.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;86</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>La conformidad
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 86</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>La conformidad
 definitiva no libera al adjudicatario de las responsabilidades emergentes de
 vicios redhibitorios que se adviertan durante el plazo de tres meses, computados
 a partir de la conformidad definitiva, salvo que por la índole de la prestación,
@@ -1682,8 +1105,7 @@ en las cláusulas particulares que fijara un plazo mayor. El adjudicatario
 quedará obligado a efectuar las reposiciones o señalaciones en el término y
 lugar que indique la Municipalidad.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;87</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Vencido el
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 87</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Vencido el
 plazo de cumplimiento de lo pactado sin que la mercaderías o servicios fuesen
 entregados o prestados, o en el caso de rechazo y sin perjuicio de la multa por
 mora señalada en el título correspondiente y además sanciones que le pudieran
@@ -1694,50 +1116,44 @@ prevén su cumplimiento mediante entregas parciales, la Municipalidad
 determinará la oportunidad en que en presencia de sucesivos incumplimientos, procederá
 la intimación bajo apercibimiento de rescisión del contrato.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;88</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>El
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 88</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>El
 adjudicatario estará obligado a retirar los elementos rechazados en el plazo de
 30 (Treinta) días a contar de la fecha de la comunicación del rechazo. Si
 mediare objeción fundada por parte del interesado, el término se contará desde
 la fecha en que la respectiva Resolución quedará firme.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;89</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Vencido el
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 89</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Vencido el
 plazo indicado en el Artículo anterior, la Municipalidad procederá a la
 enajenación de los elementos conforme a las normas contenidas en esta
 reglamentación, sin reclamación alguna por parte del adjudicatario, quedando a
 total beneficio del patrimonio Municipal.</p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Facturas
+<h2 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Facturas
 y Pagos</span></h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;90</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Las
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 90</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Las
 facturas serán presentadas por duplicado en la Oficina de Compras y conformadas
 por la oficina receptora.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;91</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Serán
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 91</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Serán
 aceptadas facturas por entregas parciales, salvo que las cláusulas particulares,
 dispusieran lo contrario.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;92</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Los pagos
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 92</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Los pagos
 serán efectuados luego de la fecha en la cual, según lo establecido en los
 artículos 82 y 84º se certificare o se produjera la conformidad de las
 prestaciones respectivas.</p>
 
-<p class=MsoNormal>Las cláusulas que se incluyan en las ofertas por “pago
+<p class="MsoNormal">Las cláusulas que se incluyan en las ofertas por “pago
 contado”, “pago a treinta días de fecha de entrega”, mercaderías o de
 presentación de facturas o similares se considerarán como aceptación de lo
 enunciado en el párrafo primero de este Artículo.</p>
 
-<p class=MsoNormal>Cuando en las cláusulas particulares no se prevea el pago
+<p class="MsoNormal">Cuando en las cláusulas particulares no se prevea el pago
 “contra-entrega”, se entenderá que el pago debe efectuarse después de operada
 la conformidad definitiva de la recepción.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;93</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Cuando los
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 93</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Cuando los
 proveedores hubieran ofrecido descuentos especiales por pagos dentro de
 determinado plazo, las oficinas intervinientes efectuarán las liquidaciones de
 las facturas por los montos brutos, indicando además el importe a que asciende
@@ -1745,15 +1161,13 @@ el descuento y la fecha hasta la cual corresponde deducirlo del pago. Si por
 razones no imputables al acreedor, el pago se realizara con posterioridad, el
 mismo se efectuará sin deducciones por tal concepto.</p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Penalidades</span></h2>
+<h2 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Penalidades</span></h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;94</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>En caso de
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 94</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>En caso de
 incumplimiento de sus obligaciones, los proponentes o adjudicatarios sufrirán
 las penalidades que se detallan a continuación:</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>La pérdida
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>La pérdida
 de la garantía que hubieran constituido en beneficio de la Municipalidad, si el
 proponente desistiera de su oferta antes de que el D.E.M. resuelva la
 adjudicación definitiva, dentro del plazo de mantenimiento de las propuestas. Igual
@@ -1763,8 +1177,7 @@ notificación de la adjudicación. La misma pena será de aplicación en el caso
 que, siendo el plazo de entrega de los elementos inferior a 5 (cinco) días no integrará
 la garantía con dos días de anticipación.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Una multa
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>Una multa
 equivalente al 1% diario del valor de los artículos no entregados, o que
 habiéndolos entregados hubieran sido rechazados dentro de los plazos y
 condiciones fijadas en el pliego sin perjuicio de la adquisición que realizara
@@ -1777,27 +1190,23 @@ importe de la provisión no efectuada, más la diferencia de precios que hubiere
 por la adquisición de los productos a terceros realizados hasta la fecha que se
 encuadre en los plazos y condiciones fijadas en el pliego respectivo.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>c)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Pérdida
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">c)<span style='font:7.0pt "Times New Roman"'>     </span>Pérdida
 del depósito de garantía y recisión del contrato en las partes no cumplidas, si
 venciese el plazo del inciso anterior y sin que el adjudicatario regularizase
 su situación y sin perjuicio del procedimiento que menciona aquel inciso.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>d)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Pérdida del
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">d)<span style='font:7.0pt "Times New Roman"'>    </span>Pérdida del
 depósito de garantía de los proponentes y adjudicatarios que hayan cometido
 maniobras o actos dolosos para obtener la adjudicación, que habiéndola obtenido
 la ejecutarán celosamente y siempre sin perjuicio de las penalidades
 establecidas en los incisos anteriores.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>e)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Corresponderá
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">e)<span style='font:7.0pt "Times New Roman"'>     </span>Corresponderá
 la pérdida de la garantía, sin perjuicio de las demás penalidades que pudieran
 ser de aplicación en los casos de que el adjudicatario transfiera su contrato
 sin el consentimiento previo de la Municipalidad.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>f)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Multa
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">f)<span style='font:7.0pt "Times New Roman"'>      </span>Multa
 diaria del 2% del valor adjudicado al adjudicatario que no formalizase el
 contrato por escritura pública en los casos que correspondiera, dentro del
 plazo de 5 (cinco) días de recibida la notificación del Escribano. Esta multa
@@ -1805,14 +1214,12 @@ se aplicará sin previo aviso a partir del día siguiente del vencimiento de
 dicho plazo y hasta un máximo de 15 (quince) días, transcurrido los cuales se
 tendrá por desistido de su propuesta, con pérdida del depósito de garantía.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;95</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Las multas
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 95</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Las multas
 o recargos que se formulen a los proveedores por demora en la entrega de
 efectos licitados, se harán efectivas, afectando cualquier crédito que tuvieren
 al cobro en la Municipalidad.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;96</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Las
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 96</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Las
 penalidades antes establecidas no serán de aplicación cuando el incumplimiento
 de la obligación obedezca a causas de fuerza mayor o fortuitas, debidamente
 comprobadas y aceptadas por el D.E.M. Las razones de fuerza mayor o fortuitas
@@ -1824,14 +1231,12 @@ comunicación referida deberá efectuarse antes de las 24 horas de dicho
 vencimiento. Transcurrido dicho término, quedará extinguido todo derecho al
 respecto.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;97</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>La mora se
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 97</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>La mora se
 considerará producida por el simple vencimiento del plazo contractual, sin
 necesidad de interpelación judicial o extrajudicial. Las multas serán de
 aplicación automática, sin necesidad de pronunciamiento expreso.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;98</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Cuando por
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 98</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Cuando por
 su naturaleza o modalidad, la contratación no pudiera encuadrarse en las normas
 establecidas por este reglamento y por ello no resultare posible sancionar el
 incumplimiento de la obligación según lo determinado en los artículos
@@ -1839,41 +1244,33 @@ precedentes, en las respectivas cláusulas particulares o en la convención que
 se celebre, se establecerán penalidades que en el caso particular serán de
 aplicación.</p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Sanciones</span></h2>
+<h2 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Sanciones</span></h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;99</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Sin
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 99</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Sin
 perjuicio de las penalidades, multas, pérdida de garantías, etc. que corresponda
 aplicar, las transgresiones en que incurran los oferentes o adjudicatarios, los
 hará pasibles de las siguientes sanciones:</p>
 
-<p class=MsoListParagraph style='margin-left:1.0cm;text-indent:-14.15pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span>Apercibimiento:</p>
+<p class="MsoListParagraph" style="margin-left:1.0cm;text-indent:-14.15pt">a)<span style='font:7.0pt "Times New Roman"'>   </span>Apercibimiento:</p>
 
-<p class=MsoListParagraph style='margin-left:42.55pt;text-indent:-14.2pt'>1)<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span>A toda firma que incurriese
+<p class="MsoListParagraph" style="margin-left:42.55pt;text-indent:-14.2pt">1)<span style='font:7.0pt "Times New Roman"'>  </span>A toda firma que incurriese
 en la omisión de incorrecciones que no lleguen a constituir hecho doloso.</p>
 
-<p class=MsoListParagraph style='margin-left:42.55pt;text-indent:-14.2pt'>2)<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span>Al adjudicatario que
+<p class="MsoListParagraph" style="margin-left:42.55pt;text-indent:-14.2pt">2)<span style='font:7.0pt "Times New Roman"'>  </span>Al adjudicatario que
 reiteradamente dejara de cumplimentar sus compromisos, hechos debido a su culpa.</p>
 
-<p class=MsoListParagraph style='margin-left:1.0cm;text-indent:-14.15pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span>Suspensión como contratista
+<p class="MsoListParagraph" style="margin-left:1.0cm;text-indent:-14.15pt">b)<span style='font:7.0pt "Times New Roman"'>  </span>Suspensión como contratista
 o proveedor del Municipio.</p>
 
-<p class=MsoListParagraph style='margin-left:42.55pt;text-indent:-14.2pt'>1)<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span>Por el término de uno a tres
+<p class="MsoListParagraph" style="margin-left:42.55pt;text-indent:-14.2pt">1)<span style='font:7.0pt "Times New Roman"'>  </span>Por el término de uno a tres
 años, a la firma que se hiciera pasible de un segundo apercibimiento dentro de
 un período de un año calendario.</p>
 
-<p class=MsoListParagraph style='margin-left:42.55pt;text-indent:-14.2pt'>2)<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span>Por el término de dos años a
+<p class="MsoListParagraph" style="margin-left:42.55pt;text-indent:-14.2pt">2)<span style='font:7.0pt "Times New Roman"'>  </span>Por el término de dos años a
 cuatro años, cuando no se cumpliera oportunamente la intimación de hacer
 efectiva la garantía o la obligación respectiva que la sustituya.</p>
 
-<p class=MsoListParagraph style='margin-left:42.55pt;text-indent:-14.2pt'>3)<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span>Por el término de tres a
+<p class="MsoListParagraph" style="margin-left:42.55pt;text-indent:-14.2pt">3)<span style='font:7.0pt "Times New Roman"'>  </span>Por el término de tres a
 ocho años, cuando se comprobase la omisión de hechos dolosos, aparte de las
 acciones de la justicia ordinaria que corresponden. De lo actuado se dará vista
 a la firma respectiva para que en el término de 10 (diez) días tome
@@ -1882,12 +1279,10 @@ formulen los descargos y aclaraciones a que se considere con derecho. El
 período de las sanciones comenzará a computarse a partir de la fecha del
 respectivo pronunciamiento.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;100</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Los
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 100</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Los
 apercibimientos y suspensiones, serán aplicadas por Decreto del D.E.M.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;101</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Los
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 101</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Los
 apercibimientos y suspensiones alcanzan a las firmas respectivas o
 individualmente a sus componentes para futuras contrataciones y solo tendrán
 efecto respecto a los actos posteriores a la fecha de sanción, no siendo de
@@ -1896,44 +1291,37 @@ expresa del mismo. No obstante los efectos de las sanciones solo alcanzarán a
 los miembros del Directorio o a los socios colectivos, si se trata de Sociedades
 Anónimas o en Comandita, respectivamente.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;102</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Los
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 102</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Los
 decretos disponiendo sanciones, cualesquiera sean ellas, serán comunicadas
 dentro de los 5 (cinco) días al Poder Ejecutivo Provincial a los organismos
 descentralizados y Municipalidades de la Provincia.</p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Erogaciones
+<h2 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Erogaciones
 a Cargo Del Adjudicatario</span></h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;103</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Sin
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 103</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Sin
 excepción, serán por cuenta del adjudicatario los siguientes gastos originados
 por la formulación, aplicación o ejecución de los contratos:</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Gastos del
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>Gastos del
 sellado del contrato, de conformidad a la legislación vigente.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Gastos de
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>Gastos de
 análisis, jornales u otros conceptos, en caso de resultar rechaza, con
 fundamentos, una mercadería o servicio.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>c)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Costo del
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">c)<span style='font:7.0pt "Times New Roman"'>     </span>Costo del
 despacho, derechos y servicios aduaneros si se han abonado, y los incurridos
 por cualquier concepto en el caso de rechazo o abandono de las mercaderías
 compradas “C. I. F”, sobre cualquier puerto o aeropuerto de la República.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>d)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Costos de
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">d)<span style='font:7.0pt "Times New Roman"'>    </span>Costos de
 análisis de prueba y gastos pertinentes realizados a requerimiento de los
 adjudicatarios por su desacuerdo con los ejecutados por la Municipalidad, en
 oportunidad en que deba prestarse conformidad a una recepción, siempre que estos
 nuevos análisis correspondieran por la índole de la contratación.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>e)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>La
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">e)<span style='font:7.0pt "Times New Roman"'>     </span>La
 reparación o reposición, según corresponda, de los elementos destruidos total o
 parcialmente, a fin de determinar si se ajustan en su composición o
 construcción a los estrictamente contratados, solo en los casos en que esa
@@ -1942,39 +1330,34 @@ caso contrario los gastos pertinentes estarán a cargo de la Municipalidad. Asim
 serán por cuenta del oferente los gastos erogados por reclamo respecto a la
 Licitación, si ellos fueron imputables al mismo.</p>
 
-<h1 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Título
+<h1 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Título
 III: Licitaciones Privadas</span></h1>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;104</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Se entenderá
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 104</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Se entenderá
 por Licitación Privada de precios, a los efectos de los previstos en el Artículo
 Cuarto, inc. A) de este reglamento, el pedido de precios efectuados por la
 Municipalidad a proveedores del ramo.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;105</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>En general,
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 105</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>En general,
 se cursará invitaciones a un mínimo de 5 (cinco) casas o firmas del ramo, con
 la anticipación mínima de 5 (cinco) días de la fecha fijada para la apertura de
 las propuestas, no computándose el de la apertura.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;106</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>A las
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 106</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>A las
 actuaciones se agregarán los justificativos del envió de las invitaciones
 pertinentes, ya sea en el comprobante de recibo extendido por la firma invitada,
 o la constancia de remisión de la carta certificada con aviso de retorno o
 cualquier otro medio fehaciente de comunicación.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;107</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>En general,
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 107</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>En general,
 regirán para las licitaciones privadas, todas las disposiciones relativas a las
 Licitaciones Públicas en cuanto sean aplicables, salvo en lo referente a
 publicidad y demás disposiciones especiales determinadas en este Título.</p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Concurso
+<h2 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Concurso
 de Precios</span></h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;108</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Se
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 108</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Se
 entenderá por Concurso de Precios, a los fines previstos en el artículo 4, inc.
 b) de este reglamento, el pedido de preciso efectuado por la Municipalidad, a
 proveedores del ramo. Como mínimo se cursarán invitaciones a 5 (cinco) casas o
@@ -1982,8 +1365,7 @@ firmas del ramo, en formularios especiales donde se hará constar la cantidad, t
 calidad, plazo para la presentación de las propuestas, plazo de entrega de los
 artículos que se requieran.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;109</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Las ofertas
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 109</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Las ofertas
 y adjudicaciones en los concursos de precios quedan eximidas de la presentación
 de garantías, pero los oferentes y adjudicatarios, por el solo hecho de la
 aceptación de la adjudicación se harán responsables, en el caso de
@@ -1991,33 +1373,29 @@ incumplimiento de sus obligaciones, de una multa equivalente a las garantías
 eximidas calculadas sobre la base del artículo 27 inciso b) de la presente
 reglamentación además de las disposiciones que correspondan.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;110</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Todas
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 110</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Todas
 disposiciones relativas a las Licitaciones Públicas serán de aplicación en los
 concursos de precios, siempre que no contraríen las disposiciones especiales de
 este Título y salvo en lo que se refiere a publicidad, garantías y demás
 disposiciones especiales.</p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Contrataciones
+<h2 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Contrataciones
 Directas</span></h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;111</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>En caso de
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 111</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>En caso de
 compras directas autorizadas por el artículo 7 de esta Ordenanza, a excepción
 de lo previsto en el artículo 5 de este reglamento, la autorización y
 aprobación de las mismas se otorgarán mediante decreto del D.E.M., en los casos
 taxativamente enumerados y por Ordenanza especial para lo previsto en el inciso
 14 del artículo 7</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;112</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Las
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 112</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Las
 emergencias de carácter imprevisible a que se refiere el artículo 7 inciso 1, de
 la presente Ordenanza, deberán ser acreditadas por el funcionario que las
 invoque, debiendo dejarse plena constancia de ello en el procedimiento de
 autorización.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;113</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Queda
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 113</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Queda
 entendido que la marca de un producto no constituye causa de exclusividad, salvo
 que en plazo o mercado donde habitualmente se abastece, exista un solo
 representante o expendedor de la misma y no hubiera sustitutos convenientes, mencionados
@@ -2026,18 +1404,16 @@ conclusiones de los informes técnicos sobre el particular. En cuanto se refiere
 a la compra de semovientes por selección, su conveniencia debe estar fundada en
 informes técnicos del área competente.</p>
 
-<h1 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Título
+<h1 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Título
 IV: Locación De Inmuebles</span></h1>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;114</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>La locación
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 114</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>La locación
 de inmuebles estará sujeta a los requisitos de las Licitaciones Públicas, Privadas
 o Concurso de Precio y contrataciones directas conforme corresponda, de acuerdo
 al monto de la erogación anual o proporcionalmente cuando sea fracción menor de
 este período de tiempo.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;115</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>En ningún
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 115</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>En ningún
 caso se incluirán en los contratos cláusulas que obliguen al Municipio al pago
 de tasas, contribuciones, impuestos, gravámenes de cualquier naturaleza que
 fueren, que incidan sobre el bien locado, las que siempre deberán ser por
@@ -2046,110 +1422,92 @@ mantener el inmueble en correcto estado de conservación. Los gravámenes que se
 apliquen al inmueble en razón del uso que la Municipalidad le dé, no estarán a
 cargo del locador.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;116</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Cuando en
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 116</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Cuando en
 un contrato de locación aprobado, se hubiera estipulado opción por un plazo
 mayor a favor de la Municipalidad, la simple continuidad de ocupación
 significará haberse hecho uso de tal derecho.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;117</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Las bases
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 117</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Las bases
 de contratación, la adjudicación y los contratos, serán aprobados por el Señor
 Intendente Municipal mediante el instrumento legal que corresponda, según lo
 establece reglamento.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;118</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>En todos
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 118</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>En todos
 los casos en que sustancie la locación de un inmueble, se agregarán como
 elementos de juicio: la avaluación fiscal fijada a los fines de la Ordenanza
 Fiscal y la información técnica sobre el estado del mismo, así como los datos
 relativos al dominio del propietario.</p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Disposiciones
+<h2 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Disposiciones
 Generales - Requisitos Para Contratar Con La Municipalidad</span></h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;119</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Para
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 119</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Para
 contratar con la Municipalidad se requiere:</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Tener capacidad
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>Tener capacidad
 legal para obligarse</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Tener fábrica, comercio
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>Tener fábrica, comercio
 o actividad establecida en el país, con autorización o patente que lo habilite
 para comerciar en los renglones que opera o ser productor, importador, representante
 o agente apoderado de firmas establecidas en el extranjero.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>c)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Para
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">c)<span style='font:7.0pt "Times New Roman"'>     </span>Para
 hacerlo a título personal, los profesionales, artesanos, obreros, artistas en
 general y todas aquellas personas que tengan estudios o conocimientos
 especiales en determinadas áreas, ciencias, artes u oficio, y para las tareas o
 trabajos que se refieran a las especialidades de los mismos.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;120</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>No podrán
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 120</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>No podrán
 contratar con la Municipalidad.</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>En general
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>En general
 los que no reúnan los requisitos exigidos en el artículo 119</p>
 
-<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Los Miembros de
+<p class="MsoListParagraph" style="margin-left:18.0pt;text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>Los Miembros de
 los Poderes Ejecutivos, Legislativos y Judicial, los agentes y funcionarios al
 servicio de la Municipalidad, las firmas o empresas integradas total o
 parcialmente por los mismos.</p>
 
-<h1 style='margin-top:0cm;page-break-after:auto'><span style='font-size:12.0pt'>Título
+<h1 style="margin-top:0cm;page-break-after:auto"><span style="font-size:12.0pt">Título
 V: Venta y Concesiones</span></h1>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;121</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Toda venta
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 121</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Toda venta
 de bienes de propiedad municipal será efectuada mediante el procedimiento de
 Licitación Pública o remate público previamente anunciado con especificación de
 bases, modo de pago y demás condiciones que hagan a las contrataciones de
 acuerdo a las disposiciones del artículo 107 de la Ley Provincial Nº 5529, Orgánica
 de Municipalidades.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;122</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>No se
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 122</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>No se
 dispondrá venta alguna sin que por los organismos técnicos se haga el
 correspondiente justiprecio. La base para la venta será siempre por lo menos el
 75% del justiprecio.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;123</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Para la
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 123</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Para la
 enajenación de aquellas propiedades que no sean de uso público se requerirá en
 cada caso una Ordenanza especial, aprobada con el 2/3 del total de los Miembros
 del Concejo Deliberante.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;124</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>El
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 124</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>El
 otorgamiento de concesiones por cuenta de la Municipalidad se regirá por las disposiciones
 generales de este reglamento y por las cláusulas particulares que para cada
 concesión apruebe la Municipalidad.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;125</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Las
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 125</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Las
 concesiones, cualquiera fuera el monto de la contratación serán autorizadas y
 aprobadas por una Ordenanza especial.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;126</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Los bienes
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 126</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Los bienes
 patrimoniales obsoletos, con valor residual agotado podrán ser entregados en
 donación o disponerse su destrucción a través de instrumento legal emitido por
 el H.C.D. de esta ciudad. En caso de donación quedan expresamente excluidos los
 particulares como posibles donatarios.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;127</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Deroganse
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 127</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Deroganse
 las Ordenanzas Nº 59/81, 53 y toda norma que se oponga a la presente.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;128</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>COMUNÍQUESE,
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO 128</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>COMUNÍQUESE,
 PUBLIQUESE, CÓPIESE y ARCHÍVESE.</p>
 
 </div>

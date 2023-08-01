@@ -1,308 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html>
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Book Antiqua";
-	panose-1:2 4 6 2 5 3 5 3 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.DGFecha, li.DGFecha, div.DGFecha
-	{mso-style-name:"DG Fecha";
-	mso-style-link:"DG Fecha Char";
-	margin:0cm;
-	text-align:right;
-	border:none;
-	padding:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGFechaChar
-	{mso-style-name:"DG Fecha Char";
-	mso-style-link:"DG Fecha";
-	font-family:"Book Antiqua",serif;}
-p.DGOrdenanza, li.DGOrdenanza, div.DGOrdenanza
-	{mso-style-name:"DG Ordenanza";
-	mso-style-link:"DG Ordenanza Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:12.0pt;
-	margin-left:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGOrdenanzaChar
-	{mso-style-name:"DG Ordenanza Char";
-	mso-style-link:"DG Ordenanza";
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGSeccion, li.DGSeccion, div.DGSeccion
-	{mso-style-name:"DG Seccion";
-	mso-style-link:"DG Seccion Char";
-	margin-top:12.0pt;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSeccionChar
-	{mso-style-name:"DG Seccion Char";
-	mso-style-link:"DG Seccion";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGCuerpoSeccion, li.DGCuerpoSeccion, div.DGCuerpoSeccion
-	{mso-style-name:"DG CuerpoSeccion";
-	mso-style-link:"DG CuerpoSeccion Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGCuerpoSeccionChar
-	{mso-style-name:"DG CuerpoSeccion Char";
-	mso-style-link:"DG CuerpoSeccion";
-	font-family:"Book Antiqua",serif;}
-p.DGSanciona, li.DGSanciona, div.DGSanciona
-	{mso-style-name:"DG Sanciona";
-	mso-style-link:"DG Sanciona Char";
-	margin-top:16.0pt;
-	margin-right:92.15pt;
-	margin-bottom:16.0pt;
-	margin-left:92.15pt;
-	text-align:center;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSancionaChar
-	{mso-style-name:"DG Sanciona Char";
-	mso-style-link:"DG Sanciona";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGArticulo
-	{mso-style-name:"DG Articulo";
-	font-family:"Book Antiqua",serif;
-	font-variant:normal !important;
-	color:windowtext;
-	text-transform:none;
-	text-shadow:none;
-	font-weight:normal;
-	font-style:normal;
-	text-decoration:underline none underline;
-	vertical-align:baseline;}
-.MsoChpDefault
-	{font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:10.0pt;
-	text-align:justify;
-	line-height:150%;}
- /* Page Definitions */
- @page WordSection1
-	{size:595.3pt 841.9pt;
-	margin:2.0cm 42.5pt 42.5pt 70.85pt;}
-div.WordSection1
-	{page:WordSection1;}
- /* List Definitions */
- ol
-	{margin-bottom:0cm;}
-ul
-	{margin-bottom:0cm;}
--->
-</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Generator" content="Microsoft Word 15 (filtered)">
+
 
 </head>
 
-<body lang=ES-AR style='word-wrap:break-word'>
+<body lang="ES-AR" style="word-wrap:break-word">
 
-<div class=WordSection1>
+<div class="WordSection1">
 
-<div style='border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<div style="border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm">
 
-<p class=DGFecha><a name=Fecha>Yerba Buena, 22 de junio de 2017</a></p>
+<p class="DGFecha"><a name="Fecha">Yerba Buena, 22 de junio de 2017</a></p>
 
 </div>
 
-<p class=DGOrdenanza><a name=Ordenanza>ORDENANZA Nº 2096</a></p>
+<p class="DGOrdenanza"><a name="Ordenanza">ORDENANZA Nº 2096</a></p>
 
-<p class=DGSeccion><a name=Visto>VISTO:</a></p>
+<p class="DGSeccion"><a name="Visto">VISTO:</a></p>
 
-<p class=DGCuerpoSeccion>Que el Municipio de Yerba Buena cuenta con un enorme
+<p class="DGCuerpoSeccion">Que el Municipio de Yerba Buena cuenta con un enorme
 déficit de accesibilidad en distintos espacios y servicios públicos y privados;</p>
 
-<p class=DGSeccion><a name=Considerando>CONSIDERANDO:</a></p>
+<p class="DGSeccion"><a name="Considerando">CONSIDERANDO:</a></p>
 
-<p class=DGCuerpoSeccion>Que la accesibilidad universal es la condición que
+<p class="DGCuerpoSeccion">Que la accesibilidad universal es la condición que
 deben cumplir los entornos, procesos, bienes, productos y servicios, así como
 los objetos o instrumentos, herramientas y dispositivos, para ser comprensibles
 utilizables y practicables por todas las personas en condiciones de seguridad y
 comodidad y de forma más autónoma y natural posible;</p>
 
-<p class=DGCuerpoSeccion>Que la falta de accesibilidad vulnera derechos básicos
+<p class="DGCuerpoSeccion">Que la falta de accesibilidad vulnera derechos básicos
 de las personas y que la creación de un Plan presupone la estrategia de diseño
 para que toda la ciudadanía pueda ser incluída;</p>
 
-<p class=DGSanciona><a name=Sanciona>EL CONCEJO DELIBERANTE SANCIONA CON FUERZA
+<p class="DGSanciona"><a name="Sanciona">EL CONCEJO DELIBERANTE SANCIONA CON FUERZA
 DE ORDENANZA</a></p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;PRIMERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>CREASE en
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO PRIMERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>CREASE en
 el cambio de la Ciudad de Yerba Buena el Plan Municipal de Accesibilidad, cuya
 finalidad es mejorar la calidad de vida de todos los ciudadanos, en consonancia
 con lo dispuesto por la Ley Nacional Nº 26378</p>
 
-<p class=MsoNormal><b>Ámbito de Aplicación</b></p>
+<p class="MsoNormal"><b>Ámbito de Aplicación</b></p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SEGUNDO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Entiéndase
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO SEGUNDO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Entiéndase
 por “accesibilidad” a la eliminación de barreras que impiden el acceso
 igualitario a servicios y derechos de los ciudadanos de Yerba Buena. Estas
 barreras son de diferente tipo y su eliminación requiere una actuación integral
 y planificada que permita lograr una ciudad para todos. Entre las que se
 destacan:</p>
 
-<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Barreras urbanísticas, en espacios públicos, viario, espacios
 peatonales.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Mobiliario urbano.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Señalización.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Servicios municipales.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Barreras arquitectónicas en edificios de uso público.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Equipamientos de uso público.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Barreras de comunicación.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Entornos verdes.</p>
 
-<p class=MsoListParagraph style='margin-left:0cm'><b>Objetivos</b></p>
+<p class="MsoListParagraph" style="margin-left:0cm"><b>Objetivos</b></p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;TERCERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>El Plan
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO TERCERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>El Plan
 Municipal de Accesibilidad tendrá como objetivos generales:</p>
 
-<p class=MsoListParagraphCxSpFirst style='text-indent:-18.15pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Fomentar
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-18.15pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>Fomentar
 la participación activa del colectivo de personas con discapacidad en el diseño
 y ejecución de políticas específicas;</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.15pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Construir una
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.15pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>Construir una
 ciudad para todos;</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.15pt'>c)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Promover
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.15pt">c)<span style='font:7.0pt "Times New Roman"'>     </span>Promover
 la construcción de viviendas sociales adaptables, e impulsar la construcción
 privada en las mismas condiciones;</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.15pt'>d)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Impulsar el
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.15pt">d)<span style='font:7.0pt "Times New Roman"'>    </span>Impulsar el
 deporte accesible, el acceso a eventos e instalaciones deportivas;</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.15pt'>e)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Fomentar
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.15pt">e)<span style='font:7.0pt "Times New Roman"'>     </span>Fomentar
 el turismo social y construir a la Ciudad en un centro de turismo accesible;</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.15pt'>f)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Ampliar
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.15pt">f)<span style='font:7.0pt "Times New Roman"'>      </span>Ampliar
 las oportunidades educativas;</p>
 
-<p class=MsoListParagraphCxSpLast style='text-indent:-18.15pt'>g)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Garantizar la
+<p class="MsoListParagraphCxSpLast" style="text-indent:-18.15pt">g)<span style='font:7.0pt "Times New Roman"'>    </span>Garantizar la
 efectividad del derecho a la protección social de las personas con discapacidad.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;CUARTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>El Plan
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO CUARTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>El Plan
 Municipal de Accesibilidad tendrá los siguientes objetivos particulares:</p>
 
-<p class=MsoNormal>Se recabará y analizarán los datos que permitan tener una
+<p class="MsoNormal">Se recabará y analizarán los datos que permitan tener una
 información básica del Municipio y que contribuyan a establecer una serie de
 prioridades de actuación, al ser completados con información de carácter
 específico.</p>
 
-<p class=MsoNormal>Se deberá analizar y valorar esta información que se
+<p class="MsoNormal">Se deberá analizar y valorar esta información que se
 considera indispensable para identificar y priorizar itinerarios y sectores
 sobre la base de datos demográficos y de movilidad. Asimismo, se trata de
 conocer las principales necesidades de movilidad de la población con alguna
@@ -312,40 +125,36 @@ como base de partida, cuando sea posible, la información que pudiera recabarse
 del movimiento asociativo, de los organismos oficiales estadísticos, de
 instituciones, etc.</p>
 
-<p class=MsoNormal>El Plan contará con las distintas etapas:</p>
+<p class="MsoNormal">El Plan contará con las distintas etapas:</p>
 
-<p class=MsoNormal>Etapa de actuación en la Vía y Espacios y Edificios Públicos:</p>
+<p class="MsoNormal">Etapa de actuación en la Vía y Espacios y Edificios Públicos:</p>
 
-<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Recopilación de información: Morfología del ámbito territorial, dotación
 y equipamiento, jerarquía de prioridades, sectores con problemas graves de accesibilidad,
 resto de sectores o itinerarios, dotación de elementos de mobiliario urbano, zonas
 en proceso de renovación urbana.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>El Plan deberá estimar las condiciones de accesibilidad
 analizando itinerarios y sectores de las diferentes zonas y características. Deberán
 tenerse en cuenta las peticiones y sugerencias de las entidades representativas
 de colectivos interesados en la accesibilidad, así como la información y
 aportaciones de técnicos y responsables de la entidad local.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Cada zona estará representada mediante una ficha, que constará de
 un plano a escala 1: 1000, una descripción de los problemas encontrados y de
 las actuaciones precisas. En el plano se representará al menos la siguiente
 información ajustándose en cada caso a las necesidades que marque el análisis y
 la evaluación.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>El Plan propondrá intervenciones concretas en los itinerarios
 peatonales y se realizará la descripción de las propuestas mediante fichas de
 soluciones tipo que constarán de representación gráfica y descripción de las mismas.</p>
 
-<p class=MsoListParagraph style='margin-left:0cm'>El Plan propondrá actuaciones
+<p class="MsoListParagraph" style="margin-left:0cm">El Plan propondrá actuaciones
 concretas para resolver la accesibilidad en los edificios de uso público, desde
 el exterior, en su entorno próximo, y en el interior, de forma que se pueda
 acceder y hacer uso de sus instalaciones y servicios. Las propuestas de
@@ -356,33 +165,29 @@ contenidos establecidos. Y además se aportarán planes del edificio de las zona
 a intervenir con las soluciones tipo o específicas, cuando la entidad local
 facilite la documentación necesaria, a la escala precisa para su definición. </p>
 
-<p class=MsoListParagraph style='margin-left:0cm'>Etapa de actuación en el
+<p class="MsoListParagraph" style="margin-left:0cm">Etapa de actuación en el
 transporte público.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Para que el transporte urbano sea accesible debe serlo toda la
 cadena de transporte que conste de los siguientes elementos: vehículos públicos,
 parada en destino, itinerarios de paradas y estaciones, destino, señalización
 informativa, operación y gestión del servicio.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>El documento deberá recoger una relación de medios y líneas y
 localizar en planos la siguiente información: transporte interurbano (paradas
 de colectivos, marquesinas, paradas móviles); transporte privado (plazas de
 estacionamiento reservadas para personas discapacitadas); taxis convencionales
 y accesibles y servicio de transporte especial.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Deberán conocerse los datos de número de viajeros que utilizan
 los diferentes servicios con el objeto de establecer prioridades, y a su vez, a
 través de la encuesta de movilidad a realizar las más utilizadas por los
 colectivos de personas con discapacidad y mayores.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>El documento deberá estimar las condiciones de accesibilidad
 analizando una muestra de elementos de transporte de diferentes zonas y características.
 El Plan deberá estimar las condiciones de accesibilidad analizando los medios y
@@ -391,51 +196,43 @@ las entidades representativas de colectivos interesados en la accesibilidad, as�
 como la información y aportaciones de técnicos y responsables de la entidad
 local.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Se deberá tener en cuenta los siguientes contenidos a la hora de
 establecer las pautas de actuación:</p>
 
-<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpLast" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Disponer de una red integrada de transporte accesible, garantizando
 de forma progresiva la cadena de movilidad. Alcanzar un adecuado nivel de
 prestaciones en accesibilidad tanto en los intercambiadores de transporte
 ubicadas dentro del ámbito de actuación en las que se ofrezcan servicios de
 cercanías, regional y de larga distancia.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;QUINTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Participación
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO QUINTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Participación
 Ciudadana: se fomentará la participación ciudadana y de representantes de
 entidades de y para discapacitados en los organismos consultivos del gobierno
 de la Ciudad de Yerba Buena. Se promoverán las iniciativas sociales de apoyo y
 atención a grupos de personas con discapacidad destinadas a promover su
 desarrollo personal para una vida independiente e inclusiva.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SEXTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>El D.E.M. podrá
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO SEXTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>El D.E.M. podrá
 celebrar convenios con autoridades provinciales, nacionales y organizaciones no
 gubernamentales vinculadas a la temática, en el marco de cumplimiento de los
 objetivos de la presente Ordenanza.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SÉPTIMO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>El D.E.M. y
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO SÉPTIMO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>El D.E.M. y
 el H.C.D., a través de las reparticiones que corresponda, podrán ejecutar en
 forma periódica estrategias de difusión destinadas a informar y concientizar a
 la población en relación a la importancia de la accesibilidad y la inclusión
 social.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;OCTAVO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Las
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO OCTAVO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Las
 erogaciones que demanden la implementación de la presente serán imputadas al
 Presupuesto Anual Municipal.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;NOVENO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Derógase
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO NOVENO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Derógase
 toda norma que se oponga a la presente.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>COMUNÍQUESE,
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO DÉCIMO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>COMUNÍQUESE,
 REGÍSTRESE Y ARCHIVESE.</p>
 
 </div>

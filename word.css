@@ -1,181 +1,578 @@
-
-:root {
-  --fuente-principal: "Book Antiqua", serif;
-}
-
-/* Font Definitions */
- /* @font-face
+ /* Font Definitions */
+ @font-face
+	{font-family:Helvetica;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Courier;
+	panose-1:2 7 4 9 2 2 5 2 4 4;}
+@font-face
+	{font-family:"Tms Rmn";
+	panose-1:2 2 6 3 4 5 5 2 3 4;}
+@font-face
+	{font-family:Helv;
+	panose-1:2 11 6 4 2 2 2 3 2 4;}
+@font-face
+	{font-family:"New York";
+	panose-1:2 4 5 3 6 5 6 2 3 4;}
+@font-face
+	{font-family:System;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
 	{font-family:Wingdings;
 	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:Batang;
+	panose-1:2 3 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:PMingLiU;
+	panose-1:2 1 6 1 0 1 1 1 1 1;}
+@font-face
+	{font-family:"MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:Dotum;
+	panose-1:2 11 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:SimHei;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:MingLiU;
+	panose-1:2 1 6 9 0 1 1 1 1 1;}
+@font-face
+	{font-family:Mincho;
+	panose-1:2 2 6 9 4 3 5 8 3 5;}
+@font-face
+	{font-family:Gulim;
+	panose-1:2 11 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Angsana New";
+	panose-1:2 2 6 3 5 4 5 2 3 4;}
+@font-face
+	{font-family:"Cordia New";
+	panose-1:2 11 3 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Mangal;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Latha;
+	panose-1:2 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Sylfaen;
+	panose-1:1 10 5 2 5 3 6 3 3 3;}
+@font-face
+	{font-family:Vrinda;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Raavi;
+	panose-1:2 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Shruti;
+	panose-1:2 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Sendnya;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Gautami;
+	panose-1:2 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Tunga;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Estrangelo Edessa";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
 @font-face
 	{font-family:"Cambria Math";
 	panose-1:2 4 5 3 5 4 6 3 2 4;}
 @font-face
+	{font-family:"Yu Gothic";
+	panose-1:2 11 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:DengXian;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
 	{font-family:Calibri;
 	panose-1:2 15 5 2 2 2 4 3 2 4;}
 @font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Palatino Linotype";
+	panose-1:2 4 5 2 5 5 5 3 3 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
 	{font-family:"Book Antiqua";
-	panose-1:2 4 6 2 5 3 5 3 3 4;} */
+	panose-1:2 4 6 2 5 3 5 3 3 4;}
+@font-face
+	{font-family:"Segoe UI Emoji";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Trebuchet MS";
+	panose-1:2 11 6 3 2 2 2 2 2 4;}
+@font-face
+	{font-family:"Copperplate Gothic Light";
+	panose-1:2 14 5 7 2 2 6 2 4 4;}
+@font-face
+	{font-family:"Arial Narrow";
+	panose-1:2 11 6 6 2 2 2 3 2 4;}
+@font-face
+	{font-family:"\@Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
  /* Style Definitions */
-
  p.MsoNormal, li.MsoNormal, div.MsoNormal
 	{margin-top:0cm;
 	margin-right:0cm;
-	margin-bottom:6.0pt;
+	margin-bottom:12.0pt;
 	margin-left:0cm;
 	text-align:justify;
 	font-size:12.0pt;
-	font-family:var(--fuente-principal);
-}
-
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph {
-    margin-top:0cm;
+	font-family:"Book Antiqua",serif;}
+h1
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:20.0pt;
+	font-family:"Book Antiqua",serif;}
+h2
+	{margin-top:6.0pt;
 	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:var(--fuente-principal);
-}
-
-p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst {
-    margin-top:0cm;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Book Antiqua",serif;}
+h3
+	{margin-top:12.0pt;
 	margin-right:0cm;
 	margin-bottom:0cm;
-	margin-left:36.0pt;
+	margin-left:1.0cm;
+	text-align:justify;
+	text-indent:-1.0cm;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Book Antiqua",serif;}
+h4
+	{mso-style-link:"Título 4 Car";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
 	text-align:justify;
 	font-size:12.0pt;
-	font-family:var(--fuente-principal);
-}
-
-p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle	{
-    margin-top:0cm;
+	font-family:"Book Antiqua",serif;
+	font-weight:normal;}
+h5
+	{mso-style-link:"Título 5 Car";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;
+	color:#002060;
+	font-weight:normal;}
+h6
+	{mso-style-link:"Título 6 Car";
+	margin-top:2.0pt;
 	margin-right:0cm;
 	margin-bottom:0cm;
-	margin-left:36.0pt;
+	margin-left:0cm;
 	text-align:justify;
+	page-break-after:avoid;
 	font-size:12.0pt;
-	font-family:var(--fuente-principal);
-}
-
-p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast {
-    margin-top:0cm;
+	font-family:"Book Antiqua",serif;
+	color:#243F60;
+	font-weight:normal;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-link:"Título 7 Car";
+	margin-top:2.0pt;
 	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:justify;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;
+	color:#243F60;
+	font-style:italic;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-link:"Título 8 Car";
+	margin-top:2.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:justify;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Book Antiqua",serif;
+	color:#272727;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-link:"Título 9 Car";
+	margin-top:2.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:justify;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Book Antiqua",serif;
+	color:#272727;
+	font-style:italic;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
 	text-align:justify;
 	font-size:12.0pt;
-	font-family:var(--fuente-principal);
-}
-
-p.DGFecha, li.DGFecha, div.DGFecha	{
+	font-family:"Book Antiqua",serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;
+	font-weight:bold;}
+span.MsoEndnoteReference
+	{vertical-align:super;}
+p.MsoEndnoteText, li.MsoEndnoteText, div.MsoEndnoteText
+	{mso-style-link:"Texto nota al final Car";
 	margin:0cm;
-	margin-bottom: 1cm;
+	text-align:justify;
+	font-size:10.0pt;
+	font-family:"Book Antiqua",serif;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Título Car";
+	margin:0cm;
+	text-align:justify;
+	font-size:28.0pt;
+	font-family:"Book Antiqua",serif;
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Título Car";
+	margin:0cm;
+	text-align:justify;
+	font-size:28.0pt;
+	font-family:"Book Antiqua",serif;
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Título Car";
+	margin:0cm;
+	text-align:justify;
+	font-size:28.0pt;
+	font-family:"Book Antiqua",serif;
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Título Car";
+	margin:0cm;
+	text-align:justify;
+	font-size:28.0pt;
+	font-family:"Book Antiqua",serif;
+	letter-spacing:-.5pt;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{mso-style-link:"Texto independiente Car";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:14.2pt;
+	text-align:justify;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;
+	font-weight:bold;}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	line-height:150%;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;
+	font-weight:bold;
+	text-decoration:underline;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Texto de globo Car";
+	margin:0cm;
+	text-align:justify;
+	font-size:9.0pt;
+	font-family:"Segoe UI",sans-serif;}
+p.MsoRMPane, li.MsoRMPane, div.MsoRMPane
+	{margin:0cm;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:36.0pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:36.0pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+p.DGFecha, li.DGFecha, div.DGFecha
+	{mso-style-name:"DG Fecha";
+	mso-style-link:"DG Fecha Char";
+	margin:0cm;
 	text-align:right;
 	border:none;
 	padding:0cm;
 	font-size:12.0pt;
-	font-family:var(--fuente-principal);
-}
-
-span.DGFechaChar {
-    font-family:var(--fuente-principal);
-}
-
-p.DGOrdenanza, li.DGOrdenanza, div.DGOrdenanza	{
+	font-family:"Book Antiqua",serif;}
+span.TextoindependienteCar
+	{mso-style-name:"Texto independiente Car";
+	mso-style-link:"Texto independiente";
+	font-family:"Book Antiqua",serif;}
+span.DGFechaChar
+	{mso-style-name:"DG Fecha Char";
+	mso-style-link:"DG Fecha";
+	font-family:"Book Antiqua",serif;}
+p.DGOrdenanza, li.DGOrdenanza, div.DGOrdenanza
+	{mso-style-name:"DG Ordenanza";
+	mso-style-link:"DG Ordenanza Char";
 	margin-top:0cm;
 	margin-right:0cm;
 	margin-bottom:12.0pt;
 	margin-left:0cm;
 	font-size:12.0pt;
-	font-family:var(--fuente-principal);
+	font-family:"Book Antiqua",serif;
 	text-transform:uppercase;
-	font-weight:bold;
-}
-
-span.DGOrdenanzaChar{
-	font-family:var(--fuente-principal);
+	font-weight:bold;}
+span.DGOrdenanzaChar
+	{mso-style-name:"DG Ordenanza Char";
+	mso-style-link:"DG Ordenanza";
+	font-family:"Book Antiqua",serif;
 	text-transform:uppercase;
-	font-weight:bold;
-}
-
-p.DGSeccion, li.DGSeccion, div.DGSeccion	{
+	font-weight:bold;}
+p.DGSeccion, li.DGSeccion, div.DGSeccion
+	{mso-style-name:"DG Seccion";
+	mso-style-link:"DG Seccion Char";
 	margin-top:12.0pt;
 	margin-right:0cm;
-	margin-bottom:6.0pt;
+	margin-bottom:12.0pt;
 	margin-left:0cm;
 	text-align:justify;
 	font-size:12.0pt;
-	font-family:var(--fuente-principal);
+	font-family:"Book Antiqua",serif;
 	color:#0D0000;
 	text-transform:uppercase;
-	font-weight:bold;
-}
-
-span.DGSeccionChar	{
-	font-family:var(--fuente-principal);
+	font-weight:bold;}
+span.DGSeccionChar
+	{mso-style-name:"DG Seccion Char";
+	mso-style-link:"DG Seccion";
+	font-family:"Book Antiqua",serif;
 	color:#0D0000;
 	text-transform:uppercase;
-	font-weight:bold;
-}
-
-p.DGCuerpoSeccion, li.DGCuerpoSeccion, div.DGCuerpoSeccion	{
+	font-weight:bold;}
+p.DGCuerpoSeccion, li.DGCuerpoSeccion, div.DGCuerpoSeccion
+	{mso-style-name:"DG CuerpoSeccion";
+	mso-style-link:"DG CuerpoSeccion Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+span.DGCuerpoSeccionChar
+	{mso-style-name:"DG CuerpoSeccion Char";
+	mso-style-link:"DG CuerpoSeccion";
+	font-family:"Book Antiqua",serif;}
+p.DGSanciona, li.DGSanciona, div.DGSanciona
+	{mso-style-name:"DG Sanciona";
+	mso-style-link:"DG Sanciona Char";
+	margin-top:16.0pt;
+	margin-right:92.15pt;
+	margin-bottom:16.0pt;
+	margin-left:92.15pt;
+	text-align:center;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;
+	color:#0D0000;
+	text-transform:uppercase;
+	font-weight:bold;}
+span.DGSancionaChar
+	{mso-style-name:"DG Sanciona Char";
+	mso-style-link:"DG Sanciona";
+	font-family:"Book Antiqua",serif;
+	color:#0D0000;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.DGArticulos, li.DGArticulos, div.DGArticulos
+	{mso-style-name:"DG Articulos";
+	mso-style-link:"DG Articulos Char";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Book Antiqua",serif;}
+span.DGArticulosChar
+	{mso-style-name:"DG Articulos Char";
+	mso-style-link:"DG Articulos";
+	font-family:"Book Antiqua",serif;}
+span.DGArticulo
+	{mso-style-name:"DG Articulo";
+	font-family:"Book Antiqua",serif;
+	font-variant:normal !important;
+	color:windowtext;
+	text-transform:none;
+	font-weight:normal;
+	font-style:normal;
+	text-decoration:underline none underline;
+	vertical-align:baseline;}
+span.Ttulo4Car
+	{mso-style-name:"Título 4 Car";
+	mso-style-link:"Título 4";
+	font-family:"Book Antiqua",serif;}
+span.Ttulo5Car
+	{mso-style-name:"Título 5 Car";
+	mso-style-link:"Título 5";
+	font-family:"Book Antiqua",serif;
+	color:#002060;}
+span.TextodegloboCar
+	{mso-style-name:"Texto de globo Car";
+	mso-style-link:"Texto de globo";
+	font-family:"Segoe UI",sans-serif;}
+p.DGModificacion, li.DGModificacion, div.DGModificacion
+	{mso-style-name:"DG Modificacion";
 	margin-top:0cm;
 	margin-right:0cm;
 	margin-bottom:6.0pt;
 	margin-left:0cm;
 	text-align:justify;
-	font-size:12.0pt;
-	font-family:var(--fuente-principal);
-}
-
-span.DGCuerpoSeccionChar{
-	font-family:var(--fuente-principal);
-}
-
-p.DGSanciona, li.DGSanciona, div.DGSanciona	{
-	margin-top:16.0pt;
-	margin-bottom:16.0pt;
-	margin-right:0pt;
-	margin-left:0pt;
-	text-align:center;
-	font-size:12.0pt;
-	font-family:var(--fuente-principal);
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;
-}
-
-span.DGSancionaChar	{
-	font-family:var(--fuente-principal);
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;
-}
-
-span.DGArticulo	{
-	font-family:var(--fuente-principal);
-	font-variant:normal !important;
-	text-transform:none;
-	text-shadow:none;
-	font-weight:normal;
-	font-style:normal;
-	text-decoration:underline none underline;
-	vertical-align:baseline;
-}
-
-.MsoChpDefault {
-    font-size:12.0pt;
-}
-
-.MsoPapDefault {
-    text-align:justify;
-	line-height:150%;
-}
-ol {
-    margin-bottom:0cm;
-}
-
-ul {
-    margin-bottom:0cm;
-}
+	font-size:10.0pt;
+	font-family:"Book Antiqua",serif;
+	color:#00B050;
+	font-style:italic;}
+span.TextonotaalfinalCar
+	{mso-style-name:"Texto nota al final Car";
+	mso-style-link:"Texto nota al final";
+	font-family:"Book Antiqua",serif;}
+span.TtuloCar
+	{mso-style-name:"Título Car";
+	mso-style-link:Título;
+	font-family:"Book Antiqua",serif;
+	letter-spacing:-.5pt;}
+span.Ttulo6Car
+	{mso-style-name:"Título 6 Car";
+	mso-style-link:"Título 6";
+	font-family:"Book Antiqua",serif;
+	color:#243F60;}
+span.Ttulo7Car
+	{mso-style-name:"Título 7 Car";
+	mso-style-link:"Título 7";
+	font-family:"Book Antiqua",serif;
+	color:#243F60;
+	font-style:italic;}
+span.Ttulo8Car
+	{mso-style-name:"Título 8 Car";
+	mso-style-link:"Título 8";
+	font-family:"Book Antiqua",serif;
+	color:#272727;}
+span.Ttulo9Car
+	{mso-style-name:"Título 9 Car";
+	mso-style-link:"Título 9";
+	font-family:"Book Antiqua",serif;
+	color:#272727;
+	font-style:italic;}
+span.msoIns
+	{mso-style-name:"";
+	text-decoration:underline;
+	color:teal;}
+span.msoDel
+	{mso-style-name:"";
+	text-decoration:line-through;
+	color:red;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:2.0cm 42.5pt 42.5pt 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->

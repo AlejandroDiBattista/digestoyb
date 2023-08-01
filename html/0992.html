@@ -1,672 +1,487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html>
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Book Antiqua";
-	panose-1:2 4 6 2 5 3 5 3 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.DGFecha, li.DGFecha, div.DGFecha
-	{mso-style-name:"DG Fecha";
-	mso-style-link:"DG Fecha Char";
-	margin:0cm;
-	text-align:right;
-	border:none;
-	padding:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGFechaChar
-	{mso-style-name:"DG Fecha Char";
-	mso-style-link:"DG Fecha";
-	font-family:"Book Antiqua",serif;}
-p.DGOrdenanza, li.DGOrdenanza, div.DGOrdenanza
-	{mso-style-name:"DG Ordenanza";
-	mso-style-link:"DG Ordenanza Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:12.0pt;
-	margin-left:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGOrdenanzaChar
-	{mso-style-name:"DG Ordenanza Char";
-	mso-style-link:"DG Ordenanza";
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGSeccion, li.DGSeccion, div.DGSeccion
-	{mso-style-name:"DG Seccion";
-	mso-style-link:"DG Seccion Char";
-	margin-top:12.0pt;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSeccionChar
-	{mso-style-name:"DG Seccion Char";
-	mso-style-link:"DG Seccion";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGCuerpoSeccion, li.DGCuerpoSeccion, div.DGCuerpoSeccion
-	{mso-style-name:"DG CuerpoSeccion";
-	mso-style-link:"DG CuerpoSeccion Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGCuerpoSeccionChar
-	{mso-style-name:"DG CuerpoSeccion Char";
-	mso-style-link:"DG CuerpoSeccion";
-	font-family:"Book Antiqua",serif;}
-p.DGSanciona, li.DGSanciona, div.DGSanciona
-	{mso-style-name:"DG Sanciona";
-	mso-style-link:"DG Sanciona Char";
-	margin-top:16.0pt;
-	margin-right:92.15pt;
-	margin-bottom:16.0pt;
-	margin-left:92.15pt;
-	text-align:center;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSancionaChar
-	{mso-style-name:"DG Sanciona Char";
-	mso-style-link:"DG Sanciona";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGArticulo
-	{mso-style-name:"DG Articulo";
-	font-family:"Book Antiqua",serif;
-	font-variant:normal !important;
-	color:windowtext;
-	text-transform:none;
-	text-shadow:none;
-	font-weight:normal;
-	font-style:normal;
-	text-decoration:underline none underline;
-	vertical-align:baseline;}
-p.DGAnexo, li.DGAnexo, div.DGAnexo
-	{mso-style-name:"DG Anexo";
-	margin:0cm;
-	text-align:justify;
-	border:none;
-	padding:0cm;
-	font-size:16.0pt;
-	font-family:"Book Antiqua",serif;
-	font-weight:bold;}
-.MsoChpDefault
-	{font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:10.0pt;
-	line-height:115%;}
- /* Page Definitions */
- @page WordSection1
-	{size:595.3pt 841.9pt;
-	margin:2.0cm 42.5pt 42.5pt 70.85pt;}
-div.WordSection1
-	{page:WordSection1;}
- /* List Definitions */
- ol
-	{margin-bottom:0cm;}
-ul
-	{margin-bottom:0cm;}
--->
-</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Generator" content="Microsoft Word 15 (filtered)">
+
 
 </head>
 
-<body lang=ES-AR style='word-wrap:break-word'>
+<body lang="ES-AR" style="word-wrap:break-word">
 
-<div class=WordSection1>
+<div class="WordSection1">
 
-<div style='border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<div style="border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm">
 
-<p class=DGFecha><a name=Fecha>Yerba Buena, 08 de septiembre de 1999</a></p>
+<p class="DGFecha"><a name="Fecha">Yerba Buena, 08 de septiembre de 1999</a></p>
 
 </div>
 
-<p class=DGOrdenanza><a name=Ordenanza>ORDENANZA Nº 992</a></p>
+<p class="DGOrdenanza"><a name="Ordenanza">ORDENANZA Nº 992</a></p>
 
-<p class=DGSeccion><a name=Visto>VISTO:</a></p>
+<p class="DGSeccion"><a name="Visto">VISTO:</a></p>
 
-<p class=DGCuerpoSeccion>La necesidad de ubicar a familias de escasos recursos;
+<p class="DGCuerpoSeccion">La necesidad de ubicar a familias de escasos recursos;
 y</p>
 
-<p class=DGSeccion><a name=Considerando>CONSIDERANDO:</a></p>
+<p class="DGSeccion"><a name="Considerando">CONSIDERANDO:</a></p>
 
-<p class=DGCuerpoSeccion>Que es preocupación constante de este Cuerpo, buscar
+<p class="DGCuerpoSeccion">Que es preocupación constante de este Cuerpo, buscar
 las soluciones a estos afligentes problemas de sectores carenciados;</p>
 
-<p class=DGCuerpoSeccion>Que en este sentido, y al disponer de tierras de
+<p class="DGCuerpoSeccion">Que en este sentido, y al disponer de tierras de
 propiedad municipal, aptas para urbanizar y reubicar a estas familias que
 atraviesan esta situación;</p>
 
-<p class=DGCuerpoSeccion>Que a tal fin y con el objetivo de entregar las mismas
+<p class="DGCuerpoSeccion">Que a tal fin y con el objetivo de entregar las mismas
 en forma de ordenada y a título oneroso, se establecen los requisitos y
 normativas a cumplimentar por las partes;</p>
 
-<p class=DGCuerpoSeccion>Que mediante este instrumento legal, se concretará
+<p class="DGCuerpoSeccion">Que mediante este instrumento legal, se concretará
 este anhelado objetivo;</p>
 
-<p class=DGSanciona><a name=Sanciona>EL CONCEJO DELIBERANTE SANCIONA CON FUERZA
+<p class="DGSanciona"><a name="Sanciona">EL CONCEJO DELIBERANTE SANCIONA CON FUERZA
 DE ORDENANZA</a></p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;PRIMERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>AUTORIZASE
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO PRIMERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>AUTORIZASE
 al D.E.M. a realizar la entrega a Título Oneroso de los lotes resultantes del
 Plano de Anteproyecto aprobado del predio propiedad Municipal ubicado en calle
 Combate de Las Lanzas, identificado con el Padrón 81.519, en mayor extensión, según
 las siguientes condiciones:</p>
 
-<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'>1)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>De la división
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-18.0pt">1)<span style='font:7.0pt "Times New Roman"'>     </span>De la división
 resultante surgieron 146 (ciento cuarenta y seis) lotes, mas espacios verdes, de
 los cuales un cupo de 20 (veinte) se entregan en esta etapa y cuyos
 adjudicatarios son los que figuran en el Anexo I que forma parte de la presente
 Ordenanza.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>2)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>A los efectos
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">2)<span style='font:7.0pt "Times New Roman"'>     </span>A los efectos
 de distribuir estas familias en forma equitativa, se procederá a realizar un
 sorteo de los lotes ante Escribano Público en sede del H.C.D., según la
 numeración del Plano de Anteproyecto aprobado, y en forma inmediata a la
 sanción de la Ordenanza correspondiente.</p>
 
-<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt'>3)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Se fija
+<p class="MsoListParagraphCxSpLast" style="text-indent:-18.0pt">3)<span style='font:7.0pt "Times New Roman"'>     </span>Se fija
 como precio el valor de $15 (pesos quince) por metro cuadrado, que se abonará a
 razón de $20 (pesos veinte) en forma mensual y consecutiva, sin intereses, siempre
 y cuando el pago se efectúe en término, determinándose el valor total, según la
 superficie que le corresponda y de acuerdo al sorteo ya mencionado.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SEGUNDO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>A los
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO SEGUNDO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>A los
 efectos de concretar la entrega de los lotes, se procederá a firmar un Boleto
 de Compraventa, quedando establecido que durante el término que se establece
 como plazo de pago, no podrán transferirse, venderse ni alquilarse los lotes
 entregados.</p>
 
-<p class=MsoNormal>Se establece por otra parte que tanto los adjudicatarios
+<p class="MsoNormal">Se establece por otra parte que tanto los adjudicatarios
 titulares con sus respectivos cónyuges, no podrán ser beneficiarios en ningún
 otro plan Municipal de similares características por el término que dure la
 operación de este Convenio.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;TERCERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>La
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO TERCERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>La
 Municipalidad proveerá de la infraestructura correspondiente a provisión de
 agua potable, energía eléctrica, apertura y enripiado de calles.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;CUARTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Concluido
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO CUARTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Concluido
 el pago por parte de los adquirentes de la parcela que le correspondió, la
 Municipalidad procederá a entregar las Escrituras correspondientes.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;QUINTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>COMUNIQUESE,
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO QUINTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>COMUNIQUESE,
 COPIESE Y ARCHIVESE.</p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class="MsoNormal"> </p>
 
-<div style='border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<div style="border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm">
 
-<p class=DGAnexo><span style='font-size:12.0pt'>ANEXO I</span></p>
+<p class="DGAnexo"><span style="font-size:12.0pt">ANEXO I</span></p>
 
 </div>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class="MsoNormal"> </p>
 
-<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;border:none'>
- <tr style='height:1.0pt'>
-  <td width=37 valign=top style='width:27.55pt;border:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center'><b>Nº </b></p>
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none">
+ <tr style="height:1.0pt">
+  <td width="37" valign="top" style="width:27.55pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:0cm;
+  margin-top:0cm;text-align:center"><b>Nº </b></p>
   </td>
-  <td width=312 valign=top style='width:233.85pt;border:solid windowtext 1.0pt;
-  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'><b>NOMBRE Y APELLIDO</b></p>
+  <td width="312" valign="top" style="width:233.85pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm"><b>NOMBRE Y APELLIDO</b></p>
   </td>
-  <td width=117 valign=top style='width:87.7pt;border:solid windowtext 1.0pt;
-  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'><b>D. N. I</b></p>
-  </td>
- </tr>
- <tr style='height:1.0pt'>
-  <td width=37 valign=top style='width:27.55pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>1</p>
-  </td>
-  <td width=312 valign=top style='width:233.85pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>ELISA CARMEN LEGUIZAMON</p>
-  </td>
-  <td width=117 valign=top style='width:87.7pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center'>25.740.712</p>
+  <td width="117" valign="top" style="width:87.7pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm"><b>D. N. I</b></p>
   </td>
  </tr>
- <tr style='height:1.0pt'>
-  <td width=37 valign=top style='width:27.55pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>2</p>
+ <tr style="height:1.0pt">
+  <td width="37" valign="top" style="width:27.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">1</p>
   </td>
-  <td width=312 valign=top style='width:233.85pt;border-top:none;border-left:
+  <td width="312" valign="top" style="width:233.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>JOSE AGUSTIN CARRIZO</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">ELISA CARMEN LEGUIZAMON</p>
   </td>
-  <td width=117 valign=top style='width:87.7pt;border-top:none;border-left:
+  <td width="117" valign="top" style="width:87.7pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center'>22.450.052</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:0cm;
+  margin-top:0cm;text-align:center">25.740.712</p>
   </td>
  </tr>
- <tr style='height:1.0pt'>
-  <td width=37 valign=top style='width:27.55pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>3</p>
+ <tr style="height:1.0pt">
+  <td width="37" valign="top" style="width:27.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">2</p>
   </td>
-  <td width=312 valign=top style='width:233.85pt;border-top:none;border-left:
+  <td width="312" valign="top" style="width:233.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>HUMBERTO SANTOS AGUILAR</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">JOSE AGUSTIN CARRIZO</p>
   </td>
-  <td width=117 valign=top style='width:87.7pt;border-top:none;border-left:
+  <td width="117" valign="top" style="width:87.7pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center'>8.956.869</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:0cm;
+  margin-top:0cm;text-align:center">22.450.052</p>
   </td>
  </tr>
- <tr style='height:1.0pt'>
-  <td width=37 valign=top style='width:27.55pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>4</p>
+ <tr style="height:1.0pt">
+  <td width="37" valign="top" style="width:27.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">3</p>
   </td>
-  <td width=312 valign=top style='width:233.85pt;border-top:none;border-left:
+  <td width="312" valign="top" style="width:233.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>MARTIN ALFREDO RIOS</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">HUMBERTO SANTOS AGUILAR</p>
   </td>
-  <td width=117 valign=top style='width:87.7pt;border-top:none;border-left:
+  <td width="117" valign="top" style="width:87.7pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center'>13.378.041</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:0cm;
+  margin-top:0cm;text-align:center">8.956.869</p>
   </td>
  </tr>
- <tr style='height:1.0pt'>
-  <td width=37 valign=top style='width:27.55pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>5</p>
+ <tr style="height:1.0pt">
+  <td width="37" valign="top" style="width:27.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">4</p>
   </td>
-  <td width=312 valign=top style='width:233.85pt;border-top:none;border-left:
+  <td width="312" valign="top" style="width:233.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>JUAN MIGUEL MUÑOS</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">MARTIN ALFREDO RIOS</p>
   </td>
-  <td width=117 valign=top style='width:87.7pt;border-top:none;border-left:
+  <td width="117" valign="top" style="width:87.7pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center'>25.003.991</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:0cm;
+  margin-top:0cm;text-align:center">13.378.041</p>
   </td>
  </tr>
- <tr style='height:1.0pt'>
-  <td width=37 valign=top style='width:27.55pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>6</p>
+ <tr style="height:1.0pt">
+  <td width="37" valign="top" style="width:27.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">5</p>
   </td>
-  <td width=312 valign=top style='width:233.85pt;border-top:none;border-left:
+  <td width="312" valign="top" style="width:233.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>OMAR AMROSIO FERNANDEZ</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">JUAN MIGUEL MUÑOS</p>
   </td>
-  <td width=117 valign=top style='width:87.7pt;border-top:none;border-left:
+  <td width="117" valign="top" style="width:87.7pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center'>25.003.015</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:0cm;
+  margin-top:0cm;text-align:center">25.003.991</p>
   </td>
  </tr>
- <tr style='height:1.0pt'>
-  <td width=37 valign=top style='width:27.55pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>7</p>
+ <tr style="height:1.0pt">
+  <td width="37" valign="top" style="width:27.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">6</p>
   </td>
-  <td width=312 valign=top style='width:233.85pt;border-top:none;border-left:
+  <td width="312" valign="top" style="width:233.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>MANUEL ANTONIO RUIZ</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">OMAR AMROSIO FERNANDEZ</p>
   </td>
-  <td width=117 valign=top style='width:87.7pt;border-top:none;border-left:
+  <td width="117" valign="top" style="width:87.7pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center'>13.950.774</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:0cm;
+  margin-top:0cm;text-align:center">25.003.015</p>
   </td>
  </tr>
- <tr style='height:1.0pt'>
-  <td width=37 valign=top style='width:27.55pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>8</p>
+ <tr style="height:1.0pt">
+  <td width="37" valign="top" style="width:27.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">7</p>
   </td>
-  <td width=312 valign=top style='width:233.85pt;border-top:none;border-left:
+  <td width="312" valign="top" style="width:233.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>RAMON AVELLANEDA</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">MANUEL ANTONIO RUIZ</p>
   </td>
-  <td width=117 valign=top style='width:87.7pt;border-top:none;border-left:
+  <td width="117" valign="top" style="width:87.7pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center'>7.048.795</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:0cm;
+  margin-top:0cm;text-align:center">13.950.774</p>
   </td>
  </tr>
- <tr style='height:1.0pt'>
-  <td width=37 valign=top style='width:27.55pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>9</p>
+ <tr style="height:1.0pt">
+  <td width="37" valign="top" style="width:27.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">8</p>
   </td>
-  <td width=312 valign=top style='width:233.85pt;border-top:none;border-left:
+  <td width="312" valign="top" style="width:233.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>ALFREDO VICTORIO SAYAVEDRA</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">RAMON AVELLANEDA</p>
   </td>
-  <td width=117 valign=top style='width:87.7pt;border-top:none;border-left:
+  <td width="117" valign="top" style="width:87.7pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center'>18.482.298</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:0cm;
+  margin-top:0cm;text-align:center">7.048.795</p>
   </td>
  </tr>
- <tr style='height:1.0pt'>
-  <td width=37 valign=top style='width:27.55pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>10</p>
+ <tr style="height:1.0pt">
+  <td width="37" valign="top" style="width:27.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">9</p>
   </td>
-  <td width=312 valign=top style='width:233.85pt;border-top:none;border-left:
+  <td width="312" valign="top" style="width:233.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>ISIDRO ELEUTERIO CORDOBA</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">ALFREDO VICTORIO SAYAVEDRA</p>
   </td>
-  <td width=117 valign=top style='width:87.7pt;border-top:none;border-left:
+  <td width="117" valign="top" style="width:87.7pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center'>7.084.115</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:0cm;
+  margin-top:0cm;text-align:center">18.482.298</p>
   </td>
  </tr>
- <tr style='height:1.0pt'>
-  <td width=37 valign=top style='width:27.55pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>11</p>
+ <tr style="height:1.0pt">
+  <td width="37" valign="top" style="width:27.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">10</p>
   </td>
-  <td width=312 valign=top style='width:233.85pt;border-top:none;border-left:
+  <td width="312" valign="top" style="width:233.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>SERGIO ERNESTO NOIR</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">ISIDRO ELEUTERIO CORDOBA</p>
   </td>
-  <td width=117 valign=top style='width:87.7pt;border-top:none;border-left:
+  <td width="117" valign="top" style="width:87.7pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center'>22.153.329</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:0cm;
+  margin-top:0cm;text-align:center">7.084.115</p>
   </td>
  </tr>
- <tr style='height:1.0pt'>
-  <td width=37 valign=top style='width:27.55pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>12</p>
+ <tr style="height:1.0pt">
+  <td width="37" valign="top" style="width:27.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">11</p>
   </td>
-  <td width=312 valign=top style='width:233.85pt;border-top:none;border-left:
+  <td width="312" valign="top" style="width:233.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>MAGDALENA REGINA YAMPA</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">SERGIO ERNESTO NOIR</p>
   </td>
-  <td width=117 valign=top style='width:87.7pt;border-top:none;border-left:
+  <td width="117" valign="top" style="width:87.7pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center'>5.154.101</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:0cm;
+  margin-top:0cm;text-align:center">22.153.329</p>
   </td>
  </tr>
- <tr style='height:1.0pt'>
-  <td width=37 valign=top style='width:27.55pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>13</p>
+ <tr style="height:1.0pt">
+  <td width="37" valign="top" style="width:27.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">12</p>
   </td>
-  <td width=312 valign=top style='width:233.85pt;border-top:none;border-left:
+  <td width="312" valign="top" style="width:233.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>ALEJANDRO BALLESTEROS</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">MAGDALENA REGINA YAMPA</p>
   </td>
-  <td width=117 valign=top style='width:87.7pt;border-top:none;border-left:
+  <td width="117" valign="top" style="width:87.7pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center'>23.564.343</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:0cm;
+  margin-top:0cm;text-align:center">5.154.101</p>
   </td>
  </tr>
- <tr style='height:1.0pt'>
-  <td width=37 valign=top style='width:27.55pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>14</p>
+ <tr style="height:1.0pt">
+  <td width="37" valign="top" style="width:27.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">13</p>
   </td>
-  <td width=312 valign=top style='width:233.85pt;border-top:none;border-left:
+  <td width="312" valign="top" style="width:233.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>CLAUDIO ALEJANDRO REARTE</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">ALEJANDRO BALLESTEROS</p>
   </td>
-  <td width=117 valign=top style='width:87.7pt;border-top:none;border-left:
+  <td width="117" valign="top" style="width:87.7pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center'>24.164.570</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:0cm;
+  margin-top:0cm;text-align:center">23.564.343</p>
   </td>
  </tr>
- <tr style='height:1.0pt'>
-  <td width=37 valign=top style='width:27.55pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>15</p>
+ <tr style="height:1.0pt">
+  <td width="37" valign="top" style="width:27.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">14</p>
   </td>
-  <td width=312 valign=top style='width:233.85pt;border-top:none;border-left:
+  <td width="312" valign="top" style="width:233.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>ANGEL DANIEL CORBALAN</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">CLAUDIO ALEJANDRO REARTE</p>
   </td>
-  <td width=117 valign=top style='width:87.7pt;border-top:none;border-left:
+  <td width="117" valign="top" style="width:87.7pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center'>25.740.309</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:0cm;
+  margin-top:0cm;text-align:center">24.164.570</p>
   </td>
  </tr>
- <tr style='height:1.0pt'>
-  <td width=37 valign=top style='width:27.55pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>16</p>
+ <tr style="height:1.0pt">
+  <td width="37" valign="top" style="width:27.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">15</p>
   </td>
-  <td width=312 valign=top style='width:233.85pt;border-top:none;border-left:
+  <td width="312" valign="top" style="width:233.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>VALERIA DEL CARMEN RODIRGUEZ</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">ANGEL DANIEL CORBALAN</p>
   </td>
-  <td width=117 valign=top style='width:87.7pt;border-top:none;border-left:
+  <td width="117" valign="top" style="width:87.7pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center'>27.732.789</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:0cm;
+  margin-top:0cm;text-align:center">25.740.309</p>
   </td>
  </tr>
- <tr style='height:1.0pt'>
-  <td width=37 valign=top style='width:27.55pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>17</p>
+ <tr style="height:1.0pt">
+  <td width="37" valign="top" style="width:27.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">16</p>
   </td>
-  <td width=312 valign=top style='width:233.85pt;border-top:none;border-left:
+  <td width="312" valign="top" style="width:233.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>SALVADOR JESUS RUIZ</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">VALERIA DEL CARMEN RODIRGUEZ</p>
   </td>
-  <td width=117 valign=top style='width:87.7pt;border-top:none;border-left:
+  <td width="117" valign="top" style="width:87.7pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center'>7.085.111</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:0cm;
+  margin-top:0cm;text-align:center">27.732.789</p>
   </td>
  </tr>
- <tr style='height:1.0pt'>
-  <td width=37 valign=top style='width:27.55pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>18</p>
+ <tr style="height:1.0pt">
+  <td width="37" valign="top" style="width:27.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">17</p>
   </td>
-  <td width=312 valign=top style='width:233.85pt;border-top:none;border-left:
+  <td width="312" valign="top" style="width:233.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>MARCELA PATRICIA PONCE</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">SALVADOR JESUS RUIZ</p>
   </td>
-  <td width=117 valign=top style='width:87.7pt;border-top:none;border-left:
+  <td width="117" valign="top" style="width:87.7pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center'>20.551.135</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:0cm;
+  margin-top:0cm;text-align:center">7.085.111</p>
   </td>
  </tr>
- <tr style='height:1.0pt'>
-  <td width=37 valign=top style='width:27.55pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>19</p>
+ <tr style="height:1.0pt">
+  <td width="37" valign="top" style="width:27.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">18</p>
   </td>
-  <td width=312 valign=top style='width:233.85pt;border-top:none;border-left:
+  <td width="312" valign="top" style="width:233.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-  0cm'>LUIS FRANCO BARRA</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">MARCELA PATRICIA PONCE</p>
   </td>
-  <td width=117 valign=top style='width:87.7pt;border-top:none;border-left:
+  <td width="117" valign="top" style="width:87.7pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center'>20.216.450</p>
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:0cm;
+  margin-top:0cm;text-align:center">20.551.135</p>
+  </td>
+ </tr>
+ <tr style="height:1.0pt">
+  <td width="37" valign="top" style="width:27.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">19</p>
+  </td>
+  <td width="312" valign="top" style="width:233.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:0cm;margin-top:
+  0cm">LUIS FRANCO BARRA</p>
+  </td>
+  <td width="117" valign="top" style="width:87.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;margin-bottom:0cm;
+  margin-top:0cm;text-align:center">20.216.450</p>
   </td>
  </tr>
 </table>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class="MsoNormal"> </p>
 
 </div>
 

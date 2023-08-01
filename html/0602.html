@@ -1,342 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html>
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Book Antiqua";
-	panose-1:2 4 6 2 5 3 5 3 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-h2
-	{mso-style-link:"Título 2 Car";
-	margin-top:12.0pt;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	page-break-after:avoid;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.DGFecha, li.DGFecha, div.DGFecha
-	{mso-style-name:"DG Fecha";
-	mso-style-link:"DG Fecha Char";
-	margin:0cm;
-	text-align:right;
-	border:none;
-	padding:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGFechaChar
-	{mso-style-name:"DG Fecha Char";
-	mso-style-link:"DG Fecha";
-	font-family:"Book Antiqua",serif;}
-p.DGOrdenanza, li.DGOrdenanza, div.DGOrdenanza
-	{mso-style-name:"DG Ordenanza";
-	mso-style-link:"DG Ordenanza Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:12.0pt;
-	margin-left:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGOrdenanzaChar
-	{mso-style-name:"DG Ordenanza Char";
-	mso-style-link:"DG Ordenanza";
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGSeccion, li.DGSeccion, div.DGSeccion
-	{mso-style-name:"DG Seccion";
-	mso-style-link:"DG Seccion Char";
-	margin-top:12.0pt;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSeccionChar
-	{mso-style-name:"DG Seccion Char";
-	mso-style-link:"DG Seccion";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGCuerpoSeccion, li.DGCuerpoSeccion, div.DGCuerpoSeccion
-	{mso-style-name:"DG CuerpoSeccion";
-	mso-style-link:"DG CuerpoSeccion Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGCuerpoSeccionChar
-	{mso-style-name:"DG CuerpoSeccion Char";
-	mso-style-link:"DG CuerpoSeccion";
-	font-family:"Book Antiqua",serif;}
-p.DGSanciona, li.DGSanciona, div.DGSanciona
-	{mso-style-name:"DG Sanciona";
-	mso-style-link:"DG Sanciona Char";
-	margin-top:16.0pt;
-	margin-right:92.15pt;
-	margin-bottom:16.0pt;
-	margin-left:92.15pt;
-	text-align:center;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSancionaChar
-	{mso-style-name:"DG Sanciona Char";
-	mso-style-link:"DG Sanciona";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGArticulo
-	{mso-style-name:"DG Articulo";
-	font-family:"Book Antiqua",serif;
-	font-variant:normal !important;
-	color:windowtext;
-	text-transform:none;
-	text-shadow:none;
-	font-weight:normal;
-	font-style:normal;
-	text-decoration:underline none underline;
-	vertical-align:baseline;}
-span.Ttulo2Car
-	{mso-style-name:"Título 2 Car";
-	mso-style-link:"Título 2";
-	font-family:"Book Antiqua",serif;
-	font-weight:bold;}
-.MsoChpDefault
-	{font-size:10.0pt;
-	font-family:"Calibri",sans-serif;}
- /* Page Definitions */
- @page WordSection1
-	{size:595.3pt 841.9pt;
-	margin:2.0cm 42.5pt 42.5pt 70.85pt;}
-div.WordSection1
-	{page:WordSection1;}
- /* List Definitions */
- ol
-	{margin-bottom:0cm;}
-ul
-	{margin-bottom:0cm;}
--->
-</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Generator" content="Microsoft Word 15 (filtered)">
+
 
 </head>
 
-<body lang=ES-AR style='word-wrap:break-word'>
+<body lang="ES-AR" style="word-wrap:break-word">
 
-<div class=WordSection1>
+<div class="WordSection1">
 
-<div style='border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<div style="border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm">
 
-<p class=DGFecha><a name=Fecha>Yerba Buena, 21 de enero de 1994</a></p>
+<p class="DGFecha"><a name="Fecha">Yerba Buena, 21 de enero de 1994</a></p>
 
 </div>
 
-<p class=DGOrdenanza><a name=Ordenanza>ORDENANZA Nº 602</a></p>
+<p class="DGOrdenanza"><a name="Ordenanza">ORDENANZA Nº 602</a></p>
 
-<p class=DGSeccion><a name=Visto>VISTO:</a></p>
+<p class="DGSeccion"><a name="Visto">VISTO:</a></p>
 
-<p class=DGCuerpoSeccion>La necesidad de reordenar y controlar los trabajos que
+<p class="DGCuerpoSeccion">La necesidad de reordenar y controlar los trabajos que
 se realizan en la vía pública por parte de Empresas Privadas o Reparaciones
 Públicas y</p>
 
-<p class=DGSeccion><a name=Considerando>CONSIDERANDO:</a></p>
+<p class="DGSeccion"><a name="Considerando">CONSIDERANDO:</a></p>
 
-<p class=DGCuerpoSeccion>Que no existe legislación municipal al respecto;</p>
+<p class="DGCuerpoSeccion">Que no existe legislación municipal al respecto;</p>
 
-<p class=DGSanciona><a name=Sanciona>EL CONCEJO DELIBERANTE SANCIONA CON FUERZA
+<p class="DGSanciona"><a name="Sanciona">EL CONCEJO DELIBERANTE SANCIONA CON FUERZA
 DE ORDENANZA</a></p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'>CAPITULOI: CONEXIONES
+<h2 style="margin-top:0cm;page-break-after:auto">CAPITULOI: CONEXIONES
 DOMICILIARIAS</h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;PRIMERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Inscripciones
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO PRIMERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Inscripciones
 en el Registro.</p>
 
-<p class=MsoNormal>Toda persona física o jurídica encargada de realizar
+<p class="MsoNormal">Toda persona física o jurídica encargada de realizar
 conexiones de servicios públicos subterráneos que signifiquen roturas de
 pavimentación y/o vereda, deberá inscribirse en el registro habilitado a tal
 efecto en el Dpto. de Obras por Contrato dependiente de la Dirección de Obras
 Públicas Municipales.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SEGUNDO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Condiciones
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO SEGUNDO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Condiciones
 para la inscripción</p>
 
-<p class=MsoNormal>En el Registro Especial se llevará un legajo por cada uno de
+<p class="MsoNormal">En el Registro Especial se llevará un legajo por cada uno de
 los inscriptos, donde constará:</p>
 
-<p class=MsoListParagraphCxSpFirst style='margin-left:18.0pt;text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Razón
+<p class="MsoListParagraphCxSpFirst" style="margin-left:18.0pt;text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>Razón
 Social</p>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-left:18.0pt;text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Nombre y
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:18.0pt;text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>Nombre y
 Apellido de los responsables</p>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-left:18.0pt;text-indent:-18.0pt'>c)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Rubro a
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:18.0pt;text-indent:-18.0pt">c)<span style='font:7.0pt "Times New Roman"'>     </span>Rubro a
 que se dedica</p>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-left:18.0pt;text-indent:-18.0pt'>d)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Documento de
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:18.0pt;text-indent:-18.0pt">d)<span style='font:7.0pt "Times New Roman"'>    </span>Documento de
 Identidad</p>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-left:18.0pt;text-indent:-18.0pt'>e)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Domicilio
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:18.0pt;text-indent:-18.0pt">e)<span style='font:7.0pt "Times New Roman"'>     </span>Domicilio
 Legal</p>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-left:18.0pt;text-indent:-18.0pt'>f)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Domicilio
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:18.0pt;text-indent:-18.0pt">f)<span style='font:7.0pt "Times New Roman"'>      </span>Domicilio
 Comercial</p>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-left:18.0pt;text-indent:-18.0pt'>g)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Teléfono</p>
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:18.0pt;text-indent:-18.0pt">g)<span style='font:7.0pt "Times New Roman"'>    </span>Teléfono</p>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-left:18.0pt;text-indent:-18.0pt'>h)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Acreditar
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:18.0pt;text-indent:-18.0pt">h)<span style='font:7.0pt "Times New Roman"'>    </span>Acreditar
 Matrícula de Profesional responsable de los servicios ante la Municipalidad</p>
 
-<p class=MsoListParagraphCxSpLast style='margin-left:18.0pt;text-indent:-18.0pt'>i)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Todo
+<p class="MsoListParagraphCxSpLast" style="margin-left:18.0pt;text-indent:-18.0pt">i)<span style='font:7.0pt "Times New Roman"'>      </span>Todo
 cambio de domicilio deberá notificarse de inmediato al Dpto. Obras de Obras por
 Contrato de la D.O.P.M.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;TERCERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Presentación
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO TERCERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Presentación
 de la documentación para trámite de permiso</p>
 
-<p class=MsoNormal>A efecto del permiso, se deberá presentar en mesa de Entrada
+<p class="MsoNormal">A efecto del permiso, se deberá presentar en mesa de Entrada
 de la D.O.P.M. la siguiente documentación:</p>
 
-<p class=MsoListParagraphCxSpFirst style='margin-left:18.0pt;text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Solicitud
+<p class="MsoListParagraphCxSpFirst" style="margin-left:18.0pt;text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>Solicitud
 de permiso para realizar la Obra donde el solicitante consignará en un croquis
 la ubicación, ancho y numeración de la finca. Ancho de calzada y vereda, correcta
 ubicación de las instalaciones existente debidamente acotadas.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-left:18.0pt;text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Memoria
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:18.0pt;text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>Memoria
 descriptiva de los trabajos a realizar la cual contendrá imprescindibles la
 siguiente descripción:</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>1)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Ancho y
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">1)<span style='font:7.0pt "Times New Roman"'>     </span>Ancho y
 profundidad de la zanja.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>2)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Tipo de
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">2)<span style='font:7.0pt "Times New Roman"'>     </span>Tipo de
 pavimento (hormigón o asfalto) y/o vereda a romper.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>3)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Planimetría
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">3)<span style='font:7.0pt "Times New Roman"'>     </span>Planimetría
 y corte de excavación indicando ancho total de la vereda y calzada.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>4)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Forma y
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">4)<span style='font:7.0pt "Times New Roman"'>     </span>Forma y
 compactación de la zanja.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>5)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Tipo de
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">5)<span style='font:7.0pt "Times New Roman"'>     </span>Tipo de
 contrapiso a emplear especificando espesor.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>6)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Tiempo de
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">6)<span style='font:7.0pt "Times New Roman"'>     </span>Tiempo de
 duración de la obra.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-left:18.0pt;text-indent:-18.0pt'>c)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Plano de
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:18.0pt;text-indent:-18.0pt">c)<span style='font:7.0pt "Times New Roman"'>     </span>Plano de
 obra aprobado por la DiPOS, EDET S. A. GASNOR; TELECOM y/u otras Empresas
 análogas autorizando la conexión según el caso.</p>
 
-<p class=MsoListParagraphCxSpLast style='margin-left:18.0pt;text-indent:-18.0pt'>d)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Notificación
+<p class="MsoListParagraphCxSpLast" style="margin-left:18.0pt;text-indent:-18.0pt">d)<span style='font:7.0pt "Times New Roman"'>    </span>Notificación
 haciendo constar el consentimiento de la Dirección de Tránsito para la apertura
 de la calzada en tal fecha.</p>
 
-<p class=MsoNormal>Toda esta documentación deberá ser presentada en Mesa de Entrada,
+<p class="MsoNormal">Toda esta documentación deberá ser presentada en Mesa de Entrada,
 formando un expediente y, en un plazo no mayor de quince (15) días corridos, deberá
 el solicitante concurrir a la D.O.P.M. Departamento de Obras por Contrato a
 retirar el correspondiente permiso de apertura de la vía pública, caso
 contrario, se desestimará el pedido y se procederá a su archivo debiéndose en
 consecuencia gestionar un nuevo expediente.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;CUARTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Plazo en
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO CUARTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Plazo en
 conexiones domiciliarias</p>
 
-<p class=MsoNormal>En todos los casos, el plazo máximo entre apertura y cierre
+<p class="MsoNormal">En todos los casos, el plazo máximo entre apertura y cierre
 de la vía pública, será de siete (7) días corridos a contar del inicio de los
 trabajos.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;QUINTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Responsabilidad
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO QUINTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Responsabilidad
 sobre los cierres de veredas y calzadas.</p>
 
-<p class=MsoNormal>La responsabilidad de dejar en condiciones reglamentarias
+<p class="MsoNormal">La responsabilidad de dejar en condiciones reglamentarias
 los cierres, recaerá en forma solidaria sobre el contratista de la obra y el
 propietario del inmueble cuando este último hubiese contratado la realización
 de la obra. En el supuesto de incumplimiento, la municipalidad procederá por si
@@ -344,30 +144,27 @@ o a través de terceros a completar la obra en forma reglamentaria siendo el
 costo de las tareas a cargo exclusivo del propietario y/o contratista, formulándose
 cargo judicial por el monto resultante, más los recargos que hubiera lugar.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SEXTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Falta de
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO SEXTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Falta de
 cumplimiento de plazo de ejecución de Obra</p>
 
-<p class=MsoNormal>En el caso que no se cumplimentare los cierres dentro del
+<p class="MsoNormal">En el caso que no se cumplimentare los cierres dentro del
 plazo concedido el contratista deberá realizar una presentación ante la
 Municipalidad explicando los motivos de la demora y solicitando ampliación. Si
 el pedido no se realizara o la ampliación no se concediera, se procederá a
 labrar el Acta de comprobación suspendiéndose provisoriamente al contratista
 responsable para la ejecución de nuevos trabajos.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SÉPTIMO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Ejecución
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO SÉPTIMO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Ejecución
 de Obras sin permiso.</p>
 
-<p class=MsoNormal>Toda obra que provoque la apertura de la vía pública y no
+<p class="MsoNormal">Toda obra que provoque la apertura de la vía pública y no
 conste con el permiso municipal pertinente motivará que se le labre Acta de
 comprobación y se dé intervención al Tribunal Municipal de Faltas.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;OCTAVO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Deficiencia
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO OCTAVO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Deficiencia
 de los trabajos</p>
 
-<p class=MsoNormal>La recepción de los trabajos realizados en la vía pública
+<p class="MsoNormal">La recepción de los trabajos realizados en la vía pública
 será efectuado por la Municipalidad. Si transcurrido un plazo no mayor de seis (6)
 meses, se originaran hundimientos de calzada o vereda, la empresa responsable
 será notificada para que en un plazo no mayor de 24 horas, inicie los trabajos
@@ -375,151 +172,135 @@ de reparación correspondientes. En caso de incumplimiento se labrará Acta de
 Comprobación y la Municipalidad procederá por sí o por terceros a solucionar el
 problema, todo ello con cargo al contratista y/o propietario.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;NOVENO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Depósito en
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO NOVENO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Depósito en
 garantía.</p>
 
-<p class=MsoNormal>La Empresa contratista y/o el propietario deberán depositar en
+<p class="MsoNormal">La Empresa contratista y/o el propietario deberán depositar en
 una cuenta abierta a tal fin en el Banco Provincia sucursal Yerba Buena, la
 suma que resultare de un análisis de precio de la Reparaciones de veredas y/o
 calzadas preparado por el Departamento Obras por Contrato de la Dirección de
 Obras Públicas Municipales con fecha coincidente a la iniciación de los
 trabajos. Estos trabajos se considerarán integrados por los siguientes ítems.</p>
 
-<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'>1)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Rotura, excavación,
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-18.0pt">1)<span style='font:7.0pt "Times New Roman"'>     </span>Rotura, excavación,
 tapada y compactación inclusive transporte del material excedente.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>2)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Provisión
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">2)<span style='font:7.0pt "Times New Roman"'>     </span>Provisión
 de materiales y ejecución de la sub-base de suelo-arena-cemento.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>3)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Ejecución
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">3)<span style='font:7.0pt "Times New Roman"'>     </span>Ejecución
 de la base de hormigón sin armar.</p>
 
-<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt'>4)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Provisión
+<p class="MsoListParagraphCxSpLast" style="text-indent:-18.0pt">4)<span style='font:7.0pt "Times New Roman"'>     </span>Provisión
 y ejecución de la carpeta de concreto asfáltico.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Costo de la
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO DÉCIMO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Costo de la
 Reparación</p>
 
-<p class=MsoNormal>El costo de la reparación que deba efectuar la Municipalidad,
+<p class="MsoNormal">El costo de la reparación que deba efectuar la Municipalidad,
 se hará utilizando el depósito de garantía.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;PRIMERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Solicitud
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO DÉCIMO PRIMERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Solicitud
 de Inspección</p>
 
-<p class=MsoNormal>Cuando la Empresa y/o propietario defina la fecha de
+<p class="MsoNormal">Cuando la Empresa y/o propietario defina la fecha de
 iniciación de los trabajos, deberá solicitar en la Dirección de Obras Públicas
 Municipales, la inspección correspondiente a fin de que esta verifique los
 trabajos de excavación como así también cuando se realicen los trabajos de
 compactación y hormigón o capa asfálticas. Se establece que la parte interesada
 deberá poner a disposición de la inspección un vehículo para su traslado.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;SEGUNDO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Regla del
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO DÉCIMO SEGUNDO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Regla del
 Arte y Responsabilidades.</p>
 
-<p class=MsoNormal>Todos los trabajos serán ejecutados según las reglas del
+<p class="MsoNormal">Todos los trabajos serán ejecutados según las reglas del
 arte y de tal suerte que resulten completos y adecuados a su fin. Las empresas
 y/ o propietarios responderán por daños y perjuicios que ocasionan con sus
 acciones.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;TERCERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Penalidades</p>
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO DÉCIMO TERCERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Penalidades</p>
 
-<p class=MsoNormal>En el supuesto de que el accionar de la empresa responsable
+<p class="MsoNormal">En el supuesto de que el accionar de la empresa responsable
 produzca incumplimiento a las normas Administrativas Técnicas se labrará Actas
 de Comprobación y se dará intervención al Tribunal Municipal de Faltas.</p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'>CAPITULO II: CRUCE DE
+<h2 style="margin-top:0cm;page-break-after:auto">CAPITULO II: CRUCE DE
 CALZADA=OBRAS NUEVAS=CONEXIONES</h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;CUARTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Toda
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO DÉCIMO CUARTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Toda
 persona física o jurídica, que realice este tipo de obras, vinculada a Empresas
 Nacionales o Provinciales de Servicios Públicos deberán dar un estricto
 cumplimiento a lo establecido en el capítulo 1.</p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'>CAPITULO III: CONEXIONES
+<h2 style="margin-top:0cm;page-break-after:auto">CAPITULO III: CONEXIONES
 DOMICILIARIAS=NORMAS TECNICAS</h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;QUINTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Iniciación
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO DÉCIMO QUINTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Iniciación
 de los trabajos</p>
 
-<p class=MsoNormal>Una vez otorgado el permiso correspondiente de aperturas de
+<p class="MsoNormal">Una vez otorgado el permiso correspondiente de aperturas de
 la vía pública por parte de la Municipalidad se podrá dar comienzo a los
 trabajos correspondientes, debiéndose comunicarse la fecha de iniciación a
 partir de la cual entrará en vigencia el artículo 4ª y demás del capítulo I.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;SEXTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Señalización
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO DÉCIMO SEXTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Señalización
 –Balizamiento-Cartel de Obra.</p>
 
-<p class=MsoNormal>En toda apertura sobre la vía pública (vereda y/o calzada) deberá
+<p class="MsoNormal">En toda apertura sobre la vía pública (vereda y/o calzada) deberá
 colocarse barreras para señalar y delimitar frontalmente las obras la que
 estarán pintadas con franjas oblicuas de color blanco y rojo de 20cm de alto, las
 barreras se colocarán horizontalmente a no menos de 80cm de la calzada.</p>
 
-<p class=MsoNormal>Además de noche se agregarán a las barreras faroles de color
+<p class="MsoNormal">Además de noche se agregarán a las barreras faroles de color
 rojo o luz amarilla intermitente o con dispositivos reflectante. Se colocará el
 cartel de la obra en el que constará el nombre de la empresa, número de
 matrícula, domicilio legal y comercial, teléfono.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;SÉPTIMO</span><span
-class=DGArticulo><span style='text-decoration:none'>:</span></span></p>
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO DÉCIMO SÉPTIMO</span><span class="DGArticulo"><span style="text-decoration:none">:</span></span></p>
 
-<p class=MsoNormal>Inciso a) Avenidas y calles pavimentadas</p>
+<p class="MsoNormal">Inciso a) Avenidas y calles pavimentadas</p>
 
-<p class=MsoNormal>Todo material proveniente de la excavación será ubicado en
+<p class="MsoNormal">Todo material proveniente de la excavación será ubicado en
 cajones de madera pintados a franja de color negro y amarillo, debiéndose
 retirarse de inmediato del lugar de la obra el excedente, no pudiendo de
 ninguna manera dicho material obstaculizar la calzada y/o vereda. Se deben
 evitar la obstrucción de los desagües domiciliario.</p>
 
-<p class=MsoNormal>Inciso b) Calle sin Pavimento.</p>
+<p class="MsoNormal">Inciso b) Calle sin Pavimento.</p>
 
-<p class=MsoNormal>Siempre que haya que realizar trabajos por el eje de la
+<p class="MsoNormal">Siempre que haya que realizar trabajos por el eje de la
 calzada, se permitirá su cierre no debiéndose abrir por vez, más de 200,00mts
 lineal.</p>
 
-<p class=MsoNormal>Inciso c) Siempre que se practique trabajos de sondeos a
+<p class="MsoNormal">Inciso c) Siempre que se practique trabajos de sondeos a
 cielo abierto y mientras duren los mismos, se colocarán pasarelas para evitar
 inconvenientes a los vecinos del lugar.</p>
 
-<p class=MsoNormal>Inciso d) En todos los casos se deberá tener siempre limpia
+<p class="MsoNormal">Inciso d) En todos los casos se deberá tener siempre limpia
 la obra y al final de los trabajos la limpieza deberá ser total.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;OCTAVO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Rotura de
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO DÉCIMO OCTAVO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Rotura de
 pavimento de Hormigón.</p>
 
-<p class=MsoNormal>El croquis de la conexión que presentará el contratista
+<p class="MsoNormal">El croquis de la conexión que presentará el contratista
 deberá ser realizado de manera que, para el empalme de rotura del pavimento sea
 ejecutada en concordancia con la junta transversal más próxima y más
 conveniente de modo que la rotura sea por un solo lado del paño en donde deberá
 lograrse la máxima horizontalidad y verticalidad del corte el cual será
 inspeccionado previo a la reposición del Hormigón.</p>
 
-<p class=MsoNormal>Luego del hormigonado se tomarán las juntas con material
+<p class="MsoNormal">Luego del hormigonado se tomarán las juntas con material
 asfáltico adecuado en todo su perímetro.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;NOVENO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Rotura de
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO DÉCIMO NOVENO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Rotura de
 pavimento asfáltico.</p>
 
-<p class=MsoNormal>En este caso la rotura deberá quedar la máxima
+<p class="MsoNormal">En este caso la rotura deberá quedar la máxima
 horizontalidad y verticalidad de corte.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;VIGÉSIMO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Zanjeo.</p>
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO VIGÉSIMO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Zanjeo.</p>
 
-<p class=MsoNormal>El contratista deberá tener todas las instalaciones
+<p class="MsoNormal">El contratista deberá tener todas las instalaciones
 subterráneas localizadas, emplear equipos necesarios y métodos adecuados para
 ejecutar la zanja, mantendrá la misma en perfectas condiciones, empleándose
 equipos de desagote, material de apuntalamiento, etc. el ancho será adecuado
@@ -529,11 +310,10 @@ de albañales, desagües, se deberá tomar providencias para que mientras no sea
 arregladas definitivamente el agua pueda circular sin inconvenientes. A
 posteriori se deberá reparar en forma completa.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;VIGÉSIMO&nbsp;PRIMERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Compactación
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO VIGÉSIMO PRIMERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Compactación
 d Suelo.</p>
 
-<p class=MsoNormal>El relleno de la excavación de la calzada se realizará con
+<p class="MsoNormal">El relleno de la excavación de la calzada se realizará con
 arena en capas no superiores a 30cm de espesor hasta 10cm. Por arriba de la
 instalación. A (ripio bruto fino de diámetro menor o igual que 0,75mts
 compactándose manual o mecánicamente en capas de 0,25mts de espesor máximo, debiéndose
@@ -541,89 +321,79 @@ lograr una densidad relativa igual o mayor que el 100% del proctor estándar
 obtenido por el Dpto. Obras por Contrato de la Dirección de Obras Públicas
 Municipal.</p>
 
-<p class=MsoNormal>Será responsabilidad del contratista la perfecta
+<p class="MsoNormal">Será responsabilidad del contratista la perfecta
 compactación del suelo ya que en caso de hundimiento, tiene la obligación de
 reparar nuevamente todo lo que sea necesario.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;VIGÉSIMO&nbsp;SEGUNDO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Sub-base.</p>
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO VIGÉSIMO SEGUNDO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Sub-base.</p>
 
-<p class=MsoNormal>Se efectuará una sub-base de 15cm de espesor en la
+<p class="MsoNormal">Se efectuará una sub-base de 15cm de espesor en la
 proporción (1:3:6) de suelo: cemento: arena.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;VIGÉSIMO&nbsp;TERCERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>En ningún
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO VIGÉSIMO TERCERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>En ningún
 caso la compactación contemplada en el artículo 19 y 20º se efectuará con el
 uso del agua.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;VIGÉSIMO&nbsp;CUARTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Sobre esta
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO VIGÉSIMO CUARTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Sobre esta
 sub-base se ejecutará la losa de cierre de Hormigón sin armar de 20cm de
 espesor con un tenor de cemento de 300 kg/mts<sup>3</sup>. Y un dosaje (1: 2: 3)
 de cemento: arena: piedra granítica (1:5)</p>
 
-<p class=MsoNormal style='margin-left:35.4pt'>Agregado grueso........... 1.380kg
+<p class="MsoNormal" style="margin-left:35.4pt">Agregado grueso........... 1.380kg
 54,20%</p>
 
-<p class=MsoNormal style='margin-left:35.4pt'>Agregado fino................... 958kg
+<p class="MsoNormal" style="margin-left:35.4pt">Agregado fino................... 958kg
 37,60%</p>
 
-<p class=MsoNormal style='margin-left:35.4pt'>Filler....................................... 65kg
+<p class="MsoNormal" style="margin-left:35.4pt">Filler....................................... 65kg
 2,50%</p>
 
-<p class=MsoNormal style='margin-left:35.4pt'>Betún Asfáltico.................... 14
+<p class="MsoNormal" style="margin-left:35.4pt">Betún Asfáltico.................... 14
 kg 5,70%</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;VIGÉSIMO&nbsp;QUINTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>El espesor
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO VIGÉSIMO QUINTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>El espesor
 de la capa asfáltica correspondiente al bacheo será como mínimo de 0,5cm de
 espesor, la que será aplicada previo riego de liga, que tomará toda la
 superficie de contacto, el material que se use para este riego será el que
 técnicamente corresponda a juicio de la inspección para cada caso en particular.</p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'>CAPITULO IV: CRUCE DE CALZADA</h2>
+<h2 style="margin-top:0cm;page-break-after:auto">CAPITULO IV: CRUCE DE CALZADA</h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;VIGÉSIMO&nbsp;SEXTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>El cruce
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO VIGÉSIMO SEXTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>El cruce
 completo de la calzada se deberá realizar por medio de túneles, contándose para
 tal efecto con el correcto balizamiento de las instalaciones existentes.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;VIGÉSIMO&nbsp;SÉPTIMO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Túnel</p>
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO VIGÉSIMO SÉPTIMO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Túnel</p>
 
-<p class=MsoNormal>Este se deberá realizar por medio de barrenado, el diámetro
+<p class="MsoNormal">Este se deberá realizar por medio de barrenado, el diámetro
 máximo es de 2” más grande que el diámetro de la instalación. No se podrá
 realizar más de dos (2) tanteos para evitar el debilitamiento del terreno. Se
 deberán tomar los recaudos para impedir que el agua que fluye de las conexiones
 inunde el túnel.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;VIGÉSIMO&nbsp;OCTAVO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Cañerías
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO VIGÉSIMO OCTAVO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Cañerías
 que deben llevar pendientes.</p>
 
-<p class=MsoNormal>Se realizarán siguiendo las especificaciones anteriores
+<p class="MsoNormal">Se realizarán siguiendo las especificaciones anteriores
 salvo en el caso en que por coincidir el recorrido de ésta con otra línea
 existente, no se puedan respetar las pendientes mínimas, en tal caso la
 conexión se realizará por zanja.</p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'>CAPITULO V: CONSIDERACIONES
+<h2 style="margin-top:0cm;page-break-after:auto">CAPITULO V: CONSIDERACIONES
 GENERALES</h2>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;VIGÉSIMO&nbsp;NOVENO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Para las
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO VIGÉSIMO NOVENO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Para las
 presentes normas administrativas Técnicas deberá entenderse como “Contratista”
 a toda persona física o jurídica encargado de realizar los trabajos por
 encomienda del propietario. En el caso de las reparticiones públicas serán
 éstas, si el trabajo se hace por administración o el contratista que ella
 determine para la ejecución de las obras.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;TRIGÉSIMO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Las
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO TRIGÉSIMO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Las
 presentes normas administrativas y Técnicas rigen para todo el ámbito de la
 Municipalidad de Yerba Buena.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;TRIGÉSIMO&nbsp;PRIMERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>COMUNÍQUESE,
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO TRIGÉSIMO PRIMERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>COMUNÍQUESE,
 CÓPIESE y ARCHÍVESE.</p>
 
 </div>

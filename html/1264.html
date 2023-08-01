@@ -1,268 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html>
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Book Antiqua";
-	panose-1:2 4 6 2 5 3 5 3 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.DGFecha, li.DGFecha, div.DGFecha
-	{mso-style-name:"DG Fecha";
-	mso-style-link:"DG Fecha Char";
-	margin:0cm;
-	text-align:right;
-	border:none;
-	padding:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGFechaChar
-	{mso-style-name:"DG Fecha Char";
-	mso-style-link:"DG Fecha";
-	font-family:"Book Antiqua",serif;}
-p.DGOrdenanza, li.DGOrdenanza, div.DGOrdenanza
-	{mso-style-name:"DG Ordenanza";
-	mso-style-link:"DG Ordenanza Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:12.0pt;
-	margin-left:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGOrdenanzaChar
-	{mso-style-name:"DG Ordenanza Char";
-	mso-style-link:"DG Ordenanza";
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGSeccion, li.DGSeccion, div.DGSeccion
-	{mso-style-name:"DG Seccion";
-	mso-style-link:"DG Seccion Char";
-	margin-top:12.0pt;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSeccionChar
-	{mso-style-name:"DG Seccion Char";
-	mso-style-link:"DG Seccion";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGCuerpoSeccion, li.DGCuerpoSeccion, div.DGCuerpoSeccion
-	{mso-style-name:"DG CuerpoSeccion";
-	mso-style-link:"DG CuerpoSeccion Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGCuerpoSeccionChar
-	{mso-style-name:"DG CuerpoSeccion Char";
-	mso-style-link:"DG CuerpoSeccion";
-	font-family:"Book Antiqua",serif;}
-p.DGSanciona, li.DGSanciona, div.DGSanciona
-	{mso-style-name:"DG Sanciona";
-	mso-style-link:"DG Sanciona Char";
-	margin-top:16.0pt;
-	margin-right:92.15pt;
-	margin-bottom:16.0pt;
-	margin-left:92.15pt;
-	text-align:center;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSancionaChar
-	{mso-style-name:"DG Sanciona Char";
-	mso-style-link:"DG Sanciona";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGArticulo
-	{mso-style-name:"DG Articulo";
-	font-family:"Book Antiqua",serif;
-	font-variant:normal !important;
-	color:windowtext;
-	text-transform:none;
-	text-shadow:none;
-	font-weight:normal;
-	font-style:normal;
-	text-decoration:underline none underline;
-	vertical-align:baseline;}
-.MsoChpDefault
-	{font-size:10.0pt;
-	font-family:"Calibri",sans-serif;}
- /* Page Definitions */
- @page WordSection1
-	{size:595.3pt 841.9pt;
-	margin:2.0cm 42.5pt 42.5pt 70.85pt;}
-div.WordSection1
-	{page:WordSection1;}
- /* List Definitions */
- ol
-	{margin-bottom:0cm;}
-ul
-	{margin-bottom:0cm;}
--->
-</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Generator" content="Microsoft Word 15 (filtered)">
+
 
 </head>
 
-<body lang=ES-AR style='word-wrap:break-word'>
+<body lang="ES-AR" style="word-wrap:break-word">
 
-<div class=WordSection1>
+<div class="WordSection1">
 
-<div style='border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<div style="border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm">
 
-<p class=DGFecha><a name=Fecha>Yerba Buena, 28 de octubre de 2002</a></p>
+<p class="DGFecha"><a name="Fecha">Yerba Buena, 28 de octubre de 2002</a></p>
 
 </div>
 
-<p class=DGOrdenanza><a name=Ordenanza>ORDENANZA Nº 1264</a></p>
+<p class="DGOrdenanza"><a name="Ordenanza">ORDENANZA Nº 1264</a></p>
 
-<p class=DGSeccion><a name=Visto>VISTO:</a></p>
+<p class="DGSeccion"><a name="Visto">VISTO:</a></p>
 
-<p class=DGCuerpoSeccion>La Ordenanza Tributaria Municipal, Nº 430 del 16/09/1991
+<p class="DGCuerpoSeccion">La Ordenanza Tributaria Municipal, Nº 430 del 16/09/1991
 y sus modificatorias, vigente en este Municipio; y</p>
 
-<p class=DGSeccion><a name=Considerando>CONSIDERANDO:</a></p>
+<p class="DGSeccion"><a name="Considerando">CONSIDERANDO:</a></p>
 
-<p class=DGCuerpoSeccion>Que en su Título VI, Capítulo III, Notificaciones, sanciones
+<p class="DGCuerpoSeccion">Que en su Título VI, Capítulo III, Notificaciones, sanciones
 e intimaciones, artículo 40 se establece la forma en que deben realizarse las
 actuaciones administrativas originadas por la aplicación del referido Código;</p>
 
-<p class=DGCuerpoSeccion>Que en la práctica está demostrado que por la cantidad
+<p class="DGCuerpoSeccion">Que en la práctica está demostrado que por la cantidad
 de documentación que debe entregarse por aplicación del citado Artículo, es
 imposible hacerlo exclusivamente por Personal de la Dirección de Rentas; como
 así también deben preverse otros modos de notificación cuando el destinatario
 se niegue a la recepción de la documentación y, además, para imprimir celeridad
 y seguridad al trámite de notificación;</p>
 
-<p class=DGCuerpoSeccion>Que la autoridad de aplicación señala la necesidad
+<p class="DGCuerpoSeccion">Que la autoridad de aplicación señala la necesidad
 arriba indicada, expresándose en concordancia el Sr. Secretario de Hacienda y
 la Dirección de Asuntos Jurídicos;</p>
 
-<p class=DGCuerpoSeccion>Por ello y en virtud de las facultades que le confiere
+<p class="DGCuerpoSeccion">Por ello y en virtud de las facultades que le confiere
 el Decreto Provincial Nº 822/1 del 19/05/2000, emitido por el Poder ejecutivo
 Provincial,</p>
 
-<p class=DGSanciona><a name=Sanciona>EL INTERVENTOR MUNICIPAL SANCIONA CON
+<p class="DGSanciona"><a name="Sanciona">EL INTERVENTOR MUNICIPAL SANCIONA CON
 FUERZA DE ORDENANZA</a></p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;PRIMERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>MODIFICASE
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO PRIMERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>MODIFICASE
 el Titulo VI, Capítulo III, Notificaciones, sanciones e Intimaciones, artículo
 40, el que queda redactado de la siguiente manera: “En las actuaciones
 administrativas originadas por la aplicación de este Código y Ordenanza
 Tributarias Especiales, las notificaciones, citaciones e intimaciones, se harán:</p>
 
-<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Por constancia
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>Por constancia
 firmada por el interesado en el respectivo expediente.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Por cédula, carta
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>Por cédula, carta
 certificada con aviso de retorno o telegrama colacionado, a cuyo efecto se
 convendrá con el correo la forma de hacerlo con la mayor urgencia y seguridad; el
 aviso de retorno servirá de suficiente prueba de la notificación, siempre que
 la carta haya sido entregada en el domicilio del contribuyente, aunque aparezca
 suscripto por un tercero.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>c)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Personalmente
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">c)<span style='font:7.0pt "Times New Roman"'>     </span>Personalmente
 por un empleado del Organismo fiscal, quien dejará constancia en la copia de la
 notificación de la diligencia practicada, con indicación de día y hora en que
 se efectuó, exigiendo la firma del interesado o de un tercero, a su ruego, si
 éste no supiere o no pudiere firmar.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>d)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Si el
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">d)<span style='font:7.0pt "Times New Roman"'>    </span>Si el
 destinatario no estuviese o éste o sus representantes se negaren a firmar, procederá
 el empleado a dejar constancia de este hecho y en tal caso se procederá a fijar
 en la puerta de su domicilio el instrumento al que se hace mención El acta
 labrada por el empleado notificador hará fe mientras no se demuestre su
 falsedad.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>e)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Por nota o
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">e)<span style='font:7.0pt "Times New Roman"'>     </span>Por nota o
 esquela numerada, con firma o firma facsimilar del funcionario autorizado, remitida
 en la forma y en las condiciones que determine la autoridad de aplicación, para
 su emisión y demás recaudos.</p>
 
-<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt'>f)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>En
+<p class="MsoListParagraphCxSpLast" style="text-indent:-18.0pt">f)<span style='font:7.0pt "Times New Roman"'>      </span>En
 caso de que no pudiera practicarse la notificación por los medios previstos en
 los incisos anteriores, por edictos publicados por 3 (tres) días sin perjuicios
 de las diligencias que el organismo fiscal pueda disponer para hacer llegar a
 conocimiento del interesado la notificación, citación o intimación de pago”.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SEGUNDO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>COMUNÍQUESE,
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO SEGUNDO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>COMUNÍQUESE,
 PUBLIQUESE, CÓPIESE y ARCHÍVESE.</p>
 
 </div>

@@ -1,749 +1,567 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html>
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Book Antiqua";
-	panose-1:2 4 6 2 5 3 5 3 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.DGFecha, li.DGFecha, div.DGFecha
-	{mso-style-name:"DG Fecha";
-	mso-style-link:"DG Fecha Char";
-	margin:0cm;
-	text-align:right;
-	border:none;
-	padding:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGFechaChar
-	{mso-style-name:"DG Fecha Char";
-	mso-style-link:"DG Fecha";
-	font-family:"Book Antiqua",serif;}
-p.DGOrdenanza, li.DGOrdenanza, div.DGOrdenanza
-	{mso-style-name:"DG Ordenanza";
-	mso-style-link:"DG Ordenanza Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:12.0pt;
-	margin-left:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGOrdenanzaChar
-	{mso-style-name:"DG Ordenanza Char";
-	mso-style-link:"DG Ordenanza";
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGSeccion, li.DGSeccion, div.DGSeccion
-	{mso-style-name:"DG Seccion";
-	mso-style-link:"DG Seccion Char";
-	margin-top:12.0pt;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSeccionChar
-	{mso-style-name:"DG Seccion Char";
-	mso-style-link:"DG Seccion";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGCuerpoSeccion, li.DGCuerpoSeccion, div.DGCuerpoSeccion
-	{mso-style-name:"DG CuerpoSeccion";
-	mso-style-link:"DG CuerpoSeccion Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGCuerpoSeccionChar
-	{mso-style-name:"DG CuerpoSeccion Char";
-	mso-style-link:"DG CuerpoSeccion";
-	font-family:"Book Antiqua",serif;}
-p.DGSanciona, li.DGSanciona, div.DGSanciona
-	{mso-style-name:"DG Sanciona";
-	mso-style-link:"DG Sanciona Char";
-	margin-top:16.0pt;
-	margin-right:92.15pt;
-	margin-bottom:16.0pt;
-	margin-left:92.15pt;
-	text-align:center;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSancionaChar
-	{mso-style-name:"DG Sanciona Char";
-	mso-style-link:"DG Sanciona";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGArticulo
-	{mso-style-name:"DG Articulo";
-	font-family:"Book Antiqua",serif;
-	font-variant:normal !important;
-	color:windowtext;
-	text-transform:none;
-	text-shadow:none;
-	font-weight:normal;
-	font-style:normal;
-	text-decoration:underline none underline;
-	vertical-align:baseline;}
-p.DGAnexo, li.DGAnexo, div.DGAnexo
-	{mso-style-name:"DG Anexo";
-	margin-top:0cm;
-	margin-right:92.15pt;
-	margin-bottom:0cm;
-	margin-left:0cm;
-	border:none;
-	padding:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	font-weight:bold;}
-.MsoChpDefault
-	{font-size:10.0pt;
-	font-family:"Calibri",sans-serif;}
- /* Page Definitions */
- @page WordSection1
-	{size:595.3pt 841.9pt;
-	margin:2.0cm 42.5pt 42.5pt 70.85pt;}
-div.WordSection1
-	{page:WordSection1;}
- /* List Definitions */
- ol
-	{margin-bottom:0cm;}
-ul
-	{margin-bottom:0cm;}
--->
-</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Generator" content="Microsoft Word 15 (filtered)">
+
 
 </head>
 
-<body lang=ES-AR style='word-wrap:break-word'>
+<body lang="ES-AR" style="word-wrap:break-word">
 
-<div class=WordSection1>
+<div class="WordSection1">
 
-<div style='border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<div style="border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm">
 
-<p class=DGFecha><a name=Fecha>Yerba Buena, 02 de septiembre de 1998</a></p>
+<p class="DGFecha"><a name="Fecha">Yerba Buena, 02 de septiembre de 1998</a></p>
 
 </div>
 
-<p class=DGOrdenanza><a name=Ordenanza>ORDENANZA Nº 947</a></p>
+<p class="DGOrdenanza"><a name="Ordenanza">ORDENANZA Nº 947</a></p>
 
-<p class=DGSeccion><a name=Visto>VISTO:</a></p>
+<p class="DGSeccion"><a name="Visto">VISTO:</a></p>
 
-<p class=DGCuerpoSeccion>El Expediente 181-Y-1998 mediante el cual el D.E.M. eleva
+<p class="DGCuerpoSeccion">El Expediente 181-Y-1998 mediante el cual el D.E.M. eleva
 la documentación técnica de proyecto de loteo, ejecución de vivienda, de
 mensura y amansamiento en el predio correspondiente al Padrón 775.858, propiedad
 de la empresa Mediterráneo S. A. y</p>
 
-<p class=DGSeccion><a name=Considerando>CONSIDERANDO:</a></p>
+<p class="DGSeccion"><a name="Considerando">CONSIDERANDO:</a></p>
 
-<p class=DGCuerpoSeccion>Que dicha empresa solicita se otorgue factibilidad
+<p class="DGCuerpoSeccion">Que dicha empresa solicita se otorgue factibilidad
 para la ejecución de 210 viviendas en planta baja de aproximadamente 60,00mts<sup>2</sup>,
 por el Régimen de Propiedad Horizontal, que se encuadrarán bajo las normas de
 financiamiento del I.P.V. y D.U. y de Titularización de Hipotecas del Banco
 Hipotecario Nacional en el predio de referencia;</p>
 
-<p class=DGCuerpoSeccion>Que se propone parcelas de 20,00mts x 30,00mts, sub-divididas
+<p class="DGCuerpoSeccion">Que se propone parcelas de 20,00mts x 30,00mts, sub-divididas
 en su eje mayor por el Régimen de Propiedad Horizontal;</p>
 
-<p class=DGCuerpoSeccion>Que el FOS y el FOT son muy bajos quedando una amplia
+<p class="DGCuerpoSeccion">Que el FOS y el FOT son muy bajos quedando una amplia
 envolvente verde en cada vivienda, como así también que la superficie
 proyectada para espacios verdes del conjunto supera ampliamente el 12%;</p>
 
-<p class=DGCuerpoSeccion>Que este asentamiento de 210 viviendas propiciara el
+<p class="DGCuerpoSeccion">Que este asentamiento de 210 viviendas propiciara el
 desarrollo de nuestro municipio;</p>
 
-<p class=DGSanciona><a name=Sanciona>EL CONCEJO DELIBERANTE SANCIONA CON FUERZA
+<p class="DGSanciona"><a name="Sanciona">EL CONCEJO DELIBERANTE SANCIONA CON FUERZA
 DE ORDENANZA</a></p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;PRIMERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>FACULTASE
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO PRIMERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>FACULTASE
 al D.E.M. a aprobar los planos de Mensura y Amansamiento de la parcela ubicada
 en Av. Presidente Perón y calle P. Fanzolatto de esta ciudad, identificada con
 el Padrón 775.853, propiedad de la empresa Mediterráneo S. A. e inscripta con
 la siguiente nomenclatura catastral C: 1, S: n, M: 125, P: 26J (48) C, M/O: 7.713
 bis/ 12.057.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SEGUNDO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>ACEPTASE la
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO SEGUNDO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>ACEPTASE la
 donación ofrecida por la empresa Mediterráneo S. A. propietaria del terreno
 ubicado en Av. Presidente Perón y calle P. Fanzolatto Padrón 775.858, de los
 siguientes espacios:</p>
 
-<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>En carácter de calles, pasajes y ochavas, según plano de Mensura
 y Amansamiento: Superficie donada: 41.018,81mts<sup>2</sup>.</p>
 
-<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="MsoListParagraphCxSpLast" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>En carácter de espacios verdes, según plano de Mensura y
 Amansamiento: Superficie donada: 10.811,58mts<sup>2</sup>.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;TERCERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>COMUNÍQUESE,
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO TERCERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>COMUNÍQUESE,
 CÓPIESE y ARCHÍVESE.</p>
 
-<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+<p class="MsoNormal" align="left" style="text-align:left"> </p>
 
-<div style='border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm;
-margin-left:0cm;margin-right:92.15pt'>
+<div style="border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm;
+margin-left:0cm;margin-right:92.15pt">
 
-<p class=DGAnexo>ANEXO I</p>
+<p class="DGAnexo">ANEXO I</p>
 
 </div>
 
-<div align=center>
+<div align="center">
 
-<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
- style='border-collapse:collapse'>
- <tr style='height:15.0pt'>
-  <td nowrap colspan=3 valign=bottom style='border:solid windowtext 1.0pt;
-  padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><b>MANZANA A</b></p>
+<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse">
+ <tr style="height:15.0pt">
+  <td nowrap colspan="3" valign="bottom" style="border:solid windowtext 1.0pt;
+  padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b>MANZANA A</b></p>
   </td>
-  <td nowrap colspan=3 valign=bottom style='border:solid windowtext 1.0pt;
-  border-left:none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><b>MANZANA M</b></p>
+  <td nowrap colspan="3" valign="bottom" style="border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b>MANZANA M</b></p>
   </td>
-  <td nowrap colspan=3 valign=bottom style='border:solid windowtext 1.0pt;
-  border-left:none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'><b>MANZANA N</b></p>
+  <td nowrap colspan="3" valign="bottom" style="border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b>MANZANA N</b></p>
   </td>
  </tr>
- <tr style='height:15.0pt'>
-  <td nowrap valign=bottom style='border:solid windowtext 1.0pt;border-top:
-  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>Vértice</p>
+ <tr style="height:15.0pt">
+  <td nowrap valign="bottom" style="border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">Vértice</p>
   </td>
-  <td nowrap colspan=2 valign=bottom style='border-top:none;border-left:none;
+  <td nowrap colspan="2" valign="bottom" style="border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>Coordenadas</p>
+  padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">Coordenadas</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>Vértice</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">Vértice</p>
   </td>
-  <td nowrap colspan=2 valign=bottom style='border-top:none;border-left:none;
+  <td nowrap colspan="2" valign="bottom" style="border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>Coordenadas</p>
+  padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">Coordenadas</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>Vértice</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">Vértice</p>
   </td>
-  <td nowrap colspan=2 valign=bottom style='border-top:none;border-left:none;
+  <td nowrap colspan="2" valign="bottom" style="border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>Coordenadas</p>
+  padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">Coordenadas</p>
   </td>
  </tr>
- <tr style='height:15.0pt'>
-  <td nowrap valign=bottom style='padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'></td>
-  <td nowrap valign=bottom style='border:solid windowtext 1.0pt;border-top:
-  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'>
-  <p class=MsoNormal>N (m) </p>
+ <tr style="height:15.0pt">
+  <td nowrap valign="bottom" style="padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt"></td>
+  <td nowrap valign="bottom" style="border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt">
+  <p class="MsoNormal">N (m) </p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal>E(m) </p>
+  height:15.0pt">
+  <p class="MsoNormal">E(m) </p>
   </td>
-  <td nowrap valign=bottom style='padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'></td>
-  <td nowrap valign=bottom style='border:solid windowtext 1.0pt;border-top:
-  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'>
-  <p class=MsoNormal>N(m) </p>
+  <td nowrap valign="bottom" style="padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt"></td>
+  <td nowrap valign="bottom" style="border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt">
+  <p class="MsoNormal">N(m) </p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal>E(m) </p>
+  height:15.0pt">
+  <p class="MsoNormal">E(m) </p>
   </td>
-  <td nowrap valign=bottom style='padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'></td>
-  <td nowrap valign=bottom style='border:solid windowtext 1.0pt;border-top:
-  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'>
-  <p class=MsoNormal>N(m) </p>
+  <td nowrap valign="bottom" style="padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt"></td>
+  <td nowrap valign="bottom" style="border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt">
+  <p class="MsoNormal">N(m) </p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal>E(m) </p>
-  </td>
- </tr>
- <tr style='height:15.0pt'>
-  <td nowrap valign=bottom style='border:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>1</p>
-  </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
-  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>201,13</p>
-  </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
-  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>176,55</p>
-  </td>
-  <td nowrap valign=bottom style='border:solid windowtext 1.0pt;border-left:
-  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>1</p>
-  </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
-  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>146,92</p>
-  </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
-  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>187,99</p>
-  </td>
-  <td nowrap valign=bottom style='border:solid windowtext 1.0pt;border-left:
-  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>1</p>
-  </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
-  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>516,68</p>
-  </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
-  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>109,5</p>
+  height:15.0pt">
+  <p class="MsoNormal">E(m) </p>
   </td>
  </tr>
- <tr style='height:15.0pt'>
-  <td nowrap valign=bottom style='border:solid windowtext 1.0pt;border-top:
-  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>2</p>
+ <tr style="height:15.0pt">
+  <td nowrap valign="bottom" style="border:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
+  height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">1</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>196,91</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">201,13</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>180,82</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">176,55</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
-  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>2</p>
+  <td nowrap valign="bottom" style="border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">1</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>148,46</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">146,92</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>337,38</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">187,99</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
-  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>2</p>
+  <td nowrap valign="bottom" style="border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">1</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>514,47</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">516,68</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>113,77</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">109,5</p>
   </td>
  </tr>
- <tr style='height:15.0pt'>
-  <td nowrap valign=bottom style='border:solid windowtext 1.0pt;border-top:
-  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>3</p>
+ <tr style="height:15.0pt">
+  <td nowrap valign="bottom" style="border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">2</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>190,85</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">196,91</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>211,64</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">180,82</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>3</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">2</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>178,14</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">148,46</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>186,51</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">337,38</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>3</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">2</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>511,67</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">514,47</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>128,00</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">113,77</p>
   </td>
  </tr>
- <tr style='height:15.0pt'>
-  <td nowrap valign=bottom style='border:solid windowtext 1.0pt;border-top:
-  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>4</p>
+ <tr style="height:15.0pt">
+  <td nowrap valign="bottom" style="border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">3</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>194,19</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">190,85</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>216,61</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">211,64</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>4</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">3</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>173,87</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">178,14</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>182,30</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">186,51</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>4</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">3</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>515,01</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">511,67</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>132,98</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">128,00</p>
   </td>
  </tr>
- <tr style='height:15.0pt'>
-  <td nowrap valign=bottom style='border:solid windowtext 1.0pt;border-top:
-  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>5</p>
+ <tr style="height:15.0pt">
+  <td nowrap valign="bottom" style="border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">4</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>244,74</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">194,19</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>226,56</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">216,61</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>5</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">4</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal>&nbsp;</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">173,87</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal>&nbsp;</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">182,30</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>5</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">4</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>636,21</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">515,01</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>156,83</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">132,98</p>
   </td>
  </tr>
- <tr style='height:15.0pt'>
-  <td nowrap valign=bottom style='border:solid windowtext 1.0pt;border-top:
-  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>6</p>
+ <tr style="height:15.0pt">
+  <td nowrap valign="bottom" style="border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">5</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>249,72</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">244,74</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>223,22</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">226,56</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>6</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">5</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal>&nbsp;</p>
+  height:15.0pt">
+  <p class="MsoNormal"> </p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal>&nbsp;</p>
+  height:15.0pt">
+  <p class="MsoNormal"> </p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>6</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">5</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>641,19</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">636,21</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>153,48</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">156,83</p>
   </td>
  </tr>
- <tr style='height:15.0pt'>
-  <td nowrap valign=bottom style='border:solid windowtext 1.0pt;border-top:
-  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>7</p>
+ <tr style="height:15.0pt">
+  <td nowrap valign="bottom" style="border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">6</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>260,36</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">249,72</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>169,16</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">223,22</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>7</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">6</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal>&nbsp;</p>
+  height:15.0pt">
+  <p class="MsoNormal"> </p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal>&nbsp;</p>
+  height:15.0pt">
+  <p class="MsoNormal"> </p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>7</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">6</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>646,67</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">641,19</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>125,64</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">153,48</p>
   </td>
  </tr>
- <tr style='height:15.0pt'>
-  <td nowrap valign=bottom style='border:solid windowtext 1.0pt;border-top:
-  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>8</p>
+ <tr style="height:15.0pt">
+  <td nowrap valign="bottom" style="border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">7</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>256,09</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">260,36</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>164,94</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">169,16</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>8</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">7</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal>&nbsp;</p>
+  height:15.0pt">
+  <p class="MsoNormal"> </p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal>&nbsp;</p>
+  height:15.0pt">
+  <p class="MsoNormal"> </p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>8</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">7</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>595,03</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">646,67</p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=right style='text-align:right'>93,38</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">125,64</p>
   </td>
  </tr>
- <tr style='height:15.0pt'>
-  <td nowrap valign=bottom style='border:solid windowtext 1.0pt;border-top:
-  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>SUP.</p>
+ <tr style="height:15.0pt">
+  <td nowrap valign="bottom" style="border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">8</p>
   </td>
-  <td nowrap colspan=2 valign=bottom style='border-top:none;border-left:none;
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">256,09</p>
+  </td>
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">164,94</p>
+  </td>
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
+  height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">8</p>
+  </td>
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
+  height:15.0pt">
+  <p class="MsoNormal"> </p>
+  </td>
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
+  height:15.0pt">
+  <p class="MsoNormal"> </p>
+  </td>
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
+  height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">8</p>
+  </td>
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">595,03</p>
+  </td>
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
+  height:15.0pt">
+  <p class="MsoNormal" align="right" style="text-align:right">93,38</p>
+  </td>
+ </tr>
+ <tr style="height:15.0pt">
+  <td nowrap valign="bottom" style="border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">SUP.</p>
+  </td>
+  <td nowrap colspan="2" valign="bottom" style="border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid black 1.0pt;
-  padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>3.983,20mts<sup>2</sup></p>
+  padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">3.983,20mts<sup>2</sup></p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>SUP.</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">SUP.</p>
   </td>
-  <td nowrap colspan=2 valign=bottom style='border-top:none;border-left:none;
+  <td nowrap colspan="2" valign="bottom" style="border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid black 1.0pt;
-  padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>2.401,82mts<sup>2</sup></p>
+  padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">2.401,82mts<sup>2</sup></p>
   </td>
-  <td nowrap valign=bottom style='border-top:none;border-left:none;border-bottom:
+  <td nowrap valign="bottom" style="border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;
-  height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>SUP.</p>
+  height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">SUP.</p>
   </td>
-  <td nowrap colspan=2 valign=bottom style='border-top:none;border-left:none;
+  <td nowrap colspan="2" valign="bottom" style="border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid black 1.0pt;
-  padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt'>
-  <p class=MsoNormal align=center style='text-align:center'>5.326,55mts<sup>2</sup></p>
+  padding:0cm 3.5pt 0cm 3.5pt;height:15.0pt">
+  <p class="MsoNormal" align="center" style="text-align:center">5.326,55mts<sup>2</sup></p>
   </td>
  </tr>
 </table>
 
 </div>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class="MsoNormal"> </p>
 
 </div>
 

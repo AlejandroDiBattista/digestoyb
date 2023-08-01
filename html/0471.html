@@ -1,390 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html>
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Book Antiqua";
-	panose-1:2 4 6 2 5 3 5 3 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.DGFecha, li.DGFecha, div.DGFecha
-	{mso-style-name:"DG Fecha";
-	mso-style-link:"DG Fecha Char";
-	margin:0cm;
-	text-align:right;
-	border:none;
-	padding:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGFechaChar
-	{mso-style-name:"DG Fecha Char";
-	mso-style-link:"DG Fecha";
-	font-family:"Book Antiqua",serif;}
-p.DGOrdenanza, li.DGOrdenanza, div.DGOrdenanza
-	{mso-style-name:"DG Ordenanza";
-	mso-style-link:"DG Ordenanza Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:12.0pt;
-	margin-left:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGOrdenanzaChar
-	{mso-style-name:"DG Ordenanza Char";
-	mso-style-link:"DG Ordenanza";
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGSeccion, li.DGSeccion, div.DGSeccion
-	{mso-style-name:"DG Seccion";
-	mso-style-link:"DG Seccion Char";
-	margin-top:12.0pt;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSeccionChar
-	{mso-style-name:"DG Seccion Char";
-	mso-style-link:"DG Seccion";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGCuerpoSeccion, li.DGCuerpoSeccion, div.DGCuerpoSeccion
-	{mso-style-name:"DG CuerpoSeccion";
-	mso-style-link:"DG CuerpoSeccion Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGCuerpoSeccionChar
-	{mso-style-name:"DG CuerpoSeccion Char";
-	mso-style-link:"DG CuerpoSeccion";
-	font-family:"Book Antiqua",serif;}
-p.DGSanciona, li.DGSanciona, div.DGSanciona
-	{mso-style-name:"DG Sanciona";
-	mso-style-link:"DG Sanciona Char";
-	margin-top:16.0pt;
-	margin-right:92.15pt;
-	margin-bottom:16.0pt;
-	margin-left:92.15pt;
-	text-align:center;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSancionaChar
-	{mso-style-name:"DG Sanciona Char";
-	mso-style-link:"DG Sanciona";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGArticulo
-	{mso-style-name:"DG Articulo";
-	font-family:"Book Antiqua",serif;
-	font-variant:normal !important;
-	color:windowtext;
-	text-transform:none;
-	text-shadow:none;
-	font-weight:normal;
-	font-style:normal;
-	text-decoration:underline none underline;
-	vertical-align:baseline;}
-.MsoChpDefault
-	{font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:10.0pt;
-	line-height:115%;}
- /* Page Definitions */
- @page WordSection1
-	{size:595.3pt 841.9pt;
-	margin:2.0cm 42.5pt 42.5pt 70.85pt;}
-div.WordSection1
-	{page:WordSection1;}
- /* List Definitions */
- ol
-	{margin-bottom:0cm;}
-ul
-	{margin-bottom:0cm;}
--->
-</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Generator" content="Microsoft Word 15 (filtered)">
+
 
 </head>
 
-<body lang=ES-AR style='word-wrap:break-word'>
+<body lang="ES-AR" style="word-wrap:break-word">
 
-<div class=WordSection1>
+<div class="WordSection1">
 
-<div style='border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<div style="border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm">
 
-<p class=DGFecha><a name=Fecha>Yerba Buena, 03 de junio de 1992</a></p>
+<p class="DGFecha"><a name="Fecha">Yerba Buena, 03 de junio de 1992</a></p>
 
 </div>
 
-<p class=DGOrdenanza><a name=Ordenanza>ORDENANZA Nº 471</a></p>
+<p class="DGOrdenanza"><a name="Ordenanza">ORDENANZA Nº 471</a></p>
 
-<p class=DGSeccion><a name=Visto>VISTO:</a></p>
+<p class="DGSeccion"><a name="Visto">VISTO:</a></p>
 
-<p class=DGCuerpoSeccion>El Expediente 6535-H-1991 (H.C.D.) por el cual se
+<p class="DGCuerpoSeccion">El Expediente 6535-H-1991 (H.C.D.) por el cual se
 solicita al D.E.M. el detalle de obras factibles de recupero;</p>
 
-<p class=DGCuerpoSeccion>Que la pavimentación de calle Perú de nuestro
+<p class="DGCuerpoSeccion">Que la pavimentación de calle Perú de nuestro
 Municipio es de obra suceptible de recupero en virtud de la extensible mejora
 que representa para el vecino frentista de esta calle; y</p>
 
-<p class=DGSeccion><a name=Considerando>CONSIDERANDO:</a></p>
+<p class="DGSeccion"><a name="Considerando">CONSIDERANDO:</a></p>
 
-<p class=DGCuerpoSeccion>Que se hace necesario crear el instrumento legal que
+<p class="DGCuerpoSeccion">Que se hace necesario crear el instrumento legal que
 permita concretar el recupero de esta obra;</p>
 
-<p class=DGCuerpoSeccion>Que de esta forma el Municipio a través de las áreas
+<p class="DGCuerpoSeccion">Que de esta forma el Municipio a través de las áreas
 competentes puede generar nuevas obras en beneficio de la comunidad;</p>
 
-<p class=DGCuerpoSeccion>Que Obras Públicas tuvo a su cargo la supervisión de
+<p class="DGCuerpoSeccion">Que Obras Públicas tuvo a su cargo la supervisión de
 los trabajadores;</p>
 
-<p class=DGCuerpoSeccion>Que el trámite contable de la misma estuvo canalizado
+<p class="DGCuerpoSeccion">Que el trámite contable de la misma estuvo canalizado
 a través de la Secretaría de Hacienda;</p>
 
-<p class=DGSanciona><a name=Sanciona>EL CONCEJO DELIBERANTE SANCIONA CON FUERZA
+<p class="DGSanciona"><a name="Sanciona">EL CONCEJO DELIBERANTE SANCIONA CON FUERZA
 DE ORDENANZA</a></p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;PRIMERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Todo
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO PRIMERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Todo
 propietario frentista o poseedor a título de dueño de inmuebles comprendidos en
 la calle Perú, desde calle Bartolomé Hernandez hasta calle Florida Norte, por
 cuyo frente se ha realizado pavimento, está obligado a pagar a la Municipalidad
 los montos que surjan de la aplicación de la presente Ordenanza y en la forma
 que la misma lo determina.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SEGUNDO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>El importe
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO SEGUNDO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>El importe
 a pagar por los frentistas beneficiados con la obra se determina de acuerdo al
 siguiente procedimiento:</p>
 
-<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>El precio
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>El precio
 unitario por metro cuadrado que surja de los datos de la obra ejecutada es de $22,50
 (inclusive bocacalles y cordón) al mes de Enero de 1992.</p>
 
-<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>La superficie
+<p class="MsoListParagraphCxSpLast" style="text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>La superficie
 que se determina para el cálculo del frentista será la que surge de considerar:
 los metros de frente por el 50% de los metros lineales del ancho de la calle, (ancho
 de calzada: 8,00mts)</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;TERCERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>El
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO TERCERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>El
 propietario o poseedor a título de dueño, podrá optar por las siguientes formas
 de pago:</p>
 
-<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Al contado,
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>Al contado,
 bonificación del 10% (diez por ciento)</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>6 (seis) meses</p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>6 (seis) meses</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>c)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>12 (doce) meses</p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">c)<span style='font:7.0pt "Times New Roman"'>     </span>12 (doce) meses</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>d)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>18 (dieciocho) meses</p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">d)<span style='font:7.0pt "Times New Roman"'>    </span>18 (dieciocho) meses</p>
 
-<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt'>e)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>24 (veinticuatro)
+<p class="MsoListParagraphCxSpLast" style="text-indent:-18.0pt">e)<span style='font:7.0pt "Times New Roman"'>     </span>24 (veinticuatro)
 meses</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;CUARTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>La
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO CUARTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>La
 financiación a que hace referencia el artículo tercero sufrirá en los casos B y
 C, un interés mensual del 1% y en los casos D y E, un interés mensual del 2%.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;QUINTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>El atraso
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO QUINTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>El atraso
 en el pago de la cuota implicará una multa diaria que será fijada por la
 Secretaría de Hacienda por intermedio de la Dirección de Rentas Municipales.</p>
 
-<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:6.0pt'><span
-class=DGArticulo>ARTÍCULO&nbsp;SEXTO</span><span class=DGArticulo><span
-style='text-decoration:none'>: </span></span>La Dirección de Rentas Municipales
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:6.0pt"><span class="DGArticulo">ARTÍCULO SEXTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>La Dirección de Rentas Municipales
 habilitará un registro especial para la registración del recupero de la obra de
 pavimento, este libro comprenderá:</p>
 
-<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Apellido y
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>Apellido y
 Nombre del propietario o poseedor a título de dueño.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Domicilio del
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>Domicilio del
 propietario.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>c)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Número de
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">c)<span style='font:7.0pt "Times New Roman"'>     </span>Número de
 Padrón del Inmueble.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>d)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Ubicación del
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">d)<span style='font:7.0pt "Times New Roman"'>    </span>Ubicación del
 Inmueble.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>e)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Superficie
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">e)<span style='font:7.0pt "Times New Roman"'>     </span>Superficie
 calculada conforme al artículo segundo punto b)</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>f)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Precio
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">f)<span style='font:7.0pt "Times New Roman"'>      </span>Precio
 por metro cuadrado conforme al artículo 2 punto a)</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>g)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Importe total de
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">g)<span style='font:7.0pt "Times New Roman"'>    </span>Importe total de
 la deuda.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>h)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Fecha de
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">h)<span style='font:7.0pt "Times New Roman"'>    </span>Fecha de
 liquidación.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>i)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Plan
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">i)<span style='font:7.0pt "Times New Roman"'>      </span>Plan
 optado y cantidad de cuotas.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>j)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Vencimiento
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">j)<span style='font:7.0pt "Times New Roman"'>      </span>Vencimiento
 de cada cuota.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>k)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Interés aplicado.</p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">k)<span style='font:7.0pt "Times New Roman"'>    </span>Interés aplicado.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>l)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Fecha
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">l)<span style='font:7.0pt "Times New Roman"'>      </span>Fecha
 de pago.</p>
 
-<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt'>m)<span
-style='font:7.0pt "Times New Roman"'>&nbsp; </span>Observaciones.</p>
+<p class="MsoListParagraphCxSpLast" style="text-indent:-18.0pt">m)<span style='font:7.0pt "Times New Roman"'>  </span>Observaciones.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SÉPTIMO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>La
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO SÉPTIMO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>La
 Dirección de Rentas de la Municipalidad enviará la liquidación con las cuotas a
 pagar para cada vecino empadronado.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;OCTAVO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>La
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO OCTAVO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>La
 liquidación deberá contener los siguientes datos:</p>
 
-<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'>a)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Apellido y
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-18.0pt">a)<span style='font:7.0pt "Times New Roman"'>     </span>Apellido y
 nombre del propietario o poseedor a título de dueño.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>b)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Domicilio del
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">b)<span style='font:7.0pt "Times New Roman"'>    </span>Domicilio del
 propietario.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>c)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Número de
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">c)<span style='font:7.0pt "Times New Roman"'>     </span>Número de
 padrón.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>d)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Ubicación del
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">d)<span style='font:7.0pt "Times New Roman"'>    </span>Ubicación del
 Inmueble.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>e)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Superficie,
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">e)<span style='font:7.0pt "Times New Roman"'>     </span>Superficie,
 base para cálculo de deuda.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>f)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Precio
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">f)<span style='font:7.0pt "Times New Roman"'>      </span>Precio
 Unitario por metro cuadrado.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>g)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Importe total.</p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">g)<span style='font:7.0pt "Times New Roman"'>    </span>Importe total.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>h)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Interés.</p>
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">h)<span style='font:7.0pt "Times New Roman"'>    </span>Interés.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>i)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Fecha
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">i)<span style='font:7.0pt "Times New Roman"'>      </span>Fecha
 de vencimiento de cada cuota.</p>
 
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt'>j)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Fecha
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-18.0pt">j)<span style='font:7.0pt "Times New Roman"'>      </span>Fecha
 de pago.</p>
 
-<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt'>k)<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Total a pagar.</p>
+<p class="MsoListParagraphCxSpLast" style="text-indent:-18.0pt">k)<span style='font:7.0pt "Times New Roman"'>    </span>Total a pagar.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;NOVENO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Los pagos
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO NOVENO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Los pagos
 se efectuarán en Entidad Bancaria que determinará la Municipalidad.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>Todo
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO DÉCIMO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>Todo
 Certificado de “Libre Deuda”, para transferencia de inmueble, beneficiados por
 la obra de pavimento, cuyo propietario tenga deuda por la obra mencionada, deberá
 previo a la misma, notificar al comprador a efectos de que se constituya solidario
 de la deuda.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;DÉCIMO&nbsp;PRIMERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>COMUNIQUESE,
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO DÉCIMO PRIMERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>COMUNIQUESE,
 COPIESE, PUBLIQUESE Y ARCHIVESE.</p>
 
 </div>

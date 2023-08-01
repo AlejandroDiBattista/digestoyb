@@ -1,287 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html>
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Book Antiqua";
-	panose-1:2 4 6 2 5 3 5 3 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.DGFecha, li.DGFecha, div.DGFecha
-	{mso-style-name:"DG Fecha";
-	mso-style-link:"DG Fecha Char";
-	margin:0cm;
-	text-align:right;
-	border:none;
-	padding:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGFechaChar
-	{mso-style-name:"DG Fecha Char";
-	mso-style-link:"DG Fecha";
-	font-family:"Book Antiqua",serif;}
-p.DGOrdenanza, li.DGOrdenanza, div.DGOrdenanza
-	{mso-style-name:"DG Ordenanza";
-	mso-style-link:"DG Ordenanza Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:12.0pt;
-	margin-left:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGOrdenanzaChar
-	{mso-style-name:"DG Ordenanza Char";
-	mso-style-link:"DG Ordenanza";
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGSeccion, li.DGSeccion, div.DGSeccion
-	{mso-style-name:"DG Seccion";
-	mso-style-link:"DG Seccion Char";
-	margin-top:12.0pt;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSeccionChar
-	{mso-style-name:"DG Seccion Char";
-	mso-style-link:"DG Seccion";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGCuerpoSeccion, li.DGCuerpoSeccion, div.DGCuerpoSeccion
-	{mso-style-name:"DG CuerpoSeccion";
-	mso-style-link:"DG CuerpoSeccion Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGCuerpoSeccionChar
-	{mso-style-name:"DG CuerpoSeccion Char";
-	mso-style-link:"DG CuerpoSeccion";
-	font-family:"Book Antiqua",serif;}
-p.DGSanciona, li.DGSanciona, div.DGSanciona
-	{mso-style-name:"DG Sanciona";
-	mso-style-link:"DG Sanciona Char";
-	margin-top:16.0pt;
-	margin-right:92.15pt;
-	margin-bottom:16.0pt;
-	margin-left:92.15pt;
-	text-align:center;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSancionaChar
-	{mso-style-name:"DG Sanciona Char";
-	mso-style-link:"DG Sanciona";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGArticulo
-	{mso-style-name:"DG Articulo";
-	font-family:"Book Antiqua",serif;
-	font-variant:normal !important;
-	color:windowtext;
-	text-transform:none;
-	text-shadow:none;
-	font-weight:normal;
-	font-style:normal;
-	text-decoration:underline none underline;
-	vertical-align:baseline;}
-.MsoChpDefault
-	{font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:10.0pt;
-	line-height:115%;}
- /* Page Definitions */
- @page WordSection1
-	{size:595.3pt 841.9pt;
-	margin:2.0cm 42.5pt 42.5pt 70.85pt;}
-div.WordSection1
-	{page:WordSection1;}
- /* List Definitions */
- ol
-	{margin-bottom:0cm;}
-ul
-	{margin-bottom:0cm;}
--->
-</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Generator" content="Microsoft Word 15 (filtered)">
+
 
 </head>
 
-<body lang=ES-AR style='word-wrap:break-word'>
+<body lang="ES-AR" style="word-wrap:break-word">
 
-<div class=WordSection1>
+<div class="WordSection1">
 
-<div style='border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<div style="border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm">
 
-<p class=DGFecha><a name=Fecha>Yerba Buena, 15 de abril de 1992</a></p>
+<p class="DGFecha"><a name="Fecha">Yerba Buena, 15 de abril de 1992</a></p>
 
 </div>
 
-<p class=DGOrdenanza><a name=Ordenanza>ORDENANZA Nº 458</a></p>
+<p class="DGOrdenanza"><a name="Ordenanza">ORDENANZA Nº 458</a></p>
 
-<p class=DGSeccion><a name=Visto>VISTO:</a></p>
+<p class="DGSeccion"><a name="Visto">VISTO:</a></p>
 
-<p class=DGCuerpoSeccion>El convenio firmado por el D.E.M. con la UNSTA con
+<p class="DGCuerpoSeccion">El convenio firmado por el D.E.M. con la UNSTA con
 fecha 02 de Marzo de 1992 y aprobado por Decreto (S. G.) N° 167/1992; y</p>
 
-<p class=DGSeccion><a name=Considerando>CONSIDERANDO:</a></p>
+<p class="DGSeccion"><a name="Considerando">CONSIDERANDO:</a></p>
 
-<p class=DGCuerpoSeccion>Que dicho convenio resulta ventajoso para la Municipalidad;</p>
+<p class="DGCuerpoSeccion">Que dicho convenio resulta ventajoso para la Municipalidad;</p>
 
-<p class=DGSanciona><a name=Sanciona>EL CONCEJO DELIBERANTE SANCIONA CON FUERZA
+<p class="DGSanciona"><a name="Sanciona">EL CONCEJO DELIBERANTE SANCIONA CON FUERZA
 DE ORDENANZA</a></p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;PRIMERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>APRUEBASE
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO PRIMERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>APRUEBASE
 el convenio suscripto por el D.E.M. con la UNSTA, con fecha 02 de Marzo de 1992,
 conforme a los siguientes términos:</p>
 
-<p class=MsoNormal>La Universidad del Norte “Santo Tomás de Aquino” con
+<p class="MsoNormal">La Universidad del Norte “Santo Tomás de Aquino” con
 domicilio en 9 de Julio 165 de San Miguel de Tucumán, representada en este acto
 por el Sr. Rector Dr. Héctor Luis Partridge y la Municipalidad de Yerba Buena
 de la Provincia de Tucumán con domicilio en Av. Aconquija 1991 de Yerba Buena
 Tucumán representada por el Sr. Intendente Municipal Dr. Domingo Vera. CONSIDERANDO:</p>
 
-<p class=MsoNormal>La opción histórica que desafía a las instituciones a la
+<p class="MsoNormal">La opción histórica que desafía a las instituciones a la
 búsqueda de nuevas alternativas de cooperación inter-institucionales procurando
 mejorar la calidad de los servicios a la Comunidad.</p>
 
-<p class=MsoNormal>Que la Dinámica de Sistemas constituye el instrumento
+<p class="MsoNormal">Que la Dinámica de Sistemas constituye el instrumento
 metodológico adecuado para la planificación urbana de un Municipio y con cuyo
 aporte es posible desarrollar un modelo Dinámico Municipal que permita el estudio
 del crecimiento y desarrollo del Municipio de Yerba Buena.</p>
 
-<p class=MsoNormal>Que el objetivo último de dicho modelo consiste en
+<p class="MsoNormal">Que el objetivo último de dicho modelo consiste en
 determinar la política que permita crear las mejoras mas sensibles y duraderos,
 que den lugar a una renovación urbana armónica y ordenada. Por ello ambas
 instituciones: Con el fin de desarrollar conjuntamente una cooperación mas
 estrecha y efectiva, en los campos de sus respectivas competencias, han
 convenido en suscribir el siguiente Convenio:</p>
 
-<p class=MsoNormal style='margin-top:0cm;margin-right:14.1pt;margin-bottom:
-6.0pt;margin-left:14.2pt'><i>“ARTÍCULO&nbsp;PRIMERO: La Universidad del Norte
+<p class="MsoNormal" style="margin-top:0cm;margin-right:14.1pt;margin-bottom:
+6.0pt;margin-left:14.2pt"><i>“ARTÍCULO PRIMERO: La Universidad del Norte
 “Santo Tomas de Aquino” (en adelante la UNSTA) y la Municipalidad de Yerba
 Buena de la Provincia de Tucumán (en adelante MYB) se prestarán mutus
 colaboración en la ejecución de las actividades y proyectos que sean de interés
 común para ambas partes.</i></p>
 
-<p class=MsoNormal style='margin-top:0cm;margin-right:14.1pt;margin-bottom:
-6.0pt;margin-left:14.2pt'><i>“ARTÍCULO&nbsp;SEGUNDO: La colaboración a que se
+<p class="MsoNormal" style="margin-top:0cm;margin-right:14.1pt;margin-bottom:
+6.0pt;margin-left:14.2pt"><i>“ARTÍCULO SEGUNDO: La colaboración a que se
 refiere el artículo anterior estará dirigida a:</i></p>
 
-<p class=MsoListParagraphCxSpFirst style='margin-top:0cm;margin-right:14.1pt;
-margin-bottom:6.0pt;margin-left:32.2pt;text-indent:-18.0pt'><i>1.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></i><i>Desarrollar
+<p class="MsoListParagraphCxSpFirst" style="margin-top:0cm;margin-right:14.1pt;
+margin-bottom:6.0pt;margin-left:32.2pt;text-indent:-18.0pt"><i>1.<span style='font:7.0pt "Times New Roman"'>     </span></i><i>Desarrollar
 un modelo de dinámica Municipal basado en sistemas informáticos para el
 Municipio de Yerba Buena de la Provincia de Tucumán.</i></p>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:14.1pt;
-margin-bottom:6.0pt;margin-left:32.2pt;text-indent:-18.0pt'><i>2.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></i><i>La
+<p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:14.1pt;
+margin-bottom:6.0pt;margin-left:32.2pt;text-indent:-18.0pt"><i>2.<span style='font:7.0pt "Times New Roman"'>     </span></i><i>La
 elaboración y ejecución de programas específicos sobre planes de formación académicos,
 de investigación y desarrollo y de asesoramiento, orientadas al modelo aludido
 y abiertas a otras áreas de interés común.</i></p>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:14.1pt;
-margin-bottom:6.0pt;margin-left:32.2pt;text-indent:-18.0pt'><i>3.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></i><i>El
+<p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:14.1pt;
+margin-bottom:6.0pt;margin-left:32.2pt;text-indent:-18.0pt"><i>3.<span style='font:7.0pt "Times New Roman"'>     </span></i><i>El
 planeamiento y realización de ediciones o publicaciones conjuntas para dar a
 conocer entre otros temas el resultado de sus propios programas.</i></p>
 
-<p class=MsoListParagraphCxSpLast style='margin-top:0cm;margin-right:14.1pt;
-margin-bottom:6.0pt;margin-left:32.2pt;text-indent:-18.0pt'><i>4.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></i><i>El
+<p class="MsoListParagraphCxSpLast" style="margin-top:0cm;margin-right:14.1pt;
+margin-bottom:6.0pt;margin-left:32.2pt;text-indent:-18.0pt"><i>4.<span style='font:7.0pt "Times New Roman"'>     </span></i><i>El
 intercambio de expertos para el desarrollo de los programas que la requieran.”</i></p>
 
-<p class=MsoNormal style='margin-top:0cm;margin-right:14.1pt;margin-bottom:
-6.0pt;margin-left:14.2pt'><i>“ARTÍCULO&nbsp;TERCERO: La Municipalidad de Yerba
+<p class="MsoNormal" style="margin-top:0cm;margin-right:14.1pt;margin-bottom:
+6.0pt;margin-left:14.2pt"><i>“ARTÍCULO TERCERO: La Municipalidad de Yerba
 Buena podrá utilizar los sistemas informáticos que resulten de los desarrollos
 parciales y definitivos relacionados al Sistema de Dinámica Municipal sin costo
 alguno y por tiempo ilimitado con conformidad a las oportunas Licencias que la
 UNSTA lo otorgue con cada Sistema Informático, para uso exclusivo de dicho
 Municipio.”</i></p>
 
-<p class=MsoNormal style='margin-top:0cm;margin-right:14.1pt;margin-bottom:
-6.0pt;margin-left:14.2pt'><i>“ARTÍCULO&nbsp;CUARTO: La UNSTA hará reserva de
+<p class="MsoNormal" style="margin-top:0cm;margin-right:14.1pt;margin-bottom:
+6.0pt;margin-left:14.2pt"><i>“ARTÍCULO CUARTO: La UNSTA hará reserva de
 los derechos de propiedad intelectual de los sistemas y programas informáticos
 que integrarán el Sistema de dinámica Municipal.”</i></p>
 
-<p class=MsoNormal style='margin-top:0cm;margin-right:14.1pt;margin-bottom:
-6.0pt;margin-left:14.2pt'><i>“ARTÍCULO&nbsp;QUINTO: Para garantizar la máxima
+<p class="MsoNormal" style="margin-top:0cm;margin-right:14.1pt;margin-bottom:
+6.0pt;margin-left:14.2pt"><i>“ARTÍCULO QUINTO: Para garantizar la máxima
 efectividad de la cooperación prevista en el presente convenio se establecerá
 una comisión mixta constituida por dos representantes de la UNSTA y dos de la
 MYB.”</i></p>
 
-<p class=MsoNormal style='margin-top:0cm;margin-right:14.1pt;margin-bottom:
-6.0pt;margin-left:14.2pt'><i>“ARTÍCULO&nbsp;SEXTO: Las partes deberán
+<p class="MsoNormal" style="margin-top:0cm;margin-right:14.1pt;margin-bottom:
+6.0pt;margin-left:14.2pt"><i>“ARTÍCULO SEXTO: Las partes deberán
 especificar en cada caso en particular, el detalle de las acciones que a cada
 uno le corresponda, en cuanto a los distintos aspectos que implica la
 realización de los programas proyectos y planes sobre los que se conviene la Cooperación
@@ -289,8 +117,8 @@ institucional. A tal efecto, por cada actividad que se desarrolle se
 establecerá un acuerdo puntual que teniendo como marca de referencia el
 presente Convenio General, detalle las acciones a realizar.”</i></p>
 
-<p class=MsoNormal style='margin-top:0cm;margin-right:14.1pt;margin-bottom:
-6.0pt;margin-left:14.2pt'><i>“ARTÍCULO&nbsp;SÉPTIMO: El presente Convenio no
+<p class="MsoNormal" style="margin-top:0cm;margin-right:14.1pt;margin-bottom:
+6.0pt;margin-left:14.2pt"><i>“ARTÍCULO SÉPTIMO: El presente Convenio no
 debe interpretarse en sentido de haber creado una relación legal o financiera
 entre las partes. El Convenio constituye una declaración de intenciones cuyo
 fin es promover auténtica relaciones de beneficios mutuos en materia de
@@ -299,30 +127,29 @@ derecho de la NYB de entrar en vínculos similares con otras Universidades no
 tampoco obstaculizará a la UNSTA para establecer vínculos similares con otras
 Universidades o Instituciones.”</i></p>
 
-<p class=MsoNormal style='margin-top:0cm;margin-right:14.1pt;margin-bottom:
-6.0pt;margin-left:14.2pt'><i>“ARTÍCULO&nbsp;OCTAVO: El presente Convenio
+<p class="MsoNormal" style="margin-top:0cm;margin-right:14.1pt;margin-bottom:
+6.0pt;margin-left:14.2pt"><i>“ARTÍCULO OCTAVO: El presente Convenio
 entrará en vigencia en la fecha de la firma, tendrá una duración ilimitada y
 podrá ser anulado por cualquiera de las partes, previa comunicación por escrito
 a la otra parte con la antelación de un mes. La anulación del convenio no
 alterará el desarrollo de las actuaciones que se hubieren acordado, las cuales
 continuarán hasta su total conclusión.”</i></p>
 
-<p class=MsoNormal style='margin-top:0cm;margin-right:14.1pt;margin-bottom:
-6.0pt;margin-left:14.2pt'><i>“ARTÍCULO&nbsp;NOVENO: Tanto la Universidad del
+<p class="MsoNormal" style="margin-top:0cm;margin-right:14.1pt;margin-bottom:
+6.0pt;margin-left:14.2pt"><i>“ARTÍCULO NOVENO: Tanto la Universidad del
 Norte Santo Tomás de Aquino como la Municipalidad de Yerba Buena de la
 Provincia de Tucumán se comprometen a dar amplia difusión al presente convenio
 en sus respectivas circunscripciones, tendiente a asegurar la adecuada
 publicidad y conocimiento de los interesados.</i></p>
 
-<p class=MsoNormal style='margin-top:0cm;margin-right:14.1pt;margin-bottom:
-6.0pt;margin-left:14.2pt'><i>En prueba de conformidad se confeccionan dos
+<p class="MsoNormal" style="margin-top:0cm;margin-right:14.1pt;margin-bottom:
+6.0pt;margin-left:14.2pt"><i>En prueba de conformidad se confeccionan dos
 ejemplares de un mismo tenor y a un solo efecto en la ciudad de San Miguel de
 Tucumán, a los dos días del mes de marzo de mil novecientos noventa y dos, los
 que son firmados por el Sr. Rector de la UNSTA y el Sr. Intendente Municipal de
 la MBY, ad referéndum del H.C.D. de la Municipalidad de Yerba Buena.”</i></p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SEGUNDO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>COMUNIQUESE,
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO SEGUNDO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>COMUNIQUESE,
 PUBLIQUESE, COPIESE Y ARCHIVESE.</p>
 
 </div>

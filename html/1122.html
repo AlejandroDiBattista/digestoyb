@@ -1,440 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html>
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:"Book Antiqua";
-	panose-1:2 4 6 2 5 3 5 3 3 4;}
-@font-face
-	{font-family:Tahoma;
-	panose-1:2 11 6 4 3 5 4 4 2 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-h2
-	{mso-style-link:"Título 2 Car";
-	margin-top:12.0pt;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	page-break-after:avoid;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-h3
-	{mso-style-link:"Título 3 Car";
-	margin-top:12.0pt;
-	margin-right:0cm;
-	margin-bottom:3.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	page-break-after:avoid;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.Listavistosa-nfasis11, li.Listavistosa-nfasis11, div.Listavistosa-nfasis11
-	{mso-style-name:"Lista vistosa - Énfasis 11";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.Listavistosa-nfasis11CxSpFirst, li.Listavistosa-nfasis11CxSpFirst, div.Listavistosa-nfasis11CxSpFirst
-	{mso-style-name:"Lista vistosa - Énfasis 11CxSpFirst";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.Listavistosa-nfasis11CxSpMiddle, li.Listavistosa-nfasis11CxSpMiddle, div.Listavistosa-nfasis11CxSpMiddle
-	{mso-style-name:"Lista vistosa - Énfasis 11CxSpMiddle";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.Listavistosa-nfasis11CxSpLast, li.Listavistosa-nfasis11CxSpLast, div.Listavistosa-nfasis11CxSpLast
-	{mso-style-name:"Lista vistosa - Énfasis 11CxSpLast";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:36.0pt;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-p.DGFecha, li.DGFecha, div.DGFecha
-	{mso-style-name:"DG Fecha";
-	mso-style-link:"DG Fecha Char";
-	margin:0cm;
-	text-align:right;
-	border:none;
-	padding:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGFechaChar
-	{mso-style-name:"DG Fecha Char";
-	mso-style-link:"DG Fecha";
-	font-family:"Book Antiqua",serif;}
-p.DGOrdenanza, li.DGOrdenanza, div.DGOrdenanza
-	{mso-style-name:"DG Ordenanza";
-	mso-style-link:"DG Ordenanza Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:12.0pt;
-	margin-left:0cm;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGOrdenanzaChar
-	{mso-style-name:"DG Ordenanza Char";
-	mso-style-link:"DG Ordenanza";
-	font-family:"Book Antiqua",serif;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGSeccion, li.DGSeccion, div.DGSeccion
-	{mso-style-name:"DG Seccion";
-	mso-style-link:"DG Seccion Char";
-	margin-top:12.0pt;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSeccionChar
-	{mso-style-name:"DG Seccion Char";
-	mso-style-link:"DG Seccion";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-p.DGCuerpoSeccion, li.DGCuerpoSeccion, div.DGCuerpoSeccion
-	{mso-style-name:"DG CuerpoSeccion";
-	mso-style-link:"DG CuerpoSeccion Char";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;}
-span.DGCuerpoSeccionChar
-	{mso-style-name:"DG CuerpoSeccion Char";
-	mso-style-link:"DG CuerpoSeccion";
-	font-family:"Book Antiqua",serif;}
-p.DGSanciona, li.DGSanciona, div.DGSanciona
-	{mso-style-name:"DG Sanciona";
-	mso-style-link:"DG Sanciona Char";
-	margin-top:16.0pt;
-	margin-right:92.15pt;
-	margin-bottom:16.0pt;
-	margin-left:92.15pt;
-	text-align:center;
-	font-size:12.0pt;
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGSancionaChar
-	{mso-style-name:"DG Sanciona Char";
-	mso-style-link:"DG Sanciona";
-	font-family:"Book Antiqua",serif;
-	color:#0D0000;
-	text-transform:uppercase;
-	font-weight:bold;}
-span.DGArticulo
-	{mso-style-name:"DG Articulo";
-	font-family:"Book Antiqua",serif;
-	font-variant:normal !important;
-	color:windowtext;
-	text-transform:none;
-	text-shadow:none;
-	font-weight:normal;
-	font-style:normal;
-	text-decoration:underline none underline;
-	vertical-align:baseline;}
-span.Ttulo2Car
-	{mso-style-name:"Título 2 Car";
-	mso-style-link:"Título 2";
-	font-family:"Book Antiqua",serif;
-	font-weight:bold;}
-span.Ttulo3Car
-	{mso-style-name:"Título 3 Car";
-	mso-style-link:"Título 3";
-	font-family:"Book Antiqua",serif;
-	font-weight:bold;}
-.MsoChpDefault
-	{font-family:"Calibri",sans-serif;}
- /* Page Definitions */
- @page WordSection1
-	{size:595.3pt 841.9pt;
-	margin:2.0cm 42.5pt 42.5pt 70.85pt;}
-div.WordSection1
-	{page:WordSection1;}
- /* List Definitions */
- ol
-	{margin-bottom:0cm;}
-ul
-	{margin-bottom:0cm;}
--->
-</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Generator" content="Microsoft Word 15 (filtered)">
+
 
 </head>
 
-<body lang=ES-AR style='word-wrap:break-word'>
+<body lang="ES-AR" style="word-wrap:break-word">
 
-<div class=WordSection1>
+<div class="WordSection1">
 
-<div style='border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm'>
+<div style="border:none;border-top:dotted windowtext 1.0pt;padding:1.0pt 0cm 0cm 0cm">
 
-<p class=DGFecha><a name=Fecha>Yerba Buena, 24 de octubre de 2000</a></p>
+<p class="DGFecha"><a name="Fecha">Yerba Buena, 24 de octubre de 2000</a></p>
 
 </div>
 
-<p class=DGOrdenanza><a name=Ordenanza>ORDENANZA Nº 1122</a></p>
+<p class="DGOrdenanza"><a name="Ordenanza">ORDENANZA Nº 1122</a></p>
 
-<p class=DGSeccion><a name=Visto>VISTO:</a></p>
+<p class="DGSeccion"><a name="Visto">VISTO:</a></p>
 
-<p class=DGCuerpoSeccion>Que mediante Ordenanza N° 1110 del 20/09/2000 se
+<p class="DGCuerpoSeccion">Que mediante Ordenanza N° 1110 del 20/09/2000 se
 reglamenta para el ámbito de Municipalidad de Yerba Buena la instalación y
 puesta en funcionamiento de lo soporte y equipamiento complementario de las
 antenas de trasmisión para telefonía celular.</p>
 
-<p class=DGSeccion><a name=Considerando>CONSIDERANDO:</a></p>
+<p class="DGSeccion"><a name="Considerando">CONSIDERANDO:</a></p>
 
-<p class=DGCuerpoSeccion>La necesidad de modificar la misma a fin de adecuarla
+<p class="DGCuerpoSeccion">La necesidad de modificar la misma a fin de adecuarla
 a las necesidades de nuestros vecinos, quienes son los verdaderos destinatarios
 de los avances tecnológicos que exige la vida moderna;</p>
 
-<p class=DGCuerpoSeccion>Que asimismo y a fin de evitar confusiones, resulta
+<p class="DGCuerpoSeccion">Que asimismo y a fin de evitar confusiones, resulta
 conveniente derogar la mencionada Ordenanza dictando una nueva norma que
 contenga las modificaciones referidas;</p>
 
-<p class=DGCuerpoSeccion>Por ello y en uso de las facultades que confiere el
+<p class="DGCuerpoSeccion">Por ello y en uso de las facultades que confiere el
 Decreto Nº 822/1 del 19/05/2000, emitido por el poder Ejecutivo Provincial.</p>
 
-<p class=DGSanciona><a name=Sanciona>EL INTERVENTOR MUNICIPAL SANCIONA CON
+<p class="DGSanciona"><a name="Sanciona">EL INTERVENTOR MUNICIPAL SANCIONA CON
 FUERZA DE ORDENANZA</a></p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;PRIMERO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>DEROGASE la
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO PRIMERO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>DEROGASE la
 Ordenanza N° 1110 del 20/09/2000</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SEGUNDO</span><span
-class=DGArticulo><span style='text-decoration:none'>:</span></span></p>
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO SEGUNDO</span><span class="DGArticulo"><span style="text-decoration:none">:</span></span></p>
 
-<h2 style='margin-top:0cm;page-break-after:auto'>REGLAMENTO PARA LA INSTALACION
+<h2 style="margin-top:0cm;page-break-after:auto">REGLAMENTO PARA LA INSTALACION
 Y PUESTA EN FUNCIONAMIENTO DE LOS SOPORTES Y EQUIPAMIENTO COMPLEMENTARIOS DE
 LAS ANTENAS DE TRASMISION PARA TELEFONIA CELULAR.</h2>
 
-<h3 style='margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;margin-left:
-0cm;page-break-after:auto'>DE LOS TIPOS DE SOPORTES Y EQUIPOS COMPLEMETARIOS</h3>
+<h3 style="margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+0cm;page-break-after:auto">DE LOS TIPOS DE SOPORTES Y EQUIPOS COMPLEMETARIOS</h3>
 
-<p class=MsoNormal>Se aceptan como soportes aptos a instalar en el ámbito
+<p class="MsoNormal">Se aceptan como soportes aptos a instalar en el ámbito
 municipal los siguientes:</p>
 
-<h3 style='margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;margin-left:
-0cm;page-break-after:auto'>MONOPOSTE TUBULARES</h3>
+<h3 style="margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+0cm;page-break-after:auto">MONOPOSTE TUBULARES</h3>
 
-<p class=MsoNormal>RETICULARES Se aceptan como equipos complementarios los
+<p class="MsoNormal">RETICULARES Se aceptan como equipos complementarios los
 denominados contenedores (Shelters de contención) los que deberán estar aislados
 tanto térmicos como acústicamente amen a garantizar la ausencia de todo tipo de
 vibraciones u otro tipo de efectos que pudieran perturbar la tranquilidad de
 los vecinos, todo de acuerdo a las exigencias vigentes.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;TERCERO</span><span
-class=DGArticulo><span style='text-decoration:none'>:</span></span></p>
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO TERCERO</span><span class="DGArticulo"><span style="text-decoration:none">:</span></span></p>
 
-<h3 style='margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;margin-left:
-0cm;page-break-after:auto'>DE LA UBICACIÓN</h3>
+<h3 style="margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+0cm;page-break-after:auto">DE LA UBICACIÓN</h3>
 
-<p class=MsoNormal>No podrán instalarse, las estructuras correspondientes a
+<p class="MsoNormal">No podrán instalarse, las estructuras correspondientes a
 unas distancias menores a los trescientos metros (300,00mts) de los viaductos
 principales. (Av. Aconquija Av. Pte Juan D. Perón- Alfredo Guzmán Av. Solano
 Vera Camino del Perú)</p>
 
-<p class=MsoNormal>En todos los casos los terrenos donde se emplazaran los
+<p class="MsoNormal">En todos los casos los terrenos donde se emplazaran los
 soportes y equipos complementarios deberán estar comprendidos en las exigencias
 establecidas en ordenanzas 613/94, en cuanto a dimensiones y superficies.</p>
 
-<p class=MsoNormal>Los predios propuestos pueden contar con construcciones, las
+<p class="MsoNormal">Los predios propuestos pueden contar con construcciones, las
 que deberán tener documentación técnicas actualizada y cumplir con todas las
 exigencias que prescribe la Ordenanza N° 613 (F: O: S, FOT, retiros, altura, etc.)</p>
 
-<p class=MsoNormal>Los retiros mínimos que se establecen para la ubicación de
+<p class="MsoNormal">Los retiros mínimos que se establecen para la ubicación de
 los soportes y equipamientos complementarios serán de 2,00mts como mínimo a los
 limites de predio (laterales y fondos) En cuanto al retiro de la línea
 municipal, el mismo será de 6,00mts como mínimo, no pudiendo en ningún caso
 ubicarse soportes o equipos complementarios sobre la zona de retiro.</p>
 
-<p class=MsoNormal>El Código de Ordenamiento Urbano de la ciudad de Yerba Buena
+<p class="MsoNormal">El Código de Ordenamiento Urbano de la ciudad de Yerba Buena
 ha zonificado al municipio en Unidad Ambientales con exigencias particulares en
 cuanto a parcelamiento, ocupacional del suelo, etc. (las denominadas UA1 A UA7)
 Teniendo en cuenta dicha zonificación se establece los siguientes sectores como
 aptos para la instalación de los soportes de antenas y sus equipos
 complementarios.</p>
 
-<p class=MsoNormal>UA1 RM: En esta unidad ambiental se podrán ubicar en el
+<p class="MsoNormal">UA1 RM: En esta unidad ambiental se podrán ubicar en el
 radio comprendiendo por las siguientes calles. Al norte calle Las Higueritas. Al
 sur calle Salsas y Valdez Al este calle Julio A. Roca. Al oeste Av. Don Pedro
 Maderuelo (ex Av. Mariano Arroyo) La altura máxima permitida será 35,00mts
 medidos desde nivel de terreno natural del predio.</p>
 
-<p class=MsoNormal>UA2 RMA: Se pueden ubicar en esta unidad ambiental dentro
+<p class="MsoNormal">UA2 RMA: Se pueden ubicar en esta unidad ambiental dentro
 del sector delimitado por las siguientes arterias. Al norte calle San Luis Al
 sur prolongación calle combate Las Lanzas Al este Av. Alfredo Guzmán. Al oeste
 Calle San Martin.</p>
 
-<p class=MsoNormal>UA2RM: Se permite su instalación en el sector comprendido por
+<p class="MsoNormal">UA2RM: Se permite su instalación en el sector comprendido por
 calles: Al norte Boulevard 9 de Julio. Al sur calle San Luis. Al este calle
 Romano. Al oeste calle Reconquista</p>
 
-<p class=MsoNormal>En la UA2, no pueden ubicarse en APP, radio comprendido por
+<p class="MsoNormal">En la UA2, no pueden ubicarse en APP, radio comprendido por
 las siguientes calles. AL norte Av. Aconquija (acera sur) Al este calle Anzorena
 (ambas acera) Al oeste calle Belgrano (ambas aceras) Al sur Boulevard 9 de
 Julio ambas aceras) y Al norte calle La Paz (ambas aceras) Al este calle
 Reconquista (ambas aceras) Al sur calle San Luis (ambas aceras) Al oeste Av. Solano
 Vera, como así también el entorno de Plaza Rvdo. Padre Joaquín Arredondo</p>
 
-<p class=MsoNormal>La altura máxima permitida para esta unidad ambiental, para
+<p class="MsoNormal">La altura máxima permitida para esta unidad ambiental, para
 los soportes de antena, será de 35,00mts medidos el nivel de terreno natural
 del predio.</p>
 
-<p class=MsoNormal>UA3 Rmb: En esta unidad ambiental se podrán instalar los
+<p class="MsoNormal">UA3 Rmb: En esta unidad ambiental se podrán instalar los
 soportes y equipos complementarios con una altura máxima de 35,00mts desde el
 nivel terreno natural del predio. En caso de terrenos cuya superficie sea de
 media hectárea o más, la altura permitida por los soportes podrá llegar hasta 45,00mts
 medidos desde el citado nivel de referente.</p>
 
-<p class=MsoNormal>UA4 Rm y Rmb: En esta Unidad Ambiental se podrán instalar
+<p class="MsoNormal">UA4 Rm y Rmb: En esta Unidad Ambiental se podrán instalar
 los soportes y equipamientos complementarios no pudiendo superar la altura
 máxima de 35,00mts medidos desde la cota del terreno natural.</p>
 
-<p class=MsoNormal>UA6: Rm, Rmb Rma y Rb</p>
+<p class="MsoNormal">UA6: Rm, Rmb Rma y Rb</p>
 
-<p class=MsoNormal>En esta Unidad Ambiental, se podrán ubicar previo estudio, debido
+<p class="MsoNormal">En esta Unidad Ambiental, se podrán ubicar previo estudio, debido
 a la falta de urbanización. En este sentido se estudiarán puntualmente los
 pedidos de factibilidad.</p>
 
-<p class=MsoNormal>La altura máxima permitida, para los soportes, será de 35,00mts
+<p class="MsoNormal">La altura máxima permitida, para los soportes, será de 35,00mts
 Medidos desde el nivel del terreno natural del predio.</p>
 
-<p class=MsoNormal>UA7 Rm: En esta Unidad Ambiental podrán emplazarse los
+<p class="MsoNormal">UA7 Rm: En esta Unidad Ambiental podrán emplazarse los
 soportes y equipos complementarios sin que la altura de aquellos supere los 45,00mts
 medidos desde el nivel del terreno natural.</p>
 
-<h3 style='margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;margin-left:
-0cm;page-break-after:auto'>SITUACIONES ESPECIALES</h3>
+<h3 style="margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+0cm;page-break-after:auto">SITUACIONES ESPECIALES</h3>
 
-<p class=MsoNormal>En las unidades ambientales mencionados en la presente
+<p class="MsoNormal">En las unidades ambientales mencionados en la presente
 ordenanza, donde es sus radios exiteren clubes, countries, interfaces de
 producción, etc. con mas de 20.000 nts. se permite la implantación de los
 soportes, con las alturas establecidas para cada una de ellas. Las distancias
 mínimas de la líneas municipal y de los linderos será 20,00mts como mínimo, Sujeto
 a consideración de la Dirección de Catastro, Edificación Privada y Planeamiento.</p>
 
-<p class=MsoNormal>SECTOR RADIO NACIONAL: (caso especial) En el predio
+<p class="MsoNormal">SECTOR RADIO NACIONAL: (caso especial) En el predio
 mencionado y parcelas linderas comprendidas entre Camino del Perú al este, calle
 Santo Domingo al norte, San Francisco de Asis al oeste y calle Brasil al sud se
 autorizan soportes que se implantaran de la siguiente manera.</p>
 
-<p class=MsoNormal>Se permitan solamente monopostes, con altura máxima de 35,00mts.</p>
+<p class="MsoNormal">Se permitan solamente monopostes, con altura máxima de 35,00mts.</p>
 
-<p class=MsoNormal>Con respecto a exigencias de parcelas y lotes con
+<p class="MsoNormal">Con respecto a exigencias de parcelas y lotes con
 edificaciones, deberán cumplimentar con lo especificado en Ordenanza N° 613</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;CUARTO</span><span
-class=DGArticulo><span style='text-decoration:none'>:</span></span></p>
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO CUARTO</span><span class="DGArticulo"><span style="text-decoration:none">:</span></span></p>
 
-<h3 style='margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;margin-left:
-0cm;page-break-after:auto'>DE LAS NORMAS DE PRESENTACION</h3>
+<h3 style="margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+0cm;page-break-after:auto">DE LAS NORMAS DE PRESENTACION</h3>
 
-<p class=MsoNormal>El solicitante deberá presentar un pedido de factibilidad
+<p class="MsoNormal">El solicitante deberá presentar un pedido de factibilidad
 para el emplazamiento del soporte y su equipo complementarios, donde deberá
 precisar:</p>
 
-<ul style='margin-top:0cm' type=disc>
- <li class=MsoNormal>Plan de ubicación del Municipio</li>
- <li class=MsoNormal>Altura propuesta.</li>
- <li class=MsoNormal>Característica del predio</li>
- <li class=MsoNormal>Tipo de soporte</li>
+<ul style="margin-top:0cm" type="disc">
+ <li class="MsoNormal">Plan de ubicación del Municipio</li>
+ <li class="MsoNormal">Altura propuesta.</li>
+ <li class="MsoNormal">Característica del predio</li>
+ <li class="MsoNormal">Tipo de soporte</li>
 </ul>
 
-<p class=MsoNormal>Evaluada la misma y otorgada la factibilidad, el solicitante
+<p class="MsoNormal">Evaluada la misma y otorgada la factibilidad, el solicitante
 procederá a presentar la documentación definitiva, la que estará compuesta de
 los siguientes requisitos.</p>
 
-<p class=Listavistosa-nfasis11CxSpFirst style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="Listavistosa-nfasis11CxSpFirst" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Factibilidad.</p>
 
-<p class=Listavistosa-nfasis11CxSpMiddle style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="Listavistosa-nfasis11CxSpMiddle" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Documentación técnica firmada por profesional competente.</p>
 
-<p class=Listavistosa-nfasis11CxSpMiddle style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="Listavistosa-nfasis11CxSpMiddle" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Autorización de la Fuerza Aérea Argentina.</p>
 
-<p class=Listavistosa-nfasis11CxSpMiddle style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="Listavistosa-nfasis11CxSpMiddle" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Estudio de impacto Ambiental.</p>
 
-<p class=Listavistosa-nfasis11CxSpMiddle style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="Listavistosa-nfasis11CxSpMiddle" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Documentación técnica de la construcción existente (si la hubiere)</p>
 
-<p class=Listavistosa-nfasis11CxSpLast style='text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="Listavistosa-nfasis11CxSpLast" style="text-indent:-18.0pt"><span style="font-family:Symbol">·<span style='font:7.0pt "Times New Roman"'>      
 </span></span>Contrato de locación con autorización expresa del propietario
 para la instalación del soporte.</p>
 
-<p class=MsoNormal>Hasta tanto la documentación detallada ut supra no haya sido
+<p class="MsoNormal">Hasta tanto la documentación detallada ut supra no haya sido
 aprobada por la Dirección de Catastro, Planeamiento y Edificación no podrá
 iniciarse ningún tipo de obra relacionada con los soportes de antenas ni de
 equipos complementarios.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;QUINTO</span><span
-class=DGArticulo><span style='text-decoration:none'>:</span></span></p>
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO QUINTO</span><span class="DGArticulo"><span style="text-decoration:none">:</span></span></p>
 
-<h3 style='margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;margin-left:
-0cm;page-break-after:auto'>DEL DESMANTELAMIENTO</h3>
+<h3 style="margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+0cm;page-break-after:auto">DEL DESMANTELAMIENTO</h3>
 
-<p class=MsoNormal>El solicitante y/o propietario del inmueble deberá
+<p class="MsoNormal">El solicitante y/o propietario del inmueble deberá
 comprometer en forma expresa la obligatoriedad de proceder al desmantelamiento
 a su cargo del soporte y sus equipos complementarios una vez concluido el
 periodo de vida útil de los mismos o por cualquier otra causa que pudiera
 surgir durante el funcionamiento de estos elementos.</p>
 
-<p class=MsoNormal style='margin-bottom:9.0pt'><span class=DGArticulo>ARTÍCULO&nbsp;SEXTO</span><span
-class=DGArticulo><span style='text-decoration:none'>: </span></span>COMUNIQUESE,
+<p class="MsoNormal" style="margin-bottom:9.0pt"><span class="DGArticulo">ARTÍCULO SEXTO</span><span class="DGArticulo"><span style="text-decoration:none">: </span></span>COMUNIQUESE,
 COPIESE Y ARCHIVESE.</p>
 
 </div>
