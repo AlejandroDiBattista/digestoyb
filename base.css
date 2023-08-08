@@ -61,5 +61,30 @@ button.nivel_3 {
 }
 
 mark {
-    color: red;
+    background-color: yellow;
+    border-radius: 5px;
+}
+
+mark sup {
+    color: gray;
+    font-size: 10px;
+}
+
+mark.actual {
+    background-color: orange;
+}
+
+button.minimo {
+    border-style: none;
+    background-color: transparent;
+}
+
+body {
+  overflow-y: scroll; /* Esto asegura que siempre haya una barra de desplazamiento, incluso si no es visible */
+  /* padding-right: 17px; Ancho aproximado de la barra de desplazamiento, ajusta según sea necesario */
+  box-sizing: content-box; /* Asegura que el relleno no afecte el ancho total del contenedor */
+}
+
+#navegacion, #info {
+    min-height: 24px;
 }

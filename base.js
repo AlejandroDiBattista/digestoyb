@@ -89,7 +89,6 @@ function esSoloOrdenanzaValida(texto) {
 }
 
 // Mediciones
-
 let mediciones = [];
 
 function medir(titulo = "Ejecutando") {
@@ -108,7 +107,6 @@ function fin() {
 }
 
 // WEB
-
 const plantillas = {};
 
 async function cargarJson(origen) {
@@ -133,11 +131,14 @@ function cargarPlantilla(Plantilla) {
 
 // permite que el usuario baje un archivo
 
-function enviarWhatsapp(ordenanza) {
+function enviarWhatsapp(ordenanza, asunto) {
     let texto = `
 *Digesto Digital Yerba Buena*
-    
-Bajar la ordenanza ${ordenanza} de 
+
+Ordenanza N° ${ordenanza}
+
+__${asunto}__
+
 ${generarUrl(ordenanza, 'pdf')}`;
 
     texto = encodeURIComponent(texto);
@@ -254,14 +255,15 @@ function palabrasUnicas(cadena) {
 }
 
 function rellenarPlantilla(platilla, datos) {
+    scrollInicio();
+    const cuerpo = document.getElementById('cuerpo'); 
     const conversor = cargarPlantilla(platilla);
     const html = conversor(datos);
     if (!document.startViewTransition) {
-        document.getElementById('cuerpo').innerHTML = html;
+        cuerpo.innerHTML = html;
     } else {
-        document.startViewTransition(() => document.getElementById('cuerpo').innerHTML = html);
+        document.startViewTransition(() => cuerpo.innerHTML = html);
     }
-    scrollInicio();
 }
 
 function generar(condicion, ordenanzas) {
@@ -278,26 +280,38 @@ function generarOrdenanzas(condicion, ordenanzas) {
     ordenanzas.forEach(o => o.resaltado = resaltarPalabrasEnTexto(o.asunto, condicion) || o.asunto);
     rellenarPlantilla('plantilla-ordenanza', { "ordenanza": ordenanzas });
     mostrarEstado(ordenanzas);
-    // setTimeout( ()=> resaltarPalabras("#lista", actual), 200);
 }
 
 function generarClasificaciones(clasificaciones) {
     rellenarPlantilla("plantilla-clasificacion", { "clasificacion": clasificaciones });
-    mostrarEstado([]);
+    mostrarEstado([], false);
 }
 
 async function generarPagina(ordenanza) {
     const pagina = await cargarOrdenanza(ordenanza);
     rellenarPlantilla("plantilla-pagina", { "ordenanza": ordenanza, "cuerpo": pagina });    
-    setTimeout( ()=> resaltarPalabras("#pagina", anterior), 200);
+    setTimeout(() => resaltarPalabras("#pagina", anterior), 200);
 }
 
-function mostrarEstado(ordenanzas) {
-    const resultado = ordenanzas.length == 0 ?
+function generarNavegacion() {
+    mostrar(`Generar Navegación: ${marcaActual}/${marcas}`)
+    if (marcas == 0) return `<div id='navegacion'></div>`;
+    return `
+<div id='navegacion'>
+    ${marcaActual + 1}/${marcas}
+    <button onclick="irMarcaAnterior()"  class="minimo"><i class="bi bi-chevron-up"></i></button>
+    <button onclick="irMarcaSiguiente()" class="minimo"><i class="bi bi-chevron-down"></i></button>
+</div>`;
+}
+
+function mostrarEstado(ordenanzas, navegar = false) {
+    const navegacion = generarNavegacion(marcaActual, marcas);
+    mostrar(`Mostrar Estado > ${navegacion}`);
+    const resultado = navegar ? navegacion : ordenanzas.length == 0 ?
         `No hay ordenanzas - ${version}` :
         `Hay ${ordenanzas.length} ${ordenanzas.length == 1 ? 'ordenanza' : 'ordenanzas'}`;
     
-    document.getElementById("info").innerHTML = resultado;    
+    document.getElementById("info").innerHTML = resultado;
 }
 
 async function cargar() {
@@ -348,7 +362,7 @@ function alterarClasificacion() {
 
 function irOrdenanza(ordenanza) {
     anterior = busqueda.value;
-    buscar("#" + normalizarOrdenanza(ordenanza));
+    buscar(`#${normalizarOrdenanza(ordenanza)}`);
 }
 
 function irClasificacion() {
@@ -378,18 +392,25 @@ function escribirParametro(valor) {
     window.history.replaceState({}, '', url);
 }
 
-
 function resaltarPalabras(selector, palabras, tag = 'mark') {
-    medir(`Resaltar palabras > <${palabras}>`)
-    
+    medir(`Resaltar palabras => <<${palabras}>>`)
+    marcas = 0;    
     const elementos = document.querySelectorAll(`${selector} *`);
+    mostrar(`Hay ${elementos.length} parrafos. Selector: ${selector}, palabras: [${palabras}]`);
+    
+    let n = 0;
     elementos.forEach(elemento => {
         const texto = resaltarPalabrasEnTexto(elemento.innerHTML, palabras);
-        if(texto) {
+        if (texto) {
             elemento.innerHTML = texto;
         }
     });
 
+    const tags = document.querySelectorAll(".tag");
+    marcas = tags.length;
+    mostrarEstado([], true);
+
+    mostrar(`Hay ${marcas} marcas!`);
     fin();
 }
 
@@ -400,21 +421,57 @@ function resaltarPalabrasEnTexto(texto, palabras, tag = 'mark') {
     if (palabrasLargas.length == 0) return null;
 
     palabras = palabras.map(x => `\\b${generalizarVocales(x)}\\b`);
-    const buscarOrdenando   = new RegExp(`(${palabras.join("\\s+")})`, 'gi');
-    const buscarDesordenado = new RegExp(`(${palabrasLargas.join("|")})`, 'gi');
-
+    const buscarOrdenando  = new RegExp(`(${palabras.join("\\s+")})`, 'gi');
+    
     if (buscarOrdenando.test(texto)) {
-        return texto.replace(buscarOrdenando, x => `<${tag}>${x}</${tag}>`);
-    } else if (buscarDesordenado.test(texto)) {
-        return texto.replace(buscarDesordenado, x => `<${tag}>${x}</${tag}>`);
+        return texto.replace(buscarOrdenando, x => `<${tag} class='tag' id='ir${++marcas}'>${x}<sup>${marcas}</sup></${tag}>`);
+    } else {
+        palabrasLargas = palabrasLargas.map(x => `\\b${generalizarVocales(x)}\\b`);
+        const buscarDesordenado = new RegExp(`(${palabrasLargas.join("|")})`, 'gi');        
+        if (buscarDesordenado.test(texto)) {
+            return texto.replace(buscarDesordenado, x => `<${tag}>${x}</${tag}>`);
+        }
     }
+
     return null;
 }
 
-function esSingular(palabra) {
+let marcas = 0;
+let marcaActual = 0;
 
+function irMarcaSiguiente() {
+    irMarca(marcaActual + 1);
 }
 
-function plural(palabra) {
+function irMarcaAnterior() {
+    irMarca(marcaActual - 1);
+}
 
+function irMarca(marca) {
+    const actual = document.querySelectorAll("mark.tag.actual")
+    actual.forEach(x => x.className = "tag");
+
+    const tags = document.querySelectorAll(".tag");
+    marcas = tags.length;
+    if (marcas == 0) return;
+
+    marca = (marca + marcas) % marcas;
+    const item = tags[marca];
+    
+    item.scrollIntoView(false);
+    item.className += ' actual';
+
+    marcaActual = marca;
+    mostrarEstado([], true);
+}
+
+function listarMarcas() {
+    medir(`Listado de Marcas x ${marcas}`)
+    for (let m = 1; m < marcas; m++){
+        const id = `ir${m}`;
+        let elemento = document.getElementById(id);
+        const r = elemento.getBoundingClientRect();
+        mostrar(`marca : ${id} top : ${r.top} y :${r.y}`)
+    }
+    fin();
 }

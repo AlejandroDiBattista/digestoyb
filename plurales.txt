@@ -1,0 +1,11 @@
+// cion$               => ci[oó]n(es)?
+// [aeiou]$            => [aeiouáéíóú][s]
+// ([dnl])$            => $1[eé]s
+
+// ciones              => ci[oó]n(es) ?
+// ([aeiouáéíóú])s$    => $1(s)?
+// ([dnl])es           => $1(es) ?
+        
+// lapiz               => lapices
+// papel               => papeles
+

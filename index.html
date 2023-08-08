@@ -59,8 +59,7 @@
 
         <script id="plantilla-pagina" type="text/template">
             <div>
-<div class="d-flex justify-content-between mb-2 sticky-top">
-
+                <div class="d-flex justify-content-between mb-2">
                     <button type="button" class ="btn btn-outline-primary btn-sm" onclick="volver()">
                         <i class="bi bi-chevron-left"></i> Volver
                     </button>
@@ -85,25 +84,35 @@
 
     <body>
         <div class="sticky-top">
-            <nav class="navbar shadow-sm bg-success-subtle ">
+            <nav class="navbar shadow-sm bg-success-subtle">
                 <div class="container-fluid">
-                    <a class="navbar-brand">Digesto YB</a>
-                    <form class="d-flex" role="search"> 
-                        <input id="campoBusqueda" class="form-control" type="search" placeholder="Buscar">
-                        <button type="button" class="btn btn-outline-primary clasificacion ms-2" onclick="alterarClasificacion()">
-                            <i class="bi bi-filter-square"></i>
+                    <div>
+                        <button onclick="volver()" class="minimo">
+                            <i class="bi bi-chevron-left"></i>
                         </button>
-                    </form>
+                        <a class="navbar-brand" href="/">Digesto YB</a>
+                    </div>
+
+
+                    <div class="column">
+                        <form class="d-flex" role="search"> 
+                            <input id="campoBusqueda" class="form-control" type="search" placeholder="Buscar">
+                            <button type="button" class="btn btn-outline-primary clasificacion ms-2" onclick="alterarClasificacion()">
+                                <!-- <i class="bi bi-filter-square"></i> -->
+                                <i class="bi bi-funnel-fill"></i>
+                            </button>
+                        </form>
+                        <div
+                            id="info" class="text-end me-2">
+                            <!-- Esto es para que al comienzo muestre algo -->
+                            Hay 851 ordenanzas
+                        </div>
+                    </div>
                 </div>
             </nav>
         </div>
         
         <div class="container">
-            <div id="info" class="text-end me-2">
-                <!-- Esto es para que al comienzo muestre algo -->
-                Hay 851 ordenanzas
-            </div>
-
             <div id="cuerpo" class="m-1">
                 <!-- Esto es para que al comienzo muestre algo -->
                 <div id="lista">
