@@ -393,10 +393,8 @@ function escribirParametro(valor) {
 }
 
 function resaltarPalabras(selector, palabras, tag = 'mark') {
-    medir(`Resaltar palabras => <<${palabras}>>`)
     marcas = 0;    
     const elementos = document.querySelectorAll(`${selector} *`);
-    mostrar(`Hay ${elementos.length} parrafos. Selector: ${selector}, palabras: [${palabras}]`);
     
     let n = 0;
     elementos.forEach(elemento => {
@@ -410,7 +408,6 @@ function resaltarPalabras(selector, palabras, tag = 'mark') {
     marcas = tags.length;
     mostrarEstado([], true);
 
-    mostrar(`Hay ${marcas} marcas!`);
     fin();
 }
 
@@ -438,6 +435,10 @@ function resaltarPalabrasEnTexto(texto, palabras, tag = 'mark') {
 
 let marcas = 0;
 let marcaActual = 0;
+
+function irArriba() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
 
 function irMarcaSiguiente() {
     irMarca(marcaActual + 1);
@@ -475,3 +476,4 @@ function listarMarcas() {
     }
     fin();
 }
+

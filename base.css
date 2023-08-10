@@ -75,16 +75,33 @@ mark.actual {
 }
 
 button.minimo {
+    margin-top: 8px;
     border-style: none;
     background-color: transparent;
+    border-radius: 4px;
+}
+
+button.minimo:hover {
+    background-color: yellow;
 }
 
 body {
-  overflow-y: scroll; /* Esto asegura que siempre haya una barra de desplazamiento, incluso si no es visible */
-  /* padding-right: 17px; Ancho aproximado de la barra de desplazamiento, ajusta según sea necesario */
-  box-sizing: content-box; /* Asegura que el relleno no afecte el ancho total del contenedor */
+  overflow-y: scroll;
+  box-sizing: content-box;
 }
 
 #navegacion, #info {
     min-height: 24px;
+}
+
+#arriba {
+    position: fixed;
+    bottom: 8px;
+    right: 16px;
+}
+
+#volver {
+    position: fixed;
+    top: 82px;
+    left: 16px;
 }
