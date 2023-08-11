@@ -61,7 +61,11 @@ button.nivel_3 {
 }
 
 mark {
-    background-color: yellow;
+    padding-left: 8px;
+    margin-left: -4px;
+    padding-right: px;
+    margin-right: -4px;
+    background-color: white;
     border-radius: 5px;
 }
 
@@ -82,7 +86,8 @@ button.minimo {
 }
 
 button.minimo:hover {
-    background-color: yellow;
+    background-color: blue;
+    color: white;
 }
 
 body {
@@ -97,11 +102,15 @@ body {
 #arriba {
     position: fixed;
     bottom: 8px;
-    right: 16px;
+    left: 16px;
 }
 
 #volver {
     position: fixed;
     top: 82px;
     left: 16px;
+}
+
+i.bi-whatsapp{
+    color: green;
 }

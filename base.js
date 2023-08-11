@@ -290,6 +290,7 @@ function generarClasificaciones(clasificaciones) {
 async function generarPagina(ordenanza) {
     const pagina = await cargarOrdenanza(ordenanza);
     rellenarPlantilla("plantilla-pagina", { "ordenanza": ordenanza, "cuerpo": pagina });    
+    setTimeout(() => alinearVolver(), 100);
     setTimeout(() => resaltarPalabras("#pagina", anterior), 200);
 }
 
@@ -335,6 +336,7 @@ function instalar() {
     busqueda.addEventListener('focus', () => busqueda.select());
 
     window.addEventListener('scroll', () => busqueda.blur());
+    window.addEventListener('resize', () => alinearVolver());
    
     buscar(leerParametro());
 }
@@ -477,3 +479,22 @@ function listarMarcas() {
     fin();
 }
 
+function alinearVolver() {
+    const cabecera = document.getSelection("nav");
+    const cuerpo = document.getElementById("cuerpo");
+    const volver = document.getElementById("volver");
+    const arriba = document.getElementById("arriba");
+    
+    if (volver == null || arriba == null) return;
+
+    const top = cabecera.clientHeight + 16;
+    const left = cuerpo.getBoundingClientRect().left - 16;
+    const right = left + cuerpo.clientWidth - 32 - 8;
+    
+    mostrar(`Alineando boton ARRIBA > ${right} | ${cuerpo.getBoundingClientRect().right}`);
+
+    volver.style.marginLeft = `${left}px`;
+    volver.style.marginTop = `${top}px`;
+
+    arriba.style.marginLeft = `${right}px`;
+}
