@@ -1,6 +1,6 @@
 // import { medir, mostrar, fin } from './medir.js';
 
-const version = 'v0.5';
+const version = 'v0.6';
 
 let busqueda = null;
 let demorar = null;
