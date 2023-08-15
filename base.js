@@ -1,6 +1,6 @@
 // import { medir, mostrar, fin } from './medir.js';
 
-const version = 'v0.6';
+const version = 'v0.7';
 
 let busqueda = null;
 let demorar = null;
@@ -8,16 +8,26 @@ let demorar = null;
 let ordenanzas = [];
 let clasificaciones = [];
 
-let actual = "";
-let anterior = "";
+let actual = '';
+let anterior = '';
 
 function generalizarVocales(texto) {
     return texto
-        .replaceAll(/[aá]/gi, "[aá]")
-        .replaceAll(/[eé]/gi, "[eé]")
-        .replaceAll(/[ií]/gi, "[ií]")
-        .replaceAll(/[oó]/gi, "[oó]")
-        .replaceAll(/[uú]/gi, "[uú]")
+        .replaceAll(/[aá]/gi, '[aá]')
+        .replaceAll(/[eé]/gi, '[eé]')
+        .replaceAll(/[ií]/gi, '[ií]')
+        .replaceAll(/[oó]/gi, '[oó]')
+        .replaceAll(/[uú]/gi, '[uú]')
+}
+
+function traerAsunto(ordenanza) {
+    ordenanza = normalizarOrdenanza(ordenanza);
+    for (let i in ordenanzas) {
+        let o = ordenanzas[i];
+        // console.log(o);
+        if (o.ordenanza == ordenanza) return o.asunto;
+    }    
+    return "◉_◉";
 }
 
 String.prototype.sinAcento = function sinAcento() {
@@ -34,24 +44,24 @@ String.prototype.simplificar = function () {
 }
 
 String.prototype.allTrim = function () {
-    return this.replace(/\s+/g, " ").trim();
+    return this.replace(/\s+/g, ' ').trim();
 };
 
 function traducirMeses(cadena) {
-    const mesesEnIngles = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    const mesesEnEspañol = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
+    const mesesEnIngles = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const mesesEnEspañol = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
 
     for (let i = 0; i < mesesEnIngles.length; i++) {
         const expresionRegular = new RegExp(mesesEnIngles[i], 'gi');
         cadena = cadena.replace(expresionRegular, mesesEnEspañol[i]);
     }
 
-    cadena = cadena.replace(/-/g, "/");
+    cadena = cadena.replace(/-/g, '/');
     return cadena;
 }
 
 function completarAño(texto) {
-    return texto.replace(/([89]\d)$/g, "19$1").replace(/([012]\d)$/g, "20$1");
+    return texto.replace(/([89]\d)$/g, '19$1').replace(/([012]\d)$/g, '20$1');
 }
 
 function comienzaConMayuscula(palabra) {
@@ -72,7 +82,7 @@ function esOrdenanza(palabra) {
 
 function esClasificacion(palabra) {
     palabra = palabra.allTrim();
-    palabra = palabra.replace(/(?=\d)>/g, '.').replace(/[^0-9.>]/g, ""); 
+    palabra = palabra.replace(/(?=\d)>/g, '.').replace(/[^0-9.>]/g, ''); 
     
     const valido = /^\d+(\.\d*)*$/;
     const comienza = /(^>\d|\d>$)/;
@@ -91,7 +101,7 @@ function esSoloOrdenanzaValida(texto) {
 // Mediciones
 let mediciones = [];
 
-function medir(titulo = "Ejecutando") {
+function medir(titulo = 'Ejecutando') {
     mostrar(`> ${titulo}`);
     mediciones.push(new Date());
 }
@@ -131,15 +141,15 @@ function cargarPlantilla(Plantilla) {
 
 // permite que el usuario baje un archivo
 
-function enviarWhatsapp(ordenanza, asunto) {
-    let texto = `
-*Digesto Digital Yerba Buena*
+function enviarWhatsapp(ordenanza) {
+    let asunto = traerAsunto(normalizarOrdenanza(ordenanza));
+    let texto = `*DIGESTO DIGITAL YERBA BUENA*
 
-Ordenanza N° ${ordenanza}
+*Ordenanza N° ${ordenanza}*
 
-__${asunto}__
+_${asunto}_
 
-${generarUrl(ordenanza, 'pdf')}`;
+📄 ${generarUrl(ordenanza, 'pdf')}`;
 
     texto = encodeURIComponent(texto);
     url = `https://api.whatsapp.com/send/?text=${texto}&type=custom_url&app_absent=0`;
@@ -165,7 +175,7 @@ function descargarPdf(ordenanza) {
 }
 
 function generarUrl(ordenanza, tipo, local = false) {
-    const base = local ? "." : 'https://digestoyb.netlify.app';
+    const base = local ? '.' : 'https://digestoyb.netlify.app';
 
     // ordenanza = normalizarOrdenanza(ordenanza);
     tipo = tipo.toLowerCase();
@@ -178,7 +188,7 @@ function invocarUrl(url, destino = null, abrir = false) {
 
     enlace.href = url;
     if (destino) enlace.download = destino;
-    if (abrir) enlace.target = "_blank"
+    if (abrir) enlace.target = '_blank'
 
     document.body.appendChild(enlace);
     enlace.click();
@@ -193,7 +203,7 @@ function normalizarClasificacion(palabra) {
     if(!esClasificacion(palabra)) return palabra;
     
     palabra = palabra.allTrim();
-    palabra = palabra.replace(/>/g, '.').replace(/[^0-9.]/g, "");
+    palabra = palabra.replace(/>/g, '.').replace(/[^0-9.]/g, '');
 
     const digitos   = palabra.split('.').filter(x => x.length > 0);
     const resultado = digitos.map(digito => digito.padStart(2, '0')).join('.');
@@ -202,11 +212,11 @@ function normalizarClasificacion(palabra) {
 }
 
 function normalizarOrdenanza(palabra) {
-    return `${palabra}`.replace("#","").padStart(4,"0")
+    return `${palabra}`.replace('#','').padStart(4,'0')
 }
 
 function normalizarPalabra(palabra) {
-    if(palabra.startsWith(":")) palabra = palabra.substring(1);
+    if(palabra.startsWith(':')) palabra = palabra.substring(1);
 
     if(comienzaConMayuscula(palabra) || esNumero(palabra)) palabra += ' ';
 
@@ -214,7 +224,7 @@ function normalizarPalabra(palabra) {
 }
 
 function filtrarVigentes(ordenanzas) {
-    return ordenanzas.filter(o => o.estado == "Vigente" && o.alcance == "General")
+    return ordenanzas.filter(o => o.estado == 'Vigente' && o.alcance == 'General')
 }
 
 function contieneIndice(o, indice) {
@@ -231,7 +241,7 @@ function contienePalabra(o, palabra) {
         return true;
     }
     
-    if(palabra.startsWith(":")){                                                    // :xxx > Asunto
+    if(palabra.startsWith(':')){                                                    // :xxx > Asunto
         return o.palabrasAsunto.includes(normalizarPalabra(palabra));
     }
 
@@ -239,7 +249,7 @@ function contienePalabra(o, palabra) {
 }
 
 function filtrarCondicion(ordenanzas, condicion) {
-    let palabras = condicion.simplificar().split(" ");
+    let palabras = condicion.simplificar().split(' ');
     let salida = ordenanzas.filter(o => palabras.every(palabra => contienePalabra(o, palabra)));
 
     return salida;
@@ -278,45 +288,45 @@ function generar(condicion, ordenanzas) {
 
 function generarOrdenanzas(condicion, ordenanzas) {
     ordenanzas.forEach(o => o.resaltado = resaltarPalabrasEnTexto(o.asunto, condicion) || o.asunto);
-    rellenarPlantilla('plantilla-ordenanza', { "ordenanza": ordenanzas });
+    rellenarPlantilla('plantilla-ordenanza', { 'ordenanza': ordenanzas });
     mostrarEstado(ordenanzas);
 }
 
 function generarClasificaciones(clasificaciones) {
-    rellenarPlantilla("plantilla-clasificacion", { "clasificacion": clasificaciones });
+    rellenarPlantilla('plantilla-clasificacion', { 'clasificacion': clasificaciones });
     mostrarEstado([], false);
 }
 
 async function generarPagina(ordenanza) {
     const pagina = await cargarOrdenanza(ordenanza);
-    rellenarPlantilla("plantilla-pagina", { "ordenanza": ordenanza, "cuerpo": pagina });    
+    rellenarPlantilla('plantilla-pagina', { 'ordenanza': ordenanza, 'cuerpo': pagina });    
     setTimeout(() => alinearVolver(), 100);
-    setTimeout(() => resaltarPalabras("#pagina", anterior), 200);
+    setTimeout(() => resaltarPalabras('#pagina', anterior), 200);
 }
 
 function generarNavegacion() {
     mostrar(`Generar Navegación: ${marcaActual}/${marcas}`)
     if (marcas == 0) return `<div id='navegacion'></div>`;
     return `
-<div id='navegacion'>
-    ${marcaActual + 1}/${marcas}
-    <button onclick="irMarcaAnterior()"  class="minimo"><i class="bi bi-chevron-up"></i></button>
-    <button onclick="irMarcaSiguiente()" class="minimo"><i class="bi bi-chevron-down"></i></button>
-</div>`;
+    .${marcaActual + 1}/${marcas}.
+    <button onclick='irMarcaAnterior()'  class='minimo'><i class='bi bi-chevron-up'></i></button>
+    <button onclick='irMarcaSiguiente()' class='minimo'><i class='bi bi-chevron-down'></i></button>
+`;
 }
 
 function mostrarEstado(ordenanzas, navegar = false) {
     const navegacion = generarNavegacion(marcaActual, marcas);
-    mostrar(`Mostrar Estado > ${navegacion}`);
+    // mostrar(`Mostrar Estado > ${navegacion}`);
     const resultado = navegar ? navegacion : ordenanzas.length == 0 ?
-        `No hay ordenanzas - ${version}` :
-        `Hay ${ordenanzas.length} ${ordenanzas.length == 1 ? 'ordenanza' : 'ordenanzas'}`;
+        `<div>No hay ordenanzas - ${version}</div>` :
+        `<div>Hay ${ordenanzas.length} ${ordenanzas.length == 1 ? 'ordenanza' : 'ordenanzas'}</div>`;
     
-    document.getElementById("info").innerHTML = resultado;
+    document.getElementById('info').innerHTML = resultado;
+    alinearVolver();
 }
 
 async function cargar() {
-    medir("Cargando datos");
+    medir('Cargando datos');
 
     ordenanzas = await cargarJson('ordenanzas');
     ordenanzas = filtrarVigentes(ordenanzas);
@@ -348,7 +358,7 @@ function buscar(condicion) {
     escribirParametro(condicion);
     
     const listado = filtrarCondicion(ordenanzas, condicion);
-    mostrar(`EsOrdenanza: ${esSoloOrdenanzaValida(condicion) ? "SI" : "NO"} clasificacion: ${esSoloClasificacion(condicion) ? "SI" : "NO"}`  )
+    mostrar(`EsOrdenanza: ${esSoloOrdenanzaValida(condicion) ? 'SI' : 'NO'} clasificacion: ${esSoloClasificacion(condicion) ? 'SI' : 'NO'}`  )
     
     clearTimeout(demorar);
     demorar = setTimeout(() => generar(condicion, listado), 50);
@@ -369,12 +379,12 @@ function irOrdenanza(ordenanza) {
 
 function irClasificacion() {
     anterior = busqueda.value;
-    buscar(".");
+    buscar('.');
 }
 
 function volver() {
     buscar(anterior);
-    anterior = "";
+    anterior = '';
     busqueda.focus();
 }
 
@@ -385,7 +395,7 @@ function scrollInicio() {
 function leerParametro(historia = false) {
     const origen = historia ? document.referrer : window.location.search;
     const parametros = new URLSearchParams(origen);
-    return parametros.get('buscar') || "";
+    return parametros.get('buscar') || '';
 }
 
 function escribirParametro(valor) {
@@ -406,7 +416,7 @@ function resaltarPalabras(selector, palabras, tag = 'mark') {
         }
     });
 
-    const tags = document.querySelectorAll(".tag");
+    const tags = document.querySelectorAll('.tag');
     marcas = tags.length;
     mostrarEstado([], true);
 
@@ -414,19 +424,19 @@ function resaltarPalabras(selector, palabras, tag = 'mark') {
 }
 
 function resaltarPalabrasEnTexto(texto, palabras, tag = 'mark') {
-    palabras = palabras.allTrim().split(" ");
+    palabras = palabras.allTrim().split(' ');
     palabrasLargas = palabras.filter(palabra => palabra.length > 2);
 
     if (palabrasLargas.length == 0) return null;
 
     palabras = palabras.map(x => `\\b${generalizarVocales(x)}\\b`);
-    const buscarOrdenando  = new RegExp(`(${palabras.join("\\s+")})`, 'gi');
+    const buscarOrdenando  = new RegExp(`(${palabras.join('\\s+')})`, 'gi');
     
     if (buscarOrdenando.test(texto)) {
         return texto.replace(buscarOrdenando, x => `<${tag} class='tag' id='ir${++marcas}'>${x}<sup>${marcas}</sup></${tag}>`);
     } else {
         palabrasLargas = palabrasLargas.map(x => `\\b${generalizarVocales(x)}\\b`);
-        const buscarDesordenado = new RegExp(`(${palabrasLargas.join("|")})`, 'gi');        
+        const buscarDesordenado = new RegExp(`(${palabrasLargas.join('|')})`, 'gi');        
         if (buscarDesordenado.test(texto)) {
             return texto.replace(buscarDesordenado, x => `<${tag}>${x}</${tag}>`);
         }
@@ -439,7 +449,7 @@ let marcas = 0;
 let marcaActual = 0;
 
 function irArriba() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function irMarcaSiguiente() {
@@ -451,10 +461,10 @@ function irMarcaAnterior() {
 }
 
 function irMarca(marca) {
-    const actual = document.querySelectorAll("mark.tag.actual")
-    actual.forEach(x => x.className = "tag");
+    const actual = document.querySelectorAll('mark.tag.actual')
+    actual.forEach(x => x.className = 'tag');
 
-    const tags = document.querySelectorAll(".tag");
+    const tags = document.querySelectorAll('.tag');
     marcas = tags.length;
     if (marcas == 0) return;
 
@@ -480,21 +490,23 @@ function listarMarcas() {
 }
 
 function alinearVolver() {
-    const cabecera = document.getSelection("nav");
-    const cuerpo = document.getElementById("cuerpo");
-    const volver = document.getElementById("volver");
-    const arriba = document.getElementById("arriba");
+    const cabecera = document.getElementById('menu');
+    const cuerpo = document.getElementById('cuerpo');
+    const volver = document.getElementById('volver');
+    const arriba = document.getElementById('arriba');
     
     if (volver == null || arriba == null) return;
 
-    const top = cabecera.clientHeight + 16;
-    const left = cuerpo.getBoundingClientRect().left - 16;
+    const top   = cabecera.getBoundingClientRect().height + 4;
+    const left  = cuerpo.getBoundingClientRect().left - 16;
     const right = left + cuerpo.clientWidth - 32 - 8;
     
-    mostrar(`Alineando boton ARRIBA > ${right} | ${cuerpo.getBoundingClientRect().right}`);
+    mostrar(`Alineando boton ARRIBA > t: ${top} l: ${left} r: ${right} > cbr: ${cuerpo.getBoundingClientRect().right}`);
 
     volver.style.marginLeft = `${left}px`;
-    volver.style.marginTop = `${top}px`;
+    // volver.style.marginTop  = `${top}px`;
+    volver.style.marginTop  = `12px`;
+    volver.style.display = 'block';
 
     arriba.style.marginLeft = `${right}px`;
 }
